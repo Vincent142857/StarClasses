@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <title>Bootstrap NavTab</title>
+
+</head>
+
+<body>
+  <!-- 6- Nav (Pills) Data-Toggle
+ -->
+  <div class="container-fluid">
+    <header>Bootstrap NavPills - Data-Toggle</header>
+
+    <ul class="nav nav-pills" id="myPill" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link" id="tab-Javascript" data-toggle="tab" href="#content-javascript" role="tap"
+          aria-controls="content-javascript" aria-selected="false">
+          Javascript
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-CSS" data-toggle="tab" href="#content-css" role="tap" aria-controls="content-css"
+          aria-selected="false">
+          CSS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-bootstrap" data-toggle="tab" href="#content-bootstrap" role="tab"
+          aria-controls="content-bootstrap" aria-selected="true">
+          Bootstrap</a>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="myPillContent">
+      <div class="tab-pane fade" id="content-javascript" role="tabpanel" aria-labelledby="tab-javascript">
+        Javascript is a cross-platform, object-oriented scripting language.
+      </div>
+      <div class="tab-pane fade" id="content-css" role="tabpanel" aria-labelledby="tab-css">
+        CSS stands for Cascading Style Sheets.
+      </div>
+      <div class="tab-pane fade show ative" id="content-bootstrap" role="tabpanel" aria-labelledby="tab-bootstrap">
+        Bootstrap is a free front-end framework for faster and easier web development.</div>
+    </div>
+    <!-- 
+    Chú ý: Có thể loại bỏ các thuộc tính:
+        role,
+        aria-controls,
+        aria-selected,
+        aria-labelledby
+     ra khỏi ví dụ trên mà không gây ra bất kỳ vấn đề gì.
+    Các thuôc tính này chỉ nhằm mục đích gợi ý cho các thiết bị như Screen Reader (Thiết bị đọc màn hình dành cho người mù).
+ -->
+  </div>
+
+</body>
+
+</html>
