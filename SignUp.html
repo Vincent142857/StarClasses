@@ -27,26 +27,12 @@
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
 
+  <!-- Anguler  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
   <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-
-    /* GLOBAL STYLES
-    --------------------------------------------- */
-    /* Padding below the footer and lighter body text */
-
+   
     body {
       padding-top: 3rem;
       padding-bottom: 3rem;
@@ -54,92 +40,9 @@
     }
 
 
-    /* CUSTOMIZE THE CAROUSEL
-    -------------------------------------------- */
-
-    /* Carousel base class */
-    .carousel {
-      margin-bottom: 4rem;
-    }
-
-    /* Since positioning the image, we need to help out the caption */
-    .carousel-caption {
-      bottom: 3rem;
-      z-index: 10;
-    }
-
-    /* Declare heights because of positioning of img element */
-    .carousel-item {
-      height: 32rem;
-    }
-
-    .carousel-item>img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      height: 32rem;
-    }
 
 
-    /* MARKETING CONTENT
--------------------------------------------------- */
-
-    /* Center align the text within the three columns below the carousel */
-    .marketing .col-lg-4 {
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    .marketing h2 {
-      font-weight: 400;
-    }
-
-    .marketing .col-lg-4 p {
-      margin-right: .75rem;
-      margin-left: .75rem;
-    }
-
-
-    /* Featurettes
-------------------------- */
-
-    .featurette-divider {
-      margin: 5rem 0;
-      /* Space out the Bootstrap <hr> more */
-    }
-
-    /* Thin out the marketing headings */
-    .featurette-heading {
-      font-weight: 300;
-      line-height: 1;
-      letter-spacing: -.05rem;
-    }
-
-    /* RESPONSIVE CSS
--------------------------------------------------- */
-
-    @media (min-width: 40em) {
-
-      /* Bump up size of carousel content */
-      .carousel-caption p {
-        margin-bottom: 1.25rem;
-        font-size: 1.25rem;
-        line-height: 1.4;
-      }
-
-      .featurette-heading {
-        font-size: 50px;
-      }
-    }
-
-    @media (min-width: 62em) {
-      .featurette-heading {
-        margin-top: 7rem;
-      }
-    }
-
-    .nav-link:hover {
+    .nav-link:hover, .dropdown-item:hover {
       color: #E4A11B !important;
     }
 
@@ -157,16 +60,20 @@
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
 </head>
-
+<style>
+  form{
+    margin: 0 auto;
+  }
+</style>
 <body>
   <!-- Menu top -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand pl-sm-3" href="#">
+        <a class="navbar-brand pl-sm-3" href="./index.html">
           <img src="/img/star-classes-4.png" style="width:150px;">
         </a>
-
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
@@ -175,17 +82,19 @@
           <!-- menu left -->
           <ul class="navbar-nav mr-auto mb-2 m-md-0 col-12 col-sm-2">
             <li class="nav-item dropdown col-12 border border-warning rounded-pill text-center">
-              <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" role="button" data-toggle="dropdown" aria-expanded="false">
-                <img src="./img/tutorialCut.png" style="width: 20px;"> Tutorial
+              <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown" aria-expanded="false">
+                <img src="./img/tutorialCut.png" style="width: 20px;"> Courses
               </a>
-              <ul class="dropdown-menu" aria-labelledby="DropdownMenu">
-                <li><a href="#" class="dropdown-item">Javascript</a></li>
-                <li><a href="#" class="dropdown-item">CSS</a></li>
-                <li><a href="#" class="dropdown-item">Bootstrap</a></li>
-                <li><a href="#" class="dropdown-item">Excel</a></li>
-                <li><a href="#" class="dropdown-item">Python</a></li>
-                <li><a href="#" class="dropdown-item">C/C++</a></li>
+              <!-- Menu H2 -->
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="DropdownMenu">
+                <li><a href="#" class="dropdown-item px-5">Javascript</a></li>
+                <li><a href="#" class="dropdown-item px-5">CSS</a></li>
+                <li><a href="#" class="dropdown-item px-5">Bootstrap</a></li>
+                <li><a href="#" class="dropdown-item px-5">Excel</a></li>
+                <li><a href="#" class="dropdown-item px-5">Python</a></li>
+                <li><a href="#" class="dropdown-item px-5">C/C++</a></li>
               </ul>
+              <!-- Menu H2 -->
             </li>
 
           </ul>
@@ -202,7 +111,7 @@
           <!-- menu right -->
           <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
             <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link border border-warning rounded-pill text-center" href="#">Support</a>
+              <a class="nav-link border border-warning rounded-pill text-center" href="#">About us</a>
             </li>
             <!-- shopping & payment -->
             <li class="nav-item col-12 col-sm-2 mx-1">
@@ -214,13 +123,13 @@
 
             <!-- Sign in - dang nhap-->
             <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link" href="#">Sign in</a>
+              <a class="nav-link" href="./SignIn.html">Sign in</a>
 
             </li>
 
             <!-- Sign up - dang ky -->
             <li class="nav-item col-12 col-sm-2">
-              <a class="nav-link" href="#">Sign up</a>
+              <a class="nav-link" href="./SignUp.html">Sign up</a>
             </li>
 
             <!-- Visitor -->
@@ -231,79 +140,87 @@
                 <span class="badge rounded-pill bg-danger">111</span>
               </div>
             </li>
+            <!-- Visitor -->
           </ul>
+          <!-- menu right -->
         </div>
       </div>
     </nav>
   </header>
-  <main>
-
-  <section class="col-7 border m-3 mt-5 p-3">
-    <h2>Created New Account</h2>
-    <form class="border m-3 mt-5 p-3">
+  <!-- Menu top -->
+  <main class="d-flex flex-column mt-4" ng-app="myApp" >
+    <form id="SignIn" class="col-7 border p-4">
+    
+      <h2><img class="d-inline-flex" src="./img/logo.png" width="9%" alt=""> Created new account</h2>
       <!-- 2 column grid layout with text inputs for the first and last names -->
       <div class="row mb-4">
         <div class="col">
           <div class="form-group">
-            <label class="form-label" for="form3Example1">First name</label>
-            <input type="text" id="form3Example1" class="form-control-input">
+            <label class="form-label" for="FirstName">First name</label>
+            <input type="text" id="FirstName" class="form-control" placeholder="Enter your first name" />
           </div>
         </div>
         <div class="col">
-          <div class="form-gruop">
-            <label class="form-label" for="form3Example2">Last name</label>
-            <input type="text" id="LastName" class="form-control-input">
+          <div class="form-group">
+            <label class="form-label" for="FirstName">Last name</label>
+            <input type="text" id="LastName" class="form-control" placeholder="Enter your last name" />
           </div>
         </div>
       </div>
-    
+  
       <!-- Email input -->
-      <div class="form-outline mb-4">
-        <label class="form-label" for="form3Example3">Email address</label>
-        <input type="email" id="Email" class="form-control-input">
+      <div class="form-group mb-4">
+        <label class="form-label" for="Email">Email address (*):</label>
+        <input type="email" id="Email" class="form-control" placeholder="Enter your email address" required />
       </div>
-    
+      <!-- Phone input -->
+      <div class="form-group mb-4">
+        <label class="form-label" for="Email">Phone number (*):</label>
+        <input type="tel" id="Phone" class="form-control" placeholder="Enter your phone number" required />
+      </div>
       <!-- Password input -->
-      <div class="form-outline mb-4">
-        <label class="form-label" for="form3Example4">Password</label>
-        <input type="password" id="Password" class="form-control-input">
+      <div class="form-group mb-4">
+        <label class="form-label" for="Password">Password (*):</label>
+        <input type="password" id="Password" class="form-control" placeholder="Enter your password" required />
       </div>
-    
+      <!-- Confirm Password input -->
+      <div class="form-group mb-4">
+        <label class="form-label" for="CfmPassword">Confirmed Password (*):</label>
+        <input type="password" id="CfmPassword" class="form-control" placeholder="Enter your confirmed password"
+          required />
+      </div>
+  
       <!-- Checkbox -->
       <div class="form-check d-flex justify-content-center mb-4">
-        <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-        <label class="form-check-label" for="checkBox">
+        <input class="form-check-input mr-2" type="checkbox" id="" checked />
+        <label class="form-check-label" for="">
           Subscribe to our newsletter
         </label>
       </div>
-    
+  
       <!-- Submit button -->
       <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
-    
+  
       <!-- Register buttons -->
       <div class="text-center">
-        <p>or sign up with:</p>
+        <p>Or Sign Up with:</p>
         <button type="button" class="btn btn-primary btn-floating mx-1">
           <i class="fab fa-facebook-f"></i>
         </button>
-    
+  
         <button type="button" class="btn btn-primary btn-floating mx-1">
           <i class="fab fa-google"></i>
         </button>
-    
+  
         <button type="button" class="btn btn-primary btn-floating mx-1">
           <i class="fab fa-twitter"></i>
         </button>
-    
+  
         <button type="button" class="btn btn-primary btn-floating mx-1">
           <i class="fab fa-github"></i>
         </button>
       </div>
     </form>
-
-  </section>
-
-
 
     <!-- FOOTER -->
     <footer class="border bg-dark text-white">
@@ -339,7 +256,7 @@
 
       <!-- Section: Links  -->
       <section class="d-flex justify-content-center justify-content-lg-between p-2 border-bottom">
-        <div class="container text-center text-md-start mt-5">
+        <div class="container text-center text-md-start mt-3">
           <!-- Grid row -->
           <div class="row mt-3">
 
@@ -349,7 +266,7 @@
               <h6 class="mb-3">
                 <a href="#"><img src="./img/star-classes-4.png" width="200px" alt="logo-name"></a>
               </h6>
-              <p>
+              <p style="text-align:justify">
                 Whether you want to learn or to share what you know, you have come to the right place. As a global
                 destination for online learning, we connect people through knowledge.
               </p>
@@ -437,7 +354,9 @@
       <!-- Copyright and Time -->
     </footer>
   </main>
+
     <!-- Java Script -->
   
+    <!-- Java Script -->
 </body>
 </html>

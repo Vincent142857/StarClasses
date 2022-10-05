@@ -27,6 +27,9 @@
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
 
+  <!-- Anguler  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -163,7 +166,7 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand pl-sm-3" href="#">
+        <a class="navbar-brand pl-sm-3" href="index.html">
           <img src="/img/star-classes-4.png" style="width:150px;">
         </a>
         
@@ -216,13 +219,13 @@
 
             <!-- Sign in - dang nhap-->
             <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link" href="#">Sign in</a>
+              <a class="nav-link" href="SignIn.html">Sign in</a>
 
             </li>
 
             <!-- Sign up - dang ky -->
             <li class="nav-item col-12 col-sm-2">
-              <a class="nav-link" href="#">Sign up</a>
+              <a class="nav-link" href="SignUp.html">Sign up</a>
             </li>
 
             <!-- Visitor -->
@@ -241,7 +244,7 @@
     </nav>
   </header>
   <!-- Menu top -->
-  <main class="d-flex flex-column mt-4">
+  <main class="d-flex flex-column mt-4" ng-app="myApp" >
     <section class="d-block">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -251,34 +254,16 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./img/Clanguage.png" alt="C program" width="100%" height="500px">
-            <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Example headline.</h1>
-                <p>Introduce about subject. Introduce about subject. Introduce about subject. Introduce about subject. Introduce about subject.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-              </div>
-            </div>
+            <a href="#"><img src="./img/temp_Drawing.png" alt="Drawing" width="100%" height="600px"></a>
           </div>
+
           <div class="carousel-item">
-            <img src="./img/Advantage-and-Disadvantage-of-PHP.jpg" alt="php" width="100%" height="500px">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>Introduce about subject. Introduce about subject. Introduce about subject. Introduce about subject.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-              </div>
-            </div>
+            <a href="#">
+              <img src="./img/temp_JS.png" alt="JS" width="100%" height="600px"></a>
           </div>
+
           <div class="carousel-item">
-            <img src="./img/excel.png" alt="Excel" width="100%" height="500px">
-            <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>One more for good measure.</h1>
-                <p>Introduce about subject. Introduce about subject. Introduce about subject. Introduce about subject..</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-              </div>
-            </div>
+            <a href="#"><img src="./img/temp_PHP.png" alt="PHP" width="100%" height="600px"></a>
           </div>
         </div>
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -293,7 +278,7 @@
     </section>
 
     <!-- Wrap the rest of the page in another container to center all the content. -->
-      <div class="container border mb-md-4">
+      <div class="container mb-md-4" ng-controller="myController" >
         <!-- Tabs navs -->
         <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
           <li class="nav-item" role="presentation">
@@ -341,17 +326,85 @@
 
         <!-- Tabs content -->
         <div class="tab-content" id="ex2-content">
-          <div
-            class="tab-pane fade show active" id="ex7-tabs-1" role="tabpanel" aria-labelledby="ex7-tab-1">
-            Tab 1 content
+          <div class="tab-pane fade show active" id="ex7-tabs-1" role="tabpanel" aria-labelledby="ex7-tab-1">
+            <!-- All course -->
+            <div ng-repeat="x in list ">
+              <div class="col-12 p-2">
+                  <div class="d-flex flex-column height100">
+                    <div class="course-slider">
+                      <a class="d-md-flex text-reset" href="#" target="new">
+                        <div class="img-course p-2">
+                          <img src="{{x.Img}}" alt="" width="200px">
+                        </div>
+                        <div class="content p-2">
+                          <h3 class="title-course">{{x.NameCourse}}</h3>
+                          <div class="name-gv"><b>{{x.Teacher}}</b></div>
+                          <!-- rating -->
+                          <span class="star-rate">
+                            <i class="fa fa-star co-or" aria-hidden="true"></i>
+                            <i class="fa fa-star co-or" aria-hidden="true"></i>
+                            <i class="fa fa-star co-or" aria-hidden="true"></i>
+                            <i class="fa fa-star co-or" aria-hidden="true"></i>
+                            <i class="fa fa-star co-or" aria-hidden="true"></i>
+                            (368 ratings) 400 students
+                          </span>
+                          <!-- price -->
+                          <div class="price-course">
+                            <span class="price_sale">
+                               {{x.Price}}
+                            </span>
+                            <span class="price_origin">
+                              <del>{{x.PriceOld}}</del>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    
+                  </div>
+              </div>
+              <div class="w-100 d-sm-none"></div>
+            </div>
           </div>
-          <div
-            class="tab-pane fade"
-            id="ex7-tabs-2"
-            role="tabpanel"
-            aria-labelledby="ex7-tab-2"
-          >
-            Tab 2 content
+          <div class="tab-pane fade" id="ex7-tabs-2" role="tabpanel" aria-labelledby="ex7-tab-2">
+            <!-- Excel course -->
+            <div ng-repeat="x in list | filter: 'Excel'">
+              <div class="col-12 p-2">
+                  <div class="d-flex flex-column height100">
+                    <div class="course-slider">
+                      <a class="d-md-flex text-reset" href="#" target="new">
+                        <div class="img-course p-2">
+                          <img src="{{x.Img}}" alt="" width="200px">
+                        </div>
+                        <div class="content p-2">
+                          <h3 class="title-course">{{x.NameCourse}}</h3>
+                          <div class="name-gv"><b>{{x.Teacher}}</b></div>
+                          <!-- rating -->
+                          <span class="star-rate">
+                            <i class="fa fa-star co-or" aria-hidden="true"></i>
+                            <i class="fa fa-star co-or" aria-hidden="true"></i>
+                            <i class="fa fa-star co-or" aria-hidden="true"></i>
+                            <i class="fa fa-star co-or" aria-hidden="true"></i>
+                            <i class="fa fa-star co-or" aria-hidden="true"></i>
+                            (368 ratings) 400 students
+                          </span>
+                          <!-- price -->
+                          <div class="price-course">
+                            <span class="price_sale">
+                               {{x.Price}}
+                            </span>
+                            <span class="price_origin">
+                              <del>{{x.PriceOld}}</del>
+                            </span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    
+                  </div>
+              </div>
+              <div class="w-100 d-sm-none"></div>
+          </div>
           </div>
           <div
             class="tab-pane fade"
@@ -648,7 +701,12 @@
 
     <!-- Java Script -->
     <script>
-      
+      var app=angular.module("myApp",[])
+      app.controller("myController",function($scope, $http, $location){
+          $http.get("informationSubject.json").then(function(response){
+              $scope.list = response.data.informationSubject;
+          })
+      })
     </script>
     <!-- Java Script -->
 </body>
