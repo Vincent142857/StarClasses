@@ -153,6 +153,9 @@
       margin-left: -.5rem;
       padding: .2em .45em
     }
+    .BoxShow{
+      box-shadow: -2px -1px 7px rgba(86, 81, 81, 0.473);
+    }
     
   </style>
 
@@ -176,19 +179,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <!-- menu left -->
-          <ul class="navbar-nav mr-auto mb-2 m-md-0 col-12 col-sm-2">
+          <ul class="BoxShow navbar-nav mr-auto mb-2 m-md-0 col-12 col-sm-2">
             <li class="nav-item dropdown col-12 border border-warning rounded-pill text-center">
               <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown" aria-expanded="false">
                 <img src="./img/tutorialCut.png" style="width: 20px;"> Courses
               </a>
               <!-- Menu H2 -->
               <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="DropdownMenu">
-                <li><a href="#" class="dropdown-item px-5">Javascript</a></li>
-                <li><a href="#" class="dropdown-item px-5">CSS</a></li>
-                <li><a href="#" class="dropdown-item px-5">Bootstrap</a></li>
-                <li><a href="#" class="dropdown-item px-5">Excel</a></li>
                 <li><a href="#" class="dropdown-item px-5">Python</a></li>
-                <li><a href="#" class="dropdown-item px-5">C/C++</a></li>
+                <li><a href="#" class="dropdown-item px-5">Excel</a></li>
+                <li><a href="#" class="dropdown-item px-5">Web Development</a></li>
+                <li><a href="#" class="dropdown-item px-5">Javascript</a></li>
+                <li><a href="#" class="dropdown-item px-5">Data Science</a></li>
+                <li><a href="#" class="dropdown-item px-5">AWS Certification</a></li>
+                <li><a href="#" class="dropdown-item px-5">Drawing</a></li>
               </ul>
               <!-- Menu H2 -->
             </li>
@@ -280,7 +284,7 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
       <div class="container mb-md-4" ng-controller="myController" >
         <!-- Tabs navs -->
-        <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+        <ul class="BoxShow nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
           <li class="nav-item" role="presentation">
             <a class="nav-link active" id="ex7-tab-1" data-toggle="tab" href="#ex7-tabs-1" role="tab" aria-controls="ex7-tabs-1" aria-selected="true">
               All courses
@@ -288,163 +292,476 @@
           </li>
           <li class="nav-item" role="presentation">
             <a class="nav-link" id="ex7-tab-2" data-toggle="tab" href="#ex7-tabs-2" role="tab" aria-controls="ex7-tabs-2" aria-selected="false">
-              Excel
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link" id="ex7-tab-3" data-toggle="tab" href="#ex7-tabs-3" role="tab" aria-controls="ex7-tabs-3" aria-selected="false">
-              JavaScript
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link" id="ex7-tab-4" data-toggle="tab" href="#ex7-tabs-4" role="tab" aria-controls="ex7-tabs-4" aria-selected="false">
-              Bootstrap
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link" id="ex7-tab-5" data-toggle="tab" href="#ex7-tabs-5" role="tab" aria-controls="ex7-tabs-5" aria-selected="false">
-              Excel
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link" id="ex7-tab-6" data-toggle="tab" href="#ex7-tabs-6" role="tab" aria-controls="ex7-tabs-6" aria-selected="false">
               Python
             </a>
           </li>
           <li class="nav-item" role="presentation">
             <a
+              class="nav-link" id="ex7-tab-3" data-toggle="tab" href="#ex7-tabs-3" role="tab" aria-controls="ex7-tabs-3" aria-selected="false">
+              Excel
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link" id="ex7-tab-4" data-toggle="tab" href="#ex7-tabs-4" role="tab" aria-controls="ex7-tabs-4" aria-selected="false">
+              Web Development
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="ex7-tab-5" data-toggle="tab" href="#ex7-tabs-5" role="tab" aria-controls="ex7-tabs-5" aria-selected="false">
+              Data Science
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link" id="ex7-tab-6" data-toggle="tab" href="#ex7-tabs-6" role="tab" aria-controls="ex7-tabs-6" aria-selected="false">
+              Javascript
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
               class="nav-link" id="ex7-tab-7" data-toggle="tab" href="#ex7-tabs-7" role="tab" aria-controls="ex7-tabs-7" aria-selected="false">
-              C/C++
+              AWS Certification
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link" id="ex7-tab-8" data-toggle="tab" href="#ex7-tabs-8" role="tab" aria-controls="ex7-tabs-8" aria-selected="false">
+              Drawing
             </a>
           </li>
         </ul>
-        <!-- Tabs navs -->
-
         <!-- Tabs content -->
         <div class="tab-content" id="ex2-content">
-          <div class="tab-pane fade show active" id="ex7-tabs-1" role="tabpanel" aria-labelledby="ex7-tab-1">
+          <div  class="tab-pane fade show active" 
+                id="ex7-tabs-1" role="tabpanel" 
+                aria-labelledby="ex7-tab-1" 
+                data-spy="scroll" 
+                data-target="#myScrollspy" 
+                data-offset="10"
+                style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;">
             <!-- All course -->
-            <div ng-repeat="x in list ">
-              <div class="col-12 p-2">
-                  <div class="d-flex flex-column height100">
-                    <div class="course-slider">
-                      <a class="d-md-flex text-reset" href="#" target="new">
-                        <div class="img-course p-2">
-                          <img src="{{x.Img}}" alt="" width="200px">
-                        </div>
-                        <div class="content p-2">
-                          <h3 class="title-course">{{x.NameCourse}}</h3>
-                          <div class="name-gv"><b>{{x.Teacher}}</b></div>
-                          <!-- rating -->
-                          <span class="star-rate">
-                            <i class="fa fa-star co-or" aria-hidden="true"></i>
-                            <i class="fa fa-star co-or" aria-hidden="true"></i>
-                            <i class="fa fa-star co-or" aria-hidden="true"></i>
-                            <i class="fa fa-star co-or" aria-hidden="true"></i>
-                            <i class="fa fa-star co-or" aria-hidden="true"></i>
-                            (368 ratings) 400 students
-                          </span>
-                          <!-- price -->
-                          <div class="price-course">
-                            <span class="price_sale">
-                               {{x.Price}}
-                            </span>
-                            <span class="price_origin">
-                              <del>{{x.PriceOld}}</del>
+              <div ng-repeat="x in list ">
+                <div class="col-12 p-2">
+                    <div class="d-flex flex-column height100">
+                      <div class="course-slider">
+                        <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                          <!-- col-1 -->
+                          <div class="img-course col-12 col-sm-3 col-md-auto p-2">
+                            <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                          </div>
+                          <!-- col 2 -->
+                          <div class="content col-12 col-sm-6 p-2">
+                            <h3 class="title-course">{{x.NameCourse}}</h3>
+                            <p class="name-intro">{{x.Intro}}</p>
+                            <p class="name-gv"><b>{{x.Teacher}}</b></p>
+                          </div>
+                          <!-- col 3 -->
+                          <div class="text-left col-md-1 p-2">
+                            <!-- rating -->
+                            <span class="d-block">
+                              {{x.Rating}}
+                              <i class="fa fa-star text-warning"></i>
                             </span>
                           </div>
-                        </div>
-                      </a>
+                          <!-- col 4 -->
+                          <div class="col-md-1 text-primary p-2">
+                              <span class="d-block">
+                                <i class="fas fa-user-graduate"></i>
+                                {{x.QtyStudent}}
+                              </span>
+                          </div>
+                          <!-- price -->
+                          <div class="text-right col-1 p-2">
+                            <b class="text-success">{{x.PriceNew}}</b>
+                            <small class="text-danger">
+                              <del>{{x.PriceOld}}</del>
+                            </small>
+                          </div>
+                        </a>
+                      </div>
                     </div>
-                    
+                </div>
+                <div class="w-100 d-sm-none"></div>
+              </div>   
+          </div>
+          <div
+            class="tab-pane fade"
+            id="ex7-tabs-2"
+            role="tabpanel"
+            aria-labelledby="ex7-tab-2"
+            data-spy="scroll" 
+            data-target="#myScrollspy" 
+            data-offset="10"
+            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;"
+          >
+          <div ng-repeat="x in list|filter : 'SubjectPython' ">
+            <div class="col-12 p-2">
+                <div class="d-flex flex-column height100">
+                  <div class="course-slider">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                      <!-- col-1 -->
+                      <div class="img-course col-12 col-sm-3 col-md-auto p-2">
+                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                      </div>
+                      <!-- col 2 -->
+                      <div class="content col-12 col-sm-6 p-2">
+                        <h3 class="title-course">{{x.NameCourse}}</h3>
+                        <p class="name-intro">{{x.Intro}}</p>
+                        <p class="name-gv"><b>{{x.Teacher}}</b></p>
+                      </div>
+                      <!-- col 3 -->
+                      <div class="text-left col-md-1 p-2">
+                        <!-- rating -->
+                        <span class="d-block">
+                          {{x.Rating}}
+                          <i class="fa fa-star text-warning"></i>
+                        </span>
+                      </div>
+                      <!-- col 4 -->
+                      <div class="col-md-1 text-primary p-2">
+                          <span class="d-block">
+                            <i class="fas fa-user-graduate"></i>
+                            {{x.QtyStudent}}
+                          </span>
+                      </div>
+                      <!-- price -->
+                      <div class="text-right col-1 p-2">
+                        <b class="text-success">{{x.PriceNew}}</b>
+                        <small class="text-danger">
+                          <del>{{x.PriceOld}}</del>
+                        </small>
+                      </div>
+                    </a>
                   </div>
-              </div>
-              <div class="w-100 d-sm-none"></div>
+                </div>
             </div>
-          </div>
-          <div class="tab-pane fade" id="ex7-tabs-2" role="tabpanel" aria-labelledby="ex7-tab-2">
-            <!-- Excel course -->
-            <div ng-repeat="x in list | filter: 'Excel'">
-              <div class="col-12 p-2">
-                  <div class="d-flex flex-column height100">
-                    <div class="course-slider">
-                      <a class="d-md-flex text-reset" href="#" target="new">
-                        <div class="img-course p-2">
-                          <img src="{{x.Img}}" alt="" width="200px">
-                        </div>
-                        <div class="content p-2">
-                          <h3 class="title-course">{{x.NameCourse}}</h3>
-                          <div class="name-gv"><b>{{x.Teacher}}</b></div>
-                          <!-- rating -->
-                          <span class="star-rate">
-                            <i class="fa fa-star co-or" aria-hidden="true"></i>
-                            <i class="fa fa-star co-or" aria-hidden="true"></i>
-                            <i class="fa fa-star co-or" aria-hidden="true"></i>
-                            <i class="fa fa-star co-or" aria-hidden="true"></i>
-                            <i class="fa fa-star co-or" aria-hidden="true"></i>
-                            (368 ratings) 400 students
-                          </span>
-                          <!-- price -->
-                          <div class="price-course">
-                            <span class="price_sale">
-                               {{x.Price}}
-                            </span>
-                            <span class="price_origin">
-                              <del>{{x.PriceOld}}</del>
-                            </span>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                    
-                  </div>
-              </div>
-              <div class="w-100 d-sm-none"></div>
-          </div>
+            <div class="w-100 d-sm-none"></div>
+          </div>  
           </div>
           <div
             class="tab-pane fade"
             id="ex7-tabs-3"
             role="tabpanel"
             aria-labelledby="ex7-tab-3"
+            data-spy="scroll" 
+            data-target="#myScrollspy" 
+            data-offset="10"
+            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;"
           >
-            Tab 3 content
+          <div ng-repeat="x in list|filter : 'SubjectExcel' ">
+            <div class="col-12 p-2">
+                <div class="d-flex flex-column height100">
+                  <div class="course-slider">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                      <!-- col-1 -->
+                      <div class="img-course col-12 col-sm-3 col-md-auto p-2">
+                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                      </div>
+                      <!-- col 2 -->
+                      <div class="content col-12 col-sm-6 p-2">
+                        <h3 class="title-course">{{x.NameCourse}}</h3>
+                        <p class="name-intro">{{x.Intro}}</p>
+                        <p class="name-gv"><b>{{x.Teacher}}</b></p>
+                      </div>
+                      <!-- col 3 -->
+                      <div class="text-left col-md-1 p-2">
+                        <!-- rating -->
+                        <span class="d-block">
+                          {{x.Rating}}
+                          <i class="fa fa-star text-warning"></i>
+                        </span>
+                      </div>
+                      <!-- col 4 -->
+                      <div class="col-md-1 text-primary p-2">
+                          <span class="d-block">
+                            <i class="fas fa-user-graduate"></i>
+                            {{x.QtyStudent}}
+                          </span>
+                      </div>
+                      <!-- price -->
+                      <div class="text-right col-1 p-2">
+                        <b class="text-success">{{x.PriceNew}}</b>
+                        <small class="text-danger">
+                          <del>{{x.PriceOld}}</del>
+                        </small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="w-100 d-sm-none"></div>
+          </div>  
           </div>
           <div
             class="tab-pane fade"
             id="ex7-tabs-4"
             role="tabpanel"
-            aria-labelledby="ex7-tab-3"
+            aria-labelledby="ex7-tab-4"
+            data-spy="scroll" 
+            data-target="#myScrollspy" 
+            data-offset="10"
+            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;"
           >
-            Tab 4 content
+          <div ng-repeat="x in list|filter : 'SubjectWebDevelopment' ">
+            <div class="col-12 p-2">
+                <div class="d-flex flex-column height100">
+                  <div class="course-slider">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                      <!-- col-1 -->
+                      <div class="img-course col-12 col-sm-3 col-md-auto p-2">
+                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                      </div>
+                      <!-- col 2 -->
+                      <div class="content col-12 col-sm-6 p-2">
+                        <h3 class="title-course">{{x.NameCourse}}</h3>
+                        <p class="name-intro">{{x.Intro}}</p>
+                        <p class="name-gv"><b>{{x.Teacher}}</b></p>
+                      </div>
+                      <!-- col 3 -->
+                      <div class="text-left col-md-1 p-2">
+                        <!-- rating -->
+                        <span class="d-block">
+                          {{x.Rating}}
+                          <i class="fa fa-star text-warning"></i>
+                        </span>
+                      </div>
+                      <!-- col 4 -->
+                      <div class="col-md-1 text-primary p-2">
+                          <span class="d-block">
+                            <i class="fas fa-user-graduate"></i>
+                            {{x.QtyStudent}}
+                          </span>
+                      </div>
+                      <!-- price -->
+                      <div class="text-right col-1 p-2">
+                        <b class="text-success">{{x.PriceNew}}</b>
+                        <small class="text-danger">
+                          <del>{{x.PriceOld}}</del>
+                        </small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="w-100 d-sm-none"></div>
+          </div>  
           </div>
           <div
             class="tab-pane fade"
             id="ex7-tabs-5"
             role="tabpanel"
-            aria-labelledby="ex7-tab-3"
+            aria-labelledby="ex7-tab-5"
+            data-spy="scroll" 
+            data-target="#myScrollspy" 
+            data-offset="10"
+            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;"
           >
-            Tab 5 content
+          <div ng-repeat="x in list|filter : 'SubjectDataScience' ">
+            <div class="col-12 p-2">
+                <div class="d-flex flex-column height100">
+                  <div class="course-slider">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                      <!-- col-1 -->
+                      <div class="img-course col-12 col-sm-3 col-md-auto p-2">
+                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                      </div>
+                      <!-- col 2 -->
+                      <div class="content col-12 col-sm-6 p-2">
+                        <h3 class="title-course">{{x.NameCourse}}</h3>
+                        <p class="name-intro">{{x.Intro}}</p>
+                        <p class="name-gv"><b>{{x.Teacher}}</b></p>
+                      </div>
+                      <!-- col 3 -->
+                      <div class="text-left col-md-1 p-2">
+                        <!-- rating -->
+                        <span class="d-block">
+                          {{x.Rating}}
+                          <i class="fa fa-star text-warning"></i>
+                        </span>
+                      </div>
+                      <!-- col 4 -->
+                      <div class="col-md-1 text-primary p-2">
+                          <span class="d-block">
+                            <i class="fas fa-user-graduate"></i>
+                            {{x.QtyStudent}}
+                          </span>
+                      </div>
+                      <!-- price -->
+                      <div class="text-right col-1 p-2">
+                        <b class="text-success">{{x.PriceNew}}</b>
+                        <small class="text-danger">
+                          <del>{{x.PriceOld}}</del>
+                        </small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="w-100 d-sm-none"></div>
+          </div>  
           </div>
           <div
             class="tab-pane fade"
             id="ex7-tabs-6"
             role="tabpanel"
-            aria-labelledby="ex7-tab-3"
+            aria-labelledby="ex7-tab-6"
+            data-spy="scroll" 
+            data-target="#myScrollspy" 
+            data-offset="10"
+            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;"
           >
-            Tab 6 content
+          <div ng-repeat="x in list|filter : 'SubjectJavascript' ">
+            <div class="col-12 p-2">
+                <div class="d-flex flex-column height100">
+                  <div class="course-slider">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                      <!-- col-1 -->
+                      <div class="img-course col-12 col-sm-3 col-md-auto p-2">
+                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                      </div>
+                      <!-- col 2 -->
+                      <div class="content col-12 col-sm-6 p-2">
+                        <h3 class="title-course">{{x.NameCourse}}</h3>
+                        <p class="name-intro">{{x.Intro}}</p>
+                        <p class="name-gv"><b>{{x.Teacher}}</b></p>
+                      </div>
+                      <!-- col 3 -->
+                      <div class="text-left col-md-1 p-2">
+                        <!-- rating -->
+                        <span class="d-block">
+                          {{x.Rating}}
+                          <i class="fa fa-star text-warning"></i>
+                        </span>
+                      </div>
+                      <!-- col 4 -->
+                      <div class="col-md-1 text-primary p-2">
+                          <span class="d-block">
+                            <i class="fas fa-user-graduate"></i>
+                            {{x.QtyStudent}}
+                          </span>
+                      </div>
+                      <!-- price -->
+                      <div class="text-right col-1 p-2">
+                        <b class="text-success">{{x.PriceNew}}</b>
+                        <small class="text-danger">
+                          <del>{{x.PriceOld}}</del>
+                        </small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="w-100 d-sm-none"></div>
+          </div>  
           </div>
           <div
             class="tab-pane fade"
             id="ex7-tabs-7"
             role="tabpanel"
-            aria-labelledby="ex7-tab-3"
+            aria-labelledby="ex7-tab-7"
+            data-spy="scroll" 
+            data-target="#myScrollspy" 
+            data-offset="10"
+            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;"
           >
-            Tab 7 content
+          <div ng-repeat="x in list|filter : 'SubjectAWSCertification' ">
+            <div class="col-12 p-2">
+                <div class="d-flex flex-column height100">
+                  <div class="course-slider">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                      <!-- col-1 -->
+                      <div class="img-course col-12 col-sm-3 col-md-auto p-2">
+                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                      </div>
+                      <!-- col 2 -->
+                      <div class="content col-12 col-sm-6 p-2">
+                        <h3 class="title-course">{{x.NameCourse}}</h3>
+                        <p class="name-intro">{{x.Intro}}</p>
+                        <p class="name-gv"><b>{{x.Teacher}}</b></p>
+                      </div>
+                      <!-- col 3 -->
+                      <div class="text-left col-md-1 p-2">
+                        <!-- rating -->
+                        <span class="d-block">
+                          {{x.Rating}}
+                          <i class="fa fa-star text-warning"></i>
+                        </span>
+                      </div>
+                      <!-- col 4 -->
+                      <div class="col-md-1 text-primary p-2">
+                          <span class="d-block">
+                            <i class="fas fa-user-graduate"></i>
+                            {{x.QtyStudent}}
+                          </span>
+                      </div>
+                      <!-- price -->
+                      <div class="text-right col-1 p-2">
+                        <b class="text-success">{{x.PriceNew}}</b>
+                        <small class="text-danger">
+                          <del>{{x.PriceOld}}</del>
+                        </small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="w-100 d-sm-none"></div>
+          </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="ex7-tabs-8"
+            role="tabpanel"
+            aria-labelledby="ex7-tab-8"
+            data-spy="scroll" 
+            data-target="#myScrollspy" 
+            data-offset="10"
+            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;"
+          >
+          <div ng-repeat="x in list | filter: 'SubjectDrawing'">
+            <div class="col-12 p-2">
+                <div class="d-flex flex-column height100">
+                  <div class="course-slider">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                      <!-- col-1 -->
+                      <div class="img-course col-12 col-sm-3 col-md-auto p-2">
+                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                      </div>
+                      <!-- col 2 -->
+                      <div class="content col-12 col-sm-6 p-2">
+                        <h3 class="title-course">{{x.NameCourse}}</h3>
+                        <p class="name-intro">{{x.Intro}}</p>
+                        <p class="name-gv"><b>{{x.Teacher}}</b></p>
+                      </div>
+                      <!-- col 3 -->
+                      <div class="text-left col-md-1 p-2">
+                        <!-- rating -->
+                        <span class="d-block">
+                          {{x.Rating}}
+                          <i class="fa fa-star text-warning"></i>
+                        </span>
+                      </div>
+                      <!-- col 4 -->
+                      <div class="col-md-1 text-primary p-2">
+                          <span class="d-block">
+                            <i class="fas fa-user-graduate"></i>
+                            {{x.QtyStudent}}
+                          </span>
+                      </div>
+                      <!-- price -->
+                      <div class="text-right col-1 p-2">
+                        <b class="text-success">{{x.PriceNew}}</b>
+                        <small class="text-danger">
+                          <del>{{x.PriceOld}}</del>
+                        </small>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <div class="w-100 d-sm-none"></div>
+          </div>
           </div>
         </div>
         <!-- Tabs content -->
@@ -705,8 +1022,9 @@
       app.controller("myController",function($scope, $http, $location){
           $http.get("informationSubject.json").then(function(response){
               $scope.list = response.data.informationSubject;
-          })
-      })
+          });
+      });
+      
     </script>
     <!-- Java Script -->
 </body>
