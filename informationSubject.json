@@ -292,7 +292,7 @@
         {
             "ID": "EX04",
             "Subject":"SubjectWebDevelopment",
-            "Img":"./img/imgcourses/webdev04.webp",
+            "Img":"./img/imgcourses/webdev04.jpeg",
             "NameCourse":"Ultimate Web Designer & Web Developer Course", 
             "Intro":"Become a Full-Stack Web Designer in 2022 - Learn Everything from Web Design Fundamentals to Front-End Web Development",
             "Teacher":"Brad Hussey",
@@ -412,7 +412,7 @@
         {
             "ID":"DR07",
             "Subject":"SubjectDrawing",
-            "Img":"./img/imgcourses/drawing07.webp",
+            "Img":"./img/imgcourses/drawing07.jpeg",
             "NameCourse":"25 Days to Better Drawings", 
             "Intro":"The Core Concepts to Drawing - One Day at a Time.",
             "Teacher":"Matthew Fussell",
@@ -460,7 +460,7 @@
         {
             "ID":"AWS04",
             "Subject":"SubjectAWSCertification",
-            "Img":"./img/imgcourses/aws04.webp",
+            "Img":"./img/imgcourses/aws04.jpeg",
             "NameCourse":"Ultimate AWS Certified SysOps Administrator Associate 2022", 
             "Intro":"Full Practice Test with Explanations included! PASS the AWS Certified SysOps Administrator Associate SOA-C02 Exam.",
             "Teacher":"Stephane Maarek",
