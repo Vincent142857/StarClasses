@@ -215,7 +215,7 @@
             </li>
             <!-- shopping & payment -->
             <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link active text-sm-center p-2" aria-current="page" href="#">
+              <a class="nav-link active text-sm-center p-2" aria-current="page" href="ShoppingCart.html">
                 <span><i class="fa fa-shopping-cart fa-lg"></i></span>
                 <span class="badge rounded-pill badge-notification bg-danger">2</span>
               </a>
@@ -1019,9 +1019,9 @@
     <!-- Java Script -->
     <script>
       var app=angular.module("myApp",[])
-      app.controller("myController",function($scope, $http, $location){
+      app.controller("myController",function($rootScope, $http, $location){
           $http.get("informationSubject.json").then(function(response){
-              $scope.list = response.data.informationSubject;
+              $rootScope.list = response.data.informationSubject;
           });
       });
       
