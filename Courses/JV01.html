@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <!-- <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" /> -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="../MDB5/css/mdb.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: content-box;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .clearfix {
+      zoom: 1;
+    }
+
+    .clearfix:after {
+      clear: both;
+      content: ".";
+      display: block;
+      height: 0;
+      line-height: 0;
+      visibility: hidden;
+    }
+
+    .course-content .learning-list {
+      margin-bottom: 60px;
+    }
+
+    .course-content .learning-list li {
+      float: left;
+      width: 270px;
+      margin-bottom: 8px;
+      margin-right: 30px;
+    }
+
+    .course-content .learning-list li i {
+      color: #01bacf;
+      font-size: 14px;
+      margin-right: 7px;
+    }
+
+    .Cart {
+      margin: 10px;
+      padding: 10px;
+      border: 4px solid white;
+      border-radius: 30px;
+      z-index: 9999;
+      box-shadow: 2px 0px 10px black;
+      position: relative;
+      top: -80px;
+      /* left: 70%; */
+      background-color: white;
+      /* padding: 10px 20px; */
+      /* display: block; */
+    }
+    @media screen and (max-width: 800px){
+      .Cart {
+        top: 0;
+      }
+      
+    }
+    .Cart button {
+      font-size: large;
+    }
+    .Cart i {
+      margin-right: 10px;
+      padding-left: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Start your project here-->
+  <div class="container-fluid">
+    <!-- top courses -->
+    <div class="bg-dark p-3 text-light">
+      <small class="mb-5">
+        <a class="text-reset" href="">Home</a> &#62;
+        <a class="text-reset" href="">Javascript</a> &#62;
+        <a class="text-reset" href="">Javascript for Beginners</a>
+      </small>
+
+      <div class="d-flex flex-column mt-5 px-5">
+        <h1>Javascript for Beginners</h1>
+        <p>Learn javascript online and supercharge your web design with this Javascript for beginners training course.
+        </p>
+        <div class="name-gv"><b>Created by Dollar Design School</b></div>
+        <!-- rating -->
+        <span class="star-rate">
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          (368 ratings) 400 students
+        </span>
+        <p><small>Last update 10/2020</small></p>
+      </div>
+
+      <!-- Add to Cart -->
+      <div class="d-block float-md-end col-sm-auto m-1 col-md-4">
+        <div class="Cart bg-light border text-black p-4">
+          <img style="border-radius:10px;" src="../img/imgcourses/js01.png" alt="js01" width="100%">
+          <div class="text-center">
+            <p>
+            <h3 class="text-success">16,99 $US</h3>
+            <del class="text-danger">19,99 $US</del>
+            <small>15% Off</small>
+            </p>
+            <button class="m-2 col-10 btn btn-warning text-black">Add to cart</button>
+            <button class="m-2 col-10 btn text-light" style="background-color:lightslategray">Buy now</button>
+            <p class="text-center"><small>30-day money-back guarantee</small></p>
+          </div>
+
+          <h4>This course includes:</h4>
+          <div>
+            <p><i class="fas fa-video"></i> 2.5 hour video on demand</p>
+            <p><i class="far fa-file"></i> 1 article</p>
+            <p><i class="fas fa-file-download"></i> 1 downloadable resource</p>
+            <p><i class="fas fa-code"></i> 6 coding exercises</p>
+            <p><i class="fas fa-infinity"></i> Unlimited access </p>
+            <p><i class="fas fa-mobile-alt"></i> Mobile and TV access</p>
+            <p><i class="fas fa-trophy"></i> End of training certificate</p>
+          </div>
+          <h3>Do you train 5 or more people?</h3>
+          <p>Give your team members access to over 17,000 of the best courses anytime, anywhere.</p>
+        </div>
+        <!-- Add to Cart -->
+      </div>
+
+    </div>
+
+    <div class="d-flex flex-column col-auto border">
+      <!-- main course -->
+      <div class="p-3">
+        <!-- why -->
+        <div class="border p-3">
+          <h3>What you'll learn</h3>
+          <ul class="learning-list clearfix" style="text-align:justify">
+            <li><i class="fas fa-check"></i>
+              Extensive, informative and interesting video lecture</li>
+            <li><i class="fas fa-check"></i>
+              Lab Exercises</li>
+            <li>
+              <i class="fas fa-check"></i>
+              All Powerpoint Demonstrations Used in Course
+            </li>
+            <li>
+              <i class="fas fa-check"></i>
+              Coverage of all important primary Javascript concepts
+            </li>
+            <li>
+              <i class="fas fa-check"></i>
+              Complete Code demonstrated in lecture
+            </li>
+            <li>
+              <i class="fas fa-check"></i>
+              Lab Solution Sets
+            </li>
+            <li>
+              <i class="fas fa-check"></i>
+              Instructor contact Email for questions and clarifications
+            </li>
+          </ul>
+        </div>
+        <!-- Course content -->
+        <div class="course-content mt-4">
+          <section>
+            <h3>Course content</h3>
+            <small>13 sections - 48 lectures - 3h 2m total length</small>
+            <ul class="border px-5">
+              <li>Javascript for Beginners</li>
+              <li>Chapter 1: Hello Javascript</li>
+              <li>Chapter 2: Storing Information in Variables</li>
+              <li>Chapter 3: Conditional Statements</li>
+              <li>Chapter 4: Dialog Boxes</li>
+              <li>Chapter 5: Now We're Iterating! Loops in Javascript</li>
+              <li>Chapter 6: Coding Javascript Functions</li>
+              <li>Chapter 7: Working with Array</li>
+              <li>Chapter 8: The String Object</li>
+              <li>Chapter 9: Obtaining and Manipulating User Information</li>
+              <li>Chapter 10: The Document Object</li>
+              <li>Lab Solutions</li>
+              <li>Bonus Lecture</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Requirements</h4>
+            <p> Some basic knowledge of HTML is required for this course</p>
+          </section>
+          <section>
+            <h4>Who this course is for:</h4>
+            <ul>
+              <li>Web Designers looking to improve their skill set</li>
+              <li>Programmers who need to learn Javascript for their web applications</li>
+              <li>People looking to start programming and need a first programming language to learn</li>
+              <li>Students who want to learn Javascript</li>
+              <li>People who manage a web site as a volunteer or as a hobby
+              </li>
+              <li>Bloggers-- even if you use Wordpress or another CMS!</li>
+              <li>Anyone else who wants to learn Javascript</li>
+            </ul>
+          </section>
+          <!-- comment of student -->
+          <section>
+            <h4>
+              <i class="fa fa-star text-warning" aria-hidden="true"></i>
+              4.4 course rating. 1K ratings.
+            </h4>
+            <hr>
+
+            <form>
+              <label class="">Yours comment:</label>
+              <span class="d-inline-flex">
+                <i onclick="changeColor(this)" aria-hidden="true" class="fa fa-star"></i>
+                <i onclick="changeColor(this)" class="fa fa-star"></i>
+                <i onclick="changeColor(this)" class="fa fa-star"></i>
+                <i onclick="changeColor(this)" class="fa fa-star"></i>
+                <i onclick="changeColor(this)" class="fa fa-star"></i>
+
+                <script type="text/javascript">
+                  function changeColor(color) {
+                    if (color.style.color === 'rgb(68, 68, 68)') {
+                      // color.style.color = "#E4A11B";
+                      color.style.color = 'rgb(228,161,27)';
+                    }
+                    else {
+                      color.style.color = 'rgb(68, 68, 68)';
+                    }
+                  };
+              
+                </script>
+              </span>
+              <textarea class="form-contrpl col-12 p-2" name="comment" id="comment" cols="30" rows="5"></textarea>
+              <button class="btn btn-primary m-2" type="submit">Send</button>
+
+            </form>
+
+          </section>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- End your project here-->
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  
+</body>
+
+</html>
