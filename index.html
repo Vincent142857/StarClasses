@@ -1019,9 +1019,9 @@
     <!-- Java Script -->
     <script>
       var app=angular.module("myApp",[])
-      app.controller("myController",function($rootScope, $http, $location){
+      app.controller("myController",function($scope, $http, $location){
           $http.get("informationSubject.json").then(function(response){
-              $rootScope.list = response.data.informationSubject;
+              $scope.list = response.data.informationSubject;
           });
       });
       
