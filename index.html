@@ -31,6 +31,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
   <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
     .bd-placeholder-img {
       font-size: 1.125rem;
       text-anchor: middle;
@@ -54,7 +58,6 @@
       padding-top: 3rem;
       color: #5a5a5a;
     }
-
 
     /* CUSTOMIZE THE CAROUSEL
     -------------------------------------------- */
@@ -101,11 +104,8 @@
       margin-right: .75rem;
       margin-left: .75rem;
     }
-
-
     /* Featurettes
 ------------------------- */
-
     .featurette-divider {
       margin: 5rem 0;
       /* Space out the Bootstrap <hr> more */
@@ -122,14 +122,12 @@
 -------------------------------------------------- */
 
     @media (min-width: 40em) {
-
       /* Bump up size of carousel content */
       .carousel-caption p {
         margin-bottom: 1.25rem;
         font-size: 1.25rem;
         line-height: 1.4;
       }
-
       .featurette-heading {
         font-size: 50px;
       }
@@ -144,6 +142,7 @@
     .nav-link:hover,
     .dropdown-item:hover {
       color: #E4A11B !important;
+      cursor: pointer !important;
     }
 
     .badge-notification {
@@ -153,10 +152,22 @@
       margin-left: -.5rem;
       padding: .2em .45em
     }
-
+    
     .BoxShow {
       box-shadow: -2px -1px 7px rgba(86, 81, 81, 0.473);
+      position: static !important;
     }
+
+    .course-slider img{
+      border-radius: 20px !important;
+      border: 1px solid rgba(35, 34, 34, 0.5);
+      max-width: 100%;
+      max-height: 100%;
+      width: 300px;
+      height: 165px;
+    }
+    
+
   </style>
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
@@ -170,7 +181,6 @@
         <a class="navbar-brand pl-sm-3" href="index.html">
           <img src="./img/star-classes-4.png" style="width:150px;">
         </a>
-
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
@@ -218,20 +228,17 @@
                 <span class="badge rounded-pill badge-notification bg-danger">2</span>
               </a>
             </li>
-
-            <!-- Sign in - dang nhap-->
+            <!-- Sign in-->
             <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link" href="SignIn.html">Sign in</a>
-
+              <a class="nav-link" href="SignIn.html">Sign in
+              </a>
             </li>
-
-            <!-- Sign up - dang ky -->
+            <!-- Sign up -->
             <li class="nav-item col-12 col-sm-2">
               <a class="nav-link" href="SignUp.html">Sign up</a>
             </li>
-
             <!-- Visitor -->
-            <li class="nav-item col-sm-4">
+            <li class="nav-item col-12 col-sm-4">
               <div class="navbar-text text-light">
                 <img src="./img/star-classes-icon.png" width="35px" alt="icon">
                 Visitor: <i class="fas fa-users"></i>
@@ -280,8 +287,7 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-    </section>
-    <!--/1. Carousel -->
+    </section><!--/1. Carousel -->
 
     <!-- 2. All the content. -->
     <section class="container-fluid marketing">
@@ -334,25 +340,19 @@
               Drawing
             </a>
           </li>
-        </ul><!-- /2.1.1 Tabs navs -->
+        </ul><!-- /2.1.1 Tabs nav -->
         <!--2.2 Tabs content -->
         <div class="tab-content" id="ex2-content">
-          <div  class="tab-pane fade show active" 
-                id="ex7-tabs-1" role="tabpanel" 
-                aria-labelledby="ex7-tab-1" 
-                data-spy="scroll" 
-                data-target="#myScrollspy" 
-                data-offset="10"
-                style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;">
-            <!-- All course -->
+          <!--2.2.1 All course -->
+          <div class="tab-pane fade show active" id="ex7-tabs-1" role="tabpanel" aria-labelledby="ex7-tab-1" data-spy="scroll" data-target="#myScrollspy" data-offset="10" style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;">
               <div ng-repeat="x in list ">
                 <div class="col-12 p-2">
                     <div class="d-flex flex-column height100">
                       <div class="course-slider">
-                        <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
+                        <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                           <!-- col-1 -->
-                          <div class="img-course col-12 col-sm-3 col-md-auto p-2">
-                            <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                          <div class="img-course col-12 col-sm-6 col-md-auto p-2">
+                            <img src="{{x.Img}}" alt="">
                           </div>
                           <!-- col 2 -->
                           <div class="content col-12 col-sm-6 p-2">
@@ -361,88 +361,77 @@
                             <p class="name-gv"><b>{{x.Teacher}}</b></p>
                           </div>
                           <!-- col 3 -->
-                          <div class="text-left col-md-1 p-2">
-                            <!-- rating -->
-                            <span class="d-block">
-                              {{x.Rating}}
-                              <i class="fa fa-star text-warning"></i>
-                            </span>
-                          </div>
-                          <!-- col 4 -->
-                          <div class="col-md-1 text-primary p-2">
+                            <div class="text-left col-4 col-sm-1 p-2">
                               <span class="d-block">
-                                <i class="fas fa-user-graduate"></i>
-                                {{x.QtyStudent}}
+                                {{x.Rating}} <i class="fa fa-star text-warning"></i>
                               </span>
-                          </div>
-                          <!-- price -->
-                          <div class="text-right col-1 p-2">
-                            <b class="text-success">{{x.PriceNew}}</b>
-                            <small class="text-danger">
-                              <del>{{x.PriceOld}}</del>
-                            </small>
-                          </div>
+                            </div>
+                          <!-- col 4 -->
+                            <div class="col-4 col-sm-1 text-primary p-2">
+                                <span class="d-block">
+                                  <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
+                                </span>
+                            </div>
+                          <!-- col 5 -->
+                            <div class="text-right col-4 col-sm-1 p-2">
+                              <b class="text-success">{{x.PriceNew}}</b>
+                              <small class="text-danger">
+                                <del>{{x.PriceOld}}</del>
+                              </small>
+                            </div>
                         </a>
                       </div>
                     </div>
                 </div>
                 <div class="w-100 d-sm-none"></div>
               </div>   
-          </div>
-          <div
-            class="tab-pane fade"
-            id="ex7-tabs-2"
-            role="tabpanel"
-            aria-labelledby="ex7-tab-2"
-            data-spy="scroll" 
-            data-target="#myScrollspy" 
-            data-offset="10"
-            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;"
-          >
-          <div ng-repeat="x in list|filter : 'SubjectPython' ">
-            <div class="col-12 p-2">
-                <div class="d-flex flex-column height100">
-                  <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
-                      <!-- col-1 -->
-                      <div class="img-course col-12 col-sm-3 col-md-auto p-2">
-                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
-                      </div>
-                      <!-- col 2 -->
-                      <div class="content col-12 col-sm-6 p-2">
-                        <h3 class="title-course">{{x.NameCourse}}</h3>
-                        <p class="name-intro">{{x.Intro}}</p>
-                        <p class="name-gv"><b>{{x.Teacher}}</b></p>
-                      </div>
-                      <!-- col 3 -->
-                      <div class="text-left col-md-1 p-2">
-                        <!-- rating -->
-                        <span class="d-block">
-                          {{x.Rating}}
-                          <i class="fa fa-star text-warning"></i>
-                        </span>
-                      </div>
-                      <!-- col 4 -->
-                      <div class="col-md-1 text-primary p-2">
-                          <span class="d-block">
-                            <i class="fas fa-user-graduate"></i>
-                            {{x.QtyStudent}}
-                          </span>
-                      </div>
-                      <!-- price -->
-                      <div class="text-right col-1 p-2">
-                        <b class="text-success">{{x.PriceNew}}</b>
-                        <small class="text-danger">
-                          <del>{{x.PriceOld}}</del>
-                        </small>
-                      </div>
-                    </a>
+          </div><!--/2.2.1 All course -->
+          <!-- 2.2.2 Python -->
+          <div class="tab-pane fade" id="ex7-tabs-2" role="tabpanel" aria-labelledby="ex7-tab-2" data-spy="scroll" data-target="#myScrollspy" data-offset="10" 
+            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;">
+
+            <div ng-repeat="x in list|filter : 'SubjectPython' ">
+              <div class="col-12 p-2">
+                  <div class="d-flex flex-column height100">
+                    <div class="course-slider">
+                      <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
+                        <!-- col-1 -->
+                        <div class="img-course col-12 col-sm-4 col-md-auto p-2">
+                          <img src="{{x.Img}}" alt="">
+                        </div>
+                        <!-- col 2 -->
+                        <div class="content col-12 col-sm-6 p-2">
+                          <h3 class="title-course">{{x.NameCourse}}</h3>
+                          <p class="name-intro">{{x.Intro}}</p>
+                          <p class="name-gv"><b>{{x.Teacher}}</b></p>
+                        </div>
+                        <!-- col 3 -->
+                          <div class="text-left col-4 col-sm-1 p-2">
+                            <span class="d-block">
+                              {{x.Rating}} <i class="fa fa-star text-warning"></i>
+                            </span>
+                          </div>
+                        <!-- col 4 -->
+                          <div class="col-4 col-sm-1 text-primary p-2">
+                              <span class="d-block">
+                                <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
+                              </span>
+                          </div>
+                        <!-- col 5 -->
+                          <div class="text-right col-4 col-sm-1 p-2">
+                            <b class="text-success">{{x.PriceNew}}</b>
+                            <small class="text-danger">
+                              <del>{{x.PriceOld}}</del>
+                            </small>
+                          </div>
+                      </a>
+                    </div>
                   </div>
-                </div>
-            </div>
-            <div class="w-100 d-sm-none"></div>
-          </div>  
-          </div>
+              </div>
+              <div class="w-100 d-sm-none"></div>
+            </div>  
+          </div> <!-- /2.2.2 Python -->
+          <!--2.2.3 Excel -->
           <div
             class="tab-pane fade"
             id="ex7-tabs-3"
@@ -457,10 +446,10 @@
             <div class="col-12 p-2">
                 <div class="d-flex flex-column height100">
                   <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
+                    <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                       <!-- col-1 -->
-                      <div class="img-course col-12 col-sm-3 col-md-auto p-2">
-                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                      <div class="img-course col-12 col-sm-4 col-md-auto p-2">
+                        <img src="{{x.Img}}" alt="">
                       </div>
                       <!-- col 2 -->
                       <div class="content col-12 col-sm-6 p-2">
@@ -469,27 +458,24 @@
                         <p class="name-gv"><b>{{x.Teacher}}</b></p>
                       </div>
                       <!-- col 3 -->
-                      <div class="text-left col-md-1 p-2">
-                        <!-- rating -->
-                        <span class="d-block">
-                          {{x.Rating}}
-                          <i class="fa fa-star text-warning"></i>
-                        </span>
-                      </div>
-                      <!-- col 4 -->
-                      <div class="col-md-1 text-primary p-2">
+                        <div class="text-left col-4 col-sm-1 p-2">
                           <span class="d-block">
-                            <i class="fas fa-user-graduate"></i>
-                            {{x.QtyStudent}}
+                            {{x.Rating}} <i class="fa fa-star text-warning"></i>
                           </span>
-                      </div>
-                      <!-- price -->
-                      <div class="text-right col-1 p-2">
-                        <b class="text-success">{{x.PriceNew}}</b>
-                        <small class="text-danger">
-                          <del>{{x.PriceOld}}</del>
-                        </small>
-                      </div>
+                        </div>
+                      <!-- col 4 -->
+                        <div class="col-4 col-sm-1 text-primary p-2">
+                            <span class="d-block">
+                              <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
+                            </span>
+                        </div>
+                      <!-- col 5 -->
+                        <div class="text-right col-4 col-sm-1 p-2">
+                          <b class="text-success">{{x.PriceNew}}</b>
+                          <small class="text-danger">
+                            <del>{{x.PriceOld}}</del>
+                          </small>
+                        </div>
                     </a>
                   </div>
                 </div>
@@ -511,10 +497,10 @@
             <div class="col-12 p-2">
                 <div class="d-flex flex-column height100">
                   <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
+                    <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                       <!-- col-1 -->
-                      <div class="img-course col-12 col-sm-3 col-md-auto p-2">
-                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                      <div class="img-course col-12 col-sm-4 col-md-auto p-2">
+                        <img src="{{x.Img}}" alt="">
                       </div>
                       <!-- col 2 -->
                       <div class="content col-12 col-sm-6 p-2">
@@ -523,27 +509,24 @@
                         <p class="name-gv"><b>{{x.Teacher}}</b></p>
                       </div>
                       <!-- col 3 -->
-                      <div class="text-left col-md-1 p-2">
-                        <!-- rating -->
-                        <span class="d-block">
-                          {{x.Rating}}
-                          <i class="fa fa-star text-warning"></i>
-                        </span>
-                      </div>
-                      <!-- col 4 -->
-                      <div class="col-md-1 text-primary p-2">
+                        <div class="text-left col-4 col-sm-1 p-2">
                           <span class="d-block">
-                            <i class="fas fa-user-graduate"></i>
-                            {{x.QtyStudent}}
+                            {{x.Rating}} <i class="fa fa-star text-warning"></i>
                           </span>
-                      </div>
-                      <!-- price -->
-                      <div class="text-right col-1 p-2">
-                        <b class="text-success">{{x.PriceNew}}</b>
-                        <small class="text-danger">
-                          <del>{{x.PriceOld}}</del>
-                        </small>
-                      </div>
+                        </div>
+                      <!-- col 4 -->
+                        <div class="col-4 col-sm-1 text-primary p-2">
+                            <span class="d-block">
+                              <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
+                            </span>
+                        </div>
+                      <!-- col 5 -->
+                        <div class="text-right col-4 col-sm-1 p-2">
+                          <b class="text-success">{{x.PriceNew}}</b>
+                          <small class="text-danger">
+                            <del>{{x.PriceOld}}</del>
+                          </small>
+                        </div>
                     </a>
                   </div>
                 </div>
@@ -565,10 +548,10 @@
             <div class="col-12 p-2">
                 <div class="d-flex flex-column height100">
                   <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
+                    <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                       <!-- col-1 -->
-                      <div class="img-course col-12 col-sm-3 col-md-auto p-2">
-                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                      <div class="img-course col-12 col-sm-4 col-md-auto p-2">
+                        <img src="{{x.Img}}" alt="">
                       </div>
                       <!-- col 2 -->
                       <div class="content col-12 col-sm-6 p-2">
@@ -577,27 +560,24 @@
                         <p class="name-gv"><b>{{x.Teacher}}</b></p>
                       </div>
                       <!-- col 3 -->
-                      <div class="text-left col-md-1 p-2">
-                        <!-- rating -->
-                        <span class="d-block">
-                          {{x.Rating}}
-                          <i class="fa fa-star text-warning"></i>
-                        </span>
-                      </div>
-                      <!-- col 4 -->
-                      <div class="col-md-1 text-primary p-2">
+                        <div class="text-left col-4 col-sm-1 p-2">
                           <span class="d-block">
-                            <i class="fas fa-user-graduate"></i>
-                            {{x.QtyStudent}}
+                            {{x.Rating}} <i class="fa fa-star text-warning"></i>
                           </span>
-                      </div>
-                      <!-- price -->
-                      <div class="text-right col-1 p-2">
-                        <b class="text-success">{{x.PriceNew}}</b>
-                        <small class="text-danger">
-                          <del>{{x.PriceOld}}</del>
-                        </small>
-                      </div>
+                        </div>
+                      <!-- col 4 -->
+                        <div class="col-4 col-sm-1 text-primary p-2">
+                            <span class="d-block">
+                              <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
+                            </span>
+                        </div>
+                      <!-- col 5 -->
+                        <div class="text-right col-4 col-sm-1 p-2">
+                          <b class="text-success">{{x.PriceNew}}</b>
+                          <small class="text-danger">
+                            <del>{{x.PriceOld}}</del>
+                          </small>
+                        </div>
                     </a>
                   </div>
                 </div>
@@ -619,10 +599,10 @@
             <div class="col-12 p-2">
                 <div class="d-flex flex-column height100">
                   <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
+                    <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                       <!-- col-1 -->
-                      <div class="img-course col-12 col-sm-3 col-md-auto p-2">
-                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                      <div class="img-course col-12 col-sm-4 col-md-auto p-2">
+                        <img src="{{x.Img}}" alt="">
                       </div>
                       <!-- col 2 -->
                       <div class="content col-12 col-sm-6 p-2">
@@ -631,27 +611,24 @@
                         <p class="name-gv"><b>{{x.Teacher}}</b></p>
                       </div>
                       <!-- col 3 -->
-                      <div class="text-left col-md-1 p-2">
-                        <!-- rating -->
-                        <span class="d-block">
-                          {{x.Rating}}
-                          <i class="fa fa-star text-warning"></i>
-                        </span>
-                      </div>
-                      <!-- col 4 -->
-                      <div class="col-md-1 text-primary p-2">
+                        <div class="text-left col-4 col-sm-1 p-2">
                           <span class="d-block">
-                            <i class="fas fa-user-graduate"></i>
-                            {{x.QtyStudent}}
+                            {{x.Rating}} <i class="fa fa-star text-warning"></i>
                           </span>
-                      </div>
-                      <!-- price -->
-                      <div class="text-right col-1 p-2">
-                        <b class="text-success">{{x.PriceNew}}</b>
-                        <small class="text-danger">
-                          <del>{{x.PriceOld}}</del>
-                        </small>
-                      </div>
+                        </div>
+                      <!-- col 4 -->
+                        <div class="col-4 col-sm-1 text-primary p-2">
+                            <span class="d-block">
+                              <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
+                            </span>
+                        </div>
+                      <!-- col 5 -->
+                        <div class="text-right col-4 col-sm-1 p-2">
+                          <b class="text-success">{{x.PriceNew}}</b>
+                          <small class="text-danger">
+                            <del>{{x.PriceOld}}</del>
+                          </small>
+                        </div>
                     </a>
                   </div>
                 </div>
@@ -673,10 +650,10 @@
             <div class="col-12 p-2">
                 <div class="d-flex flex-column height100">
                   <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
+                    <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                       <!-- col-1 -->
-                      <div class="img-course col-12 col-sm-3 col-md-auto p-2">
-                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                      <div class="img-course col-12 col-sm-4 col-md-auto p-2">
+                        <img src="{{x.Img}}" alt="">
                       </div>
                       <!-- col 2 -->
                       <div class="content col-12 col-sm-6 p-2">
@@ -685,27 +662,24 @@
                         <p class="name-gv"><b>{{x.Teacher}}</b></p>
                       </div>
                       <!-- col 3 -->
-                      <div class="text-left col-md-1 p-2">
-                        <!-- rating -->
-                        <span class="d-block">
-                          {{x.Rating}}
-                          <i class="fa fa-star text-warning"></i>
-                        </span>
-                      </div>
-                      <!-- col 4 -->
-                      <div class="col-md-1 text-primary p-2">
+                        <div class="text-left col-4 col-sm-1 p-2">
                           <span class="d-block">
-                            <i class="fas fa-user-graduate"></i>
-                            {{x.QtyStudent}}
+                            {{x.Rating}} <i class="fa fa-star text-warning"></i>
                           </span>
-                      </div>
-                      <!-- price -->
-                      <div class="text-right col-1 p-2">
-                        <b class="text-success">{{x.PriceNew}}</b>
-                        <small class="text-danger">
-                          <del>{{x.PriceOld}}</del>
-                        </small>
-                      </div>
+                        </div>
+                      <!-- col 4 -->
+                        <div class="col-4 col-sm-1 text-primary p-2">
+                            <span class="d-block">
+                              <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
+                            </span>
+                        </div>
+                      <!-- col 5 -->
+                        <div class="text-right col-4 col-sm-1 p-2">
+                          <b class="text-success">{{x.PriceNew}}</b>
+                          <small class="text-danger">
+                            <del>{{x.PriceOld}}</del>
+                          </small>
+                        </div>
                     </a>
                   </div>
                 </div>
@@ -727,10 +701,10 @@
             <div class="col-12 p-2">
                 <div class="d-flex flex-column height100">
                   <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
+                    <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                       <!-- col-1 -->
-                      <div class="img-course col-12 col-sm-3 col-md-auto p-2">
-                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                      <div class="img-course col-12 col-sm-4 col-md-auto p-2">
+                        <img src="{{x.Img}}" alt="">
                       </div>
                       <!-- col 2 -->
                       <div class="content col-12 col-sm-6 p-2">
@@ -739,27 +713,24 @@
                         <p class="name-gv"><b>{{x.Teacher}}</b></p>
                       </div>
                       <!-- col 3 -->
-                      <div class="text-left col-md-1 p-2">
-                        <!-- rating -->
-                        <span class="d-block">
-                          {{x.Rating}}
-                          <i class="fa fa-star text-warning"></i>
-                        </span>
-                      </div>
-                      <!-- col 4 -->
-                      <div class="col-md-1 text-primary p-2">
+                        <div class="text-left col-4 col-sm-1 p-2">
                           <span class="d-block">
-                            <i class="fas fa-user-graduate"></i>
-                            {{x.QtyStudent}}
+                            {{x.Rating}} <i class="fa fa-star text-warning"></i>
                           </span>
-                      </div>
-                      <!-- price -->
-                      <div class="text-right col-1 p-2">
-                        <b class="text-success">{{x.PriceNew}}</b>
-                        <small class="text-danger">
-                          <del>{{x.PriceOld}}</del>
-                        </small>
-                      </div>
+                        </div>
+                      <!-- col 4 -->
+                        <div class="col-4 col-sm-1 text-primary p-2">
+                            <span class="d-block">
+                              <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
+                            </span>
+                        </div>
+                      <!-- col 5 -->
+                        <div class="text-right col-4 col-sm-1 p-2">
+                          <b class="text-success">{{x.PriceNew}}</b>
+                          <small class="text-danger">
+                            <del>{{x.PriceOld}}</del>
+                          </small>
+                        </div>
                     </a>
                   </div>
                 </div>
@@ -799,7 +770,7 @@
               src="./img/star-classes-icon.png" alt="picture">
 
             <h2>Read our blog</h2>
-            <p>Want to know what we’ve been up to lately? Check out the Udemy blog to get the scoop on the latest news,
+            <p>Want to know what we’ve been up to lately? Check out the Star Classes blog to get the scoop on the latest news,
               ideas and projects, and more.</p>
 
             <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
