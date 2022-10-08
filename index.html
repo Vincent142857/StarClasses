@@ -52,7 +52,6 @@
 
     body {
       padding-top: 3rem;
-      padding-bottom: 3rem;
       color: #5a5a5a;
     }
 
@@ -164,7 +163,7 @@
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="countVisitor()">
   <!-- Menu top -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -179,7 +178,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <!-- menu left -->
-          <ul class="BoxShow navbar-nav mr-auto mb-2 m-md-0 col-12 col-sm-2">
+          <ul class="navbar-nav mr-auto mb-2 m-md-0 col-12 col-sm-2">
             <li class="nav-item dropdown col-12 border border-warning rounded-pill text-center">
               <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown" aria-expanded="false">
                 <img src="./img/tutorialCut.png" style="width: 20px;"> Courses
@@ -199,11 +198,10 @@
 
           </ul>
           
-
           <!-- menu search -->
           <form class="d-flex input-group mx-sm-3 mb-2">
             <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
-            <button class="btn bg-light" type="submit">
+            <button class="btn bg-warning" type="submit">
               <!-- <b style="font-size: 20px;">&#x1F50D;</b> -->
               <i class="fas fa-search"></i>
             </button>
@@ -237,7 +235,9 @@
               <div class="navbar-text text-light">
                 <img src="./img/star-classes-icon.png" width="35px" alt="icon">
                 Visitor: <i class="fas fa-users"></i>
-                <span class="badge rounded-pill bg-danger">111</span>
+                <span class="badge rounded-pill bg-danger">
+                  <div id="visitor"></div>
+                </span>
               </div>
             </li>
             <!-- Visitor -->
@@ -280,9 +280,9 @@
         </a>
       </div>
     </section>
-
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-      <div class="container mb-md-4" ng-controller="myController" >
+    <div class="container marketing">
+    <!--  All the content. -->
+      <div class="container mb-md-4" ng-controller="myController">
         <!-- Tabs navs -->
         <ul class="BoxShow nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
           <li class="nav-item" role="presentation">
@@ -393,7 +393,7 @@
             data-spy="scroll" 
             data-target="#myScrollspy" 
             data-offset="10"
-            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;"
+            style="height:500; overflow-y:scroll; padding:5px; border:1px solid #ccc;"
           >
           <div ng-repeat="x in list|filter : 'SubjectPython' ">
             <div class="col-12 p-2">
@@ -615,10 +615,10 @@
             <div class="col-12 p-2">
                 <div class="d-flex flex-column height100">
                   <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/JV01.html" target="new">
                       <!-- col-1 -->
                       <div class="img-course col-12 col-sm-3 col-md-auto p-2">
-                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
+                        <img src="{{x.Img}}" alt="course" width="200px" height="165px">
                       </div>
                       <!-- col 2 -->
                       <div class="content col-12 col-sm-6 p-2">
@@ -766,52 +766,38 @@
         </div>
         <!-- Tabs content -->
       </div>
+      
 
     <div class="container marketing">
-
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-            aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-          </svg> -->
+          <img class="bd-placeholder-img rounded-circle border" width="140" height="140" src="./img/star-classes-icon.png" alt="picture">
 
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-            vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna.</p>
+          <h2>Work with us</h2>
+          <p>At Star Classes, we’re all learners and instructors. We live out our values every day to create a culture that is diverse, inclusive, and committed to helping employees thrive.</p>
+
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        
+        <div class="col-lg-4">
+          <img class="bd-placeholder-img rounded-circle border" width="140" height="140" src="./img/star-classes-icon.png" alt="picture">
+
+          <h2>See our research</h2>
+          <p>We’re committed to improving lives through learning. Dig into our original research to learn about the forces that are shaping the modern workplace.</p>
+
           <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-            aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-          </svg> -->
+          <img class="bd-placeholder-img rounded-circle border" width="140" height="140" src="./img/star-classes-icon.png" alt="picture">
 
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-            mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-            condimentum nibh.</p>
+          <h2>Read our blog</h2>
+          <p>Want to know what we’ve been up to lately? Check out the Udemy blog to get the scoop on the latest news, ideas and projects, and more.</p>
+
           <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-            aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-          </svg> -->
 
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-            felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-            massa justo sit amet risus.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
-
 
       <!-- START THE FEATURETTES -->
 
@@ -819,20 +805,12 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span>
-          </h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-            semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-            commodo.</p>
+          <h2 class="featurette-heading">Become an instructor</h2>
+          <p class="lead">Instructors from around the world teach millions of students on Star Classes. We provide the tools and skills to teach what you love.</p>
         </div>
         <div class="col-md-5">
-          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-            height="500" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: 500x500"
-            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-          </svg> -->
-
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+          height="500" src="https://i0.wp.com/chame.rmit.edu.vn/wp-content/uploads/2020/09/MG_8964.jpg?resize=560%2C416&ssl=1" alt="picture">
         </div>
       </div>
 
@@ -840,19 +818,12 @@
 
       <div class="row featurette">
         <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-            semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-            commodo.</p>
+          <h2 class="featurette-heading">Star Classes</h2>
+          <p class="lead">Get unlimited access to 1,700+ of Star Classes’s top courses for your team. Learn and improve skills across business, tech, design, and more.</p>
         </div>
         <div class="col-md-5 order-md-1">
-          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-            height="500" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: 500x500"
-            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-          </svg> -->
-
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+          height="500" src="https://glints.com/vn/blog/wp-content/uploads/2022/06/it-la-lam-gi.jpg" alt="picture">
         </div>
       </div>
 
@@ -860,19 +831,12 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-            semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-            commodo.</p>
+          <h2 class="featurette-heading">Transform your life through education</h2>
+          <p class="lead">Learners around the world are launching new careers, advancing in their fields, and enriching their lives.</p>
         </div>
         <div class="col-md-5">
-          <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-            height="500" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: 500x500"
-            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-          </svg> -->
-
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+          height="500" src="https://cdn.vungoi.vn/vungoi/1541393463543_truong.jpg" alt="picture">
         </div>
       </div>
 
@@ -882,139 +846,133 @@
 
     </div><!-- /.container -->
 
-
-    <!-- FOOTER -->
-    <footer class="border bg-dark text-white">
-      <!-- Section: Social media -->
-      <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
-        </div>
-        <!-- Left -->
-
-        <!-- Right -->
-        <div>
-          <a href="" class="me-4 link-secondary">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="" class="me-4 link-secondary">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="me-4 link-secondary">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="" class="me-4 link-secondary">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="me-4 link-secondary">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </div>
-        <!-- Right -->
-      </section>
-      <!-- Section: Social media -->
-
-      <!-- Section: Links  -->
-      <section class="d-flex justify-content-center justify-content-lg-between p-2 border-bottom">
-        <div class="container text-center text-md-start mt-3">
-          <!-- Grid row -->
-          <div class="row mt-3">
-
-            <!-- Grid column -->
-            <div class="col-md-3 mx-auto mb-4">
-              <!-- Content -->
-              <h6 class="mb-3">
-                <a href="#"><img src="./img/star-classes-4.png" width="200px" alt="logo-name"></a>
-              </h6>
-              <p style="text-align:justify">
-                Whether you want to learn or to share what you know, you have come to the right place. As a global
-                destination for online learning, we connect people through knowledge.
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Star Classes</h6>
-              <p>
-                <a href="#!" class="text-reset">Courses Classes</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Featured topics</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Sitemap</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Support</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Policy</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Payment</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Help</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-3 mx-auto mb-md-0 mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
-              <p>
-                <i class="fas fa-home me-3 text-secondary"></i>
-                590, CMT8, HCM City, VN
-              </p>
-              <p>
-                <i class="fas fa-envelope me-3 text-secondary"></i>
-                <a href="mailto:info@estarclasses.edu.com" class="text-rest text-white">info@starclasses.edu.com</a>
-              </p>
-              <p>
-                <i class="fas fa-phone me-3 text-secondary"></i>
-                 + 84 234 567 890
-                </p>
-              <p>
-                <i class="fas fa-print me-3 text-secondary"></i>
-                 + 84 234 567 890
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
-              <!-- GeoLocation API (GoogleMaps)-->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s" width="300" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <!-- Grid column -->
-          </div>
-          <!-- Grid row -->
-        </div>
-      </section>
-      <!-- Section: Links  -->
-
-      <!-- Copyright and Time -->
-      <section class="d-flex justify-content-between p-2 border-bottom">
-        <div class="me-5 d-none d-lg-block pl-2">&copy; 2022 Star Classes</div>
-        <div class="ms-5 d-none d-lg-block">
-          <!-- Display current date, time -->
-          <div class="time" id="time">
-            <script>
-              var time = document.getElementById("time").innerHTML;
-              var today = new Date();
-              time = document.write("Current: " + today);
-            </script>
-          </div>
-          <!-- Display current date, time -->
-        </div>
-      </section>
-      <!-- Copyright and Time -->
-    </footer>
   </main>
+
+  <!-- FOOTER -->
+  <footer class="border bg-dark text-white">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-2 border-bottom">
+      <div class="container text-center text-md-start mt-3">
+        <!-- Grid row -->
+        <div class="row mt-3">
+
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="mb-3">
+              <a href="#"><img src="./img/star-classes-4.png" width="200px" alt="logo-name"></a>
+            </h6>
+            <p style="text-align:justify">
+              Whether you want to learn or to share what you know, you have come to the right place. As a global
+              destination for online learning, we connect people through knowledge.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Star Classes</h6>
+            <p>
+              <a href="#!" class="text-reset">Courses Classes</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Support</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Policy</a>
+            </p>
+            <p>
+              <a href="ShoppingCart.html" class="text-reset">Shopping Cart</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
+            <p>
+              <i class="fas fa-home me-3 text-secondary"></i>
+              590, CMT8, HCM City, VN
+            </p>
+            <p>
+              <i class="fas fa-envelope me-3 text-secondary"></i>
+              <a href="mailto:info@estarclasses.edu.com" class="text-rest text-white">info@starclasses.edu.com</a>
+            </p>
+            <p>
+              <i class="fas fa-phone me-3 text-secondary"></i>
+               + 84 234 567 890
+              </p>
+            <p>
+              <i class="fas fa-print me-3 text-secondary"></i>
+               + 84 234 567 890
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
+            <!-- GeoLocation API (GoogleMaps)-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s" width="300" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright and Time -->
+    <section class="d-flex justify-content-between p-2 border-bottom">
+      <div class="mr-5 d-none d-lg-block pl-2">&copy; 2022 Star Classes</div>
+      <div class="ml-5 d-none d-lg-block">
+        <!-- Display current date, time -->
+        <div class="time" id="time">
+          <script>
+            var time = document.getElementById("time").innerHTML;
+            var today = new Date();
+            time = document.write("Current: " + today);
+          </script>
+        </div>
+        <!-- Display current date, time -->
+      </div>
+    </section>
+    <!-- Copyright and Time -->
+  </footer>
 
     <!-- Java Script -->
     <script>
@@ -1025,6 +983,19 @@
           });
       });
       
+      //** Count Visitor ** 
+      function countVisitor() {
+        if (typeof(Storage) !== "undefined") {
+          if (localStorage.countV) {
+            localStorage.countV = Number(localStorage.countV)+1;
+          } else {
+            localStorage.countV = 1;
+          }
+          document.getElementById("visitor").innerHTML = localStorage.countV;
+        } else {
+          document.getElementById("visitor").innerHTML = 0;
+        }
+      } 
     </script>
     <!-- Java Script -->
 </body>

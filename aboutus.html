@@ -156,7 +156,22 @@
     .BoxShow{
       box-shadow: -2px -1px 7px rgba(86, 81, 81, 0.473);
     }
-    
+    .About1 h1{
+        position:absolute;
+        top:150px;
+        left:30px;
+        font-size: 60px;
+        font-family: 'Times New Roman', Times, serif;
+        z-index: 1000;
+        color: white;
+        line-height: 1.5em;
+    }
+    .Welcome{
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        margin-top: 2px;
+    }
   </style>
 
 
@@ -165,7 +180,7 @@
 </head>
 
 <body>
-  <!-- Menu top -->
+  <!-- Menu top --> 
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
@@ -248,30 +263,54 @@
     </nav>
   </header>
   <!-- Menu top -->
-  <main class="d-flex flex-column mt-4" ng-app="myApp" >
+  <main class="d-flex flex-column mt-2" ng-app="myApp">
+
+    <div class="About1">
+    <p><h1>We share<br>Knowledge<br> with the world</h1></p>
+    <img src="./img/about.png" alt="" width="100%" height="450px">
+    </div>
+    <div class="bg-warning text-center Welcome">
+        Welcome to Star Classes
+    </div>
+    <div class="text-center"> 
+        <p class="">
+            <h3>Improving lives through learning</h3>
+        </p>
+        <p>Whether you want to learn or to share what you know, you’ve come to the right place.<br>
+            As a global destination for online learning, we connect people through knowledge.</p>    
+    </div>
+    <section class="d-block">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="#"><img src="./img/temp_Drawing.png" alt="Drawing" width="100%" height="600px"></a>
+            </div>
   
-    <p>Checkout</p>
-    <p>Billing Address</p>
-    <p>Country
-      <select name="" id="">
-        <option value="">American</option>
-        <option value="">China</option>
-        <option value="">Indian</option>
-        <option value="">VietNamese</option>
-        <option value=""></option>
-      </select>
-    </p>
-    <small>Star Classes is required by law to collect applicable transaction taxes for purchases made in certain tax jurisdictions.</small>
-    <p>Payment Method</p>
-    <p>Secured connection</p>
-    <b>Phuong thuc thanh toan</b>
-    
-   
-
-
-
-
+            <div class="carousel-item">
+              <a href="#">
+                <img src="./img/temp_JS.png" alt="JS" width="100%" height="600px"></a>
+            </div>
   
+            <div class="carousel-item">
+              <a href="#"><img src="./img/temp_PHP.png" alt="PHP" width="100%" height="600px"></a>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="border bg-dark text-white">
       <!-- Section: Social media -->
