@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Star Classes</title>
+  <!-- MDB icon -->
+  <!-- <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" /> -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="../MDB5/css/mdb.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: content-box;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .clearfix {
+      zoom: 1;
+    }
+
+    .clearfix:after {
+      clear: both;
+      content: ".";
+      display: block;
+      height: 0;
+      line-height: 0;
+      visibility: hidden;
+    }
+
+    .course-content .learning-list {
+      margin-bottom: 60px;
+    }
+
+    .course-content .learning-list li {
+      float: left;
+      width: 270px;
+      margin-bottom: 8px;
+      margin-right: 30px;
+    }
+
+    .course-content .learning-list li i {
+      color: #01bacf;
+      font-size: 14px;
+      margin-right: 7px;
+    }
+
+    .Cart {
+      margin: 10px;
+      padding: 10px;
+      border: 4px solid white;
+      border-radius: 30px;
+      z-index: 9999;
+      box-shadow: 2px 0px 10px black;
+      position: relative;
+      top: -80px;
+      /* left: 70%; */
+      background-color: white;
+      /* padding: 10px 20px; */
+      /* display: block; */
+    }
+    @media screen and (max-width: 800px){
+      .Cart {
+        top: 0;
+      }
+      
+    }
+    .Cart button {
+      font-size: large;
+    }
+    .Cart i {
+      margin-right: 10px;
+      padding-left: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Start your project here-->
+  <div class="container-fluid">
+    <!-- top courses -->
+    <div class="bg-dark p-3 text-light">
+      <small class="mb-5">
+        <a class="text-reset" href="../index.html">Home</a> &#62;
+        <a class="text-reset" href="../index.html#ex7-tab-6">Python</a> &#62;
+        <a class="text-reset" href="JV01.html">Programming Languages</a>
+      </small>
+
+      <div class="d-flex flex-column mt-5 px-5">
+        <h1>Learn to Code with Python</h1>
+        <p>The complete Python bootcamp for 2022. Learn Python 3 from beginner to expert. Build complete Python applications.
+        </p>
+        <div class="name-gv"><b>Created by Dollar Design School</b></div>
+        <!-- rating -->
+        <span class="star-rate">
+          4.8
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          (4,524 ratings) 68,943 students
+        </span>
+        <p><small>Last update 10/2020</small></p>
+      </div>
+
+      <!-- Add to Cart -->
+      <div class="d-block float-md-end col-sm-auto m-1 col-md-4">
+        <div class="Cart bg-light border text-black p-4">
+          <img style="border-radius:10px;" src="../img/imgcourses/" alt="js01" width="100%">
+          <div class="text-center">
+            <p>
+            <h3 class="text-success">13,99 $US</h3>
+            <del class="text-danger">84,99 $US</del>
+            <small>84% Off</small>
+            </p>
+
+            <div class="mx-4">
+              <button class="m-2 col-9 btn btn-warning text-black">Add to cart</button>
+              <button class="m-2 col-9 btn text-light" style="background-color:lightslategray">Buy now</button>
+            </div>
+
+            <p class="text-center"><small>30-day money-back guarantee</small></p>
+          </div>
+
+          <h4>This course includes:</h4>
+          <div>
+            4.5
+            <p><i class="fas fa-video"></i> 58 hour video on demand</p>
+            <p><i class="far fa-file"></i> 6 article</p>
+            <p><i class="fas fa-code"></i> 64 coding exercises</p>
+            <p><i class="fas fa-infinity"></i> Unlimited access </p>
+            <p><i class="fas fa-mobile-alt"></i> Mobile and TV access</p>
+            <p><i class="fas fa-trophy"></i> End of training certificate</p>
+          </div>
+          <h3>Do you train 5 or more people?</h3>
+          <p>Give your team members access to over 17,000 of the best courses anytime, anywhere.</p>
+        </div>
+        <!-- Add to Cart -->
+      </div>
+
+    </div>
+
+    <div class="d-flex flex-column col-auto">
+      <!-- main course -->
+      <div class="p-3">
+        <!-- why -->
+        <div class="border p-3">
+          <h3>What you'll learn</h3>
+          <ul class="learning-list clearfix" style="text-align:justify">
+            <li><i class="fas fa-check"></i> Master programming in Python, a popular language that powers codebases in tech companies like Instagram, Pinterest, Dropbox and more
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Apply your knowledge to solve common interview questions, algorithms and coding challenges
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Progress from core language fundamentals to advanced features like classes, decorators and unit testing
+  
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Dive into the mechanics of Python's data structures including strings, lists, dictionaries, tuples, and sets
+            </li>
+            <li>
+              <i class="fas fa-check"></i>Explore a dynamic curriculum with videos, quizzes, written assignments, in-browser coding challenges and more
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Build complete projects including card games, web scraping tools, and more!
+            </li>
+          </ul>
+        </div>
+        <!-- Course content -->
+        <div class="course-content mt-4">
+          <section>
+            <h3>Course content</h3>
+            <small>36 sections • 412 lectures • 58h 3m total length</small>
+        <ul>
+          <li>Chapter 1: Setup & Introduction </li>
+          <li>Chapter 2: Welcome to Python</li>
+          <li>Chapter 3: Number, Booleans and Equality</li>
+          <li>Chapter 4: Variables</li>
+          <li>Chapter 5: Functions</li>
+          <li>Chapter 6: Strings: The Basics</li>
+          <li>Chapter 7: Strings: Methods</li>
+          <li>Chapter 8: Control Flow</li>
+          <li>Chapter 9: Lists: The Basics</li>
+          <li>Chapter 10: Lists: Iteration</li>
+          <li>Chapter 11: Debugging</li>
+          <li>Chapter 12: Lists: Mutation</li>
+          <li>Chapter 13: Lists: Methods</li>
+          <li>Chapter 14: Built-in Function</li>
+          <li>Chapter 15: Tuples</li>
+          <li>Chapter 16: Objects and References</li>
+          <li>Chapter 17: Dictionaries: The Basics</li>
+          <li>Chapter 18: Dictionaries: Iteration</li>
+          <li>Chapter 19: Sets</li>
+          <li>Chapter 20: Modules</li>
+          <li>Chapter 21: Reading from and Writing to Files</li>
+          <li>Chapter 21: Decorators</li>
+          <li>Chapter 22: Classes: The Basics</li>
+          <li>Chapter 23: Classes: Attributes and Methods</li>
+          <li>Chapter 24: Classes: Magic Methods</li>
+          <li>Chapter 25: Classes: Inheritence</li>
+          <li>Chapter 26: Classes: Handling</li>
+          <li>Chapter 27: Dates and Time</li>
+          <li>Chapter 28: The random Module</li>
+          <li>Chapter 29: Testing Code: The Basics</li>
+          <li>Chapter 30: Testing Code: Mocking</li>
+          <li>Chapter 31: PROJECT: Texas Hold'em Poker</li>
+          <li>Chapter 32: Regular Expressions (RegEx)</li>
+          <li>Chapter 33: Virtual Environments</li>
+          <li>Chapter 34: Web Scraping with Scrapy</li>
+          <li>Chapter 35:Conclusion</li>         
+        </ul>
+          </section>
+          <section>
+            <h4>Requirements</h4>
+            <li>A Windows, MacOS, or Linux computer.</li>
+            <li>An Internet connection</li>
+            <li>A modern text editor (Visual Studio Code is installed and used in the course)</li>
+            <li>Persistence and dedication!</li>
+          </section>
+          <section>
+            <h4>Who this course is for:</h4>
+            <ul>
+              <li>New developers eager to tackle a powerful but simple programming language</li>
+              <li>Existing programmers looking to learn Python, the world's most popular programming language</li>
+              <li>Anyone eager to learn the most in-demand skill set of the 21st century!</li>
+            </ul>
+          </section>
+          <!-- comment of student -->
+          <section>
+            <h4>
+              <i class="fa fa-star text-warning" aria-hidden="true"></i>
+              4.8 course rating. 1K ratings.
+            </h4>
+            <hr>
+
+            <form>
+              <label class="">Yours comment:</label>
+              <span class="d-inline-flex">
+                <i onclick="changeColor(this)" aria-hidden="true" class="fa fa-star"></i>
+                <i onclick="changeColor(this)" class="fa fa-star"></i>
+                <i onclick="changeColor(this)" class="fa fa-star"></i>
+                <i onclick="changeColor(this)" class="fa fa-star"></i>
+                <i onclick="changeColor(this)" class="fa fa-star"></i>
+              </span>
+
+              <div class="form-group m-2">
+                <label for="">Your name:</label>
+                <input class="form-control" type="text" placeholder="Enter your name">
+              </div>
+              <textarea class="form-control col-12 m-2 p-2" name="comment" id="comment" cols="30" rows="5" placeholder="Enter your comment"></textarea>
+              <button class="btn btn-primary m-2" type="submit">Send</button>
+            </form>
+            <hr>
+            <div class="form-group m-3">
+              <div>result of name</div>
+              <div>result of enter comment</div>
+            </div>
+          </section>
+          <!-- History comment -->
+          <section class="container">
+            <section class="d-flex row border-top m-2">
+              <div class="avatar border col-auto">
+                <img style="border-radius:50%" src="../img/logo.png" width="10%" alt="avatar">
+              </div>
+              <div class="d-flex row col-10 border">
+                <h4>
+                  Sven R.</h4>
+                <!-- rating -->
+                <span class="star-rate">
+                  4.6
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                </span>
+                <p>Very comprehensive course. I also like that it uses Test-Driven-Development. Very few people do that, everybody should.
+
+                  Thank you.</p>              
+                <small class="d-block">
+                  Help ?
+                  <i onclick="changeColor(this)" class="fas fa-thumbs-up ml-3"></i>
+                  <i onclick="changeColor(this)" class="fas fa-thumbs-down ml-3"></i>
+                  
+                </small>
+              </div>
+            </section>
+          </section>
+          <section class="container">
+            <section class="d-flex row border-top m-2">
+              <div class="avatar border col-auto">
+                <img style="border-radius:50%" src="../img/logo.png" width="10%" alt="avatar">
+              </div>
+              <div class="d-flex row col-10 border">
+                <h4>
+                  Brian</h4>
+                  
+                <!-- rating -->
+                <span class="star-rate">
+                  4.8
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                </span>
+                <p>Good so far going through the basics with clear explanations and examples. Just wish the tests were harder and we had more coding problems/assignments.</p>                                 
+                <small class="d-block">
+                  Help ?
+                  <i onclick="changeColor(this)" class="fas fa-thumbs-up ml-3"></i>
+                  <i onclick="changeColor(this)" class="fas fa-thumbs-down ml-3"></i>
+                  
+                </small>
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- End your project here-->
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript">
+    function changeColor(color) {
+      if (color.style.color === 'rgb(68, 68, 68)') {
+        // color.style.color = "#E4A11B";
+        color.style.color = 'rgb(228,161,27)';
+      }
+      else {
+        color.style.color = 'rgb(68, 68, 68)';
+      }
+    };
+
+  </script>
+</body>
+
+</html>

@@ -27,9 +27,9 @@
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
 
-  <!-- Anguler  -->
+  <!-- Angular  -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-  <script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -141,7 +141,8 @@
       }
     }
 
-    .nav-link:hover, .dropdown-item:hover {
+    .nav-link:hover,
+    .dropdown-item:hover {
       color: #E4A11B !important;
     }
 
@@ -152,10 +153,10 @@
       margin-left: -.5rem;
       padding: .2em .45em
     }
-    .BoxShow{
+
+    .BoxShow {
       box-shadow: -2px -1px 7px rgba(86, 81, 81, 0.473);
     }
-    
   </style>
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
@@ -169,7 +170,7 @@
         <a class="navbar-brand pl-sm-3" href="index.html">
           <img src="./img/star-classes-4.png" style="width:150px;">
         </a>
-        
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
@@ -178,7 +179,8 @@
           <!-- menu left -->
           <ul class="navbar-nav mr-auto mb-2 m-md-0 col-12 col-sm-2">
             <li class="nav-item dropdown col-12 border border-warning rounded-pill text-center">
-              <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown"
+                aria-expanded="false">
                 <img src="./img/tutorialCut.png" style="width: 20px;"> Courses
               </a>
               <!-- Menu H2 -->
@@ -195,7 +197,7 @@
             </li>
 
           </ul>
-          
+
           <!-- menu search -->
           <form class="d-flex input-group mx-sm-3 mb-2">
             <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
@@ -246,7 +248,8 @@
     </nav>
   </header>
   <!-- Menu top -->
-  <main class="d-flex flex-column mt-4" ng-app="myApp" >
+  <main class="d-flex flex-column mt-4" ng-app="myApp">
+    <!--1. Carousel -->
     <section class="d-block">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -278,90 +281,65 @@
         </a>
       </div>
     </section>
-    <div class="container-fluid marketing">
-    <!--  All the content. -->
-      <div class="container-fluid mb-md-4" ng-controller="myController">
-        <!-- Tabs navs -->
+    <!--/1. Carousel -->
+
+    <!-- 2. All the content. -->
+    <section class="container-fluid marketing">
+      <!-- 2.1 Courses Classes -->
+      <div class="mb-md-4" ng-controller="myController" >
+        <!-- 2.1.1 Nav-tab -->
         <ul class="BoxShow nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
-<<<<<<< Updated upstream
           <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="Allcourses" data-toggle="tab" href="#Allcourses" role="tab" aria-controls="Allcourses" aria-selected="true">
+            <a class="nav-link active" id="ex7-tab-1" data-toggle="tab" href="#ex7-tabs-1" role="tab" aria-controls="ex7-tabs-1" aria-selected="true">
               All courses
             </a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="Python" data-toggle="tab" href="#Python" role="tab" aria-controls="Python" aria-selected="false">
-              Python
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" id="Excel" data-toggle="tab" href="#Excel" role="tab" aria-controls="Excel" aria-selected="false">
-              Excel
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" id="WebDevelopment" data-toggle="tab" href="#WebDevelopment" role="tab" aria-controls="WebDevelopment" aria-selected="false">
-              Web Development
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" id="DataScience" data-toggle="tab" href="#DataScience" role="tab" aria-controls="DataScience" aria-selected="false">
-              Data Science
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" id="Javascript" data-toggle="tab" href="#Javascript" role="tab" aria-controls="Javascript" aria-selected="false">
-=======
-          <li class="nav-item col-auto" role="presentation">
-            <a class="nav-link active" id="ex7-tab-1" data-toggle="tab" href="#ex7-tabs-1" role="tab" aria-controls="ex7-tabs-1" aria-selected="true">
-              <b>All courses</b>
-            </a>
-          </li>
-          <li class="nav-item col-auto" role="presentation">
             <a class="nav-link" id="ex7-tab-2" data-toggle="tab" href="#ex7-tabs-2" role="tab" aria-controls="ex7-tabs-2" aria-selected="false">
               Python
             </a>
           </li>
-          <li class="nav-item col-auto" role="presentation">
+          <li class="nav-item" role="presentation">
             <a
               class="nav-link" id="ex7-tab-3" data-toggle="tab" href="#ex7-tabs-3" role="tab" aria-controls="ex7-tabs-3" aria-selected="false">
               Excel
             </a>
           </li>
-          <li class="nav-item col-auto" role="presentation">
+          <li class="nav-item" role="presentation">
             <a
               class="nav-link" id="ex7-tab-4" data-toggle="tab" href="#ex7-tabs-4" role="tab" aria-controls="ex7-tabs-4" aria-selected="false">
-              <b>Web Development</b>
+              Web Development
             </a>
           </li>
-          <li class="nav-item col-auto" role="presentation">
+          <li class="nav-item" role="presentation">
             <a class="nav-link" id="ex7-tab-5" data-toggle="tab" href="#ex7-tabs-5" role="tab" aria-controls="ex7-tabs-5" aria-selected="false">
               Data Science
             </a>
           </li>
-          <li class="nav-item col-auto" role="presentation">
+          <li class="nav-item" role="presentation">
             <a
-              class="nav-link col-auto" id="ex7-tab-6" data-toggle="tab" href="#ex7-tabs-6" role="tab" aria-controls="ex7-tabs-6" aria-selected="false">
->>>>>>> Stashed changes
+              class="nav-link" id="ex7-tab-6" data-toggle="tab" href="#ex7-tabs-6" role="tab" aria-controls="ex7-tabs-6" aria-selected="false">
               Javascript
             </a>
           </li>
           <li class="nav-item" role="presentation">
-            <a  class="nav-link" id="AWSCertification" data-toggle="tab" href="#AWSCertification" role="tab" aria-controls="AWSCertification" aria-selected="false">
+            <a
+              class="nav-link" id="ex7-tab-7" data-toggle="tab" href="#ex7-tabs-7" role="tab" aria-controls="ex7-tabs-7" aria-selected="false">
               AWS Certification
             </a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="Drawing" data-toggle="tab" href="#Drawing" role="tab" aria-controls="Drawing" aria-selected="false">
+            <a
+              class="nav-link" id="ex7-tab-8" data-toggle="tab" href="#ex7-tabs-8" role="tab" aria-controls="ex7-tabs-8" aria-selected="false">
               Drawing
             </a>
           </li>
-        </ul>
-        <!-- Tabs content -->
+        </ul><!-- /2.1.1 Tabs navs -->
+        <!--2.2 Tabs content -->
         <div class="tab-content" id="ex2-content">
           <div  class="tab-pane fade show active" 
-                id="Allcourses" role="tabpanel" 
-                aria-labelledby="Allcourses" 
+                id="ex7-tabs-1" role="tabpanel" 
+                aria-labelledby="ex7-tab-1" 
                 data-spy="scroll" 
                 data-target="#myScrollspy" 
                 data-offset="10"
@@ -371,7 +349,7 @@
                 <div class="col-12 p-2">
                     <div class="d-flex flex-column height100">
                       <div class="course-slider">
-                        <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                        <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                           <!-- col-1 -->
                           <div class="img-course col-12 col-sm-3 col-md-auto p-2">
                             <img src="{{x.Img}}" alt="" width="200px" height="165px">
@@ -413,19 +391,19 @@
           </div>
           <div
             class="tab-pane fade"
-            id="Python"
+            id="ex7-tabs-2"
             role="tabpanel"
-            aria-labelledby="Python"
+            aria-labelledby="ex7-tab-2"
             data-spy="scroll" 
             data-target="#myScrollspy" 
             data-offset="10"
-            style="height:500; overflow-y:scroll; padding:5px; border:1px solid #ccc;"
+            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;"
           >
           <div ng-repeat="x in list|filter : 'SubjectPython' ">
             <div class="col-12 p-2">
                 <div class="d-flex flex-column height100">
                   <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                       <!-- col-1 -->
                       <div class="img-course col-12 col-sm-3 col-md-auto p-2">
                         <img src="{{x.Img}}" alt="" width="200px" height="165px">
@@ -467,9 +445,9 @@
           </div>
           <div
             class="tab-pane fade"
-            id="Excel"
+            id="ex7-tabs-3"
             role="tabpanel"
-            aria-labelledby="Excel"
+            aria-labelledby="ex7-tab-3"
             data-spy="scroll" 
             data-target="#myScrollspy" 
             data-offset="10"
@@ -479,7 +457,7 @@
             <div class="col-12 p-2">
                 <div class="d-flex flex-column height100">
                   <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                       <!-- col-1 -->
                       <div class="img-course col-12 col-sm-3 col-md-auto p-2">
                         <img src="{{x.Img}}" alt="" width="200px" height="165px">
@@ -521,9 +499,9 @@
           </div>
           <div
             class="tab-pane fade"
-            id="WebDevelopment"
+            id="ex7-tabs-4"
             role="tabpanel"
-            aria-labelledby="WebDevelopment"
+            aria-labelledby="ex7-tab-4"
             data-spy="scroll" 
             data-target="#myScrollspy" 
             data-offset="10"
@@ -533,7 +511,7 @@
             <div class="col-12 p-2">
                 <div class="d-flex flex-column height100">
                   <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                       <!-- col-1 -->
                       <div class="img-course col-12 col-sm-3 col-md-auto p-2">
                         <img src="{{x.Img}}" alt="" width="200px" height="165px">
@@ -575,9 +553,9 @@
           </div>
           <div
             class="tab-pane fade"
-            id="DataScience"
+            id="ex7-tabs-5"
             role="tabpanel"
-            aria-labelledby="DataScience"
+            aria-labelledby="ex7-tab-5"
             data-spy="scroll" 
             data-target="#myScrollspy" 
             data-offset="10"
@@ -587,7 +565,7 @@
             <div class="col-12 p-2">
                 <div class="d-flex flex-column height100">
                   <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                       <!-- col-1 -->
                       <div class="img-course col-12 col-sm-3 col-md-auto p-2">
                         <img src="{{x.Img}}" alt="" width="200px" height="165px">
@@ -629,9 +607,9 @@
           </div>
           <div
             class="tab-pane fade"
-            id="Javascript"
+            id="ex7-tabs-6"
             role="tabpanel"
-            aria-labelledby="Javascript"
+            aria-labelledby="ex7-tab-6"
             data-spy="scroll" 
             data-target="#myScrollspy" 
             data-offset="10"
@@ -641,10 +619,10 @@
             <div class="col-12 p-2">
                 <div class="d-flex flex-column height100">
                   <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/JV01.html" target="new">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                       <!-- col-1 -->
                       <div class="img-course col-12 col-sm-3 col-md-auto p-2">
-                        <img src="{{x.Img}}" alt="course" width="200px" height="165px">
+                        <img src="{{x.Img}}" alt="" width="200px" height="165px">
                       </div>
                       <!-- col 2 -->
                       <div class="content col-12 col-sm-6 p-2">
@@ -683,9 +661,9 @@
           </div>
           <div
             class="tab-pane fade"
-            id="AWSCertification"
+            id="ex7-tabs-7"
             role="tabpanel"
-            aria-labelledby="AWSCertification"
+            aria-labelledby="ex7-tab-7"
             data-spy="scroll" 
             data-target="#myScrollspy" 
             data-offset="10"
@@ -695,7 +673,7 @@
             <div class="col-12 p-2">
                 <div class="d-flex flex-column height100">
                   <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                       <!-- col-1 -->
                       <div class="img-course col-12 col-sm-3 col-md-auto p-2">
                         <img src="{{x.Img}}" alt="" width="200px" height="165px">
@@ -737,9 +715,9 @@
           </div>
           <div
             class="tab-pane fade"
-            id="Drawing"
+            id="ex7-tabs-8"
             role="tabpanel"
-            aria-labelledby="Drawing"
+            aria-labelledby="ex7-tab-8"
             data-spy="scroll" 
             data-target="#myScrollspy" 
             data-offset="10"
@@ -749,7 +727,7 @@
             <div class="col-12 p-2">
                 <div class="d-flex flex-column height100">
                   <div class="course-slider">
-                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="#" target="new">
+                    <a class="d-md-flex justify-content-start border-bottom text-reset" href="./Courses/{{x.Detail}}" target="new">
                       <!-- col-1 -->
                       <div class="img-course col-12 col-sm-3 col-md-auto p-2">
                         <img src="{{x.Img}}" alt="" width="200px" height="165px">
@@ -790,99 +768,105 @@
           </div>
           </div>
         </div>
-        <!-- Tabs content -->
-      </div>
-      
+        <!-- /2.2 Tabs content -->
+      </div><!-- /2.1 Courses Classes -->
 
-    <div class="container marketing">
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="bd-placeholder-img rounded-circle border" width="140" height="140" src="./img/star-classes-icon.png" alt="picture">
+      <div class="container marketing">
+        <!--2.2 Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="bd-placeholder-img rounded-circle border" width="140" height="140"
+              src="./img/star-classes-icon.png" alt="picture">
 
-          <h2>Work with us</h2>
-          <p>At Star Classes, we’re all learners and instructors. We live out our values every day to create a culture that is diverse, inclusive, and committed to helping employees thrive.</p>
+            <h2>Work with us</h2>
+            <p>At Star Classes, we’re all learners and instructors. We live out our values every day to create a culture
+              that is diverse, inclusive, and committed to helping employees thrive.</p>
 
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        
-        <div class="col-lg-4">
-          <img class="bd-placeholder-img rounded-circle border" width="140" height="140" src="./img/star-classes-icon.png" alt="picture">
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="bd-placeholder-img rounded-circle border" width="140" height="140"
+              src="./img/star-classes-icon.png" alt="picture">
 
-          <h2>See our research</h2>
-          <p>We’re committed to improving lives through learning. Dig into our original research to learn about the forces that are shaping the modern workplace.</p>
+            <h2>See our research</h2>
+            <p>We’re committed to improving lives through learning. Dig into our original research to learn about the
+              forces that are shaping the modern workplace.</p>
 
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="bd-placeholder-img rounded-circle border" width="140" height="140" src="./img/star-classes-icon.png" alt="picture">
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <img class="bd-placeholder-img rounded-circle border" width="140" height="140"
+              src="./img/star-classes-icon.png" alt="picture">
 
-          <h2>Read our blog</h2>
-          <p>Want to know what we’ve been up to lately? Check out the Udemy blog to get the scoop on the latest news, ideas and projects, and more.</p>
+            <h2>Read our blog</h2>
+            <p>Want to know what we’ve been up to lately? Check out the Udemy blog to get the scoop on the latest news,
+              ideas and projects, and more.</p>
 
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
 
-      </div><!-- /.row -->
+        <!--2.3 START THE FEATURETTES -->
+        <hr class="featurette-divider">
 
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Become an instructor</h2>
-          <p class="lead">Instructors from around the world teach millions of students on Star Classes. We provide the tools and skills to teach what you love.</p>
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Become an instructor</h2>
+            <p class="lead">Instructors from around the world teach millions of students on Star Classes. We provide the
+              tools and skills to teach what you love.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+              height="500"
+              src="https://i0.wp.com/chame.rmit.edu.vn/wp-content/uploads/2020/09/MG_8964.jpg?resize=560%2C416&ssl=1"
+              alt="picture">
+          </div>
         </div>
-        <div class="col-md-5">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" src="https://i0.wp.com/chame.rmit.edu.vn/wp-content/uploads/2020/09/MG_8964.jpg?resize=560%2C416&ssl=1" alt="picture">
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Star Classes</h2>
+            <p class="lead">Get unlimited access to 1,700+ of Star Classes’s top courses for your team. Learn and
+              improve skills across business, tech, design, and more.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+              height="500" src="https://glints.com/vn/blog/wp-content/uploads/2022/06/it-la-lam-gi.jpg" alt="picture">
+          </div>
         </div>
-      </div>
 
-      <hr class="featurette-divider">
+        <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">Star Classes</h2>
-          <p class="lead">Get unlimited access to 1,700+ of Star Classes’s top courses for your team. Learn and improve skills across business, tech, design, and more.</p>
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Transform your life through education</h2>
+            <p class="lead">Learners around the world are launching new careers, advancing in their fields, and
+              enriching their lives.</p>
+          </div>
+          <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+              height="500" src="https://cdn.vungoi.vn/vungoi/1541393463543_truong.jpg" alt="picture">
+          </div>
         </div>
-        <div class="col-md-5 order-md-1">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" src="https://glints.com/vn/blog/wp-content/uploads/2022/06/it-la-lam-gi.jpg" alt="picture">
-        </div>
-      </div>
 
-      <hr class="featurette-divider">
+        <hr class="featurette-divider">
+        <!-- /2.3 END THE FEATURETTES -->
+      </div><!-- /.container -->
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Transform your life through education</h2>
-          <p class="lead">Learners around the world are launching new careers, advancing in their fields, and enriching their lives.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" src="https://cdn.vungoi.vn/vungoi/1541393463543_truong.jpg" alt="picture">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-    </div><!-- /.container -->
-
+    </section><!-- /2.container-fluid -->
   </main>
 
   <!-- FOOTER -->
   <footer class="border bg-dark text-white">
-    <!-- Section: Social media -->
+    <!-- Section 1: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
       <!-- Left -->
       <div class="me-5 d-none d-lg-block">
         <span>Get connected with us on social networks:</span>
       </div>
-      <!-- Left -->
+      <!--/ Left -->
 
       <!-- Right -->
       <div>
@@ -902,17 +886,19 @@
           <i class="fab fa-linkedin"></i>
         </a>
       </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
+      <!--/ Right -->
 
-    <!-- Section: Links  -->
+    </section>
+    <!--/ Section 1: Social media -->
+
+
+    <!-- Section 2: Links  -->
     <section class="d-flex justify-content-center justify-content-lg-between p-2 border-bottom">
       <div class="container text-center text-md-start mt-3">
         <!-- Grid row -->
         <div class="row mt-3">
 
-          <!-- Grid column -->
+          <!-- Grid column 1 -->
           <div class="col-md-3 mx-auto mb-4">
             <!-- Content -->
             <h6 class="mb-3">
@@ -923,9 +909,9 @@
               destination for online learning, we connect people through knowledge.
             </p>
           </div>
-          <!-- Grid column -->
+          <!--/ Grid column 1-->
 
-          <!-- Grid column -->
+          <!-- Grid column 2-->
           <div class="col-md-2 mx-auto mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">Star Classes</h6>
@@ -945,9 +931,9 @@
               <a href="#!" class="text-reset">Help</a>
             </p>
           </div>
-          <!-- Grid column -->
+          <!--/ Grid column 2-->
 
-          <!-- Grid column -->
+          <!-- Grid column 3-->
           <div class="col-md-3 col-lg-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
@@ -961,28 +947,30 @@
             </p>
             <p>
               <i class="fas fa-phone me-3 text-secondary"></i>
-               + 84 234 567 890
-              </p>
+              + 84 234 567 890
+            </p>
             <p>
               <i class="fas fa-print me-3 text-secondary"></i>
-               + 84 234 567 890
+              + 84 234 567 890
             </p>
           </div>
-          <!-- Grid column -->
+          <!--/ Grid column 3-->
 
-          <!-- Grid column -->
+          <!-- Grid column 4-->
           <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
             <!-- GeoLocation API (GoogleMaps)-->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s" width="300" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s"
+              width="300" height="300" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <!-- Grid column -->
-        </div>
-        <!-- Grid row -->
-      </div>
+          <!--/ Grid column 4-->
+        </div><!-- /Grid row -->
+      </div> <!-- /container -->
     </section>
-    <!-- Section: Links  -->
+    <!--/Section 2: Links  -->
 
-    <!-- Copyright and Time -->
+    <!--Section 3:  Copyright and Time -->
     <section class="d-flex justify-content-between p-2 border-bottom">
       <div class="mr-5 d-none d-lg-block pl-2">&copy; 2022 Star Classes</div>
       <div class="ml-5 d-none d-lg-block">
@@ -994,35 +982,39 @@
             time = document.write("Current: " + today);
           </script>
         </div>
-        <!-- Display current date, time -->
+        <!--/ Display current date, time -->
       </div>
     </section>
-    <!-- Copyright and Time -->
-  </footer>
+    <!--/Section 3:  Copyright and Time -->
 
-    <!-- Java Script -->
-    <script>
-      var app=angular.module("myApp",[])
-      app.controller("myController",function($rootScope, $http, $location){
-          $http.get("informationSubject.json").then(function(response){
-              $rootScope.list = response.data.informationSubject;
-          });
+  </footer>
+  <!--/ FOOTER -->
+
+  <!-- Java Script -->
+  <script>
+    var app = angular.module("myApp", [])
+    app.controller("myController", function ($rootScope, $http, $location) {
+      $http.get("informationSubject.json").then(function (response) {
+        $rootScope.list = response.data.informationSubject;
       });
-      
-      //** Count Visitor ** 
-      function countVisitor() {
-        if (typeof(Storage) !== "undefined") {
-          if (localStorage.countV) {
-            localStorage.countV = Number(localStorage.countV)+1;
-          } else {
-            localStorage.countV = 1;
-          }
-          document.getElementById("visitor").innerHTML = localStorage.countV;
+    });
+
+    //** Count Visitor ** 
+    function countVisitor() {
+      if (typeof (Storage) !== "undefined") {
+        if (localStorage.countV) {
+          localStorage.countV = Number(localStorage.countV) + 1;
         } else {
-          document.getElementById("visitor").innerHTML = 0;
+          localStorage.countV = 1;
         }
-      } 
-    </script>
-    <!-- Java Script -->
+        document.getElementById("visitor").innerHTML = localStorage.countV;
+      } else {
+        document.getElementById("visitor").innerHTML = 0;
+      }
+    } 
+  </script>
+  <!--/Java Script -->
+
 </body>
+
 </html>

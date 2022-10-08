@@ -11,7 +11,8 @@
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
             "Rating":"4.7",
-            "QtyStudent":"629,025"
+            "QtyStudent":"629,025",
+            "Detail":"Python01.html"
         },
         {
             "ID":"PT02",
@@ -23,7 +24,8 @@
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
             "Rating":"4.6",
-            "QtyStudent":"1,611,037"
+            "QtyStudent":"1,611,037",
+            "Detail":"Python02.html"
         },
         {
             "ID":"PT03",
@@ -35,7 +37,8 @@
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
             "Rating":"4.6",
-            "QtyStudent":"170,773"
+            "QtyStudent":"170,773",
+            "Detail":"Python03.html"
         },
         {
             "ID":"PT04",
@@ -47,7 +50,8 @@
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
             "Rating":"4.6",
-            "QtyStudent":"391,390"
+            "QtyStudent":"391,390",
+            "Detail":"Python04.html"
         },
         {
             "ID":"PT05",
@@ -59,7 +63,8 @@
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
             "Rating":"4.6",
-            "QtyStudent":"277,733"
+            "QtyStudent":"277,733",
+            "Detail":"Python05.html"
         },
         {
             "ID":"PT06",
@@ -71,7 +76,8 @@
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
             "Rating":"4.6",
-            "QtyStudent":"72,912"
+            "QtyStudent":"72,912",
+            "Detail":"Python06.html"
         },
         {
             "ID":"PT07",
@@ -83,7 +89,8 @@
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
             "Rating":"4.6",
-            "QtyStudent":"68,943 "
+            "QtyStudent":"68,943",
+            "Detail":"Python07.html"
         },
         {
             "ID": "EX01",
@@ -95,7 +102,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$49.99",
             "Rating":"4.5",
-            "QtyStudent":"34,238"
+            "QtyStudent":"34,238",
+            "Detail":"Excel01.html"
         },
         {
             "ID": "EX02",
@@ -107,7 +115,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$49.99",
             "Rating":"4.4",
-            "QtyStudent":"44,727"
+            "QtyStudent":"44,727",
+            "Detail":"Excel02.html"
         },
         {
             "ID": "EX03",
@@ -119,7 +128,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$24.99",
             "Rating":"4.5",
-            "QtyStudent":"129,790"
+            "QtyStudent":"129,790",
+            "Detail":"Excel03.html"
         },
         {
             "ID": "EX04",
@@ -131,7 +141,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$19.99",
             "Rating":"4.6",
-            "QtyStudent":"2,587"
+            "QtyStudent":"2,587",
+            "Detail":"Excel04.html"
         },
         {
             "ID": "EX05",
@@ -143,7 +154,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.6",
-            "QtyStudent":"4,077"
+            "QtyStudent":"4,077",
+            "Detail":"Excel05.html"
         },
         {
             "ID": "EX06",
@@ -155,7 +167,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.3",
-            "QtyStudent":"3,273"
+            "QtyStudent":"3,273",
+            "Detail":"Excel06.html"
         },
         {
             "ID": "EX07",
@@ -167,10 +180,11 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.6",
-            "QtyStudent":"112,909"
+            "QtyStudent":"112,909",
+            "Detail":"Excel07.html"
         },
         {
-            "ID": "EX01",
+            "ID": "DS01",
             "Subject":"SubjectDataScience",
             "Img":"./img/imgcourses/datascience01.jpeg",
             "NameCourse":"Data Science A-Z™: Real-Life Data Science Exercises Included", 
@@ -179,10 +193,11 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.6",
-            "QtyStudent":"206,234"
+            "QtyStudent":"206,234",
+            "Detail":"DataScience01.html"
         },
         {
-            "ID": "EX02",
+            "ID": "DS02",
             "Subject":"SubjectDataScience",
             "Img":"./img/imgcourses/datascience02.png",
             "NameCourse":"Machine Learning, Data Science and Deep Learning with Python", 
@@ -191,10 +206,11 @@
             "PriceNew":"$19.99",
             "PriceOld":"$24.99",
             "Rating":"4.5",
-            "QtyStudent":"168,097"
+            "QtyStudent":"168,097",
+            "Detail":"DataScience02.html"
         },
         {
-            "ID": "EX03",
+            "ID": "DS03",
             "Subject":"SubjectDataScience",
             "Img":"./img/imgcourses/datascience03.jpeg",
             "NameCourse":"Data Science: Deep Learning and Neural Networks in Python", 
@@ -203,10 +219,11 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.6",
-            "QtyStudent":"50,582"
+            "QtyStudent":"50,582",
+            "Detail":"DataScience03.html"
         },
         {
-            "ID": "EX04",
+            "ID": "DS04",
             "Subject":"SubjectDataScience",
             "Img":"./img/imgcourses/datascience04.jpeg",
             "NameCourse":"R Programming A-Z™: R For Data Science With Real Exercises!", 
@@ -215,10 +232,11 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.7",
-            "QtyStudent":"240,627"
+            "QtyStudent":"240,627",
+            "Detail":"DataScience04.html"
         },
         {
-            "ID": "EX05",
+            "ID": "DS05",
             "Subject":"SubjectDataScience",
             "Img":"./img/imgcourses/datascience05.jpeg",
             "NameCourse":"Data Science and Machine Learning Bootcamp with R", 
@@ -227,10 +245,11 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.7",
-            "QtyStudent":"84,512"
+            "QtyStudent":"84,512",
+            "Detail":"DataScience05.html"
         },
         {
-            "ID": "EX06",
+            "ID": "DS06",
             "Subject":"SubjectDataScience",
             "Img":"./img/imgcourses/datascience06.jpeg",
             "NameCourse":"Introduction to Machine Learning for Data Science", 
@@ -239,10 +258,11 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.5",
-            "QtyStudent":"56,579"
+            "QtyStudent":"56,579",
+            "Detail":"DataScience06.html"
         },
         {
-            "ID": "EX07",
+            "ID": "DS07",
             "Subject":"SubjectDataScience",
             "Img":"./img/imgcourses/datascience07.png",
             "NameCourse":"Data Science : Master Machine Learning Without Coding", 
@@ -251,10 +271,11 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.6",
-            "QtyStudent":"5,580"
+            "QtyStudent":"5,580",
+            "Detail":"DataScience07.html"
         },
         {
-            "ID": "EX01",
+            "ID": "WD01",
             "Subject":"SubjectWebDevelopment",
             "Img":"./img/imgcourses/webdev01.jpeg",
             "NameCourse":"Introduction to Web Development", 
@@ -263,10 +284,11 @@
             "PriceNew":"$16.99",
             "PriceOld":"$19.99",
             "Rating":"4.3",
-            "QtyStudent":"22,496"
+            "QtyStudent":"22,496",
+            "Detail":"WebDevelopment01.html"
         },
         {
-            "ID": "EX02",
+            "ID": "WD02",
             "Subject":"SubjectWebDevelopment",
             "Img":"./img/imgcourses/webdev02.jpeg",
             "NameCourse":"Become a Certified HTML, CSS, JavaScript Web Developer", 
@@ -275,10 +297,11 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.4",
-            "QtyStudent":"34,033"
+            "QtyStudent":"34,033",
+            "Detail":"WebDevelopment02.html"
         },
         {
-            "ID": "EX03",
+            "ID": "WD03",
             "Subject":"SubjectWebDevelopment",
             "Img":"./img/imgcourses/webdev03.jpeg",
             "NameCourse":"Running a Web Development Business: The Complete Guide", 
@@ -287,10 +310,11 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.9",
-            "QtyStudent":"33,257"
+            "QtyStudent":"33,257",
+            "Detail":"WebDevelopment03.html"
         },
         {
-            "ID": "EX04",
+            "ID": "WD04",
             "Subject":"SubjectWebDevelopment",
             "Img":"./img/imgcourses/webdev04.jpeg",
             "NameCourse":"Ultimate Web Designer & Web Developer Course", 
@@ -299,10 +323,11 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.5",
-            "QtyStudent":"78,021"
+            "QtyStudent":"78,021",
+            "Detail":"WebDevelopment04.html"
         },
         {
-            "ID": "EX05",
+            "ID": "WD05",
             "Subject":"SubjectWebDevelopment",
             "Img":"./img/imgcourses/webdev05.jpeg",
             "NameCourse":"Introduction to Programming", 
@@ -311,10 +336,11 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.5",
-            "QtyStudent":"6,459"
+            "QtyStudent":"6,459",
+            "Detail":"WebDevelopment05.html"
         },
         {
-            "ID": "EX06",
+            "ID": "WD06",
             "Subject":"SubjectWebDevelopment",
             "Img":"./img/imgcourses/webdev06.jpeg",
             "NameCourse":"The Complete Web Developer Course 2.0", 
@@ -323,10 +349,11 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.5",
-            "QtyStudent":"304,247"
+            "QtyStudent":"304,247",
+            "Detail":"WebDevelopment06.html"
         },
         {
-            "ID": "EX07",
+            "ID": "WD07",
             "Subject":"SubjectWebDevelopment",
             "Img":"./img/imgcourses/webdev07.jpeg",
             "NameCourse":"The Complete 2022 Web Development Course - Build 15 Projects", 
@@ -335,7 +362,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.5",
-            "QtyStudent":"34,358"
+            "QtyStudent":"34,358",
+            "Detail":"WebDevelopment07.html"
         },
         {
             "ID":"DR01",
@@ -347,7 +375,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.6",
-            "QtyStudent":"490 294"
+            "QtyStudent":"490 294",
+            "Detail":"Drawing01.html"
         },
         {   
             "ID":"DR02",
@@ -359,7 +388,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.8",
-            "QtyStudent":"278 670"
+            "QtyStudent":"278 670",
+            "Detail":"Drawing02.html"
         },
         {
             "ID":"DR03",
@@ -371,7 +401,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.7",
-            "QtyStudent":"41 137"
+            "QtyStudent":"41 137",
+            "Detail":"Drawing03.html"
         },
         {
             "ID":"DR04",
@@ -383,7 +414,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$34.99",
             "Rating":"4.7",
-            "QtyStudent":"67 528"
+            "QtyStudent":"67 528",
+            "Detail":"Drawing04.html"
         },
         {
             "ID":"DR05",
@@ -395,7 +427,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.9",
-            "QtyStudent":"21 528"
+            "QtyStudent":"21 528",
+            "Detail":"Drawing05.html"
         },
         {
             "ID":"DR06",
@@ -407,7 +440,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.9",
-            "QtyStudent":"14 276"
+            "QtyStudent":"14 276",
+            "Detail":"Drawing06.html"
         },
         {
             "ID":"DR07",
@@ -419,7 +453,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$34.99",
             "Rating":"4.7",
-            "QtyStudent":"4 169"
+            "QtyStudent":"4 169",
+            "Detail":"Drawing07.html"
         },
         {
             "ID":"AWS01",
@@ -431,7 +466,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.7",
-            "QtyStudent":"638 952"
+            "QtyStudent":"638 952",
+            "Detail":"AWSCertification01.html"
         },
         {
             "ID":"AWS02",
@@ -443,7 +479,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.8",
-            "QtyStudent":"363 758"
+            "QtyStudent":"363 758",
+            "Detail":"AWSCertification02.html"
         },
         {
             "ID":"AWS03",
@@ -455,7 +492,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.8",
-            "QtyStudent":"523 864"
+            "QtyStudent":"523 864",
+            "Detail":"AWSCertification03.html"
         },
         {
             "ID":"AWS04",
@@ -467,7 +505,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.7",
-            "QtyStudent":"86 134"
+            "QtyStudent":"86 134",
+            "Detail":"AWSCertification04.html"
         },
         {
             "ID":"AWS05",
@@ -479,7 +518,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.7",
-            "QtyStudent":"137 299"
+            "QtyStudent":"137 299",
+            "Detail":"AWSCertification05.html"
         },
         {
             "ID":"AWS06",
@@ -491,7 +531,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.8",
-            "QtyStudent":"98 346"
+            "QtyStudent":"98 346",
+            "Detail":"AWSCertification06.html"
         },
         {
             "ID":"AWS07",
@@ -503,7 +544,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.8",
-            "QtyStudent":"74 291"
+            "QtyStudent":"74 291",
+            "Detail":"AWSCertification01.html"
         },
         {
             "ID":"JS01",
@@ -515,7 +557,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$19.99",
             "Rating":"4.5",
-            "QtyStudent":"9,613"
+            "QtyStudent":"9,613",
+            "Detail":"Javascript01.html"
         },
         {
             "ID":"JS02",
@@ -527,7 +570,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.5",
-            "QtyStudent":"67,614"
+            "QtyStudent":"67,614",
+            "Detail":"Javascript02.html"
         },
         {
             "ID":"JS03",
@@ -539,7 +583,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.8",
-            "QtyStudent":"179,362"
+            "QtyStudent":"179,362",
+            "Detail":"Javascript03.html"
         },
         {
             "ID":"JS04",
@@ -551,7 +596,8 @@
             "PriceNew":"$19.99",
             "PriceOld":"$99.99",
             "Rating":"4.4",
-            "QtyStudent":"30,106"
+            "QtyStudent":"30,106",
+            "Detail":"Javascript04.html"
         },
         {
             "ID":"JS05",
@@ -563,7 +609,8 @@
             "PriceNew":"$19.99",
             "PriceOld":"$99.99",
             "Rating":"4.3",
-            "QtyStudent":"9,931"
+            "QtyStudent":"9,931",
+            "Detail":"Javascript05.html"
         },
         {
             "ID":"JS06",
@@ -575,7 +622,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$29.99",
             "Rating":"4.5",
-            "QtyStudent":"2,747"
+            "QtyStudent":"2,747",
+            "Detail":"Javascript06.html"
         },
         {
             "ID":"JS07",
@@ -587,8 +635,8 @@
             "PriceNew":"$16.99",
             "PriceOld":"$49.99",
             "Rating":"4.6",
-            "QtyStudent":"31,146"
+            "QtyStudent":"31,146",
+            "Detail":"Javascript07.html"
         }
-
     ]
 }

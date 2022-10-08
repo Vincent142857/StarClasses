@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Star Classes</title>
+  <!-- MDB icon -->
+  <!-- <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" /> -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="../MDB5/css/mdb.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: content-box;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .clearfix {
+      zoom: 1;
+    }
+
+    .clearfix:after {
+      clear: both;
+      content: ".";
+      display: block;
+      height: 0;
+      line-height: 0;
+      visibility: hidden;
+    }
+
+    .course-content .learning-list {
+      margin-bottom: 60px;
+    }
+
+    .course-content .learning-list li {
+      float: left;
+      width: 270px;
+      margin-bottom: 8px;
+      margin-right: 30px;
+    }
+
+    .course-content .learning-list li i {
+      color: #01bacf;
+      font-size: 14px;
+      margin-right: 7px;
+    }
+
+    .Cart {
+      margin: 10px;
+      padding: 10px;
+      border: 4px solid white;
+      border-radius: 30px;
+      z-index: 9999;
+      box-shadow: 2px 0px 10px black;
+      position: relative;
+      top: -80px;
+      /* left: 70%; */
+      background-color: white;
+      /* padding: 10px 20px; */
+      /* display: block; */
+    }
+    @media screen and (max-width: 800px){
+      .Cart {
+        top: 0;
+      }
+      
+    }
+    .Cart button {
+      font-size: large;
+    }
+    .Cart i {
+      margin-right: 10px;
+      padding-left: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Start your project here-->
+  <div class="container-fluid">
+    <!-- top courses -->
+    <div class="bg-dark p-3 text-light">
+      <small class="mb-5">
+        <a class="text-reset" href="../index.html">Home</a> &#62;
+        <a class="text-reset" href="../index.html#ex7-tab-6">Python</a> &#62;
+        <a class="text-reset" href="JV01.html">Python for Beginners</a>
+      </small>
+
+      <div class="d-flex flex-column mt-5 px-5">
+        <h1>2022 Complete Python Bootcamp From Zero to Hero in Python</h1>
+        <p>Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games
+        </p>
+        <div class="name-gv"><b>Created by Dollar Design School</b></div>
+        <!-- rating -->
+        <span class="star-rate">
+          4.5
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          <i class="fa fa-star text-warning" aria-hidden="true"></i>
+          (368 ratings) 400 students
+        </span>
+        <p><small>Last update 10/2020</small></p>
+      </div>
+
+      <!-- Add to Cart -->
+      <div class="d-block float-md-end col-sm-auto m-1 col-md-4">
+        <div class="Cart bg-light border text-black p-4">
+          <img style="border-radius:10px;" src="../img/imgcourses/" alt="js01" width="100%">
+          <div class="text-center">
+            <p>
+            <h3 class="text-success">13,99 $US</h3>
+            <del class="text-danger">84,99 $US</del>
+            <small>84% Off</small>
+            </p>
+
+            <div class="mx-4">
+              <button class="m-2 col-9 btn btn-warning text-black">Add to cart</button>
+              <button class="m-2 col-9 btn text-light" style="background-color:lightslategray">Buy now</button>
+            </div>
+
+            <p class="text-center"><small>30-day money-back guarantee</small></p>
+          </div>
+
+          <h4>This course includes:</h4>
+          <div>
+            4.5
+            <p><i class="fas fa-video"></i> 22 hour video on demand</p>
+            <p><i class="far fa-file"></i> 14 article</p>
+            <p><i class="fas fa-code"></i> 19 coding exercises</p>
+            <p><i class="fas fa-infinity"></i> Unlimited access </p>
+            <p><i class="fas fa-mobile-alt"></i> Mobile and TV access</p>
+            <p><i class="fas fa-trophy"></i> End of training certificate</p>
+          </div>
+          <h3>Do you train 5 or more people?</h3>
+          <p>Give your team members access to over 17,000 of the best courses anytime, anywhere.</p>
+        </div>
+        <!-- Add to Cart -->
+      </div>
+
+    </div>
+
+    <div class="d-flex flex-column col-auto">
+      <!-- main course -->
+      <div class="p-3">
+        <!-- why -->
+        <div class="border p-3">
+          <h3>What you'll learn</h3>
+          <ul class="learning-list clearfix" style="text-align:justify">
+            <li><i class="fas fa-check"></i> You will learn how to leverage the power of Python to solve tasks.</li>
+          <li>
+            <i class="fas fa-check"></i> You will be able to use Python for your own work problems or personal projects.
+          </li>
+
+          <li>
+            <i class="fas fa-check"></i> Learn to use Python professionally, learning both Python 2 and Python 3!
+          </li>
+          <li>
+            <i class="fas fa-check"></i> Learn advanced Python features, like the collections module and how to work with timestamps!
+          </li>
+          <li>
+            <i class="fas fa-check"></i> Understand complex topics, like decorators.
+          </li>
+          <li>
+            <i class="fas fa-check"></i> Get an understanding of how to create GUIs in the Jupyter Notebook system!
+
+          </li>
+          <li>
+            <i class="fas fa-check"></i> You will build games and programs that use Python libraries.
+          </li>
+          <li>
+            <i class="fas fa-check"></i> You will create a portfolio of Python based projects you can share.
+          </li>
+          <li>
+            <i class="fas fa-check"></i> Create games with Python, like Tic Tac Toe and Blackjack!
+          </li>
+          <li>
+            <i class="fas fa-check"></i> Learn to use Object Oriented Programming with classes!
+          </li>
+          <li>
+            <i class="fas fa-check"></i> Understand how to use both the Jupyter Notebook and create .py files
+          </li>
+          <li>
+            <i class="fas fa-check"></i> Build a complete understanding of Python from the ground up!
+          </li>
+          </ul>
+        </div>
+        <!-- Course content -->
+        <div class="course-content mt-4">
+          <section>
+            <h3>Course content</h3>
+            <small>23 sections • 155 lectures • 22h 13m total length</small>
+        <ul>
+          <li>Chapter 1: Course Overview</li>
+          <li>Chapter 2: Python Setup</li>
+          <li>Chapter 3: Python Object and Data Structure Basics</li>
+          <li>Chapter 4: Python Comparison Operators</li>
+          <li>Chapter 5: Python Statements</li>
+          <li>Chapter 6: Methods and Function</li>
+          <li>Chapter 7: Milestone Project - 1</li>
+          <li>Chapter 8: Object Oriented Programming</li>
+          <li>Chapter 9: Modules and Packages</li>
+          <li>Chapter 10: Errors and Exceptions Handling</li>
+          <li>Chapter 11: Milestone Project - 2</li>
+          <li>Chapter 12: Python Decorators</li>
+          <li>Chapter 13: Advanced Python Modules</li>
+          <li>Chapter 14: Web Scaping with Python</li>
+          <li>Chapter 15: Working with Images with Python</li>
+          <li>Chapter 16: Working with PDFs and Spreadsheet CSV Files</li>
+          <li>Chapter 17: Email with Python</li>
+          <li>Chapter 18: Final Capstone Python Project</li>
+          <li>Chapter 19: Advanced Python Objects and Data Structures</li>
+          <li>Chapter 20: Bonus Material - Introduction to GUIs</li>
+          <li>APPENDIX: OLDER PYTHON 2 MATERIAL</li>
+          <li>BONUS SECTION: THANK YOU!</li>
+        </ul>
+          </section>
+          <section>
+            <h4>Requirements</h4>
+            <li>Access to a computer with an internet connection.</li>
+          </section>
+          <section>
+            <h4>Who this course is for:</h4>
+            <ul>
+              <li>Beginners who have never programmed before.</li>
+              <li>Programmers switching languages to Python.</li>
+              <li>Intermediate Python programmers who want to level up their skills!</li>
+            </ul>
+          </section>
+          <!-- comment of student -->
+          <section>
+            <h4>
+              <i class="fa fa-star text-warning" aria-hidden="true"></i>
+              4.7 course rating. 1K ratings.
+            </h4>
+            <hr>
+
+            <form>
+              <label class="">Yours comment:</label>
+              <span class="d-inline-flex">
+                <i onclick="changeColor(this)" aria-hidden="true" class="fa fa-star"></i>
+                <i onclick="changeColor(this)" class="fa fa-star"></i>
+                <i onclick="changeColor(this)" class="fa fa-star"></i>
+                <i onclick="changeColor(this)" class="fa fa-star"></i>
+                <i onclick="changeColor(this)" class="fa fa-star"></i>
+              </span>
+
+              <div class="form-group m-2">
+                <label for="">Your name:</label>
+                <input class="form-control" type="text" placeholder="Enter your name">
+              </div>
+              <textarea class="form-control col-12 m-2 p-2" name="comment" id="comment" cols="30" rows="5" placeholder="Enter your comment"></textarea>
+              <button class="btn btn-primary m-2" type="submit">Send</button>
+            </form>
+            <hr>
+            <div class="form-group m-3">
+              <div>result of name</div>
+              <div>result of enter comment</div>
+            </div>
+          </section>
+          <!-- History comment -->
+          <section class="container">
+            <section class="d-flex row border-top m-2">
+              <div class="avatar border col-auto">
+                <img style="border-radius:50%" src="../img/logo.png" width="10%" alt="avatar">
+              </div>
+              <div class="d-flex row col-10 border">
+                <h4>
+                  Manish D.</h4>
+                <!-- rating -->
+                <span class="star-rate">
+                  4.5
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                </span>
+                <p>I love the way this course has been made so interactive. So much to learn and practice. I know this is not over , rather just a begining in the learning path of python. So much to explore. Thank you for a fruitful tutorial contents.</p>
+                
+                   
+                <small class="d-block">
+                  Help ?
+                  <i onclick="changeColor(this)" class="fas fa-thumbs-up ml-3"></i>
+                  <i onclick="changeColor(this)" class="fas fa-thumbs-down ml-3"></i>
+                  
+                </small>
+              </div>
+            </section>
+          </section>
+          <section class="container">
+            <section class="d-flex row border-top m-2">
+              <div class="avatar border col-auto">
+                <img style="border-radius:50%" src="../img/logo.png" width="10%" alt="avatar">
+              </div>
+              <div class="d-flex row col-10 border">
+                <h4>
+                  Pypa A.</h4>
+                <!-- rating -->
+                <span class="star-rate">
+                  4.6
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                </span>
+                <p>From Very Basics to Advance topics are covered. It's really good to go course.</p>                                 
+                <small class="d-block">
+                  Help ?
+                  <i onclick="changeColor(this)" class="fas fa-thumbs-up ml-3"></i>
+                  <i onclick="changeColor(this)" class="fas fa-thumbs-down ml-3"></i>
+                  
+                </small>
+              </div>
+            </section>
+          </section>
+          <section class="container">
+            <section class="d-flex row border-top m-2">
+              <div class="avatar border col-auto">
+                <img style="border-radius:50%" src="../img/logo.png" width="10%" alt="avatar">
+              </div>
+              <div class="d-flex row col-10 border">
+                <h4>Mukul S.</h4>                 
+                <!-- rating -->
+                <span class="star-rate">
+                  4.7
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                </span>
+                <p>The course is fantastic to get started with the beautiful programming world of Python...Many Thanks to Jose for this one...</p>                                 
+                <small class="d-block">
+                  Help ?
+                  <i onclick="changeColor(this)" class="fas fa-thumbs-up ml-3"></i>
+                  <i onclick="changeColor(this)" class="fas fa-thumbs-down ml-3"></i>
+                  
+                </small>
+              </div>
+            </section>
+          </section>
+          <section class="container">
+            <section class="d-flex row border-top m-2">
+              <div class="avatar border col-auto">
+                <img style="border-radius:50%" src="../img/logo.png" width="10%" alt="avatar">
+              </div>
+              <div class="d-flex row col-10 border">
+                <h4>Nikita</h4>                 
+                <!-- rating -->
+                <span class="star-rate">
+                  4.5
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                </span>
+                <p>For me First part of the cource was the most usefule (including Milestone Project 2), since You will use thise knoledge 100%. Generators, Decorators and Wev Scrapping also really helpfull, but the rest is really for us to know in my opinion</p>                                 
+                <small class="d-block">
+                  Help ?
+                  <i onclick="changeColor(this)" class="fas fa-thumbs-up ml-3"></i>
+                  <i onclick="changeColor(this)" class="fas fa-thumbs-down ml-3"></i>
+                  
+                </small>
+              </div>
+            </section>
+          </section>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- End your project here-->
+
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript">
+    function changeColor(color) {
+      if (color.style.color === 'rgb(68, 68, 68)') {
+        // color.style.color = "#E4A11B";
+        color.style.color = 'rgb(228,161,27)';
+      }
+      else {
+        color.style.color = 'rgb(68, 68, 68)';
+      }
+    };
+
+  </script>
+</body>
+
+</html>
