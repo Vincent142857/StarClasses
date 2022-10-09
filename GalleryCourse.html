@@ -24,6 +24,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./MDB5/js/mdb.min.js"></script>
   <!-- jquery - JavaScript library for DOM operations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
@@ -189,18 +190,26 @@
       border: gray solid medium;
       border-radius: 25px;
       position: relative;
-      margin: 10px;
     }
     .Gallery article img:hover {
+      border-color: #E4A11B !important;
+      z-index: 1000;
+    }
+    .Gallery article h5:hover, .Gallery article p:hover{
       color: #E4A11B !important;
       z-index: 1000;
+    }
+    @media screen and (max-width: 500px){
+      .Gallery aside {
+        position: relative;
+      }
+      
     }
 
   </style>
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
 </head>
-
 <body onload="countVisitor()" ng-app="myApp">
   <!-- Menu top -->
   <header>
@@ -239,7 +248,7 @@
           <!-- menu search -->
           <form class="d-flex input-group mx-sm-3 mb-2" id="formSearch">
             <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
-              id="search" ng-model="search">
+              id="search">
             <button class="btn bg-warning" type="submit">
               <i class="fas fa-search"></i>
             </button>
@@ -247,7 +256,7 @@
           <!-- menu right -->
           <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
             <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link border border-warning rounded-pill text-center" href="./aboutus.html">About us</a>
+              <a class="nav-link border border-warning rounded-pill text-center" href="aboutus.html">About us</a>
             </li>
             <!-- shopping & payment -->
             <li class="nav-item col-12 col-sm-2 mx-1">
@@ -286,59 +295,136 @@
 
   <!-- MAIN CONTENT -->
   <main class="d-flex flex-column mt-4">
-    <section class="Gallery container-fluid d-flex flex-column mx-auto">
+    <section class="Gallery d-flex mx-auto">
       <!-- Filter courses -->
-      <aside class="d-inline-flex row col-12 col-sm-2">
-        <form id="filter-subject">
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" name="Python" id="Python" value="SubjectPython"> Python
-            </label>
-          </div>
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" name="Excel" id="Excel" value="SubjectExcel"> Excel
-            </label>
-          </div>
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" name="WebDevelopment" id="WebDevelopment" value="SubjectWebDevelopment"> Web Development
-            </label>
-          </div>
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" name="DataScience" id="DataScience" value="SubjectData Science"> Data Science
-            </label>
-          </div>
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" name="JavaScript" id="JavaScript" value="SubjectJavaScript"> Python
-            </label>
-          </div>
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" name="AWSCertification" id="AWSCertification" value="SubjectPython"> AWS Certification
-            </label>
-          </div>
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox" name="Drawing" id="Drawing" value="SubjectDrawing"> Drawing
-            </label>
-          </div>
+      <aside class="position-fixed d-flex flex-column col-12 col-sm-2 p-2">
+        <!--Filter by Subject-->
+        <section class="m-1">
+          <nav class="navbar navbar-light bg-warning">
+            <div class="container-fluid">
+              <button class="navbar-toggler first-button" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent9"
+                aria-controls="navbarToggleExternalContent9" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <div class="animated-icon1">
+                  <i class="fas fa-list"></i>
+                  <span>Topic</span>
+                </div>
+              </button>
+            </div>
+          </nav>
 
-        </form>
+          <div class="collapse" id="navbarToggleExternalContent9">
+            <!-- checkbox subject -->
+            <div class="bg-light shadow-3 p-4">
+              <div class="form-check form-check-inline col-12">
+                <label class="form-check-label">
+                  <input class="form-check-input chk-subject" type="checkbox" name="Subject" id="Python" value="SubjectPython"> Python
+                </label>
+              </div>
+              <div class="form-check form-check-inline col-12">
+                <label class="form-check-label">
+                  <input class="form-check-input chk-subject" type="checkbox" name="Subject" id="Excel" value="SubjectExcel"> Excel
+                </label>
+              </div>
+              <div class="form-check form-check-inline col-12">
+                <label class="form-check-label">
+                  <input class="form-check-input chk-subject" type="checkbox" name="Subject" id="WebDevelopment" value="SubjectWebDevelopment"> Web Development
+                </label>
+              </div>
+              <div class="form-check form-check-inline col-12">
+                <label class="form-check-label">
+                  <input class="form-check-input chk-subject" type="checkbox" name="Subject" id="DataScience" value="SubjectDataScience"> Data Science
+                </label>
+              </div>
+              <div class="form-check form-check-inline col-12">
+                <label class="form-check-label">
+                  <input class="form-check-input chk-subject" type="checkbox" name="Subject" id="JavaScript" value="SubjectJavascript"> JavaScript
+                </label>
+              </div>
+              <div class="form-check form-check-inline col-12">
+                <label class="form-check-label">
+                  <input class="form-check-input chk-subject" type="checkbox" name="Subject" id="AWSCertification" value="SubjectAWSCertification"> AWS Certification
+                </label>
+              </div>
+              <div class="form-check form-check-inline col-12">
+                <label class="form-check-label">
+                  <input class="form-check-input chk-subject" type="checkbox" name="Subject" id="Drawing" value="SubjectDrawing"> Drawing
+                </label>
+              </div>
+            </div><!-- /checkbox subject -->
+          </div>
+        </section><!--/Filter by Subject-->
+
+        <!--Filter by Rating-->
+        <section class="m-1">
+          <nav class="navbar navbar-light bg-warning">
+            <div class="container-fluid">
+              <button class="navbar-toggler first-button" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent2"
+                aria-controls="navbarToggleExternalContent2" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <div class="animated-icon1">
+                  <i class="fas fa-star"></i>
+                  <span>Rating</span>
+                </div>
+              </button>
+            </div>
+          </nav>
+
+          <div class="collapse" id="navbarToggleExternalContent2">
+            <!-- radio rating -->
+            <div class="bg-light shadow-3 py-4">
+              <!-- 4.5 star -->
+              <div class="form-check form-check-inline col-12">
+                <label class="form-check-label">
+                  <input class="form-check-input chk-subject" type="radio" name="Rating" value="5">
+                  <span>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    4.5 & up
+                  </span>
+                </label>
+              </div><!-- /4.5 star -->
+              <!-- 4 star -->
+              <div class="form-check form-check-inline col-12">
+                <label class="form-check-label">
+                  <input class="form-check-input chk-subject" type="radio" name="Rating" value="5">
+                  <span>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star"></i>
+                    4 & up
+                  </span>
+                </label>
+              </div><!--/ 4 star -->
+              <!-- 3.5 star -->
+              <div class="form-check form-check-inline col-12">
+                <label class="form-check-label">
+                  <input class="form-check-input chk-subject" type="radio" name="Rating" value="5">
+                  <span>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="fa fa-star"></i>
+                    3.5 & up
+                  </span>
+                </label>
+              </div><!--/ 3.5 star -->
+            </div><!-- /radio rating -->
+          </div>
+        </section><!--/Filter by Subject-->
+
+
       </aside>
       <!-- Display Course -->
-      <article class="d-block col-12 col-sm-10 row">
-        
-        <form class="d-flex input-group m-2" id="fSearch">
-          <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
-            id="search" ng-model="search">
-          <button class="btn bg-warning" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </form>
-
+      <article class="col-12 col-sm-10 ml-sm-auto p-2">
         <!-- container courses -->
         <div class="row d-inline-flex" id="gallery">
           <!-- Gallery Item 1 -->
@@ -350,24 +436,24 @@
               </div><!--/ 1. picture -->
               <!-- 2. content -->
               <div class="col-12 px-4">
-                <h4 class="title-course">x.NameCourse</h4>
+                <h5 class="title-course">x.NameCourse</h5>
 
                 <div class="d-flex row">
                   <div class="d-flex">
-                    <p class="mr-auto"><b></b></p>
+                    <p class="mr-auto"><b>Teacher</b></p>
                     <span class="ml-auto">
-                       <i class="fa fa-star text-warning"></i>
+                      Rating <i class="fa fa-star text-warning"></i>
                     </span>
                   </div>
                   <div class="d-flex">
                     <span class="text-left mr-auto">
-                      <i class="fas fa-user-graduate"></i>
+                      <i class="fas fa-user-graduate"></i>  Student
                     </span>
 
                     <span class="ml-auto">
-                      <strong class="text-success"></strong>
+                      <strong class="text-success">PriceNew</strong>
                       <small class="text-danger">
-                        <del></del>
+                        <del>PriceOld</del>
                       </small>
                     </span>
                   </div>
@@ -377,7 +463,8 @@
           </div>
           <div class="w-100 d-sm-none"></div><!--/ Gallery Item 1 -->
         </div><!-- /container courses -->
-      </article>
+      </article><!--/ Display Course -->
+
     </section>
   </main>
 
@@ -514,7 +601,9 @@
   <!--/ FOOTER -->
 
   <!-- Java Script -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="./MDB5/js/mdb.min.js"></script>
+
+  <script src="Gallery.js"></script>
   <script>
     var app = angular.module("myApp", [])
     app.controller("myController", function ($rootScope, $http, $location) {
@@ -522,70 +611,6 @@
         $rootScope.list = response.data.informationSubject;
       });
     });
-    // *** Gallery ***
-
-    //** Reading form JSON file **
-    $.getJSON("informationSubject.json", function (items) {
-      data = items.informationSubject;
-      displayCourse(data);
-    });
-    //** Display 
-    function displayCourse(items) {
-      let array =``;
-      $.each(items, function (k, v) {
-        array += `
-                <div class="col-12 col-sm-6 col-md-4 mx-auto p-3">
-                    <a class="d-flex flex-column text-reset" href="./Courses/${v.Detail}" target="new">
-                      <div class="col-12 text-center">
-                        <img src="${v.Img}" width="100%" alt="course">
-                      </div>
-                      <div class="col-12 px-4">
-                        <h4 class="title-course">${v.NameCourse}</h4>
-                        <div class="d-flex row">
-                          <div class="d-flex">
-                            <p class="mr-auto"><b>${v.Teacher}</b></p>
-                            <span class="ml-auto">
-                              ${v.Rating} <i class="fa fa-star text-warning"></i>
-                            </span>
-                          </div>
-                          <div class="d-flex">
-                            <span class="text-left mr-auto">
-                              <i class="fas fa-user-graduate"></i> ${v.QtyStudent}
-                            </span>
-                            <span class="ml-auto">
-                              <strong class="text-success">${v.PriceNew}</strong>
-                              <small class="text-danger">
-                                <del>${v.PriceOld}</del>
-                              </small>
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="w-100 d-sm-none"></div>
-                `;
-      });
-
-      $("#gallery").html(array);
-    }
-
-
-
-    //** Count Visitor ** 
-    function countVisitor() {
-      if (typeof (Storage) !== "undefined") {
-        if (localStorage.countV) {
-          localStorage.countV = Number(localStorage.countV) + 1;
-        } else {
-          localStorage.countV = 1;
-        }
-        document.getElementById("visitor").innerHTML = localStorage.countV;
-      } else {
-        document.getElementById("visitor").innerHTML = 0;
-      }
-    }
-
   </script>
   <!--/Java Script -->
 
