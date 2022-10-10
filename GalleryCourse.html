@@ -2,11 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.72.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- icon website -->
   <link rel="icon" href="./img/star-classes-icon.png" type="image/x-icon">
   <title>Star Classes</title>
@@ -199,9 +197,14 @@
       color: #E4A11B !important;
       z-index: 1000;
     }
-    @media screen and (max-width: 500px){
+    .Gallery aside {
+      position: fixed !important;
+      z-index: 1000;
+    }
+    @media screen and (max-width: 900px){
       .Gallery aside {
-        position: relative;
+        position: relative!important;
+        /* display: block !important; */
       }
       
     }
@@ -295,11 +298,12 @@
 
   <!-- MAIN CONTENT -->
   <main class="d-flex flex-column mt-4">
-    <section class="Gallery d-flex mx-auto">
+    <section class="Gallery row mx-auto">
       <!-- Filter courses -->
-      <aside class="position-fixed d-flex flex-column col-12 col-sm-2 p-2">
+      <aside class="d-block col-12 col-sm-3 col-md-2 p-2">
+        
         <!--Filter by Subject-->
-        <section class="m-1">
+        <section class="col-12 m-1">
           <nav class="navbar navbar-light bg-warning">
             <div class="container-fluid">
               <button class="navbar-toggler first-button" type="button" data-toggle="collapse"
@@ -357,7 +361,7 @@
         </section><!--/Filter by Subject-->
 
         <!--Filter by Rating-->
-        <section class="m-1">
+        <section class="col-12 m-1">
           <nav class="navbar navbar-light bg-warning">
             <div class="container-fluid">
               <button class="navbar-toggler first-button" type="button" data-toggle="collapse"
@@ -374,11 +378,11 @@
 
           <div class="collapse" id="navbarToggleExternalContent2">
             <!-- radio rating -->
-            <div class="bg-light shadow-3 py-4">
+            <div class="bg-light shadow-3 p-4">
               <!-- 4.5 star -->
               <div class="form-check form-check-inline col-12">
                 <label class="form-check-label">
-                  <input class="form-check-input chk-subject" type="radio" name="Rating" value="5">
+                  <input class="form-check-input chk-star" type="radio" name="Rating" value="4.5">
                   <span>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star text-warning"></i>
@@ -392,7 +396,7 @@
               <!-- 4 star -->
               <div class="form-check form-check-inline col-12">
                 <label class="form-check-label">
-                  <input class="form-check-input chk-subject" type="radio" name="Rating" value="5">
+                  <input class="form-check-input chk-star" type="radio" name="Rating" value="4">
                   <span>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star text-warning"></i>
@@ -406,7 +410,7 @@
               <!-- 3.5 star -->
               <div class="form-check form-check-inline col-12">
                 <label class="form-check-label">
-                  <input class="form-check-input chk-subject" type="radio" name="Rating" value="5">
+                  <input class="form-check-input chk-star" type="radio" name="Rating" value="3.5">
                   <span>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star text-warning"></i>
@@ -420,48 +424,48 @@
             </div><!-- /radio rating -->
           </div>
         </section><!--/Filter by Subject-->
+        
 
 
       </aside>
       <!-- Display Course -->
-      <article class="col-12 col-sm-10 ml-sm-auto p-2">
+      <article class="col-12 col-sm-9 col-md-10 ml-auto p-2">
         <!-- container courses -->
         <div class="row d-inline-flex" id="gallery">
           <!-- Gallery Item 1 -->
-          <div class="col-12 col-sm-6 col-md-4 mx-auto p-3">
-            <a class="d-flex flex-column text-reset" href="#" target="new">
-              <!--1. picture -->
+          <div class="col-12 mx-auto p-3">
+            <a class="d-flex flex-column text-reset" href="./Courses/${v.Detail}" target="new">
               <div class="col-12 text-center">
-                <img src="./img/imgcourses/aws01.jpeg" width="100%" alt="">
-              </div><!--/ 1. picture -->
-              <!-- 2. content -->
+                <img src="./img/imgcourses/datascience01.jpeg" width="300px" alt="course">
+              </div>
               <div class="col-12 px-4">
-                <h5 class="title-course">x.NameCourse</h5>
-
+                <h5 style="text-align: justify">${v.NameCourse}</h5>
                 <div class="d-flex row">
                   <div class="d-flex">
-                    <p class="mr-auto"><b>Teacher</b></p>
+                    <p class="mr-auto"><i>${v.Teacher}</i></p>
                     <span class="ml-auto">
-                      Rating <i class="fa fa-star text-warning"></i>
+                      ${v.Rating} <i class="fa fa-star text-warning"></i>
                     </span>
                   </div>
                   <div class="d-flex">
-                    <span class="text-left mr-auto">
-                      <i class="fas fa-user-graduate"></i>  Student
-                    </span>
 
+                    <span class="text-left mr-auto">
+                      <i class="fas fa-user-graduate"></i> ${v.QtyStudent}
+                    </span>
                     <span class="ml-auto">
-                      <strong class="text-success">PriceNew</strong>
+                      <strong class="text-success">${v.PriceNew}</strong>
                       <small class="text-danger">
-                        <del>PriceOld</del>
+                        <del>${v.PriceOld}</del>
                       </small>
                     </span>
+
                   </div>
                 </div>
-              </div><!-- /2. content -->
+              </div>
             </a>
           </div>
-          <div class="w-100 d-sm-none"></div><!--/ Gallery Item 1 -->
+          <div class="w-100 d-sm-none"></div>
+          <!--/ Gallery Item 1 -->
         </div><!-- /container courses -->
       </article><!--/ Display Course -->
 
@@ -604,6 +608,8 @@
   <script type="text/javascript" src="./MDB5/js/mdb.min.js"></script>
 
   <script src="Gallery.js"></script>
+
+  <script src="cart.js"></script>
   <script>
     var app = angular.module("myApp", [])
     app.controller("myController", function ($rootScope, $http, $location) {

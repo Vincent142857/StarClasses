@@ -2,11 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.72.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- icon website -->
   <link rel="icon" href="./img/star-classes-icon.png" type="image/x-icon">
   <title>Star Classes</title>
@@ -148,8 +147,16 @@
     .dropdown-item:hover {
       color: #E4A11B !important;
       font-weight: bold;
-      font-size: larger;
       cursor: pointer !important;
+    }
+
+    .dropdown-hover:hover>.dropdown-menu {
+      display: inline-block;
+    }
+
+    .dropdown-hover>.dropdown-toggle:active {
+      /*Without this, clicking will make it sticky*/
+      pointer-events: none;
     }
 
     .badge-notification {
@@ -198,24 +205,52 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <!-- menu left -->
-          <ul class="navbar-nav mr-auto mb-2 m-md-0 col-12 col-sm-2">
-            <li class="nav-item dropdown col-12 border border-warning rounded-pill text-center">
-              <a class="nav-link dropdown-toggle" href="GalleryCourse.html" id="DropdownMenu" role="tab"
-                data-toggle="dropdown" aria-expanded="false">
-                <img src="./img/tutorialCut.png" style="width: 20px;"> Courses
+          <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
+
+            <!-- Navbar dropdown -->
+            <li class="nav-item dropdown dropdown-hover col-12 border border-warning text-center position-relative">
+
+              <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
+                data-mdb-toggle="dropdown" aria-expanded="false">
+                <span><img src="./img/tutorialCut.png" width="20px;"> Courses</span>
               </a>
-              <!-- Menu H2 -->
-              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="DropdownMenu">
-                <li><a href="#" class="dropdown-item px-5">Python</a></li>
-                <li><a href="#" class="dropdown-item px-5">Excel</a></li>
-                <li><a href="#" class="dropdown-item px-5">Web Development</a></li>
-                <li><a href="#" class="dropdown-item px-5">Javascript</a></li>
-                <li><a href="#" class="dropdown-item px-5">Data Science</a></li>
-                <li><a href="#" class="dropdown-item px-5">AWS Certification</a></li>
-                <li><a href="#" class="dropdown-item px-5">Drawing</a></li>
-              </ul>
-              <!-- Menu H2 -->
-            </li>
+              <!-- Dropdown menu -->
+              <div class="dropdown-menu w-100 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;border-top-right-radius: 0;">
+                <div class="container-fluid">
+                  <div class="col-12 my-3 mb-lg-0">
+                    <div class="list-group list-group-flush">
+                      <a href="GalleryCourse.html" class="list-group-item list-group-item-action">
+                        <b class="text-uppercase">All Topic</b>
+                      </a>
+                      <a href="" class="list-group-item list-group-item-action">
+                        <i class="fas fa-caret-right"></i> Python
+                      </a>
+                      <a href="" class="list-group-item list-group-item-action">
+                        <i class="fas fa-caret-right"></i> Excel
+                      </a>
+                      <a href="" class="list-group-item list-group-item-action">
+                        <i class="fas fa-caret-right"></i>Web Development
+                      </a>
+                      <a href="" class="list-group-item list-group-item-action">
+                        <i class="fas fa-caret-right"></i> Data Science
+                      </a>
+                      <a href="" class="list-group-item list-group-item-action">
+                        <i class="fas fa-caret-right"></i> JavaScript
+                      </a>
+                      <a href="" class="list-group-item list-group-item-action">
+                        <i class="fas fa-caret-right"></i> AWS Certification
+                      </a>
+                      <a href="" class="list-group-item list-group-item-action">
+                        <i class="fas fa-caret-right"></i> Drawing
+                      </a>
+                    </div>
+                  </div>
+
+                  
+                </div>
+              </div><!-- /Dropdown menu -->
+              
+            </li><!-- Navbar dropdown -->
 
           </ul>
 

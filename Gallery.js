@@ -13,7 +13,7 @@ function countVisitor() {
 }
 
 //** Reading form JSON file **
-
+var data = [];
 $.getJSON("informationSubject.json", function (items) {
   data = items.informationSubject;
   displayCourse(data);
@@ -60,6 +60,7 @@ function showProduct(pid) {
 
 
 // Filter by Checkbox Subject
+var subData = [];
 $("input[type=checkbox]").click(function () {
 
   // var cats =
@@ -73,11 +74,35 @@ $("input[type=checkbox]").click(function () {
 
   let cats = $(".chk-subject:checked").map(function () { return $(this).val() }).toArray().toString();
 
-  let subData = (cats.length == 0) ? data : data.filter(item => cats.search(item.Subject) >= 0);
+  subData = (cats.length == 0) ? data : data.filter(item => cats.search(item.Subject) >= 0);
 
   displayCourse(subData);
-
 });
+
+//Filter by check radio Star
+$("input[type=radio]").click(function () {
+  let stars = $(".chk-star:checked").map(function () { return $(this).val() }).toArray();
+  let RatingData = [];
+  // console.log(subData.length);
+
+  if (subData.length == 0) {
+    subData = data;
+  }
+
+  if (stars.length == 0) {
+    RatingData = subData;
+  } else {
+    for (let i = 1; i < subData.length; i++) {
+      if (stars[0] <= eval("(" + subData[i].Rating + ")")) {
+        RatingData.push(subData[i]);
+      }
+    }
+  }
+  displayCourse(RatingData);
+  //$('#countDisplayCourse').html(RatingData.length);
+  
+});
+
 
 
 //** Display 
@@ -85,7 +110,7 @@ function displayCourse(items) {
   let array = ``;
   $.each(items, function (k, v) {
     array += `
-            <div class="col-12 col-sm-6 col-md-4 mx-auto p-3">
+            <div class="col-12 col-sm-6 col-md-4 mx-auto p-3 border-bottom">
                 <a class="d-flex flex-column text-reset" href="./Courses/${v.Detail}" target="new">
                   <div class="col-12 text-center">
                     <img src="${v.Img}" width="100%" alt="course">
@@ -113,6 +138,7 @@ function displayCourse(items) {
                     </div>
                   </div>
                 </a>
+                <a href="#" data-name="${v.ID}" data-price="${v.PriceNew}" class="add-to-cart btn btn-success offset-4">Add to cart</a>
               </div>
               <div class="w-100 d-sm-none"></div>
             `;
