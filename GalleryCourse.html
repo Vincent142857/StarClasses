@@ -228,6 +228,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <!-- menu left -->
           <ul class="navbar-nav mr-auto mb-2 m-md-0 col-12 col-sm-2">
+            
             <li class="nav-item dropdown col-12 border border-warning rounded-pill text-center">
               <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown"
                 aria-expanded="false">
@@ -300,10 +301,10 @@
   <main class="d-flex flex-column mt-4">
     <section class="Gallery row mx-auto">
       <!-- Filter courses -->
-      <aside class="d-block col-12 col-sm-3 col-md-2 p-2">
+      <aside class="d-block col-12 col-sm-4 col-md-3 pt-2">
         
         <!--Filter by Subject-->
-        <section class="col-12 m-1">
+        <section class="col-12 mt-1">
           <nav class="navbar navbar-light bg-warning">
             <div class="container-fluid">
               <button class="navbar-toggler first-button" type="button" data-toggle="collapse"
@@ -320,7 +321,7 @@
 
           <div class="collapse" id="navbarToggleExternalContent9">
             <!-- checkbox subject -->
-            <div class="bg-light shadow-3 p-4">
+            <div class="bg-light shadow-3 mt-2 pl-4">
               <div class="form-check form-check-inline col-12">
                 <label class="form-check-label">
                   <input class="form-check-input chk-subject" type="checkbox" name="Subject" id="Python" value="SubjectPython"> Python
@@ -361,7 +362,7 @@
         </section><!--/Filter by Subject-->
 
         <!--Filter by Rating-->
-        <section class="col-12 m-1">
+        <section class="col-12 mt-1">
           <nav class="navbar navbar-light bg-warning">
             <div class="container-fluid">
               <button class="navbar-toggler first-button" type="button" data-toggle="collapse"
@@ -378,58 +379,62 @@
 
           <div class="collapse" id="navbarToggleExternalContent2">
             <!-- radio rating -->
-            <div class="bg-light shadow-3 p-4">
+            <div class="bg-light shadow-3 mt-2 pl-4">
               <!-- 4.5 star -->
               <div class="form-check form-check-inline col-12">
                 <label class="form-check-label">
                   <input class="form-check-input chk-star" type="radio" name="Rating" value="4.5">
-                  <span>
+                  <small>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fas fa-star-half-alt text-warning"></i>
                     4.5 & up
-                  </span>
+                  </small>
                 </label>
               </div><!-- /4.5 star -->
               <!-- 4 star -->
               <div class="form-check form-check-inline col-12">
                 <label class="form-check-label">
                   <input class="form-check-input chk-star" type="radio" name="Rating" value="4">
-                  <span>
+                  <small>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star"></i>
                     4 & up
-                  </span>
+                  </small>
                 </label>
               </div><!--/ 4 star -->
               <!-- 3.5 star -->
               <div class="form-check form-check-inline col-12">
                 <label class="form-check-label">
                   <input class="form-check-input chk-star" type="radio" name="Rating" value="3.5">
-                  <span>
+                  <small>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fas fa-star-half-alt text-warning"></i>
                     <i class="fa fa-star"></i>
                     3.5 & up
-                  </span>
+                  </small>
                 </label>
               </div><!--/ 3.5 star -->
             </div><!-- /radio rating -->
           </div>
-        </section><!--/Filter by Subject-->
+        </section><!--/Filter by rating-->
+
+        
+                
+                
         
 
 
       </aside>
       <!-- Display Course -->
-      <article class="col-12 col-sm-9 col-md-10 ml-auto p-2">
+      <article class="col-12 col-sm-8 col-md-9 ml-auto p-2">
         <!-- container courses -->
         <div class="row d-inline-flex" id="gallery">
           <!-- Gallery Item 1 -->

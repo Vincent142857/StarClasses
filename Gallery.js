@@ -13,7 +13,7 @@ function countVisitor() {
 }
 
 //** Reading form JSON file **
-var data = [];
+
 $.getJSON("informationSubject.json", function (items) {
   data = items.informationSubject;
   displayCourse(data);
@@ -60,7 +60,7 @@ function showProduct(pid) {
 
 
 // Filter by Checkbox Subject
-var subData = [];
+let subData = [];
 $("input[type=checkbox]").click(function () {
 
   // var cats =
@@ -76,6 +76,7 @@ $("input[type=checkbox]").click(function () {
 
   subData = (cats.length == 0) ? data : data.filter(item => cats.search(item.Subject) >= 0);
 
+  console.log(subData.length);
   displayCourse(subData);
 });
 
@@ -83,26 +84,20 @@ $("input[type=checkbox]").click(function () {
 $("input[type=radio]").click(function () {
   let stars = $(".chk-star:checked").map(function () { return $(this).val() }).toArray();
   let RatingData = [];
-  // console.log(subData.length);
-
-  if (subData.length == 0) {
-    subData = data;
-  }
+  
 
   if (stars.length == 0) {
-    RatingData = subData;
+    RatingData = data;
   } else {
-    for (let i = 1; i < subData.length; i++) {
-      if (stars[0] <= eval("(" + subData[i].Rating + ")")) {
-        RatingData.push(subData[i]);
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].Rating >= stars[0]) {
+        RatingData.push(data[i]);
       }
     }
   }
+  console.log(RatingData.length);
   displayCourse(RatingData);
-  //$('#countDisplayCourse').html(RatingData.length);
-  
 });
-
 
 
 //** Display 
@@ -119,7 +114,7 @@ function displayCourse(items) {
                     <h5 style="text-align: justify">${v.NameCourse}</h5>
                     <div class="d-flex row">
                       <div class="d-flex">
-                        <p class="mr-auto"><i>${v.Teacher}</i></p>
+                        <small class="mr-auto"><i>${v.Teacher}</i></small>
                         <span class="ml-auto">
                           ${v.Rating} <i class="fa fa-star text-warning"></i>
                         </span>
@@ -138,7 +133,7 @@ function displayCourse(items) {
                     </div>
                   </div>
                 </a>
-                <a href="#" data-name="${v.ID}" data-price="${v.PriceNew}" class="add-to-cart btn btn-success offset-4">Add to cart</a>
+                <a href="#" data-name="${v.NameCourse}" data-price="${v.PriceNew}" class="add-to-cart btn btn-success offset-4">Add to cart</a>
               </div>
               <div class="w-100 d-sm-none"></div>
             `;

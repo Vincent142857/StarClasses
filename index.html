@@ -27,6 +27,9 @@
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="./MDB5/js/mdb.min.js"></script>
 
+  <!-- jquery - JavaScript library for DOM operations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
   <!-- Angular  -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
@@ -208,50 +211,24 @@
           <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
 
             <!-- Navbar dropdown -->
-            <li class="nav-item dropdown dropdown-hover col-12 border border-warning text-center position-relative">
-
-              <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
-                data-mdb-toggle="dropdown" aria-expanded="false">
-                <span><img src="./img/tutorialCut.png" width="20px;"> Courses</span>
+            <li class="nav-item dropdown col-12 border border-warning rounded-pill text-center">
+              <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown"
+                aria-expanded="false">
+                <img src="./img/tutorialCut.png" style="width: 20px;"> Courses
               </a>
-              <!-- Dropdown menu -->
-              <div class="dropdown-menu w-100 mt-0" aria-labelledby="navbarDropdown" style="border-top-left-radius: 0;border-top-right-radius: 0;">
-                <div class="container-fluid">
-                  <div class="col-12 my-3 mb-lg-0">
-                    <div class="list-group list-group-flush">
-                      <a href="GalleryCourse.html" class="list-group-item list-group-item-action">
-                        <b class="text-uppercase">All Topic</b>
-                      </a>
-                      <a href="" class="list-group-item list-group-item-action">
-                        <i class="fas fa-caret-right"></i> Python
-                      </a>
-                      <a href="" class="list-group-item list-group-item-action">
-                        <i class="fas fa-caret-right"></i> Excel
-                      </a>
-                      <a href="" class="list-group-item list-group-item-action">
-                        <i class="fas fa-caret-right"></i>Web Development
-                      </a>
-                      <a href="" class="list-group-item list-group-item-action">
-                        <i class="fas fa-caret-right"></i> Data Science
-                      </a>
-                      <a href="" class="list-group-item list-group-item-action">
-                        <i class="fas fa-caret-right"></i> JavaScript
-                      </a>
-                      <a href="" class="list-group-item list-group-item-action">
-                        <i class="fas fa-caret-right"></i> AWS Certification
-                      </a>
-                      <a href="" class="list-group-item list-group-item-action">
-                        <i class="fas fa-caret-right"></i> Drawing
-                      </a>
-                    </div>
-                  </div>
-
-                  
-                </div>
-              </div><!-- /Dropdown menu -->
-              
+              <!-- Menu H2 -->
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="DropdownMenu">
+                <li><a href="GalleryCourse.html" class="dropdown-item px-5 text-uppercase">Topic</a></li>
+                <li><a href="#" class="dropdown-item px-5">Python</a></li>
+                <li><a href="#" class="dropdown-item px-5">Excel</a></li>
+                <li><a href="#" class="dropdown-item px-5">Web Development</a></li>
+                <li><a href="#" class="dropdown-item px-5">Javascript</a></li>
+                <li><a href="#" class="dropdown-item px-5">Data Science</a></li>
+                <li><a href="#" class="dropdown-item px-5">AWS Certification</a></li>
+                <li><a href="#" class="dropdown-item px-5">Drawing</a></li>
+              </ul>
+              <!-- Menu H2 -->
             </li><!-- Navbar dropdown -->
-
           </ul>
 
           <!-- menu search -->

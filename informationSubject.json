@@ -10,8 +10,8 @@
             "Teacher":"Dr. Angela Yu",
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
-            "Rating":"4.7",
-            "QtyStudent":"629,025",
+            "Rating": 4.7,
+            "QtyStudent": 629025,
             "Detail":"Python01.html"
         },
         {
@@ -23,8 +23,8 @@
             "Teacher":"Jose Portilla",
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
-            "Rating":"4.6",
-            "QtyStudent":"1,611,037",
+            "Rating": 4.6,
+            "QtyStudent": 1611037,
             "Detail":"Python02.html"
         },
         {
@@ -36,8 +36,8 @@
             "Teacher":"Andrei Negagoie, Zero To Mastery ",
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
-            "Rating":"4.6",
-            "QtyStudent":"170,773",
+            "Rating": 4.6,
+            "QtyStudent": 170773,
             "Detail":"Python03.html"
         },
         {
@@ -49,8 +49,8 @@
             "Teacher":"Tim Buchalka, Jean-Paul Robets, Tim Buchalka's Learn Programming Adecamy",
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
-            "Rating":"4.6",
-            "QtyStudent":"391,390",
+            "Rating": 4.6,
+            "QtyStudent": 391390,
             "Detail":"Python04.html"
         },
         {
@@ -62,8 +62,8 @@
             "Teacher":"Ardit Sulce",
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
-            "Rating":"4.6",
-            "QtyStudent":"277,733",
+            "Rating": 4.6,
+            "QtyStudent": 277733,
             "Detail":"Python05.html"
         },
         {
@@ -75,8 +75,8 @@
             "Teacher":"Codestars • over 2 million students worldwidel, Jose Salvatierra, Rob Percival, Teclado by Jose Salvatierra",
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
-            "Rating":"4.6",
-            "QtyStudent":"72,912",
+            "Rating":4.6,
+            "QtyStudent": 72912,
             "Detail":"Python06.html"
         },
         {
@@ -88,8 +88,8 @@
             "Teacher":"Boris Paskhaver",
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
-            "Rating":"4.6",
-            "QtyStudent":"68,943",
+            "Rating":4.6,
+            "QtyStudent": 68943,
             "Detail":"Python07.html"
         },
         {
@@ -101,8 +101,8 @@
             "Teacher":"Infinite Skills",
             "PriceNew":"$16.99",
             "PriceOld":"$49.99",
-            "Rating":"4.5",
-            "QtyStudent":"34,238",
+            "Rating": 4.5,
+            "QtyStudent": 34238,
             "Detail":"Excel01.html"
         },
         {
@@ -114,8 +114,8 @@
             "Teacher":"Infinite Skills",
             "PriceNew":"$16.99",
             "PriceOld":"$49.99",
-            "Rating":"4.4",
-            "QtyStudent":"44,727",
+            "Rating": 4.4,
+            "QtyStudent": 44727,
             "Detail":"Excel02.html"
         },
         {
@@ -127,8 +127,8 @@
             "Teacher":"Todd McLeod",
             "PriceNew":"$16.99",
             "PriceOld":"$24.99",
-            "Rating":"4.5",
-            "QtyStudent":"129,790",
+            "Rating": 4.5,
+            "QtyStudent": 129790,
             "Detail":"Excel03.html"
         },
         {
@@ -140,8 +140,8 @@
             "Teacher":"Ulrika Hedlund",
             "PriceNew":"$16.99",
             "PriceOld":"$19.99",
-            "Rating":"4.6",
-            "QtyStudent":"2,587",
+            "Rating": 4.6,
+            "QtyStudent": 2587,
             "Detail":"Excel04.html"
         },
         {
@@ -153,8 +153,8 @@
             "Teacher":"Billy Wigley",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.6",
-            "QtyStudent":"4,077",
+            "Rating": 4.6,
+            "QtyStudent": 4077,
             "Detail":"Excel05.html"
         },
         {
@@ -166,7 +166,7 @@
             "Teacher":"Rishabh Pugalia, Yoda Learning",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.3",
+            "Rating": 4.3,
             "QtyStudent":"3,273",
             "Detail":"Excel06.html"
         },
@@ -179,8 +179,8 @@
             "Teacher":"Daniel Strong",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.6",
-            "QtyStudent":"112,909",
+            "Rating": 4.6,
+            "QtyStudent": 112909,
             "Detail":"Excel07.html"
         },
         {
@@ -192,7 +192,7 @@
             "Teacher":"Kirill Eremenko, Ligency Team",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.6",
+            "Rating": 4.6,
             "QtyStudent":"206,234",
             "Detail":"DataScience01.html"
         },
@@ -205,8 +205,8 @@
             "Teacher":"Sundog Education, Frank Kane, Sundog Education Team",
             "PriceNew":"$19.99",
             "PriceOld":"$24.99",
-            "Rating":"4.5",
-            "QtyStudent":"168,097",
+            "Rating": 4.5,
+            "QtyStudent": 168097,
             "Detail":"DataScience02.html"
         },
         {
@@ -218,8 +218,8 @@
             "Teacher":"Lazy Programmer Inc.",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.6",
-            "QtyStudent":"50,582",
+            "Rating": 4.6,
+            "QtyStudent": 50582,
             "Detail":"DataScience03.html"
         },
         {
@@ -231,8 +231,8 @@
             "Teacher":"Kirill Eremenko, Ligency Team",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.7",
-            "QtyStudent":"240,627",
+            "Rating": 4.7,
+            "QtyStudent": 240627,
             "Detail":"DataScience04.html"
         },
         {
@@ -244,8 +244,8 @@
             "Teacher":"Jose Portilla",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.7",
-            "QtyStudent":"84,512",
+            "Rating": 4.7,
+            "QtyStudent": 84512,
             "Detail":"DataScience05.html"
         },
         {
@@ -257,8 +257,8 @@
             "Teacher":"David Valentine",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.5",
-            "QtyStudent":"56,579",
+            "Rating": 4.5,
+            "QtyStudent": 56579,
             "Detail":"DataScience06.html"
         },
         {
@@ -270,7 +270,7 @@
             "Teacher":"Ram Prasad",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.6",
+            "Rating": 4.6,
             "QtyStudent":"5,580",
             "Detail":"DataScience07.html"
         },
@@ -283,8 +283,8 @@
             "Teacher":"Dollar Design School, Mark Lassoff",
             "PriceNew":"$16.99",
             "PriceOld":"$19.99",
-            "Rating":"4.3",
-            "QtyStudent":"22,496",
+            "Rating": 4.3,
+            "QtyStudent": 22496,
             "Detail":"WebDevelopment01.html"
         },
         {
@@ -296,7 +296,7 @@
             "Teacher":"Dollar Design School, Mark Lassoff",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.4",
+            "Rating": 4.4,
             "QtyStudent":"34,033",
             "Detail":"WebDevelopment02.html"
         },
@@ -309,8 +309,8 @@
             "Teacher":"Evan Kimbrell",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.9",
-            "QtyStudent":"33,257",
+            "Rating": 4.9,
+            "QtyStudent": 33257,
             "Detail":"WebDevelopment03.html"
         },
         {
@@ -322,8 +322,8 @@
             "Teacher":"Brad Hussey",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.5",
-            "QtyStudent":"78,021",
+            "Rating": 4.5,
+            "QtyStudent": 78021,
             "Detail":"WebDevelopment04.html"
         },
         {
@@ -335,8 +335,8 @@
             "Teacher":"Dollar Design School, Mark Lassoff",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.5",
-            "QtyStudent":"6,459",
+            "Rating": 4.5,
+            "QtyStudent": 6459,
             "Detail":"WebDevelopment05.html"
         },
         {
@@ -348,8 +348,8 @@
             "Teacher":"Rob Percival",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.5",
-            "QtyStudent":"304,247",
+            "Rating": 4.5,
+            "QtyStudent": 304247,
             "Detail":"WebDevelopment06.html"
         },
         {
@@ -361,8 +361,8 @@
             "Teacher":"Development Island(UK)",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.5",
-            "QtyStudent":"34,358",
+            "Rating": 4.5,
+            "QtyStudent": 34358,
             "Detail":"WebDevelopment07.html"
         },
         {
@@ -374,8 +374,8 @@
             "Teacher":"Jaysen Batchelor",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.6",
-            "QtyStudent":"490 294",
+            "Rating": 4.6,
+            "QtyStudent": 490294,
             "Detail":"Drawing01.html"
         },
         {   
@@ -387,8 +387,8 @@
             "Teacher":"Scott Harris",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.8",
-            "QtyStudent":"278 670",
+            "Rating": 4.8,
+            "QtyStudent": 278670,
             "Detail":"Drawing02.html"
         },
         {
@@ -400,8 +400,8 @@
             "Teacher":"Joseph Patric Daniels",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.7",
-            "QtyStudent":"41 137",
+            "Rating": 4.7,
+            "QtyStudent": 41137,
             "Detail":"Drawing03.html"
         },
         {
@@ -413,8 +413,8 @@
             "Teacher":"Brent Eviston",
             "PriceNew":"$16.99",
             "PriceOld":"$34.99",
-            "Rating":"4.7",
-            "QtyStudent":"67 528",
+            "Rating": 4.7,
+            "QtyStudent": 67528,
             "Detail":"Drawing04.html"
         },
         {
@@ -426,8 +426,8 @@
             "Teacher":"Chad Neuman",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.9",
-            "QtyStudent":"21 528",
+            "Rating": 4.9,
+            "QtyStudent": 21528,
             "Detail":"Drawing05.html"
         },
         {
@@ -440,7 +440,7 @@
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.9",
-            "QtyStudent":"14 276",
+            "QtyStudent": 14276,
             "Detail":"Drawing06.html"
         },
         {
@@ -452,8 +452,8 @@
             "Teacher":"Matthew Fussell",
             "PriceNew":"$16.99",
             "PriceOld":"$34.99",
-            "Rating":"4.7",
-            "QtyStudent":"4 169",
+            "Rating": 4.7,
+            "QtyStudent": 4169,
             "Detail":"Drawing07.html"
         },
         {
@@ -465,7 +465,7 @@
             "Teacher":"Stephane Maarek",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.7",
+            "Rating": 4.7,
             "QtyStudent":"638 952",
             "Detail":"AWSCertification01.html"
         },
@@ -478,8 +478,8 @@
             "Teacher":"Stephane Maarek",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.8",
-            "QtyStudent":"363 758",
+            "Rating": 4.8,
+            "QtyStudent": 363758,
             "Detail":"AWSCertification02.html"
         },
         {
@@ -491,8 +491,8 @@
             "Teacher":"Stephane Maarek",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.8",
-            "QtyStudent":"523 864",
+            "Rating": 4.8,
+            "QtyStudent": 523864,
             "Detail":"AWSCertification03.html"
         },
         {
@@ -504,7 +504,7 @@
             "Teacher":"Stephane Maarek",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.7",
+            "Rating": 4.7,
             "QtyStudent":"86 134",
             "Detail":"AWSCertification04.html"
         },
@@ -517,8 +517,8 @@
             "Teacher":"BackSpace Academy",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.7",
-            "QtyStudent":"137 299",
+            "Rating": 4.7,
+            "QtyStudent": 137299,
             "Detail":"AWSCertification05.html"
         },
         {
@@ -530,8 +530,8 @@
             "Teacher":"Stephane Maarek",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.8",
-            "QtyStudent":"98 346",
+            "Rating": 4.8,
+            "QtyStudent": 98346,
             "Detail":"AWSCertification06.html"
         },
         {
@@ -543,8 +543,8 @@
             "Teacher":"Stephane Maarek",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.8",
-            "QtyStudent":"74 291",
+            "Rating": 4.8,
+            "QtyStudent": 74291,
             "Detail":"AWSCertification01.html"
         },
         {
@@ -556,8 +556,8 @@
             "Teacher":"Dollar Design School",
             "PriceNew":"$16.99",
             "PriceOld":"$19.99",
-            "Rating":"4.5",
-            "QtyStudent":"9,613",
+            "Rating": 4.5,
+            "QtyStudent": 9613,
             "Detail":"Javascript01.html"
         },
         {
@@ -569,8 +569,8 @@
             "Teacher":"John Bura",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.5",
-            "QtyStudent":"67,614",
+            "Rating": 4.5,
+            "QtyStudent": 67614,
             "Detail":"Javascript02.html"
         },
         {
@@ -582,8 +582,8 @@
             "Teacher":"Anthony Alicea",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
-            "Rating":"4.8",
-            "QtyStudent":"179,362",
+            "Rating": 4.8,
+            "QtyStudent": 179362,
             "Detail":"Javascript03.html"
         },
         {
@@ -595,8 +595,8 @@
             "Teacher":"Edwin Diaz",
             "PriceNew":"$19.99",
             "PriceOld":"$99.99",
-            "Rating":"4.4",
-            "QtyStudent":"30,106",
+            "Rating": 4.4,
+            "QtyStudent": 30106,
             "Detail":"Javascript04.html"
         },
         {
@@ -608,8 +608,8 @@
             "Teacher":"Arkadiusz Wlodarczyk",
             "PriceNew":"$19.99",
             "PriceOld":"$99.99",
-            "Rating":"4.3",
-            "QtyStudent":"9,931",
+            "Rating": 4.3,
+            "QtyStudent": 9931,
             "Detail":"Javascript05.html"
         },
         {
@@ -621,8 +621,8 @@
             "Teacher":"Bryson Payne",
             "PriceNew":"$16.99",
             "PriceOld":"$29.99",
-            "Rating":"4.5",
-            "QtyStudent":"2,747",
+            "Rating": 4.5,
+            "QtyStudent": 2747,
             "Detail":"Javascript06.html"
         },
         {
@@ -634,8 +634,8 @@
             "Teacher":"Asim Hussain",
             "PriceNew":"$16.99",
             "PriceOld":"$49.99",
-            "Rating":"4.6",
-            "QtyStudent":"31,146",
+            "Rating": 4.6,
+            "QtyStudent": 31146,
             "Detail":"Javascript07.html"
         }
     ]
