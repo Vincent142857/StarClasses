@@ -25,7 +25,7 @@
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
 
-  <!-- Anguler  -->
+  <!-- Angular  -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
   <script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
   <style>
@@ -64,11 +64,6 @@
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
 </head>
-<style>
-  form{
-    margin: 0 auto;
-  }
-</style>
 <body>
   <!-- Menu top -->
   <header>
@@ -125,13 +120,13 @@
               </a>
             </li>
 
-            <!-- Sign in - dang nhap-->
+            <!-- Sign in-->
             <li class="nav-item col-12 col-sm-2 mx-1">
               <a class="nav-link" href="SignIn.html">Sign in</a>
 
             </li>
 
-            <!-- Sign up - dang ky -->
+            <!-- Sign up -->
             <li class="nav-item col-12 col-sm-2">
               <a class="nav-link" href="SignUp.html">Sign up</a>
             </li>
@@ -153,80 +148,78 @@
   </header>
   <!-- Menu top -->
   <main class="d-flex flex-column mt-4" ng-app="myApp" >
-   <div class="Margin">
-    <form id="SignUn" class="col-7 border p-4">
-    
-      <h2><img class="d-inline-flex" src="./img/logo.png" width="9%" alt=""> Created new account</h2>
-      <!-- 2 column grid layout with text inputs for the first and last names -->
-      <div class="row mb-4">
-        <div class="col">
-          <div class="form-group">
-            <label class="form-label" for="FirstName">First name</label>
-            <input type="text" id="FirstName" class="form-control" placeholder="Enter your first name" />
+    <!-- top title -->
+    <div class="mr-auto">
+      <small class="mb-5">
+        <a class="text-reset" href="index.html">Home</a> &#62;
+        <a class="text-reset" href="SignUp.html">Sign up</a>
+      </small>
+    </div>
+    <hr>
+    <!-- content -->
+    <section class="d-flex flex-column flex-md-row">
+      <!-- picture -->
+      <aside class="col-12 col-md-6 px-4 mb-3">
+        <img src="./img/imgcourses/python06.png" width="100%" alt="picture">
+      </aside>
+      <!-- form -->
+      <article class="col-12 col-md-6 mb-3">
+        <form id="SignUn" class="col-10 border rounded-9 mx-auto p-4">
+          <h2><img class="d-inline-flex" src="./img/logo.png" width="9%" alt=""> Created new account</h2>
+          <!-- full name input -->
+          <div class="form-group mb-2">
+            <label class="form-label col-3" for="FirstName">Full name (*):</label>
+            <input type="text" id="Full Name" class="form-control col-9" placeholder="Enter your full name" required />
           </div>
-        </div>
-        <div class="col">
-          <div class="form-group">
-            <label class="form-label" for="FirstName">Last name</label>
-            <input type="text" id="LastName" class="form-control" placeholder="Enter your last name" />
+          <!-- Email input -->
+          <div class="form-group mb-2">
+            <label class="form-label" for="Email">Email address (*):</label>
+            <input type="email" id="Email" class="form-control" placeholder="Enter your email address" required />
           </div>
-        </div>
-      </div>
-  
-      <!-- Email input -->
-      <div class="form-group mb-4">
-        <label class="form-label" for="Email">Email address (*):</label>
-        <input type="email" id="Email" class="form-control" placeholder="Enter your email address" required />
-      </div>
-      <!-- Phone input -->
-      <div class="form-group mb-4">
-        <label class="form-label" for="Email">Phone number (*):</label>
-        <input type="tel" id="Phone" class="form-control" placeholder="Enter your phone number" required />
-      </div>
-      <!-- Password input -->
-      <div class="form-group mb-4">
-        <label class="form-label" for="Password">Password (*):</label>
-        <input type="password" id="Password" class="form-control" placeholder="Enter your password" required />
-      </div>
-      <!-- Confirm Password input -->
-      <div class="form-group mb-4">
-        <label class="form-label" for="CfmPassword">Confirmed Password (*):</label>
-        <input type="password" id="CfmPassword" class="form-control" placeholder="Enter your confirmed password"
-          required />
-      </div>
-  
-      <!-- Checkbox -->
-      <div class="form-check d-flex justify-content-center mb-4">
-        <input class="form-check-input mr-2 bg-warning border-warning" type="checkbox"  checked />
-        <label class="form-check-label" for="">
-          Subscribe to our newsletter
-        </label>
-      </div>
-  
-      <!-- Submit button -->
-      <button type="submit" class="btn btn-primary btn-block mb-4 bg-warning">Sign up</button>
-  
-      <!-- Register buttons -->
-      <div class="text-center">
-        <p>Or Sign Up with:</p>
-        <button type="button" class="btn btn-primary btn-floating mx-1 bg-warning">
-          <i class="fab fa-facebook-f"></i>
-        </button>
-  
-        <button type="button" class="btn btn-primary btn-floating mx-1 bg-warning">
-          <i class="fab fa-google"></i>
-        </button>
-  
-        <button type="button" class="btn btn-primary btn-floating mx-1 bg-warning">
-          <i class="fab fa-twitter"></i>
-        </button>
-  
-        <button type="button" class="btn btn-primary btn-floating mx-1 bg-warning">
-          <i class="fab fa-github"></i>
-        </button>
-      </div>
-    </form>
-   </div>
+          <!-- Phone input -->
+          <div class="form-group my-3">
+            <label class="form-label" for="Email">Phone number (*):</label>
+            <input type="tel" id="Phone" class="form-control" placeholder="Enter your phone number" required />
+          </div>
+          <!-- Password input -->
+          <div class="form-group mb-2">
+            <label class="form-label" for="Password">Password (*):</label>
+            <input type="password" id="Password" class="form-control" placeholder="Enter your password" required />
+          </div>
+          <!-- Confirm Password input -->
+          <div class="form-group mb-2">
+            <label class="form-label" for="CfmPassword">Confirmed Password(*):</label>
+            <input type="password" id="CfmPassword" class="form-control" placeholder="Enter your confirmed password"
+              required />
+          </div>
+          <!-- Checkbox -->
+          <div class="form-check d-flex justify-content-center mb-2">
+            <input class="form-check-input mr-2 bg-warning border-warning" type="checkbox"  checked />
+            <label class="form-check-label" for="">
+              By signing up, you agree to our Terms of Use and Privacy Policy.
+            </label>
+          </div>
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-block mb-2 bg-warning">Sign up</button>
+          <!-- Register buttons -->
+          <div class="text-center">
+            <p>Or Sign Up with:</p>
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+            <button type="button" class="btn btn-danger btn-floating mx-1">
+              <i class="fab fa-google"></i>
+            </button>
+            <button type="button" class="btn btn-primary btn-floating mx-1" style="background-color:#80D8FF;">
+              <i class="fab fa-twitter"></i>
+            </button>
+            <button type="button" class="btn btn-dark btn-floating mx-1">
+              <i class="fab fa-github"></i>
+            </button>
+          </div>
+        </form>
+      </article>
+    </section>
 
     <!-- FOOTER -->
     <footer class="border bg-dark text-white">

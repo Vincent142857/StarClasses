@@ -145,7 +145,7 @@
         margin-top: 7rem;
       }
     }
-
+    
     .nav-link:hover,
     .dropdown-item:hover {
       color: #E4A11B !important;
@@ -184,11 +184,6 @@
       width: 300px;
       height: 165px;
     }
-
-    .img-course img:hover {
-      width: 320px;
-      height: 185px;
-    }
   </style>
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
@@ -211,14 +206,14 @@
           <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
 
             <!-- Navbar dropdown -->
-            <li class="nav-item dropdown col-12 border border-warning rounded-pill text-center">
+            <li class="nav-item dropdown col-12 text-center">
               <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown"
                 aria-expanded="false">
                 <img src="./img/tutorialCut.png" style="width: 20px;"> Courses
               </a>
               <!-- Menu H2 -->
               <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="DropdownMenu">
-                <li><a href="GalleryCourse.html" class="dropdown-item px-5 text-uppercase">Topic</a></li>
+                <li><a href="GalleryCourse.html" class="dropdown-item px-5 text-uppercase border-bottom">Topic</a></li>
                 <li><a href="#" class="dropdown-item px-5">Python</a></li>
                 <li><a href="#" class="dropdown-item px-5">Excel</a></li>
                 <li><a href="#" class="dropdown-item px-5">Web Development</a></li>
@@ -242,7 +237,7 @@
           <!-- menu right -->
           <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
             <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link border border-warning rounded-pill text-center" href="aboutus.html">About us</a>
+              <a class="nav-link text-center" href="aboutus.html">About us</a>
             </li>
             <!-- shopping & payment -->
             <li class="nav-item col-12 col-sm-2 mx-1">
@@ -252,12 +247,12 @@
               </a>
             </li>
             <!-- Sign in-->
-            <li class="nav-item col-12 col-sm-2 mx-1">
+            <li class="nav-item text-center col-12 col-sm-2 mx-1">
               <a class="nav-link" href="SignIn.html">Sign in
               </a>
             </li>
             <!-- Sign up -->
-            <li class="nav-item col-12 col-sm-2">
+            <li class="nav-item text-center col-12 col-sm-2">
               <a class="nav-link" href="SignUp.html">Sign up</a>
             </li>
             <!-- Visitor -->
@@ -316,7 +311,9 @@
     <!--/1. Carousel -->
 
     <!-- 2. All the content. -->
-    <section class="container-fluid marketing">
+    <section class="container-fluid px-md-5 marketing">
+      <h1>A broad selection of courses</h1>
+      <h5>Choose from online video courses with new additions published every month</h5>
       <!-- 2.1 Courses Classes -->
       <div class="mb-md-4" ng-controller="myController">
         <!-- 2.1.1 Nav-tab -->
@@ -378,7 +375,7 @@
             perfect for Flask, Django, data science, and machine learning. You’ll learn how to build everything from
             games to sites to apps. Choose from a range of courses that will appeal to...</p>
             <hr>
-            <div ng-repeat="x in list|filter : 'SubjectPython' ">
+            <div ng-repeat="x in list|filter : 'SubjectPython'" id="">
               <div class="col-12 p-2">
                 <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}"
                   target="new">
@@ -858,16 +855,13 @@
               <a href="#!" class="text-reset">Courses Classes</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">Support</a>
+              <a href="#!" class="text-reset">Support & Help</a>
             </p>
             <p>
               <a href="#!" class="text-reset">Policy</a>
             </p>
             <p>
               <a href="ShoppingCart.html" class="text-reset">Shopping Cart</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Help</a>
             </p>
           </div>
           <!--/ Grid column 2-->

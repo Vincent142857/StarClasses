@@ -50,7 +50,6 @@
 
     body {
       padding-top: 3rem;
-      padding-bottom: 3rem;
       color: #5a5a5a;
     }
 
@@ -158,35 +157,7 @@
       box-shadow: 0px 0px 0px white;
     }
     
-    .Shopping-Cart {
-      margin: 0 auto!important;
-      padding: .5rem 2.5rem;
-      display: flex;
-      flex-direction: row;
-      /* border: 3px solid black; */
-    }
-    .Shopping-Left {
-      flex: 70%;
-      /* border: 3px solid black; */
-      margin: 20px;
-    }
-    .Shopping-Right {
-      flex: 30%;
-      /* border: 3px solid #3B71CA; */
-      border-radius: 30px;
-      box-shadow: 3px 5px 5px 5px antiquewhite;
-      padding: 2.5rem 2.5rem;
-      margin: 1.5rem;
-      position: fixed;
-      top: 100px;
-      right: 10px;
-      z-index: 1000;
-      background-color: antiquewhite;
-    }
-    .Shopping-Right button {
-      font-size: 15px;
-      cursor: pointer;
-    }
+    
     .img-course img{
       width: 290px;
       height: auto;
@@ -196,6 +167,10 @@
     .method-payment i {
       margin-right: 10px;
       padding-left: 20px;
+    }
+    .error {
+      padding-left: 10px;
+      color: red;
     }
 
 
@@ -245,7 +220,7 @@
           <!-- menu search -->
           <form class="d-flex input-group mx-sm-3 mb-2">
             <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
-            <button class="btn bg-light" type="submit">
+            <button class="btn bg-warning" type="submit">
               <!-- <b style="font-size: 20px;">&#x1F50D;</b> -->
               <i class="fas fa-search"></i>
             </button>
@@ -293,66 +268,103 @@
   <main class="d-flex flex-column mt-4" ng-app="myApp" >
     <!-- Shopping Cart --> 
     
-    <section class="container-fluid mt-3 p-2">
+    <section class="container-fluid p-2" style="background-color: #E8F5E9">
+      <div class="mr-auto">
         <small class="mb-5">
           <a class="text-reset" href="index.html">Home</a> &#62;
           <a class="text-reset" href="ShoppingCart.html">Shopping Cart</a> &#62;
           <a class="text-reset" href="CheckOut.html">Checkout</a>
         </small>
-        <h2 class="p-3">Checkout</h2>
-        <hr>
-      <div class="Shopping-Cart">
-      <!-- column lelt -->
-        <div ng-controller="myController" class="Shopping-Left col-12 col-sm-7">
-        <!-- Your Information -->
-        <h3>Information:</h3>
-          <form class="col-12 m-4">
+        <h2 class="mt-3 pl-3">Billing/Shipping</h2>
+      </div>
+      <hr>
+
+      <div class="d-flex flex-column flex-md-row">
+        <!-- column picture -->
+        <div class="col-12 col-md-6">
+          <div class="col-12 mx-3">
+            <img src="./img//imgcourses/aws01.jpeg" alt="picture payment" width="100%" style="border-radius: 20px;">
+          </div>
+          <!-- Method Payment -->
+          <div class="col-12 my-2">
+            <div class="d-flex flex-row justify-content-center">
+              <div class="col-2 mx-2 p-0">
+                <a href="https://momo.vn/" target="new"><img src="./img/logo-momo.jpg" alt="momo" width="100%"></a>
+              </div>
+              <div class="col-2 mx-2 p-0">
+                <a href="https://www.citi.com/" target="new"><img src="./img/mastercard.png" alt="mastercard" width="100%"></a>
+              </div>
+              <div class="col-2 mx-2 p-0">
+                <a href="https://www.citi.com/" target="new"><img src="./img/InternetBanking.jpg" alt="internet banking" width="100%"></a>
+              </div>
+              <div class="col-2 mx-2 p-0">
+                <a href="https://www.citi.com/" target="new"><img src="./img/zalopay.png" alt="zalo" width="100%"></a>
+              </div>
+            </div>
+          </div><!--/ Method Payment -->
+        </div>
+
+        <!-- column form -->
+        <div ng-controller="myController" class="Shopping-Left col-12 col-md-6">
+          <!-- Your Information -->
+          <form class="col-10 mx-auto" ng-app="myApp" name="Form">
             <!-- full  name -->
-            <div class="form-group m-3">
+            <div class="form-group mb-1">
               <label for="FullName">Full name (*):</label>
-              <input type="text" name="FullName" id="FullName" class="form-control" placeholder="Enter your full name">
+              <input type="text" name="FullName" id="FullName" class="form-control" placeholder="Enter your Full name" required ng-model="FullName">
+              <small class="error" ng-show="Form.FullName.$error.required">Full name is required</small>
             </div>
             <!-- Email address -->
-            <div class="form-group m-3">
-              <label for="Email">Email address (*):</label>
-              <input type="email" name="Email" id="Email" class="form-control" placeholder="Enter your email address">
+            <div class="form-group mb-1">
+              <label for="Email">Email (*):</label>
+              <input type="email" name="Email" id="Email" class="form-control" placeholder="Enter your email" ng-model="Email" required pattern="\w+[@]gmail[.]com([.]vn)?">
+              <small class="error" ng-show="Form.Email.$error.required">Email is required</small>
+              <small class="error" ng-show="Form.Email.$error.pattern">wwww@gmail.com.vn</small>
             </div>
-            <!-- Phone number -->
-            <div class="form-group m-3">
-              <label for="Phone">Phone number(*):</label>
-              <input type="tel" name="Phone" id="Phone" class="form-control" placeholder="Enter your phone number">
+            <div class="d-flex row">
+              <!-- Phone number -->
+              <div class="form-group mb-1 col-6 pr-2">
+                <label for="Phone">Phone number(*):</label>
+                <input type="tel" name="Phone" id="Phone" class="form-control" ng-model="Phone" placeholder="Enter your phone number" required pattern="\d{8,12}">
+                <small class="error" ng-show="Form.Phone.$error.required">Phone is required</small>
+                <small class="error" ng-show="Form.Phone.$error.pattern">8-12 number</small>
+              </div>
+              <!-- Country -->
+              <div class="form-group mb-1 col-6 pl-2">
+                <label for="">Country (*):</label>
+                <select name="" id="" class="form-control" >
+                  <option value="">American</option>
+                  <option value="">China</option>
+                  <option value="">India</option>
+                  <option value="" selected>Vietnam</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group mb-1">
+              <label for="Address">Address (*):</label>
+              <input type="text" name="Address" id="Address" class="form-control" placeholder="Enter your address" required ng-model="Address">
+              <small class="error" ng-show="Form.Address.$error.required">Address is required</small>
+            </div>
+            <div class="form-group mb-1">
+              <label for="">Method Payment (*):</label>
+              <select name="" id="" class="select-wrapper p-1" required>
+                <option value="">Momo</option>
+                <option value="">ZaloPay</option>
+                <option value="">Internet Banking</option>
+                <option value="" selected>Mastercard</option>
+              </select>
+            </div>
+            
+            <div class="form-group mt-3">
+              <button class="btn btn-primary offset-md-9" type="submit">Payment</button>
             </div>
 
           </form>
-        <!-- Method Payment -->
-          <div class="method-payment border-top pt-3">
-            <h3>Method Payment:</h3>
-            <div class="mono">
-              <i class="fas fa-piggy-bank"></i> Momo
-            </div>
-            <div>
-              <i class="fas fa-credit-card"></i> Internet Banking
-            </div>
-            <div>
-              <i class="fab fa-cc-mastercard"></i> Bank Card
-            </div>
-            <div>
-              <i class="fas fa-credit-card"></i> Bank transfer/ATM Card
-            </div>
-          </div>
         </div>
-      <!-- column right -->
-        <div class="Shopping-Right col-12 col-sm-4">
-          <h2>Total: </h2>
-          <h3 class="text-success m-4">$199.00</h3>
-          <button class="btn bg-warning text-light col-12 p-3">Payment</button>
-          <hr>
-          <p>Promotion</p>
-          <div class="input-group col-12">
-            <input class="col-7 form-control" type="text" placeholder="Enter coupon">
-            <button class="btn bg-primary text-light">Apply</button>
-          </div>
-        </div>
+        
+
       </div>
 
   </section>
@@ -506,6 +518,7 @@
                 $scope.list.splice(x, 1)
             }
         })
+
     </script>
     <!-- Java Script -->
 </body>

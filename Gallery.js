@@ -17,6 +17,7 @@ function countVisitor() {
 $.getJSON("informationSubject.json", function (items) {
   data = items.informationSubject;
   displayCourse(data);
+  displayShopping(data);
 });
 
 // event search
@@ -105,13 +106,13 @@ function displayCourse(items) {
   let array = ``;
   $.each(items, function (k, v) {
     array += `
-            <div class="col-12 col-sm-6 col-md-4 mx-auto p-3 border-bottom">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mx-auto p-3 border-bottom d-flex flex-column justify-content-around">
                 <a class="d-flex flex-column text-reset" href="./Courses/${v.Detail}" target="new">
                   <div class="col-12 text-center">
-                    <img src="${v.Img}" width="100%" alt="course">
+                    <img src="${v.Img}" width="100%" height="auto" alt="course">
                   </div>
                   <div class="col-12 px-4">
-                    <h5 style="text-align: justify">${v.NameCourse}</h5>
+                    <b style="text-align: justify;">${v.NameCourse}</b>
                     <div class="d-flex row">
                       <div class="d-flex">
                         <small class="mr-auto"><i>${v.Teacher}</i></small>
@@ -133,11 +134,48 @@ function displayCourse(items) {
                     </div>
                   </div>
                 </a>
-                <a href="#" data-name="${v.NameCourse}" data-price="${v.PriceNew}" class="add-to-cart btn btn-success offset-4">Add to cart</a>
+                <a href="#" data-name="${v.NameCourse}" data-price="${v.PriceNew}" class="add-to-cart btn btn-success col-12 mt-auto">Add to cart</a>
               </div>
               <div class="w-100 d-sm-none"></div>
             `;
   });
 
   $("#gallery").html(array);
+  $("#index-cart").html(array);
+
+}
+
+function displayShopping(items) {
+  let sp = ``;
+  $.each(items, function (k, v) {
+    sp += `
+              <div class="col-12 m-1 p-1 border">
+              <a class="d-md-flex flex-column flex-md-row text-reset p-1" href="./Courses/${v.Detail}" target="new">
+
+                <div class="d-flex flex-row flex-grow-1 col-12 col-sm-8 mx-2">
+                  <div class="Exit py-4 col-1">
+                    <input ng-click="removeItem($index)" type="checkbox" checked>
+                  </div>
+                  <div class="img-course col-4">
+                    <img class="border" src="${v.Img}" alt="img-course" width="100%" height="auto" style="border-radius: 10px">
+                  </div>
+                  
+                  <div class="col-7 p-2">
+                    <strong class="title-course">${v.NameCourse}</strong> <br>
+                    <small class="name-gv">Created by: ${v.Teacher}</small>
+                  </div>
+                </div>
+                
+                <div class="col-12 col-sm-2 p-2 text-right">
+                  <b class="text-success">${v.PriceNew}</b>
+                  <small class="text-danger">
+                    <del>${v.PriceOld}</del>
+                  </small>
+                </div>
+              </a>
+            </div>`;
+  });
+
+  $("#shopping-cart").html(sp);
+  
 }
