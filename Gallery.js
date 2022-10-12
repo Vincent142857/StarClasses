@@ -163,7 +163,7 @@ function displayShopping(items) {
               <input ng-click="removeItem($index)" type="checkbox" checked>
             </div>
             <div class="img-course col-4">
-              <img class="border" src="${v.Img}" alt="img-course" width="100%" height="auto" style="border-radius: 10px">
+              <img class="border" src="./img/imgcourses/${v.Img}" alt="img-course" width="100%" height="auto" style="border-radius: 10px">
             </div>
             
             <div class="col-7 p-2">
