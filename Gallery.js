@@ -109,7 +109,7 @@ function displayCourse(items) {
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mx-auto p-3 border-bottom d-flex flex-column justify-content-around">
                 <a class="d-flex flex-column text-reset" href="./Courses/${v.Detail}" target="new">
                   <div class="col-12 text-center">
-                    <img src="${v.Img}" width="100%" height="auto" alt="course">
+                    <img src="./img/imgcourses/${v.Img}" width="100%" height="auto" alt="course">
                   </div>
                   <div class="col-12 px-2">
                     <b style="text-align: justify;">${v.NameCourse}</b>
