@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- icon website -->
   <link rel="icon" href="./img/star-classes-icon.png" type="image/x-icon">
   <title>Star Classes</title>
@@ -24,23 +25,141 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./MDB5/js/mdb.min.js"></script>
+
+  <!-- jquery - JavaScript library for DOM operations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
   <!-- Angular  -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-  <script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
   <style>
-    *{
-      margin: 0;
+ * {
       padding: 0;
+      margin: 0;
     }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    /* GLOBAL STYLES
+    --------------------------------------------- */
+    /* Padding below the footer and lighter body text */
 
     body {
       padding-top: 3rem;
       color: #5a5a5a;
     }
 
-    .nav-link:hover, .dropdown-item:hover {
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 4rem;
+    }
+
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+      bottom: 3rem;
+      z-index: 10;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .carousel-item {
+      height: 32rem;
+    }
+
+    .carousel-item>img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 32rem;
+    }
+
+
+    /* MARKETING CONTENT
+-------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .col-lg-4 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .marketing h2 {
+      font-weight: 400;
+    }
+
+    .marketing .col-lg-4 p {
+      margin-right: .75rem;
+      margin-left: .75rem;
+    }
+
+    /* Featurettes
+------------------------- */
+    .featurette-divider {
+      margin: 5rem 0;
+      /* Space out the Bootstrap <hr> more */
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -.05rem;
+    }
+
+    /* RESPONSIVE CSS
+-------------------------------------------------- */
+
+    @media (min-width: 40em) {
+
+      /* Bump up size of carousel content */
+      .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+      }
+
+      .featurette-heading {
+        font-size: 50px;
+      }
+    }
+
+    @media (min-width: 62em) {
+      .featurette-heading {
+        margin-top: 7rem;
+      }
+    }
+
+    .nav-link:hover,
+    .dropdown-item:hover {
       color: #E4A11B !important;
+      font-weight: bold;
+      cursor: pointer !important;
+    }
+
+    .dropdown-hover:hover>.dropdown-menu {
+      display: inline-block;
+    }
+
+    .dropdown-hover>.dropdown-toggle:active {
+      /*Without this, clicking will make it sticky*/
+      pointer-events: none;
     }
 
     .badge-notification {
@@ -50,24 +169,70 @@
       margin-left: -.5rem;
       padding: .2em .45em
     }
-    #SignUn{
-      box-shadow: -2px -2px 10px rgb(177, 175, 175);
+
+    .BoxShow {
+      box-shadow: -2px -1px 7px rgba(86, 81, 81, 0.473);
+      position: static !important;
+      align-items: flex-end !important;
     }
-    
-    
+
+    .img-course img {
+      border-radius: 20px !important;
+      border: 1px solid rgba(35, 34, 34, 0.5);
+      max-width: 100%;
+      max-height: 100%;
+      width: 250px;
+      height: 165px;
+    }
+
+    .img-course img:hover {
+      width: 280px;
+      height: 185px;
+    }
+   
+    .Margin{
+      margin-top: 25px;
+      margin-bottom: 25px;
+      }
+    .TeacherRight button{
+      width: 200px;
+      height: 40px;
+      margin-top: 10px;
+    }
+    .TeacherRight img{
+      margin-bottom: 50px;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+    a{
+      text-decoration: none;
+    }
+    .TeacherRight button:hover{
+      color: #E4A11B;
+    }
+    .Instructor{
+      width:240px;
+      text-align: center;
+      color:white;
+    }
   </style>
 
 
   <!-- Custom styles for this template -->
-  <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
+  <link href="../MDB5/css/mdb.min.css" rel="stylesheet">
 </head>
-<body>
+<style>
+  form{
+    margin: 0 auto;
+  }
+</style>
+<body ng-app="myApp" >
   <!-- Menu top -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand pl-sm-3" href="index.html">
-          <img src="./img/star-classes-4.png" style="width:150px;">
+        <a class="navbar-brand pl-sm-3" href="../index.html">
+          <img src="../img/star-classes-4.png" style="width:150px;">
         </a>
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -79,7 +244,7 @@
           <ul class="navbar-nav mr-auto mb-2 m-md-0 col-12 col-sm-2">
             <li class="nav-item dropdown col-12 border border-warning rounded-pill text-center">
               <a class="nav-link dropdown-toggle" href="GalleryCourse.html" id="DropdownMenu" role="tab" data-toggle="dropdown" aria-expanded="false">
-                <img src="./img/tutorialCut.png" style="width: 20px;"> Courses
+                <img src="../img/tutorialCut.png" style="width: 20px;"> Courses
               </a>
               <!-- Menu H2 -->
               <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="DropdownMenu">
@@ -117,13 +282,13 @@
               </a>
             </li>
 
-            <!-- Sign in-->
+            <!-- Sign in - dang nhap-->
             <li class="nav-item col-12 col-sm-2 mx-1">
               <a class="nav-link" href="SignIn.html">Sign in</a>
 
             </li>
 
-            <!-- Sign up -->
+            <!-- Sign up - dang ky -->
             <li class="nav-item col-12 col-sm-2">
               <a class="nav-link" href="SignUp.html">Sign up</a>
             </li>
@@ -131,7 +296,7 @@
             <!-- Visitor -->
             <li class="nav-item col-sm-4">
               <div class="navbar-text text-light">
-                <img src="./img/star-classes-icon.png" width="35px" alt="icon">
+                <img src="../img/star-classes-icon.png" width="35px" alt="icon">
                 Visitor: <i class="fas fa-users"></i>
                 <span class="badge rounded-pill bg-danger">111</span>
               </div>
@@ -144,79 +309,98 @@
     </nav>
   </header>
   <!-- Menu top -->
-  <main class="d-flex flex-column mt-4" ng-app="myApp" style="background-color: #F1F8E9;">
-    <!-- top title -->
-    <div class="mr-auto">
-      <small class="mb-5">
-        <a class="text-reset" href="index.html">Home</a> &#62;
-        <a class="text-reset" href="SignUp.html">Sign up</a>
-      </small>
-    </div>
-    <hr>
-    <!-- content -->
-    <section class="d-flex flex-column flex-md-row">
-      <!-- picture -->
-      <aside class="col-12 col-md-6 px-4 mb-3">
-        <img src="./img/imgcourses/python06.png" width="100%" alt="picture">
-      </aside>
-      <!-- form -->
-      <article class="col-12 col-md-6 mb-3">
-        <form id="SignUn" class="col-10 border rounded-9 mx-auto p-4">
-          <h2><img class="d-inline-flex" src="./img/logo.png" width="9%" alt=""> Created new account</h2>
-          <!-- full name input -->
-          <div class="form-group mb-2">
-            <label class="form-label col-3" for="FirstName">Full name (*):</label>
-            <input type="text" id="Full Name" class="form-control col-9" placeholder="Enter your full name" required />
+  <main class="d-flex flex-column mt-4 ">
+    <div class="container row mx-auto">
+      <div class="TeacherLeft col-9">
+        <p>INSTRUCTOR</p>
+        <h1 class="mt-5">Kirill Eremenko</h1>
+        <h5>Data Scientist</h5>
+        <p class="bg-warning Instructor">Star Classes Instructor Partner</p>
+        <table>
+          <tr>
+            <td>Total students</td>
+            <td class="pl-4" >Reviews</td>
+            <td class="pl-4">Courses</td>
+            <td class="pl-4">Rating</td>
+          </tr>
+          <tr>
+            <th><i class="fas fa-users"></i> 2,209,702</th>
+            <th class="pl-4"><i class="fas fa-award"></i> 590,072</th>
+            <th class="pl-4"><i class="fab fa-youtube "></i> 58</th>
+            <th class="pl-4">4.9 <i class="fa fa-star text-warning"></i></th>
+          </tr>
+        </table>
+        <h2 class="mt-4">About me</h2>
+       <p>
+        My name is Kirill Eremenko and I am super-psyched that you are reading this!
+       </p>
+       <p>
+        Professionally, I come from the Data Science consulting space with experience in finance, retail, transport and other industries. 
+        I was trained by the best analytics mentors at Deloitte Australia and since starting on Udemy I have passed on my knowledge to 
+        thousands of aspiring data scientists.
+       </p>
+       <p>
+        From my courses you will straight away notice how I combine my real-life experience and academic background in Physics and 
+        Mathematics to deliver professional step-by-step coaching in the space of Data Science. One of the strongest sides of my teaching 
+        style is that I focus on intuitive explanations, so you can be sure that you will truly understand even the most complex topics.
+       </p>
+       <p>
+        To sum up, I am absolutely and utterly passionate about Data Science and I am looking forward to sharing my passion and knowledge with you!
+       </p>
+
+<hr>
+       <div  ng-controller="myController" class="Hover">
+        <h1>My courses  </h1>
+        <div ng-repeat="x in list|filter : 'Kirill Eremenko' ">
+          <div class="col-12 p-2">
+            <a class="d-md-flex justify-content-end border-bottom text-reset" href="../Courses/{{x.Detail}}"
+              target="new">
+              <!-- col-1 -->
+              <div class="img-course col-12 col-sm-6 col-md-auto p-2">
+                <img src="../img/imgcourses/{{x.Img}}" alt="">
+              </div>
+              <!-- col 2 -->
+              <div class="content col-12 col-sm-6 p-2">
+                <h4 class="title-course">{{x.NameCourse}}</h4>
+                <p class="name-intro">{{x.Intro}}</p>
+                <p class="name-gv"><b>{{x.Teacher}}</b></p>
+              </div>
+              <!-- col 3 -->
+              <div class="text-left col-4 col-sm-1 p-2">
+                <span class="d-block">
+                  {{x.Rating}} <i class="fa fa-star text-warning"></i>
+                </span>
+              </div>
+              <!-- col 4 -->
+              <div class="col-4 col-sm-1 text-primary pt-2">
+                <span class="d-block">
+                  <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
+                </span>
+              </div>
+              <!-- col 5 -->
+              <div class="text-right col-4 col-sm-1 p-2">
+                <b class="text-success">{{x.PriceNew}}</b>
+                <small class="text-danger">
+                  <del>{{x.PriceOld}}</del>
+                </small>
+              </div>
+            </a>
           </div>
-          <!-- Email input -->
-          <div class="form-group mb-2">
-            <label class="form-label" for="Email">Email address (*):</label>
-            <input type="email" id="Email" class="form-control" placeholder="Enter your email address" required />
-          </div>
-          <!-- Phone input -->
-          <div class="form-group my-3">
-            <label class="form-label" for="Email">Phone number (*):</label>
-            <input type="tel" id="Phone" class="form-control" placeholder="Enter your phone number" required />
-          </div>
-          <!-- Password input -->
-          <div class="form-group mb-2">
-            <label class="form-label" for="Password">Password (*):</label>
-            <input type="password" id="Password" class="form-control" placeholder="Enter your password" required />
-          </div>
-          <!-- Confirm Password input -->
-          <div class="form-group mb-2">
-            <label class="form-label" for="CfmPassword">Confirmed Password(*):</label>
-            <input type="password" id="CfmPassword" class="form-control" placeholder="Enter your confirmed password"
-              required />
-          </div>
-          <!-- Checkbox -->
-          <div class="form-check d-flex justify-content-center mb-2">
-            <input class="form-check-input mr-2 bg-warning border-warning" type="checkbox"  checked />
-            <label class="form-check-label" for="">
-              By signing up, you agree to our Terms of Use and Privacy Policy.
-            </label>
-          </div>
-          <!-- Submit button -->
-          <button type="submit" class="btn btn-primary btn-block mb-2 bg-warning">Sign up</button>
-          <!-- Register buttons -->
-          <div class="text-center">
-            <p>Or Sign Up with:</p>
-            <button type="button" class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-facebook-f"></i>
-            </button>
-            <button type="button" class="btn btn-danger btn-floating mx-1">
-              <i class="fab fa-google"></i>
-            </button>
-            <button type="button" class="btn btn-floating mx-1" style="background-color:#80D8FF;">
-              <i class="fab fa-twitter"></i>
-            </button>
-            <button type="button" class="btn btn-dark btn-floating mx-1">
-              <i class="fab fa-github"></i>
-            </button>
-          </div>
-        </form>
-      </article>
-    </section>
+          <div class="w-100 d-sm-none"></div>
+        </div>
+       </div>
+
+      </div>
+      <div class="TeacherRight col-3">
+        <img src="../img/KirillEremenko.jpg" alt=""><br>
+        <a class="text-reset" href="https://www.superdatascience.com/"><button class="btn btn-secondary"><i class="fas fa-link"></i><b> Website</b></button></a><br>
+        <a class="text-reset" href="https://twitter.com/kirill_eremenko"><button class="btn btn-secondary"><i class="fab fa-twitter"></i><b> Twitter</b></button></a><br>
+        <a class="text-reset" href="https://www.facebook.com/groups/superdatascience"><button class="btn btn-secondary"><i class="fab fa-facebook"></i><b> Facebook</b></button></a><br>
+        <a class="text-reset" href="https://www.linkedin.com/in/keremenko"><button class="btn btn-secondary"><i class="fab fa-linkedin"></i></i><b> Linkedin</b></button></a><br>
+        <a class="text-reset" href="https://www.youtube.com/channel/UCMbtqTGdSsxYYhhTpV4lSTQ"><button class="btn btn-secondary"><i class="fab fa-youtube"></i><b> Youtube</b></a></button>
+      </div>
+    </div>  
+
 
     <!-- FOOTER -->
     <footer class="border bg-dark text-white">
@@ -260,7 +444,7 @@
             <div class="col-md-3 mx-auto mb-4">
               <!-- Content -->
               <h6 class="mb-3">
-                <a href="#"><img src="./img/star-classes-4.png" width="200px" alt="logo-name"></a>
+                <a href="#"><img src="../img/star-classes-4.png" width="200px" alt="logo-name"></a>
               </h6>
               <p style="text-align:justify">
                 Whether you want to learn or to share what you know, you have come to the right place. As a global
@@ -352,7 +536,14 @@
   </main>
 
     <!-- Java Script -->
-  
+   <script>
+     var app = angular.module("myApp",[])
+      app.controller("myController", function ($rootScope, $http, $location) {
+        $http.get("../informationSubject.json").then(function (response) {
+          $rootScope.list = response.data.informationSubject;
+      });
+    });
+   </script>
     <!-- Java Script -->
 </body>
 </html>

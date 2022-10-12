@@ -101,7 +101,7 @@ $("input[type=radio]").click(function () {
 });
 
 
-//** Display 
+//** Display on Gallery **
 function displayCourse(items) {
   let array = ``;
   $.each(items, function (k, v) {
@@ -111,19 +111,19 @@ function displayCourse(items) {
                   <div class="col-12 text-center">
                     <img src="${v.Img}" width="100%" height="auto" alt="course">
                   </div>
-                  <div class="col-12 px-4">
+                  <div class="col-12 px-2">
                     <b style="text-align: justify;">${v.NameCourse}</b>
                     <div class="d-flex row">
                       <div class="d-flex">
                         <small class="mr-auto"><i>${v.Teacher}</i></small>
-                        <span class="ml-auto">
+                        <small class="ml-auto">
                           ${v.Rating} <i class="fa fa-star text-warning"></i>
-                        </span>
+                        </small>
                       </div>
                       <div class="d-flex">
-                        <span class="text-left mr-auto">
+                        <small class="text-left mr-auto">
                           <i class="fas fa-user-graduate"></i> ${v.QtyStudent}
-                        </span>
+                        </small>
                         <span class="ml-auto">
                           <strong class="text-success">${v.PriceNew}</strong>
                           <small class="text-danger">
@@ -134,7 +134,13 @@ function displayCourse(items) {
                     </div>
                   </div>
                 </a>
-                <a href="#" data-name="${v.NameCourse}" data-price="${v.PriceNew}" class="add-to-cart btn btn-success col-12 mt-auto">Add to cart</a>
+                <a href="#" 
+                  data-name-course="${v.NameCourse}" 
+                  data-price-new="${v.PriceNew}"
+                  data-price-old="${v.PriceOld}" 
+                  class="add-to-cart btn btn-success col-12 mt-auto">
+                  Add to cart
+                </a>
               </div>
               <div class="w-100 d-sm-none"></div>
             `;
@@ -144,36 +150,36 @@ function displayCourse(items) {
   $("#index-cart").html(array);
 
 }
-
+// ** Display on Shopping-Cart
 function displayShopping(items) {
   let sp = ``;
   $.each(items, function (k, v) {
     sp += `
-              <div class="col-12 m-1 p-1 border">
-              <a class="d-md-flex flex-column flex-md-row text-reset p-1" href="./Courses/${v.Detail}" target="new">
+      <div class="col-12 m-1 p-1 border">
+        <a class="d-md-flex flex-column flex-md-row text-reset p-1" href="./Courses/${v.Detail}" target="new">
 
-                <div class="d-flex flex-row flex-grow-1 col-12 col-sm-8 mx-2">
-                  <div class="Exit py-4 col-1">
-                    <input ng-click="removeItem($index)" type="checkbox" checked>
-                  </div>
-                  <div class="img-course col-4">
-                    <img class="border" src="${v.Img}" alt="img-course" width="100%" height="auto" style="border-radius: 10px">
-                  </div>
-                  
-                  <div class="col-7 p-2">
-                    <strong class="title-course">${v.NameCourse}</strong> <br>
-                    <small class="name-gv">Created by: ${v.Teacher}</small>
-                  </div>
-                </div>
-                
-                <div class="col-12 col-sm-2 p-2 text-right">
-                  <b class="text-success">${v.PriceNew}</b>
-                  <small class="text-danger">
-                    <del>${v.PriceOld}</del>
-                  </small>
-                </div>
-              </a>
-            </div>`;
+          <div class="d-flex flex-row flex-grow-1 col-12 col-sm-8 mx-2">
+            <div class="Exit py-4 col-1">
+              <input ng-click="removeItem($index)" type="checkbox" checked>
+            </div>
+            <div class="img-course col-4">
+              <img class="border" src="${v.Img}" alt="img-course" width="100%" height="auto" style="border-radius: 10px">
+            </div>
+            
+            <div class="col-7 p-2">
+              <strong class="title-course">${v.NameCourse}</strong> <br>
+              <small class="name-gv">Created by: ${v.Teacher}</small>
+            </div>
+          </div>
+          
+          <div class="col-12 col-sm-2 p-2 text-right">
+            <b class="text-success">${v.PriceNew}</b>
+            <small class="text-danger">
+              <del>${v.PriceOld}</del>
+            </small>
+          </div>
+        </a>
+      </div>`;
   });
 
   $("#shopping-cart").html(sp);

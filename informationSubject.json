@@ -4,20 +4,21 @@
         {
             "ID":"PT01",
             "Subject":"SubjectPython",
-            "Img":"./img/imgcourses/python01.png",
+            "Img":"python01.png",
             "NameCourse":"100 Days of Code: The Complete Python Pro Bootcamp for 2022", 
             "Intro":"Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!",
-            "Teacher":"Dr. Angela Yu",
+            "Teacher":"Ardit Sulce",
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
             "Rating": 4.7,
             "QtyStudent": 629025,
-            "Detail":"Python01.html"
+            "Detail":"Python01.html",
+            "Level":"Intermediate"
         },
         {
             "ID":"PT02",
             "Subject":"SubjectPython",
-            "Img":"./img/imgcourses/python02.png",
+            "Img":"python02.png",
             "NameCourse":"2022 Complete Python Bootcamp From Zero to Hero in Python", 
             "Intro":"Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games",
             "Teacher":"Jose Portilla",
@@ -25,38 +26,41 @@
             "PriceOld":"$84.99",
             "Rating": 4.6,
             "QtyStudent": 1611037,
-            "Detail":"Python02.html"
+            "Detail":"Python02.html",
+            "Level":"All levels"
         },
         {
             "ID":"PT03",
             "Subject":"SubjectPython",
-            "Img":"./img/imgcourses/python03.png",
+            "Img":"python03.png",
             "NameCourse":"Complete Python Developer in 2022: Zero to Mastery", 
             "Intro":"How to become a Python 3 Developer and get hired! Build 12+ projects, learn Web Development, Machine Learning + more!",
-            "Teacher":"Andrei Negagoie, Zero To Mastery ",
+            "Teacher":"Ardit Sulce",
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
             "Rating": 4.6,
             "QtyStudent": 170773,
-            "Detail":"Python03.html"
+            "Detail":"Python03.html",
+            "Level":"All levels"
         },
         {
             "ID":"PT04",
             "Subject":"SubjectPython",
-            "Img":"./img/imgcourses/python04.png",
+            "Img":"python04.png",
             "NameCourse":"Learn Python Programming Masterclass", 
             "Intro":"This Python For Beginners Course Teaches You The Python Language Fast. Includes Python Online Training With Python 3",
-            "Teacher":"Tim Buchalka, Jean-Paul Robets, Tim Buchalka's Learn Programming Adecamy",
+            "Teacher":"Jose Portilla",
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
             "Rating": 4.6,
             "QtyStudent": 391390,
-            "Detail":"Python04.html"
+            "Detail":"Python04.html",
+            "Level":"Beginner"
         },
         {
             "ID":"PT05",
             "Subject":"SubjectPython",
-            "Img":"./img/imgcourses/python05.png",
+            "Img":"python05.png",
             "NameCourse":"The Python Mega Course: Build 10 Real World Applications", 
             "Intro":"Become a Python programmer by learning how to build any Python program from scratch, GUIs, web apps, APIs, and more.",
             "Teacher":"Ardit Sulce",
@@ -64,38 +68,41 @@
             "PriceOld":"$84.99",
             "Rating": 4.6,
             "QtyStudent": 277733,
-            "Detail":"Python05.html"
+            "Detail":"Python05.html",
+            "Level":"Beginner"
         },
         {
             "ID":"PT06",
             "Subject":"SubjectPython",
-            "Img":"./img/imgcourses/python06.png",
+            "Img":"python06.png",
             "NameCourse":"The Complete Python Course | Learn Python by Doing in 2022", 
             "Intro":"Go from Beginner to Expert in Python by building projects. The best investment for your Python journey!",
-            "Teacher":"Codestars • over 2 million students worldwidel, Jose Salvatierra, Rob Percival, Teclado by Jose Salvatierra",
+            "Teacher":"Jose Portilla",
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
             "Rating":4.6,
             "QtyStudent": 72912,
-            "Detail":"Python06.html"
+            "Detail":"Python06.html",
+            "Level":"All levels"        
         },
         {
             "ID":"PT07",
             "Subject":"SubjectPython",
-            "Img":"./img/imgcourses/python07.png",
+            "Img":"python07.png",
             "NameCourse":"Learn to Code with Python", 
             "Intro":"The complete Python bootcamp for 2022. Learn Python 3 from beginner to expert. Build complete Python applications.",
-            "Teacher":"Boris Paskhaver",
+            "Teacher":"Ardit Sulce",
             "PriceNew":"$13.99",
             "PriceOld":"$84.99",
             "Rating":4.6,
             "QtyStudent": 68943,
-            "Detail":"Python07.html"
+            "Detail":"Python07.html",
+            "Level":"All levels"
         },
         {
             "ID": "EX01",
             "Subject":"SubjectExcel",
-            "Img":"./img/imgcourses/excel01.jpeg",
+            "Img":"excel01.jpeg",
             "NameCourse":"Microsoft Excel 2013 Course Beginners/ Intermediate Training", 
             "Intro":"Learn to Master Microsoft Excel In Easy To Follow Step-By-Step Training Course. Comes With Extensive Working Files",
             "Teacher":"Infinite Skills",
@@ -103,12 +110,13 @@
             "PriceOld":"$49.99",
             "Rating": 4.5,
             "QtyStudent": 34238,
-            "Detail":"Excel01.html"
+            "Detail":"Excel01.html",
+            "Level":"Beginner"
         },
         {
             "ID": "EX02",
             "Subject":"SubjectExcel",
-            "Img":"./img/imgcourses/excel02.jpeg",
+            "Img":"excel02.jpeg",
             "NameCourse":"Microsoft Excel 2013 Advanced. Online Excel Training Course", 
             "Intro":"Master Advanced Excel 2013 Features. Become A Expert And Learn To Use Excel Like A Pro With This Advanced Excel Training",
             "Teacher":"Infinite Skills",
@@ -116,129 +124,139 @@
             "PriceOld":"$49.99",
             "Rating": 4.4,
             "QtyStudent": 44727,
-            "Detail":"Excel02.html"
+            "Detail":"Excel02.html",
+            "Level":"All levels"
         },
         {
             "ID": "EX03",
             "Subject":"SubjectExcel",
-            "Img":"./img/imgcourses/excel03.jpeg",
+            "Img":"excel03.jpeg",
             "NameCourse":"Microsoft Excel - From Beginner to Expert in 6 Hours", 
             "Intro":"This Microsoft Excel class will make you a master of Microsoft Excel. The training uses Excel 2013 for Windows.",
-            "Teacher":"Todd McLeod",
+            "Teacher":"Kyle Pew",
             "PriceNew":"$16.99",
             "PriceOld":"$24.99",
             "Rating": 4.5,
             "QtyStudent": 129790,
-            "Detail":"Excel03.html"
+            "Detail":"Excel03.html",
+            "Level":"Intermediate"
         },
         {
             "ID": "EX04",
             "Subject":"SubjectExcel",
-            "Img":"./img/imgcourses/excel04.jpeg",
+            "Img":"excel04.jpeg",
             "NameCourse":"Sharper skills using Microsoft Excel 2010 for business", 
             "Intro":"Learn how to effectively use Microsoft Excel 2010 to modify, analyze and visualize business data",
-            "Teacher":"Ulrika Hedlund",
+            "Teacher":"Kyle Pew",
             "PriceNew":"$16.99",
             "PriceOld":"$19.99",
             "Rating": 4.6,
             "QtyStudent": 2587,
-            "Detail":"Excel04.html"
+            "Detail":"Excel04.html",
+            "Level":"Beginner"
         },
         {
             "ID": "EX05",
             "Subject":"SubjectExcel",
-            "Img":"./img/imgcourses/excel05.jpeg",
+            "Img":"excel05.jpeg",
             "NameCourse":"7 Steps To Excel Success - Excel Skills And Power Tips", 
             "Intro":"In Excel every step counts. Learn to apply 7 Steps To Excel Success. Excel 2007,Excel 2010, Excel 2013 - Excel 365.",
-            "Teacher":"Billy Wigley",
+            "Teacher":"Kyle Pew",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.6,
             "QtyStudent": 4077,
-            "Detail":"Excel05.html"
+            "Detail":"Excel05.html",
+            "Level":"Beginner"
         },
         {
             "ID": "EX06",
             "Subject":"SubjectExcel",
-            "Img":"./img/imgcourses/excel06.jpeg",
+            "Img":"excel06.jpeg",
             "NameCourse":"Advanced Excel - Beginner to Ninja level (includes Charts)", 
             "Intro":"Learn Excel Online for MIS Reporting, Data Cleaning, Data Analysis, Charting, Time-saver tricks with Examples",
-            "Teacher":"Rishabh Pugalia, Yoda Learning",
+            "Teacher":"Infinite Skills",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.3,
-            "QtyStudent":"3,273",
-            "Detail":"Excel06.html"
+            "QtyStudent":3273,
+            "Detail":"Excel06.html",
+            "Level":"All levels"
         },
         {
             "ID": "EX07",
             "Subject":"SubjectExcel",
-            "Img":"./img/imgcourses/excel07.jpeg",
+            "Img":"excel07.jpeg",
             "NameCourse":"The Ultimate Excel Programmer Course", 
             "Intro":"Learn Excel VBA from Scratch with Dan Strong, Bestselling Excel Expert with Over 180K Students Worldwide!",
-            "Teacher":"Daniel Strong",
+            "Teacher":"Infinite Skills",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.6,
             "QtyStudent": 112909,
-            "Detail":"Excel07.html"
+            "Detail":"Excel07.html",
+            "Level":"Beginner"
         },
         {
             "ID": "DS01",
             "Subject":"SubjectDataScience",
-            "Img":"./img/imgcourses/datascience01.jpeg",
+            "Img":"datascience01.jpeg",
             "NameCourse":"Data Science A-Z™: Real-Life Data Science Exercises Included", 
             "Intro":"Learn Data Science step by step through real Analytics examples. Data Mining, Modeling, Tableau Visualization and more!",
-            "Teacher":"Kirill Eremenko, Ligency Team",
+            "Teacher":"Kirill Eremenko",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.6,
-            "QtyStudent":"206,234",
-            "Detail":"DataScience01.html"
+            "QtyStudent":206234,
+            "Detail":"DataScience01.html",
+            "Level":"Intermediate"
         },
         {
             "ID": "DS02",
             "Subject":"SubjectDataScience",
-            "Img":"./img/imgcourses/datascience02.png",
+            "Img":"datascience02.png",
             "NameCourse":"Machine Learning, Data Science and Deep Learning with Python", 
             "Intro":"Complete hands-on machine learning tutorial with data science, Tensorflow, artificial intelligence, and neural networks",
-            "Teacher":"Sundog Education, Frank Kane, Sundog Education Team",
+            "Teacher":"Ligency I Team",
             "PriceNew":"$19.99",
             "PriceOld":"$24.99",
             "Rating": 4.5,
             "QtyStudent": 168097,
-            "Detail":"DataScience02.html"
+            "Detail":"DataScience02.html",
+            "Level":"All levels"
         },
         {
             "ID": "DS03",
             "Subject":"SubjectDataScience",
-            "Img":"./img/imgcourses/datascience03.jpeg",
+            "Img":"datascience03.jpeg",
             "NameCourse":"Data Science: Deep Learning and Neural Networks in Python", 
             "Intro":"The MOST in-depth look at neural network theory for machine learning, with both pure Python and Tensorflow code",
-            "Teacher":"Lazy Programmer Inc.",
+            "Teacher":"Kirill Eremenko",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.6,
             "QtyStudent": 50582,
-            "Detail":"DataScience03.html"
+            "Detail":"DataScience03.html",
+            "Level":"Beginner"
         },
         {
             "ID": "DS04",
             "Subject":"SubjectDataScience",
-            "Img":"./img/imgcourses/datascience04.jpeg",
+            "Img":"datascience04.jpeg",
             "NameCourse":"R Programming A-Z™: R For Data Science With Real Exercises!", 
             "Intro":"Learn Programming In R And R Studio. Data Analytics, Data Science, Statistical Analysis, Packages, Functions, GGPlot2",
-            "Teacher":"Kirill Eremenko, Ligency Team",
+            "Teacher":"Ligency I Team",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.7,
             "QtyStudent": 240627,
-            "Detail":"DataScience04.html"
+            "Detail":"DataScience04.html",
+            "Level":"Beginner"
         },
         {
             "ID": "DS05",
             "Subject":"SubjectDataScience",
-            "Img":"./img/imgcourses/datascience05.jpeg",
+            "Img":"datascience05.jpeg",
             "NameCourse":"Data Science and Machine Learning Bootcamp with R", 
             "Intro":"Learn how to use the R programming language for data science and machine learning and data visualization!",
             "Teacher":"Jose Portilla",
@@ -246,103 +264,111 @@
             "PriceOld":"$84.99",
             "Rating": 4.7,
             "QtyStudent": 84512,
-            "Detail":"DataScience05.html"
+            "Detail":"DataScience05.html",
+            "Level":"All levels"
         },
         {
             "ID": "DS06",
             "Subject":"SubjectDataScience",
-            "Img":"./img/imgcourses/datascience06.jpeg",
+            "Img":"datascience06.jpeg",
             "NameCourse":"Introduction to Machine Learning for Data Science", 
             "Intro":"A primer on Machine Learning for Data Science. Revealed for everyday people, by the Backyard Data Scientist.",
-            "Teacher":"David Valentine",
+            "Teacher":"Kirill Eremenko",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.5,
             "QtyStudent": 56579,
-            "Detail":"DataScience06.html"
+            "Detail":"DataScience06.html",
+            "Level":"Beginner"
         },
         {
             "ID": "DS07",
             "Subject":"SubjectDataScience",
-            "Img":"./img/imgcourses/datascience07.png",
+            "Img":"datascience07.png",
             "NameCourse":"Data Science : Master Machine Learning Without Coding", 
             "Intro":"Learn Fundamentals Of Data Science & Machine Learning With Rapidminer (No Coding). Dataset & Solutions Included.",
-            "Teacher":"Ram Prasad",
+            "Teacher":"Ligency I Team",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.6,
-            "QtyStudent":"5,580",
-            "Detail":"DataScience07.html"
+            "QtyStudent":5580,
+            "Detail":"DataScience07.html",
+            "Level":"Beginner"
         },
         {
             "ID": "WD01",
             "Subject":"SubjectWebDevelopment",
-            "Img":"./img/imgcourses/webdev01.jpeg",
+            "Img":"webdev01.jpeg",
             "NameCourse":"Introduction to Web Development", 
             "Intro":"Are you Interested in Learning Web Development? Enroll in this Free course for a Dynamic Introduction to the Profession!",
-            "Teacher":"Dollar Design School, Mark Lassoff",
+            "Teacher":"Dollar Design School",
             "PriceNew":"$16.99",
             "PriceOld":"$19.99",
             "Rating": 4.3,
             "QtyStudent": 22496,
-            "Detail":"WebDevelopment01.html"
+            "Detail":"WebDevelopment01.html",
+            "Level":"Beginner"
         },
         {
             "ID": "WD02",
             "Subject":"SubjectWebDevelopment",
-            "Img":"./img/imgcourses/webdev02.jpeg",
+            "Img":"webdev02.jpeg",
             "NameCourse":"Become a Certified HTML, CSS, JavaScript Web Developer", 
             "Intro":"Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications",
-            "Teacher":"Dollar Design School, Mark Lassoff",
+            "Teacher":"Dollar Design School",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.4,
-            "QtyStudent":"34,033",
-            "Detail":"WebDevelopment02.html"
+            "QtyStudent":34033,
+            "Detail":"WebDevelopment02.html",
+            "Level":"Intermediate"
         },
         {
             "ID": "WD03",
             "Subject":"SubjectWebDevelopment",
-            "Img":"./img/imgcourses/webdev03.jpeg",
+            "Img":"webdev03.jpeg",
             "NameCourse":"Running a Web Development Business: The Complete Guide", 
             "Intro":"Learn how to start and grow a successful web development business. Get up & running and making sales in under a week.",
-            "Teacher":"Evan Kimbrell",
+            "Teacher":"Rob Percival",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.9,
             "QtyStudent": 33257,
-            "Detail":"WebDevelopment03.html"
+            "Detail":"WebDevelopment03.html",
+            "Level":"Beginner"
         },
         {
             "ID": "WD04",
             "Subject":"SubjectWebDevelopment",
-            "Img":"./img/imgcourses/webdev04.jpeg",
+            "Img":"webdev04.jpeg",
             "NameCourse":"Ultimate Web Designer & Web Developer Course", 
             "Intro":"Become a Full-Stack Web Designer in 2022 - Learn Everything from Web Design Fundamentals to Front-End Web Development",
-            "Teacher":"Brad Hussey",
+            "Teacher":"Rob Percival",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.5,
             "QtyStudent": 78021,
-            "Detail":"WebDevelopment04.html"
+            "Detail":"WebDevelopment04.html",
+            "Level":"All levels"
         },
         {
             "ID": "WD05",
             "Subject":"SubjectWebDevelopment",
-            "Img":"./img/imgcourses/webdev05.jpeg",
+            "Img":"webdev05.jpeg",
             "NameCourse":"Introduction to Programming", 
             "Intro":"Professional Coding Skills for Beginners",
-            "Teacher":"Dollar Design School, Mark Lassoff",
+            "Teacher":"Dollar Design School",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.5,
             "QtyStudent": 6459,
-            "Detail":"WebDevelopment05.html"
+            "Detail":"WebDevelopment05.html",
+            "Level":"Beginner"
         },
         {
             "ID": "WD06",
             "Subject":"SubjectWebDevelopment",
-            "Img":"./img/imgcourses/webdev06.jpeg",
+            "Img":"webdev06.jpeg",
             "NameCourse":"The Complete Web Developer Course 2.0", 
             "Intro":"Learn Web Development by building 25 websites and mobile apps using HTML, CSS, Javascript, PHP, Python, MySQL & more!",
             "Teacher":"Rob Percival",
@@ -350,25 +376,27 @@
             "PriceOld":"$84.99",
             "Rating": 4.5,
             "QtyStudent": 304247,
-            "Detail":"WebDevelopment06.html"
+            "Detail":"WebDevelopment06.html",
+            "Level":"All levels"
         },
         {
             "ID": "WD07",
             "Subject":"SubjectWebDevelopment",
-            "Img":"./img/imgcourses/webdev07.jpeg",
+            "Img":"webdev07.jpeg",
             "NameCourse":"The Complete 2022 Web Development Course - Build 15 Projects", 
             "Intro":"The only course you need to become a full-stack web developer. Covers HTML5, CSS3, JS, ES6, Node, APIs, Mobile & more!",
-            "Teacher":"Development Island(UK)",
+            "Teacher":"Rob Percival",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.5,
             "QtyStudent": 34358,
-            "Detail":"WebDevelopment07.html"
+            "Detail":"WebDevelopment07.html",
+            "Level":"All levels"
         },
         {
             "ID":"DR01",
             "Subject":"SubjectDrawing",
-            "Img":"./img/imgcourses/drawing01.jpeg",
+            "Img":"drawing01.jpeg",
             "NameCourse":"The Ultimate Drawing Course - Beginner to Advanced", 
             "Intro":"Learn the #1 most important building block of all art, Drawing. This course will teach you how to draw like a pro!",
             "Teacher":"Jaysen Batchelor",
@@ -376,77 +404,83 @@
             "PriceOld":"$84.99",
             "Rating": 4.6,
             "QtyStudent": 490294,
-            "Detail":"Drawing01.html"
+            "Detail":"Drawing01.html",
+            "Level":"All levels"
         },
         {   
             "ID":"DR02",
             "Subject":"SubjectDrawing",
-            "Img":"./img/imgcourses/drawing02.jpeg",
+            "Img":"drawing02.jpeg",
             "NameCourse":"Character Art School: Complete Character Drawing", 
             "Intro":"Learn How to Draw Characters Professionally, in the Ultimate Drawing Course - For Games, Manga, Animation and Comics",
-            "Teacher":"Scott Harris",
+            "Teacher":"Jaysen Batchelor",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.8,
             "QtyStudent": 278670,
-            "Detail":"Drawing02.html"
+            "Detail":"Drawing02.html",
+            "Level":"Beginner"
         },
         {
             "ID":"DR03",
             "Subject":"SubjectDrawing",
-            "Img":"./img/imgcourses/drawing03.jpeg",
+            "Img":"drawing03.jpeg",
             "NameCourse":"How to Draw From Beginner to Master", 
             "Intro":"Drawing and Shading From Fundamentals to Photorealism",
-            "Teacher":"Joseph Patric Daniels",
+            "Teacher":"Jaysen Batchelor",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.7,
             "QtyStudent": 41137,
-            "Detail":"Drawing03.html"
+            "Detail":"Drawing03.html",
+            "Level":"Beginner"
         },
         {
             "ID":"DR04",
             "Subject":"SubjectDrawing",
-            "Img":"./img/imgcourses/drawing04.jpeg",
+            "Img":"drawing04.jpeg",
             "NameCourse":"The Art & Science of Drawing / BASIC SKILLS", 
             "Intro":"Drawing is not a talent. It's a skill anyone can learn.",
-            "Teacher":"Brent Eviston",
+            "Teacher":"Jaysen Batchelor",
             "PriceNew":"$16.99",
             "PriceOld":"$34.99",
             "Rating": 4.7,
             "QtyStudent": 67528,
-            "Detail":"Drawing04.html"
+            "Detail":"Drawing04.html",
+            "Level":"Beginner"
         },
         {
             "ID":"DR05",
             "Subject":"SubjectDrawing",
-            "Img":"./img/imgcourses/drawing05.jpeg",
+            "Img":"drawing05.jpeg",
             "NameCourse":"The Complete Drawing Masterclass: From Beginner to Advanced", 
             "Intro":"Apply the art and practice of the fundamental skill of drawing, to bring your drawings to life in this ultimate course.",
-            "Teacher":"Chad Neuman",
+            "Teacher":"Matthew Fussell",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.9,
             "QtyStudent": 21528,
-            "Detail":"Drawing05.html"
+            "Detail":"Drawing05.html",
+            "Level":"Intermediate"
         },
         {
             "ID":"DR06",
             "Subject":"SubjectDrawing",
-            "Img":"./img/imgcourses/drawing06.jpeg",
+            "Img":"drawing06.jpeg",
             "NameCourse":"Masterclass of Realistic Drawing and Shading Human Features", 
             "Intro":"Realistic Human Feature Drawing, Hachure and Shading with Pencil, Charcoal and Brush Techniques - Beginner to Advanced",
-            "Teacher":"Ian Xiang",
+            "Teacher":"Matthew Fussell",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating":"4.9",
             "QtyStudent": 14276,
-            "Detail":"Drawing06.html"
+            "Detail":"Drawing06.html",
+            "Level":"All levels"
         },
         {
             "ID":"DR07",
             "Subject":"SubjectDrawing",
-            "Img":"./img/imgcourses/drawing07.jpeg",
+            "Img":"drawing07.jpeg",
             "NameCourse":"25 Days to Better Drawings", 
             "Intro":"The Core Concepts to Drawing - One Day at a Time.",
             "Teacher":"Matthew Fussell",
@@ -454,25 +488,27 @@
             "PriceOld":"$34.99",
             "Rating": 4.7,
             "QtyStudent": 4169,
-            "Detail":"Drawing07.html"
+            "Detail":"Drawing07.html",
+            "Level":"Intermediate"
         },
         {
             "ID":"AWS01",
             "Subject":"SubjectAWSCertification",
-            "Img":"./img/imgcourses/aws01.jpeg",
+            "Img":"aws01.jpeg",
             "NameCourse":"Ultimate AWS Certified Solutions Architect Associate SAA-C03", 
             "Intro":"Full Practice Exam | Learn Cloud Computing | Pass the AWS Certified Solutions Architect Associate Certification SAA-C03!",
             "Teacher":"Stephane Maarek",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.7,
-            "QtyStudent":"638 952",
-            "Detail":"AWSCertification01.html"
+            "QtyStudent": 638952,
+            "Detail":"AWSCertification01.html",
+            "Level":"Intermediate"
         },
         {
             "ID":"AWS02",
             "Subject":"SubjectAWSCertification",
-            "Img":"./img/imgcourses/aws02.jpeg",
+            "Img":"aws02.jpeg",
             "NameCourse":"Ultimate AWS Certified Developer Associate 2022 - NEW!", 
             "Intro":"Full Practice Exam with Explanations included! PASS the Amazon Web Services Certified Developer Certification DVA-C01.",
             "Teacher":"Stephane Maarek",
@@ -480,12 +516,13 @@
             "PriceOld":"$84.99",
             "Rating": 4.8,
             "QtyStudent": 363758,
-            "Detail":"AWSCertification02.html"
+            "Detail":"AWSCertification02.html",
+            "Level":"All levels"
         },
         {
             "ID":"AWS03",
             "Subject":"SubjectAWSCertification",
-            "Img":"./img/imgcourses/aws03.jpeg",
+            "Img":"aws03.jpeg",
             "NameCourse":"[NEW] Ultimate AWS Certified Cloud Practitioner - 2022", 
             "Intro":"Full Practice Exam included + explanations | Learn Cloud Computing | Pass the AWS Cloud Practitioner CLF-C01 exam!",
             "Teacher":"Stephane Maarek",
@@ -493,25 +530,27 @@
             "PriceOld":"$84.99",
             "Rating": 4.8,
             "QtyStudent": 523864,
-            "Detail":"AWSCertification03.html"
+            "Detail":"AWSCertification03.html",
+            "Level":"All levels"
         },
         {
             "ID":"AWS04",
             "Subject":"SubjectAWSCertification",
-            "Img":"./img/imgcourses/aws04.jpeg",
+            "Img":"aws04.jpeg",
             "NameCourse":"Ultimate AWS Certified SysOps Administrator Associate 2022", 
             "Intro":"Full Practice Test with Explanations included! PASS the AWS Certified SysOps Administrator Associate SOA-C02 Exam.",
             "Teacher":"Stephane Maarek",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.7,
-            "QtyStudent":"86 134",
-            "Detail":"AWSCertification04.html"
+            "QtyStudent": 86134,
+            "Detail":"AWSCertification04.html",
+            "Level":"All levels"
         },
         {
             "ID":"AWS05",
             "Subject":"SubjectAWSCertification",
-            "Img":"./img/imgcourses/aws05.jpeg",
+            "Img":"aws05.jpeg",
             "NameCourse":"Amazon Web Services (AWS) Certified 2022 - 4 Certifications!", 
             "Intro":"Videos, labs & practice exams - AWS Certified (Solutions Architect, Developer, SysOps Administrator, Cloud Practitioner)",
             "Teacher":"BackSpace Academy",
@@ -519,12 +558,13 @@
             "PriceOld":"$84.99",
             "Rating": 4.7,
             "QtyStudent": 137299,
-            "Detail":"AWSCertification05.html"
+            "Detail":"AWSCertification05.html",
+            "Level":"Beginner"
         },
         {
             "ID":"AWS06",
             "Subject":"SubjectAWSCertification",
-            "Img":"./img/imgcourses/aws06.jpeg",
+            "Img":"aws06.jpeg",
             "NameCourse":"Ultimate AWS Certified Solutions Architect Professional 2022", 
             "Intro":"Be AWS Certified Solutions Architect Professional. Full Amazon Web Services Solution Architecture deep-dive for SAP-C01",
             "Teacher":"Stephane Maarek",
@@ -532,12 +572,13 @@
             "PriceOld":"$84.99",
             "Rating": 4.8,
             "QtyStudent": 98346,
-            "Detail":"AWSCertification06.html"
+            "Detail":"AWSCertification06.html",
+            "Level":"Beginner"
         },
         {
             "ID":"AWS07",
             "Subject":"SubjectAWSCertification",
-            "Img":"./img/imgcourses/aws07.webp",
+            "Img":"aws07.webp",
             "NameCourse":"Practice Exams | AWS Certified Developer Associate 2022", 
             "Intro":"325 Test Quiz Questions on DVA-C01 ! Practice the AWS Certified Developer Exam & ace the AWS Certified Developer Exam!",
             "Teacher":"Stephane Maarek",
@@ -545,12 +586,13 @@
             "PriceOld":"$84.99",
             "Rating": 4.8,
             "QtyStudent": 74291,
-            "Detail":"AWSCertification01.html"
+            "Detail":"AWSCertification01.html",
+            "Level":"Beginner"
         },
         {
             "ID":"JS01",
             "Subject":"SubjectJavascript",
-            "Img":"./img/imgcourses/js01.png",
+            "Img":"js01.png",
             "NameCourse":"Javascript for Beginners", 
             "Intro":"Learn javascript online and supercharge your web design with this Javascript for beginners training course.",
             "Teacher":"Dollar Design School",
@@ -558,12 +600,13 @@
             "PriceOld":"$19.99",
             "Rating": 4.5,
             "QtyStudent": 9613,
-            "Detail":"Javascript01.html"
+            "Detail":"Javascript01.html",
+            "Level":"Intermediate"
         },
         {
             "ID":"JS02",
             "Subject":"SubjectJavascript",
-            "Img":"./img/imgcourses/js02.png",
+            "Img":"js02.png",
             "NameCourse":"1 Hour JavaScript", 
             "Intro":"Learn how to code in JavaScript in 1 hour. This class is set up for complete beginners!",
             "Teacher":"John Bura",
@@ -571,25 +614,27 @@
             "PriceOld":"$84.99",
             "Rating": 4.5,
             "QtyStudent": 67614,
-            "Detail":"Javascript02.html"
+            "Detail":"Javascript02.html",
+            "Level":"Beginner"
         },
         {
             "ID":"JS03",
             "Subject":"SubjectJavascript",
-            "Img":"./img/imgcourses/js03.png",
+            "Img":"js03.png",
             "NameCourse":"JavaScript: Understanding the Weird Parts", 
             "Intro":"An advanced JavaScript course for everyone! Scope, closures, prototypes, 'this', build your own framework, and more.",
-            "Teacher":"Anthony Alicea",
+            "Teacher":"Edwin Diaz",
             "PriceNew":"$16.99",
             "PriceOld":"$84.99",
             "Rating": 4.8,
             "QtyStudent": 179362,
-            "Detail":"Javascript03.html"
+            "Detail":"Javascript03.html",
+            "Level":"All levels"
         },
         {
             "ID":"JS04",
             "Subject":"SubjectJavascript",
-            "Img":"./img/imgcourses/js04.png",
+            "Img":"js04.png",
             "NameCourse":"Javascript for Beginners Learn by Doing Practical Exercises", 
             "Intro":"JavaScript for Beginners : Work closely with me doing exercises & learn more. I make Javascript easy for you guaranteed.",
             "Teacher":"Edwin Diaz",
@@ -597,46 +642,50 @@
             "PriceOld":"$99.99",
             "Rating": 4.4,
             "QtyStudent": 30106,
-            "Detail":"Javascript04.html"
+            "Detail":"Javascript04.html",
+            "Level":"Beginner"
         },
         {
             "ID":"JS05",
             "Subject":"SubjectJavascript",
-            "Img":"./img/imgcourses/js05.png",
+            "Img":"js05.png",
             "NameCourse":"JavaScript from Beginner to Expert", 
             "Intro":"Become a JavaScript expert in 30 days, even if you are a JS beginner. Become a front-end developer of websites in JS",
-            "Teacher":"Arkadiusz Wlodarczyk",
+            "Teacher":"Edwin Diaz",
             "PriceNew":"$19.99",
             "PriceOld":"$99.99",
             "Rating": 4.3,
             "QtyStudent": 9931,
-            "Detail":"Javascript05.html"
+            "Detail":"Javascript05.html",
+            "Level":"All levels"
         },
         {
             "ID":"JS06",
             "Subject":"SubjectJavascript",
-            "Img":"./img/imgcourses/js06.png",
+            "Img":"js06.png",
             "NameCourse":"JavaScript for Kids: Code Your Own Games and Apps at Any Age", 
             "Intro":"JavaScript coding course for beginners of all ages, build your own interactive games and apps in JavaScript!",
-            "Teacher":"Bryson Payne",
+            "Teacher":"John Bura",
             "PriceNew":"$16.99",
             "PriceOld":"$29.99",
             "Rating": 4.5,
             "QtyStudent": 2747,
-            "Detail":"Javascript06.html"
+            "Detail":"Javascript06.html",
+            "Level":"All levels"
         },
         {
             "ID":"JS07",
             "Subject":"SubjectJavascript",
-            "Img":"./img/imgcourses/js07.png",
+            "Img":"js07.png",
             "NameCourse":"Advanced Javascript", 
             "Intro":"In only seven hours you will learn enough javascript to transform from a Junior JS Dev into a Senior JS Guru",
-            "Teacher":"Asim Hussain",
+            "Teacher":"John Bura",
             "PriceNew":"$16.99",
             "PriceOld":"$49.99",
             "Rating": 4.6,
             "QtyStudent": 31146,
-            "Detail":"Javascript07.html"
+            "Detail":"Javascript07.html",
+            "Level":"Beginner" 
         }
     ]
 }
