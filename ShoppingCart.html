@@ -17,6 +17,7 @@
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
     integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
     integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
     crossorigin="anonymous"></script>
@@ -28,8 +29,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
   <!-- Angular  -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script> -->
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -172,17 +173,19 @@
       margin: -2rem auto;
       position: fixed;
       top: 200px;
-      right: 60px;
+      right: 5%;
       z-index: 1000;
       background-color: antiquewhite;
+      max-width: 20%;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
       .Shopping-Right {
         position: relative;
         top: 0px;
         right: 0px;
         margin: 0 auto;
+        max-width: none;
       }
     }
 
@@ -300,7 +303,7 @@
         <!-- column total -->
         <div class="Shopping-Right d-block float-md-end mx-auto col-12 col-sm-8 col-md-4">
           <h3>Total: </h3>
-          <h4 class="text-success m-4">$199.00</h4>
+          <h4 class="text-success m-4 total-cart"></h4>
           <a href="CheckOut.html"><button class="btn bg-warning text-light col-12 p-3">Checkout</button></a>
           <hr>
           <p>Promotion</p>
@@ -313,7 +316,7 @@
         <!-- column content -->
         <div ng-controller="myController" class="container col-12 col-sm-8 ml-md-5">
 
-          <div class="shopping-cart show-cart" id="shopping-cart">
+          <div class="show-cart">
 
             <div class="col-12 m-1 p-1 border">
               <a class="d-md-flex flex-column flex-md-row text-reset p-1" href="#" target="new">
@@ -323,7 +326,7 @@
                     <input ng-click="removeItem($index)" type="checkbox" checked>
                   </div>
                   <div class="img-course col-4">
-                    <!-- <img class="border" src="{{x.Img}}" alt="img-course" width="100%" height="auto" style="border-radius: 10px"> -->
+                    <img class="border" src="#" alt="img-course" width="100%" height="auto" style="border-radius: 10px">
                   </div>
                   <!-- content -->
                   <div class="col-7 p-2">
@@ -485,21 +488,24 @@
   </main>
 
   <!-- Java Script -->
-  <script src="Gallery.js"></script>
-  <script src="cart2.js"></script>
-  <script>
-    var app = angular.module("myApp", [])
-    app.run(function ($rootScope, $http) {
-      $http.get("informationSubject.json").then(function (response) {
-        $rootScope.list = response.data.informationSubject;
-      });
-    });
+  <script type="text/javascript" src="./MDB5/js/mdb.min.js"></script>
 
-    app.controller("myController", function ($scope) {
-      $scope.removeItem = function (x) {
-        $scope.list.splice(x, 1)
-      }
-    })
+  <script type="text/javascript" src="Gallery.js"></script>
+
+  <script type="text/javascript" src="cart.js"></script>
+  <script>
+    // var app = angular.module("myApp", [])
+    // app.run(function ($rootScope, $http) {
+    //   $http.get("informationSubject.json").then(function (response) {
+    //     $rootScope.list = response.data.informationSubject;
+    //   });
+    // });
+
+    // app.controller("myController", function ($scope) {
+    //   $scope.removeItem = function (x) {
+    //     $scope.list.splice(x, 1)
+    //   }
+    // })
   </script>
   <!-- Java Script -->
 </body>

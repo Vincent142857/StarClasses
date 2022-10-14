@@ -1,18 +1,17 @@
+// ************************************************
 // Shopping Cart API
 // ************************************************
 
 var shoppingCart = (function () {
-  
+  // =============================
+  // Private methods and properties
+  // =============================
   cart = [];
 
   // Constructor
-  function Item(img, name, teacher, price, priceOld, detail, count) {
-    this.img = img;
+  function Item(name, price, count) {
     this.name = name;
-    this.teacher = teacher;
     this.price = price;
-    this.priceOld = priceOld;
-    this.detail = detail;
     this.count = count;
   }
 
@@ -26,14 +25,19 @@ var shoppingCart = (function () {
     cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
   }
 
+
   if (sessionStorage.getItem("shoppingCart") != null) {
     loadCart();
   }
 
+
+  // =============================
+  // Public methods and properties
+  // =============================
   var obj = {};
 
   // Add to cart
-  obj.addItemToCart = function (img, name, teacher, price, priceOld, detail, count) {
+  obj.addItemToCart = function (name, price, count) {
     for (var i in cart) {
       if (cart[i].name === name) {
         cart[i].count++;
@@ -41,11 +45,10 @@ var shoppingCart = (function () {
         return;
       }
     }
-    var item = new Item(img, name, teacher, price, priceOld, detail, count);
+    var item = new Item(name, price, count);
     cart.push(item);
     saveCart();
   }
-
   // Set count from item
   obj.setCountForItem = function (name, count) {
     for (var i in cart) {
@@ -54,8 +57,7 @@ var shoppingCart = (function () {
         break;
       }
     }
-  }
-
+  };
   // Remove item from cart
   obj.removeItemFromCart = function (name) {
     for (var i in cart) {
@@ -109,8 +111,8 @@ var shoppingCart = (function () {
   obj.listCart = function () {
     var cartCopy = [];
     for (i in cart) {
-      var item = cart[i];
-      var itemCopy = {};
+      item = cart[i];
+      itemCopy = {};
       for (p in item) {
         itemCopy[p] = item[p];
 
@@ -135,23 +137,21 @@ var shoppingCart = (function () {
   return obj;
 })();
 
+
 // *****************************************
 // Triggers / Events
 // ***************************************** 
-
 // Add item
-$(".add-to-cart").click(function (event) {
+$('.add-to-cart').click(function (event) {
   event.preventDefault();
-  var id = $(this).data('id');
-  var img = $(this).data('img');
-  var name = $(this).data('name');
-  var teacher = $(this).data('teacher');
-  var price = Number($(this).data('price-new'));
-  var priceOld = Number($(this).data('price-old'));
-  var detail = $(this).data('detail');
-  
-  shoppingCart.addItemToCart(img, name, teacher, price, priceOld, detail, 1);
+
+  var name = $(this).data("name-course");
+  var price = Number($(this).data("price-new"));
+  //var PriceOld = Number($(this).data("price-old"));
+
+  shoppingCart.addItemToCart(name, price, 1);
   displayCart();
+
 });
 
 // Clear items
@@ -165,46 +165,44 @@ function displayCart() {
   var cartArray = shoppingCart.listCart();
   var output = ``;
 
+
   $.each(cartArray, function (k, v) {
-    output += `<div class="col-12 m-1 p-1 border">
-                <a class="d-md-flex flex-column flex-md-row text-reset p-1" href="./Courses/${v.detail}" target="new">
-                  <div class="d-flex flex-row flex-grow-1 col-12 col-sm-8 mx-2">
 
-                    <div class="Exit py-4 col-1">
-                      <input class="delete-item" type="checkbox" checked>
-                    </div>
+    output += `
+      <div class="col-12 m-1 p-1 border">
+        <a class="d-md-flex flex-column flex-md-row text-reset p-1" href="./Courses/{v.Detail}" target="new">
 
-                    <div class="img-course col-4">
-                      <img class="border" src="./img/imgcourses/${v.img}" alt="img-course" width="100%" height="auto" style="border-radius: 10px">
-                    </div>
-
-                    <div class="col-7 p-2">
-                      <strong class="title-course">${v.name}</strong> <br>
-                      <small class="name-gv">Created by: ${v.teacher}</small>
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row c ol-12 col-sm-3 p-2 text-right">
-                    <div class="col-6">
-                      <b class="text-success">$${v.price}</b>
-                      <small class="text-danger">
-                        <del>$${v.priceOld}</del>
-                      </small>
-                    </div>
-                    <div class="col-6">
-                      <span class="text-right">Qty: ${v.count} </span>
-                    </div>
-                  </div>
-                </a>
-              </div>`
+          <div class="d-flex flex-row flex-grow-1 col-12 col-sm-8 mx-2">
+            <div class="Exit py-4 col-1">
+              <input ng-click="removeItem($index)" type="checkbox" checked>
+            </div>
+            <div class="img-course col-4">
+              <img class="border" src="{v.Img}" alt="img-course" width="100%" height="auto" style="border-radius: 10px">
+            </div>
+            
+            <div class="col-7 p-2">
+              <strong class="title-course">${v.name}</strong> <br>
+              <small class="name-gv">Created by: {v.Teacher}</small>
+            </div>
+          </div>
+          
+          <div class="col-12 col-sm-2 p-2 text-right">
+            <b class="text-success">${v.price}</b>
+            <small class="text-danger">
+              <del>{v.PriceOld}</del>
+            </small>
+          </div>
+        </a>
+      </div>`;
   });
-  
-  $('.show-cart').html(output);
-  $('.total-cart').html("$ " + shoppingCart.totalCart());
-  $('.total-count').html(shoppingCart.totalCount());
+
+  //$('.show-cart').html(output);
+  //$('.total-cart').html(shoppingCart.totalCart());
+  //$('.total-count').html(shoppingCart.totalCount());
+
   console.log(output);
-  console.log(shoppingCart.totalCount());
   console.log(shoppingCart.totalCart());
+  console.log(shoppingCart.totalCount());
 }
 
 // Delete item button

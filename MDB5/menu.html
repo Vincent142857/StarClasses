@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Material Design for Bootstrap</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <style>
+      .dropdown-hover:hover>.dropdown-menu {
+        display: inline-block;
+      }
+
+      .dropdown-hover>.dropdown-toggle:active {
+      /*Without this, clicking will make it sticky*/
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <div class="container">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Toggle button -->
+          <button class="navbar-toggler px-0" type="button" data-mdb-toggle="collapse"
+            data-mdb-target="#navbarOnHover" aria-controls="navbarOnHover" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+      
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarOnHover">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto ps-lg-0" style="padding-left: 0.15rem">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Regular link</a>
+              </li>
+
+              <!-- Navbar dropdown -->
+              <li class="nav-item dropdown dropdown-hover position-static">
+
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-mdb-toggle="dropdown" aria-expanded="false">
+                  <img src="./img/tutorialCut.png" width="  "> Courses
+                </a>
+                <!-- Dropdown menu -->
+                <div class="dropdown-menu w-50 mt-0" aria-labelledby="navbarDropdown" 
+                style="border-top-left-radius: 0;border-top-right-radius: 0;">
+      
+                  <div class="container">
+                    <div class="row my-4">
+                      <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                        <div class="list-group list-group-flush">
+                          <a href="" class="list-group-item list-group-item-action">Topic</a>
+                          <a href="" class="list-group-item list-group-item-action">Python</a>
+                          <a href="" class="list-group-item list-group-item-action">Excel</a>
+                          <a href="" class="list-group-item list-group-item-action">Web Development</a>
+                          <a href="" class="list-group-item list-group-item-action">Data Science</a>
+                          <a href="" class="list-group-item list-group-item-action">JavaScript</a>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-lg-6 mb-3 mb-lg-0">
+                        <div class="list-group list-group-flush">
+                          <p class="mb-0 list-group-item text-uppercase font-weight-bold">Topic</p>
+                          <a href="" class="list-group-item list-group-item-action">
+                            <i class="fas fa-caret-right pe-2"></i> Python</a>
+                          <a href="" class="list-group-item list-group-item-action">
+                            <i class="fas fa-caret-right pe-2"></i> Excel</a>
+                          <a href="" class="list-group-item list-group-item-action">
+                            <i class="fas fa-caret-right pe-2"></i> Web Development</a>
+                          <a href="" class="list-group-item list-group-item-action">
+                            <i class="fas fa-caret-right pe-2"></i> Data Science</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- /Dropdown menu -->
+                
+              </li><!-- Navbar dropdown -->
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+
+    
+    
+
+    </div>
+    <!-- End your project here-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+  </body>
+</html>

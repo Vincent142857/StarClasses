@@ -207,7 +207,7 @@
 
             <!-- Navbar dropdown -->
             <li class="nav-item dropdown col-12 text-center">
-              <a class="nav-link dropdown-toggle" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown"
+              <a class="nav-link dropdown-toggle text-center" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown"
                 aria-expanded="false">
                 <img src="./img/tutorialCut.png" style="width: 20px;"> Courses
               </a>
@@ -241,9 +241,9 @@
             </li>
             <!-- shopping & payment -->
             <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link active text-sm-center p-2" aria-current="page" href="ShoppingCart.html">
+              <a class="nav-link active text-center p-2" aria-current="page" href="ShoppingCart.html">
                 <span><i class="fa fa-shopping-cart fa-lg"></i></span>
-                <span class="badge rounded-pill badge-notification bg-danger">2</span>
+                <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
               </a>
             </li>
             <!-- Sign in-->
@@ -257,10 +257,10 @@
             </li>
             <!-- Visitor -->
             <li class="nav-item col-12 col-sm-4">
-              <div class="navbar-text text-light">
+              <div class="navbar-text text-light text-center">
                 <img src="./img/star-classes-icon.png" width="35px" alt="icon">
                 Visitor: <i class="fas fa-users"></i>
-                <span class="badge rounded-pill bg-danger">
+                <span class="badge rounded-pill badge-notification bg-danger">
                   <div id="visitor"></div>
                 </span>
               </div>
@@ -312,402 +312,166 @@
 
     <!-- 2. All the content. -->
     <section class="container-fluid px-md-5 marketing">
-      <h1>A broad selection of courses</h1>
-      <h5>Choose from online video courses with new additions published every month</h5>
-      <!-- 2.1 Courses Classes -->
-      <div class="mb-md-4" ng-controller="myController">
-        <!-- 2.1.1 Nav-tab -->
-        <ul class="BoxShow nav nav-tabs nav-justified" id="ex1" role="tablist">
+      <!--2.1 Display by Subject -->
+      <div>
+        <h1>A broad selection of courses</h1>
+        <h5>Choose from online video courses with new additions published every month</h5>
+        <!-- Courses Classes -->
+        <div class="mb-md-4" ng-controller="myController">
+          <!-- 2.1.1 Nav-tab -->
+          <ul class="BoxShow nav nav-tabs nav-justified" id="ex1" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="ex7-tab-2" data-toggle="tab" href="#ex7-tabs-2" role="tab"
+                aria-controls="ex7-tabs-2" aria-selected="true">
+                <strong>Python</strong>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="ex7-tab-3" data-toggle="tab" href="#ex7-tabs-3" role="tab"
+                aria-controls="ex7-tabs-3" aria-selected="false">
+                <strong>Excel</strong>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="ex7-tab-4" data-toggle="tab" href="#ex7-tabs-4" role="tab"
+                aria-controls="ex7-tabs-4" aria-selected="false">
+                <strong>Web Development</strong>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="ex7-tab-5" data-toggle="tab" href="#ex7-tabs-5" role="tab"
+                aria-controls="ex7-tabs-5" aria-selected="false">
+                <strong>Data Science</strong>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="ex7-tab-6" data-toggle="tab" href="#ex7-tabs-6" role="tab"
+                aria-controls="ex7-tabs-6" aria-selected="false">
+                <strong>Javascript</strong>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="ex7-tab-7" data-toggle="tab" href="#ex7-tabs-7" role="tab"
+                aria-controls="ex7-tabs-7" aria-selected="false">
+                <strong>AWS Certification</strong>
+              </a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="ex7-tab-8" data-toggle="tab" href="#ex7-tabs-8" role="tab"
+                aria-controls="ex7-tabs-8" aria-selected="false">
+                <strong>Drawing</strong>
+              </a>
+            </li>
+          </ul><!-- /2.1.1 Tabs nav -->
+          <!--2.2 Tabs content -->
+          <div class="tab-content" id="ex2-content">
+            <!-- 2.2.2 Python -->
+            <div class="tab-pane fade show active" id="ex7-tabs-2" role="tabpanel" aria-labelledby="ex7-tab-2"
+              data-spy="scroll" data-target="#myScrollspy" data-offset="10">
+              <p>
+              <h3>Expand your career opportunities with Python</h3>Take one of Star Classes’s range of Python courses and
+              learn how to code using this incredibly useful language. Its simple syntax and readability makes Python
+              perfect for Flask, Django, data science, and machine learning. You’ll learn how to build everything from
+              games to sites to apps. Choose from a range of courses that will appeal to...</p>
+              <hr>
+              <div class="row SubjectPython"></div>
+              <strong class="ml-auto text-primary"><a class="text-reset" href="GalleryCourse.html">View more ... &#8594;</a></strong>
+            </div> <!-- /2.2.2 Python -->
+            <!--2.2.3 Excel -->
+            <div class="tab-pane fade" id="ex7-tabs-3" role="tabpanel" aria-labelledby="ex7-tab-3" data-spy="scroll"
+              data-target="#myScrollspy" data-offset="10">
+              <p>
+              <h3>Analyze and visualize data with Excel</h3>
+              Take a Microsoft Excel course from Star Classes, and learn how to use this industry-standard software.
+              Real-world experts will show you the basics like how to organize data into sheets, rows and columns, and
+              advanced techniques like creating complex dynamic formulas. Both small businesses and large companies use
+              Excel to...</p>
+              <hr>
+              <div class="row SubjectExcel"></div>
+              <strong class="ml-auto text-primary"><a class="text-reset" href="GalleryCourse.html">View more ... &#8594;</a></strong>
+            </div>
+            <div class="tab-pane fade" id="ex7-tabs-4" role="tabpanel" aria-labelledby="ex7-tab-4" data-spy="scroll"
+              data-target="#myScrollspy" data-offset="10">
+              <p>
+              <h3>Build websites and applications with Web Development</h3>
+              The world of web development is as wide as the internet itself. Much of our social and vocational lives play
+              out on the internet, which prompts new industries aimed at creating, managing, and debugging the websites
+              and applications that we increasingly rely on.</p>
+              <hr>
+              <div class="row SubjectWebDevelopment"></div>
+              <strong class="ml-auto text-primary"><a class="text-reset" href="GalleryCourse.html">View more ... &#8594;</a></strong>
+            </div>
+            <div class="tab-pane fade" id="ex7-tabs-5" role="tabpanel" aria-labelledby="ex7-tab-5" data-spy="scroll"
+              data-target="#myScrollspy" data-offset="10">
+              <p>
+              <h3>Lead data-driven decisions with Data Science</h3>
+              Data science application is an in-demand skill in many industries worldwide — including finance,
+              transportation, education, manufacturing, human resources, and banking. Explore data science courses with
+              Python, statistics, machine learning, and more to grow your knowledge. Get data science training if you’re
+              into research, statistics,...</p>
+              <hr>
+              <div class="row SubjectDataScience"></div>
+              <strong class="ml-auto text-primary"><a class="text-reset" href="GalleryCourse.html">View more ... &#8594;</a></strong>
+            </div>
+            <div class="tab-pane fade" id="ex7-tabs-6" role="tabpanel" aria-labelledby="ex7-tab-6" data-spy="scroll" data-target="#myScrollspy" data-offset="10">
+              <p>
+              <h3>Grow your software development skills with JavaScript</h3>
+              JavaScript is a text-based computer programming language used to make dynamic web pages. A must-learn for
+              aspiring web developers or programmers, JavaScript can be used for features like image carousels, displaying
+              countdowns and timers, and playing media on a webpage. With JavaScript online classes, you can learn to
+              build interactive web applications, choose the best framework, and work with other programming languages
+              like HTML and CSS...</p>
+              <hr>
+              <div class="row SubjectJavascript"></div>
+              <strong class="ml-auto text-primary"><a class="text-reset" href="GalleryCourse.html">View more ... &#8594;</a></strong>
+            </div>
+            <div class="tab-pane fade" id="ex7-tabs-7" role="tabpanel" aria-labelledby="ex7-tab-7" data-spy="scroll" data-target="#myScrollspy" data-offset="10">
+              <p>
+              <h3>Become an expert in cloud computing with AWS Certification</h3>
+              Prep for your AWS certification with an AWS course on Star Classes. Learn the fundamentals of AWS such as
+              working with a serverless platform, the various frameworks, security and more. With these courses, you’ll
+              build the valuable skills you need to implement cloud initiatives — and open up new career opportunities. If
+              you want to...</p>
+              <hr>
+              <div class="row SubjectAWSCertification"></div>
+              <strong class="ml-auto text-primary"><a class="text-reset" href="GalleryCourse.html">View more ... &#8594;</a></strong>
+            </div>
+            <div class="tab-pane fade" id="ex7-tabs-8" role="tabpanel" aria-labelledby="ex7-tab-8" data-spy="scroll" data-target="#myScrollspy" data-offset="10">
+              <p>
+              <h3>Expand your creative skill-set with Drawing</h3>
+              Want to start drawing for fun or take your craft to the next level? Explore our online drawing classes and
+              learn pencil drawing, figure drawing, cartoon drawing, character drawing for cartoons and anime,
+              illustration, sketching, shading and more. Take an overview course on the fundamentals of drawing or zero in
+              on an area...</p>
+              <hr>
+              <div class="row SubjectDrawing"></div>
+              <strong class="ml-auto text-primary"><a class="text-reset" href="GalleryCourse.html">View more ... &#8594;</a></strong>
+            </div>
+          </div>
+          <!-- /2.2 Tabs content -->
+        </div><!-- Courses Classes -->
+      </div><!--/2.1 Display by Subject -->
 
-          <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="ex7-tab-2" data-toggle="tab" href="#ex7-tabs-2" role="tab"
-              aria-controls="ex7-tabs-2" aria-selected="true">
-              <strong>Python</strong>
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" id="ex7-tab-3" data-toggle="tab" href="#ex7-tabs-3" role="tab"
-              aria-controls="ex7-tabs-3" aria-selected="false">
-              <strong>Excel</strong>
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" id="ex7-tab-4" data-toggle="tab" href="#ex7-tabs-4" role="tab"
-              aria-controls="ex7-tabs-4" aria-selected="false">
-              <strong>Web Development</strong>
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" id="ex7-tab-5" data-toggle="tab" href="#ex7-tabs-5" role="tab"
-              aria-controls="ex7-tabs-5" aria-selected="false">
-              <strong>Data Science</strong>
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" id="ex7-tab-6" data-toggle="tab" href="#ex7-tabs-6" role="tab"
-              aria-controls="ex7-tabs-6" aria-selected="false">
-              <strong>Javascript</strong>
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" id="ex7-tab-7" data-toggle="tab" href="#ex7-tabs-7" role="tab"
-              aria-controls="ex7-tabs-7" aria-selected="false">
-              <strong>AWS Certification</strong>
-            </a>
-          </li>
-          <li class="nav-item" role="presentation">
-            <a class="nav-link" id="ex7-tab-8" data-toggle="tab" href="#ex7-tabs-8" role="tab"
-              aria-controls="ex7-tabs-8" aria-selected="false">
-              <strong>Drawing</strong>
-            </a>
-          </li>
-        </ul><!-- /2.1.1 Tabs nav -->
-        <!--2.2 Tabs content -->
-        <div class="tab-content" id="ex2-content">
+      <!--2.2 Display by student top 4 -->
+      <div class="my-2 p-2 border">
+        <h2>Students are viewing</h2>
+        
+        <div class="row sort-top-4-by-student"></div>
+        <strong class="ml-auto text-primary"><a class="text-reset" href="GalleryCourse.html">View more ... &#8594;</a></strong>
+      </div><!--/ 2.2 Display by student top 4 -->
 
-          <!-- 2.2.2 Python -->
-          <div class="tab-pane fade show active" id="ex7-tabs-2" role="tabpanel" aria-labelledby="ex7-tab-2"
-            data-spy="scroll" data-target="#myScrollspy" data-offset="10"
-            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;">
-            <p>
-            <h3>Expand your career opportunities with Python</h3>Take one of Star Classes’s range of Python courses and
-            learn how to code using this incredibly useful language. Its simple syntax and readability makes Python
-            perfect for Flask, Django, data science, and machine learning. You’ll learn how to build everything from
-            games to sites to apps. Choose from a range of courses that will appeal to...</p>
-            <hr>
-            <div ng-repeat="x in list|filter : 'SubjectPython'" id="">
-              <div class="col-12 p-2">
-                <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}"
-                  target="new">
-                  <!-- col-1 -->
-                  <div class="img-course col-12 col-sm-6 col-md-auto p-2">
-                    <img src="./img/imgcourses/{{x.Img}}" alt="">
-                  </div>
-                  <!-- col 2 -->
-                  <div class="content col-12 col-sm-6 p-2">
-                    <h4 class="title-course">{{x.NameCourse}}</h4>
-                    <p class="name-intro">{{x.Intro}}</p>
-                    <p class="name-gv"><b>{{x.Teacher}}</b></p>
-                  </div>
-                  <!-- col 3 -->
-                  <div class="text-left col-4 col-sm-1 p-2">
-                    <span class="d-block">
-                      {{x.Rating}} <i class="fa fa-star text-warning"></i>
-                    </span>
-                  </div>
-                  <!-- col 4 -->
-                  <div class="col-4 col-sm-1 text-primary p-2">
-                    <span class="d-block">
-                      <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
-                    </span>
-                  </div>
-                  <!-- col 5 -->
-                  <div class="text-right col-4 col-sm-1 p-2">
-                    <b class="text-success">{{x.PriceNew}}</b>
-                    <small class="text-danger">
-                      <del>{{x.PriceOld}}</del>
-                    </small>
-                  </div>
-                </a>
-              </div>
-              <div class="w-100 d-sm-none"></div>
-            </div>
-          </div> <!-- /2.2.2 Python -->
-          <!--2.2.3 Excel -->
-          <div class="tab-pane fade" id="ex7-tabs-3" role="tabpanel" aria-labelledby="ex7-tab-3" data-spy="scroll"
-            data-target="#myScrollspy" data-offset="10"
-            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;">
-            <p>
-            <h3>Analyze and visualize data with Excel</h3>
-            Take a Microsoft Excel course from Star Classes, and learn how to use this industry-standard software.
-            Real-world experts will show you the basics like how to organize data into sheets, rows and columns, and
-            advanced techniques like creating complex dynamic formulas. Both small businesses and large companies use
-            Excel to...</p>
-            <hr>
-            <div ng-repeat="x in list|filter : 'SubjectExcel' ">
-              <div class="col-12 p-2">
-                <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}"
-                  target="new">
-                  <!-- col-1 -->
-                  <div class="img-course col-12 col-sm-6 col-md-auto p-2">
-                    <img src="./img/imgcourses/{{x.Img}}" alt="">
-                  </div>
-                  <!-- col 2 -->
-                  <div class="content col-12 col-sm-6 p-2">
-                    <h4 class="title-course">{{x.NameCourse}}</h4>
-                    <p class="name-intro">{{x.Intro}}</p>
-                    <p class="name-gv"><b>{{x.Teacher}}</b></p>
-                  </div>
-                  <!-- col 3 -->
-                  <div class="text-left col-4 col-sm-1 p-2">
-                    <span class="d-block">
-                      {{x.Rating}} <i class="fa fa-star text-warning"></i>
-                    </span>
-                  </div>
-                  <!-- col 4 -->
-                  <div class="col-4 col-sm-1 text-primary p-2">
-                    <span class="d-block">
-                      <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
-                    </span>
-                  </div>
-                  <!-- col 5 -->
-                  <div class="text-right col-4 col-sm-1 p-2">
-                    <b class="text-success">{{x.PriceNew}}</b>
-                    <small class="text-danger">
-                      <del>{{x.PriceOld}}</del>
-                    </small>
-                  </div>
-                </a>
-              </div>
-              <div class="w-100 d-sm-none"></div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="ex7-tabs-4" role="tabpanel" aria-labelledby="ex7-tab-4" data-spy="scroll"
-            data-target="#myScrollspy" data-offset="10"
-            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;">
-            <p>
-            <h3>Build websites and applications with Web Development</h3>
-            The world of web development is as wide as the internet itself. Much of our social and vocational lives play
-            out on the internet, which prompts new industries aimed at creating, managing, and debugging the websites
-            and applications that we increasingly rely on.</p>
-            <hr>
-            <div ng-repeat="x in list|filter : 'SubjectWebDevelopment' ">
-              <div class="col-12 p-2">
-                <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}"
-                  target="new">
-                  <!-- col-1 -->
-                  <div class="img-course col-12 col-sm-6 col-md-auto p-2">
-                    <img src="./img/imgcourses/{{x.Img}}" alt="">
-                  </div>
-                  <!-- col 2 -->
-                  <div class="content col-12 col-sm-6 p-2">
-                    <h4 class="title-course">{{x.NameCourse}}</h4>
-                    <p class="name-intro">{{x.Intro}}</p>
-                    <p class="name-gv"><b>{{x.Teacher}}</b></p>
-                  </div>
-                  <!-- col 3 -->
-                  <div class="text-left col-4 col-sm-1 p-2">
-                    <span class="d-block">
-                      {{x.Rating}} <i class="fa fa-star text-warning"></i>
-                    </span>
-                  </div>
-                  <!-- col 4 -->
-                  <div class="col-4 col-sm-1 text-primary p-2">
-                    <span class="d-block">
-                      <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
-                    </span>
-                  </div>
-                  <!-- col 5 -->
-                  <div class="text-right col-4 col-sm-1 p-2">
-                    <b class="text-success">{{x.PriceNew}}</b>
-                    <small class="text-danger">
-                      <del>{{x.PriceOld}}</del>
-                    </small>
-                  </div>
-                </a>
-              </div>
-              <div class="w-100 d-sm-none"></div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="ex7-tabs-5" role="tabpanel" aria-labelledby="ex7-tab-5" data-spy="scroll"
-            data-target="#myScrollspy" data-offset="10"
-            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;">
-            <p>
-            <h3>Lead data-driven decisions with Data Science</h3>
-            Data science application is an in-demand skill in many industries worldwide — including finance,
-            transportation, education, manufacturing, human resources, and banking. Explore data science courses with
-            Python, statistics, machine learning, and more to grow your knowledge. Get data science training if you’re
-            into research, statistics,...</p>
-            <hr>
-            <div ng-repeat="x in list|filter : 'SubjectDataScience' ">
-              <div class="col-12 p-2">
-                <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}"
-                  target="new">
-                  <!-- col-1 -->
-                  <div class="img-course col-12 col-sm-6 col-md-auto p-2">
-                    <img src="./img/imgcourses/{{x.Img}}" alt="">
-                  </div>
-                  <!-- col 2 -->
-                  <div class="content col-12 col-sm-6 p-2">
-                    <h4 class="title-course">{{x.NameCourse}}</h4>
-                    <p class="name-intro">{{x.Intro}}</p>
-                    <p class="name-gv"><b>{{x.Teacher}}</b></p>
-                  </div>
-                  <!-- col 3 -->
-                  <div class="text-left col-4 col-sm-1 p-2">
-                    <span class="d-block">
-                      {{x.Rating}} <i class="fa fa-star text-warning"></i>
-                    </span>
-                  </div>
-                  <!-- col 4 -->
-                  <div class="col-4 col-sm-1 text-primary p-2">
-                    <span class="d-block">
-                      <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
-                    </span>
-                  </div>
-                  <!-- col 5 -->
-                  <div class="text-right col-4 col-sm-1 p-2">
-                    <b class="text-success">{{x.PriceNew}}</b>
-                    <small class="text-danger">
-                      <del>{{x.PriceOld}}</del>
-                    </small>
-                  </div>
-                </a>
-              </div>
-              <div class="w-100 d-sm-none"></div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="ex7-tabs-6" role="tabpanel" aria-labelledby="ex7-tab-6" data-spy="scroll"
-            data-target="#myScrollspy" data-offset="10"
-            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;">
-            <p>
-            <h3>Grow your software development skills with JavaScript</h3>
-            JavaScript is a text-based computer programming language used to make dynamic web pages. A must-learn for
-            aspiring web developers or programmers, JavaScript can be used for features like image carousels, displaying
-            countdowns and timers, and playing media on a webpage. With JavaScript online classes, you can learn to
-            build interactive web applications, choose the best framework, and work with other programming languages
-            like HTML and CSS...</p>
-            <hr>
-            <div ng-repeat="x in list|filter : 'SubjectJavascript' ">
-              <div class="col-12 p-2">
-                <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}"
-                  target="new">
-                  <!-- col-1 -->
-                  <div class="img-course col-12 col-sm-6 col-md-auto p-2">
-                    <img src="./img/imgcourses/{{x.Img}}" alt="">
-                  </div>
-                  <!-- col 2 -->
-                  <div class="content col-12 col-sm-6 p-2">
-                    <h4 class="title-course">{{x.NameCourse}}</h4>
-                    <p class="name-intro">{{x.Intro}}</p>
-                    <p class="name-gv"><b>{{x.Teacher}}</b></p>
-                  </div>
-                  <!-- col 3 -->
-                  <div class="text-left col-4 col-sm-1 p-2">
-                    <span class="d-block">
-                      {{x.Rating}} <i class="fa fa-star text-warning"></i>
-                    </span>
-                  </div>
-                  <!-- col 4 -->
-                  <div class="col-4 col-sm-1 text-primary p-2">
-                    <span class="d-block">
-                      <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
-                    </span>
-                  </div>
-                  <!-- col 5 -->
-                  <div class="text-right col-4 col-sm-1 p-2">
-                    <b class="text-success">{{x.PriceNew}}</b>
-                    <small class="text-danger">
-                      <del>{{x.PriceOld}}</del>
-                    </small>
-                  </div>
-                </a>
-              </div>
-              <div class="w-100 d-sm-none"></div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="ex7-tabs-7" role="tabpanel" aria-labelledby="ex7-tab-7" data-spy="scroll"
-            data-target="#myScrollspy" data-offset="10"
-            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;">
-            <p>
-            <h3>Become an expert in cloud computing with AWS Certification</h3>
-            Prep for your AWS certification with an AWS course on Star Classes. Learn the fundamentals of AWS such as
-            working with a serverless platform, the various frameworks, security and more. With these courses, you’ll
-            build the valuable skills you need to implement cloud initiatives — and open up new career opportunities. If
-            you want to...</p>
-            <hr>
-            <div ng-repeat="x in list|filter : 'SubjectAWSCertification' ">
-              <div class="col-12 p-2">
-                <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}"
-                  target="new">
-                  <!-- col-1 -->
-                  <div class="img-course col-12 col-sm-6 col-md-auto p-2">
-                    <img src="./img/imgcourses/{{x.Img}}" alt="">
-                  </div>
-                  <!-- col 2 -->
-                  <div class="content col-12 col-sm-6 p-2">
-                    <h4 class="title-course">{{x.NameCourse}}</h4>
-                    <p class="name-intro">{{x.Intro}}</p>
-                    <p class="name-gv"><b>{{x.Teacher}}</b></p>
-                  </div>
-                  <!-- col 3 -->
-                  <div class="text-left col-4 col-sm-1 p-2">
-                    <span class="d-block">
-                      {{x.Rating}} <i class="fa fa-star text-warning"></i>
-                    </span>
-                  </div>
-                  <!-- col 4 -->
-                  <div class="col-4 col-sm-1 text-primary p-2">
-                    <span class="d-block">
-                      <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
-                    </span>
-                  </div>
-                  <!-- col 5 -->
-                  <div class="text-right col-4 col-sm-1 p-2">
-                    <b class="text-success">{{x.PriceNew}}</b>
-                    <small class="text-danger">
-                      <del>{{x.PriceOld}}</del>
-                    </small>
-                  </div>
-                </a>
-              </div>
-              <div class="w-100 d-sm-none"></div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="ex7-tabs-8" role="tabpanel" aria-labelledby="ex7-tab-8" data-spy="scroll"
-            data-target="#myScrollspy" data-offset="10"
-            style=" height:500px; overflow-y:scroll; padding:5px; border:1px solid #ccc;">
-            <p>
-            <h3>Expand your creative skill-set with Drawing</h3>
-            Want to start drawing for fun or take your craft to the next level? Explore our online drawing classes and
-            learn pencil drawing, figure drawing, cartoon drawing, character drawing for cartoons and anime,
-            illustration, sketching, shading and more. Take an overview course on the fundamentals of drawing or zero in
-            on an area...</p>
-            <hr>
-            <div ng-repeat="x in list | filter: 'SubjectDrawing'">
-              <div class="col-12 p-2">
-                <a class="d-md-flex justify-content-end border-bottom text-reset" href="./Courses/{{x.Detail}}"
-                  target="new">
-                  <!-- col-1 -->
-                  <div class="img-course col-12 col-sm-6 col-md-auto p-2">
-                    <img src="./img/imgcourses/{{x.Img}}" alt="">
-                  </div>
-                  <!-- col 2 -->
-                  <div class="content col-12 col-sm-6 p-2">
-                    <h4 class="title-course">{{x.NameCourse}}</h4>
-                    <p class="name-intro">{{x.Intro}}</p>
-                    <p class="name-gv"><b>{{x.Teacher}}</b></p>
-                  </div>
-                  <!-- col 3 -->
-                  <div class="text-left col-4 col-sm-1 p-2">
-                    <span class="d-block">
-                      {{x.Rating}} <i class="fa fa-star text-warning"></i>
-                    </span>
-                  </div>
-                  <!-- col 4 -->
-                  <div class="col-4 col-sm-1 text-primary p-2">
-                    <span class="d-block">
-                      <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
-                    </span>
-                  </div>
-                  <!-- col 5 -->
-                  <div class="text-right col-4 col-sm-1 p-2">
-                    <b class="text-success">{{x.PriceNew}}</b>
-                    <small class="text-danger">
-                      <del>{{x.PriceOld}}</del>
-                    </small>
-                  </div>
-                </a>
-              </div>
-              <div class="w-100 d-sm-none"></div>
-            </div>
-          </div>
-        </div>
-        <!-- /2.2 Tabs content -->
-      </div><!-- /2.1 Courses Classes -->
+      <!--2.3 Display by rating top 4 -->
+      <div class="my-3 p-2 border">
+        <h2>Rating is the best</h2>
+        
+        <div class="row sort-top-4-by-rating"></div>
+        <strong class="ml-auto text-primary"><a class="text-reset" href="GalleryCourse.html">View more ... &#8594;</a></strong>
+      </div><!-- /2.3 Display by rating top 4 -->
 
-      <div class="container marketing">
-        <!--2.2 Three columns of text below the carousel -->
+      <hr class="featurette-divider">
+      <!-- 2.4 -->
+      <div class="container marketing mt-3">
+        <!--2.4.1 Three columns of text below the carousel -->
         <div class="row">
           <div class="col-lg-4">
             <img class="bd-placeholder-img rounded-circle border" width="140" height="140"
@@ -742,7 +506,7 @@
           </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
 
-        <!--2.3 START THE FEATURETTES -->
+        <!--2.4.2 START THE FEATURETTES -->
         <hr class="featurette-divider">
 
         <div class="row featurette">
@@ -788,7 +552,7 @@
         </div>
 
         <hr class="featurette-divider">
-        <!-- /2.3 END THE FEATURETTES -->
+        <!-- /2.4 END THE FEATURETTES -->
       </div><!-- /.container -->
 
     </section><!-- /2.container-fluid -->
@@ -922,13 +686,21 @@
   <!--/ FOOTER -->
 
   <!-- Java Script -->
+  <script src="Gallery.js"></script>
+  <script src="cart.js"></script>
   <script>
+
     var app = angular.module("myApp", [])
     app.controller("myController", function ($rootScope, $http, $location) {
       $http.get("informationSubject.json").then(function (response) {
         $rootScope.list = response.data.informationSubject;
       });
+
     });
+
+    //*** Show Courses on index page ***
+    showIndex();
+    
 
     //** Count Visitor ** 
     function countVisitor() {
@@ -942,9 +714,10 @@
       } else {
         document.getElementById("visitor").innerHTML = 0;
       }
-    } 
+    }
   </script>
   <!--/Java Script -->
+  
 
 </body>
 
