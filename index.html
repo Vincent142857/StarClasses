@@ -33,6 +33,10 @@
   <!-- Angular  -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+  
+  <!-- Custom styles for this template -->
+  <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
+
   <style>
     * {
       padding: 0;
@@ -184,9 +188,19 @@
       width: 300px;
       height: 165px;
     }
+    .card-img-top {
+    border-radius: 50%;
+    width: 60%;
+    max-width: 400px;
+    margin:0 auto;
+    padding-top: 5px;
+  }
+  .card {
+    max-height: 430px;
+    min-height: 430px;
+    color: black;
+  }
   </style>
-  <!-- Custom styles for this template -->
-  <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
 </head>
 
 <body onload="countVisitor()" ng-app="myApp">
@@ -470,44 +484,312 @@
 
       <hr class="featurette-divider">
       <!-- 2.4 -->
-      <div class="container marketing mt-3">
-        <!--2.4.1 Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-4">
-            <img class="bd-placeholder-img rounded-circle border" width="140" height="140"
-              src="./img/star-classes-icon.png" alt="picture">
+      <div class="container marketing ">
+       
+       <!-- Carousel wrapper -->
+      <div
+      id="carouselMultiItemExample"
+      class="carousel slide carousel-dark text-center"
+      data-mdb-ride="carousel"
+      >
+      <!-- Controls -->
+      <button
+      class="carousel-control-prev"
+      type="button"
+      data-mdb-target="#carouselMultiItemExample"
+      data-mdb-slide="prev"
+      >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 
-            <h2>Work with us</h2>
-            <p>At Star Classes, we’re all learners and instructors. We live out our values every day to create a culture
-              that is diverse, inclusive, and committed to helping employees thrive.</p>
+      </button>
+      <button
+      class="carousel-control-next"
+      type="button"
+      data-mdb-target="#carouselMultiItemExample"
+      data-mdb-slide="next"
+      >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
 
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="bd-placeholder-img rounded-circle border" width="140" height="140"
-              src="./img/star-classes-icon.png" alt="picture">
+      </button>
+      <!-- Inner -->
+      <div class=" carousel-inner" >
+        <!-- Single item -->
+        <div class="carousel-item active" >
+          <div class="container-fluid row mx-aotu">
+            
+              <div class="col-lg-4">
+                <a href="./Teacher/ArditSulce.html">
+                  <div class="card">
+                    <img src="./img/ArditSulce.jpg" class="card-img-top" />
+                    <div class="card-body mt-auto">
+                      <h5 class="card-title">Ardit Sulce</h5>
+                      <p class="card-text ">
+                        Python Programmer. Founder and Author, PythonHow
+                      </p>
+                      <p>
+                        Rating
+                        4.7 <i class="fa fa-star text-warning"></i>
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
 
-            <h2>See our research</h2>
-            <p>We’re committed to improving lives through learning. Dig into our original research to learn about the
-              forces that are shaping the modern workplace.</p>
+              <div class="col-lg-4 d-none d-lg-block">
+              <a href="./Teacher/DollarDesignSchool.html">
+                <div class="card">
+                  <img
+                    src="./img/DollarDesignSchool.jpg" class="card-img-top" />
+                  <div class="card-body mt-auto">
+                    <h5 class="card-title">Dollar Design School</h5>
+                    <p class="card-text">
+                      Career Building Digital Skills Training
+                    </p>
+                    <p class="mt-auto">
+                      Rating
+                      4.5 <i class="fa fa-star text-warning"></i>
+                    </p>
+                  </div>
+                </div>
+              </a>
+              </div>
 
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="bd-placeholder-img rounded-circle border" width="140" height="140"
-              src="./img/star-classes-icon.png" alt="picture">
+              <div class="col-lg-4 d-none d-lg-block">
+                <a href="./Teacher/DollarDesignSchool.html">
+                  <div class="card">
+                    <img src="./img/EdwinDiaz.jpg" class="card-img-top" />
+                    <div class="card-body mt-auto">
+                      <h5 class="card-title">Edwin Diaz</h5>
+                      <p class="card-text">
+                        Web Developer & Premium Instructor - 800,000 students
+                      </p>
+                      <p class="mt-auto">
+                        Rating
+                        4.7 <i class="fa fa-star text-warning"></i>
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            
+          </div>
+        </div>
 
-            <h2>Read our blog</h2>
-            <p>Want to know what we’ve been up to lately? Check out the Star Classes blog to get the scoop on the latest
-              news,
-              ideas and projects, and more.</p>
+        <!-- Single item -->
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-12">
+              <a href="./Teacher/InfiniteSkills.html">
+                <div class="card">
+                  <img src="./img/InfiniteSkills.jpg" class="card-img-top" />
+                  <div class="card-body">
+                    <h5 class="card-title">Infinite Skills</h5>
+                    <p class="card-text">
+                      High Quality Training
+                    </p>
+                    <p>
+                      Rating
+                      4.8 <i class="fa fa-star text-warning"></i>
+                    </p>
+                  </div>
+                </div>
+              </a>
+              </div>
 
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
+              <div class="col-lg-4 d-none d-lg-block">
+                <a href="./Teacher/JaysenBatchelor.html">
+                  <div class="card">
+                    <img src="./img/JaysenBatchelor.jpg" class="card-img-top"/>
+                    <div class="card-body">
+                      <h5 class="card-title">Jaysen Batchelor</h5>
+                      <p class="card-text">
+                        Illustrator & Designer
+                      </p>
+                      <p>
+                        Rating
+                        4.6 <i class="fa fa-star text-warning"></i>
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-lg-4 d-none d-lg-block">
+                <a href="./Teacher/JohnBura.html">
+                  <div class="card">
+                    <img src="./img/JohnBura.jpg" class="card-img-top"/>
+                    <div class="card-body">
+                      <h5 class="card-title">John Bura</h5>
+                      <p class="card-text">
+                        Best Selling Instructor Web/App/Game Developer 700k Students
+                      </p>
+                      <p>
+                        Rating
+                        4.5 <i class="fa fa-star text-warning"></i>
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <a href="./Teacher/JosePortilla.html">
+                  <div class="card">
+                    <img src="./img/JosePortilla.jpg" class="card-img-top" />
+                    <div class="card-body">
+                      <h5 class="card-title">Jose Portilla</h5>
+                      <p class="card-text">
+                        Head of Data Science at Pierian Training
+                      </p>
+                      <p>
+                        Rating
+                        4.6 <i class="fa fa-star text-warning"></i>
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                <a href="./Teacher/KirillEremenko.html">
+                  <div class="card">
+                    <img src="./img/KirillEremenko.jpg" class="card-img-top" />
+                    <div class="card-body">
+                      <h5 class="card-title">Kirill Eremenko</h5>
+                      <p class="card-text">
+                        Data Scientist
+                      </p>
+                      <p>
+                        Rating
+                        4.9 <i class="fa fa-star text-warning"></i>
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                <a href="./Teacher/KylePew.html">
+                  <div class="card">
+                    <img src="./img/KylePew.jpg" class="card-img-top" />
+                    <div class="card-body">
+                      <h5 class="card-title">Kyle Pew</h5>
+                      <p class="card-text">
+                        Microsoft Certified Trainer - 1 Million+ Students
+                      </p>
+                      <p>
+                        Rating
+                        4.8 <i class="fa fa-star text-warning"></i>
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <!-- Single item -->
+        <div class="carousel-item">
+          <div class="container">
+              <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                  <a href="./Teacher/LigencyITeam.html">
+                  <div class="card">
+                    <img src="./img/LigencyITeam.jpg" class="card-img-top" />
+                    <div class="card-body">
+                      <h5 class="card-title">Ligency I Team</h5>
+                      <p class="card-text">
+                        Helping Data Scientists Succeed
+                      </p>
+                      <p>
+                        Rating
+                        4.8 <i class="fa fa-star text-warning"></i>
+                      </p>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                  <a href="./Teacher/MatthewFussell.html">
+                    <div class="card">
+                      <img src="./img/MatthewFussell.jpg" class="card-img-top" />
+                      <div class="card-body">
+                        <h5 class="card-title">Matthew Fussell</h5>
+                        <p class="card-text">
+                          BIllustrator and Educator
+                        </p>
+                        <p>
+                          Rating
+                          4.5 <i class="fa fa-star text-warning"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                  <a href="./Teacher/RobPercival.html">
+                    <div class="card">
+                      <img  src="./img/RobPercival.jpg" class="card-img-top" />
+                      <div class="card-body">
+                        <h5 class="card-title">Rob Percival</h5>
+                        <p class="card-text">
+                          Web Developer And Teacher
+                        </p>
+                        <p class="mt-auto">
+                          Rating
+                          4.8 <i class="fa fa-star text-warning"></i>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+          </div>
+        </div>
+        <!-- Single item -->
+        <div class="carousel-item">
+          <div class="container">
+         
+              <div class="row">
+                <div class="col-12 col-lg-4 col-md-12 mb-4 mb-lg-0 mx-auto">
+                  <a href="./Teacher/StrphaneMaarek.html">
+                  <div class="card">
+                    <img src="./img/StephaneMaarek.jpg" class="card-img-top" />
+                    <div class="card-body">
+                      <h5 class="card-title">Stephane Maarek</h5>
+                      <p class="card-text">
+                        Best Selling Instructor, 9x AWS Certified, Kafka Guru
+                      </p>
+                      <p>
+                        Rating
+                        4.7 <i class="fa fa-star text-warning"></i>
+                      </p>
+                    </div>
+                  </div>
+                  </a>
+                </div>
+              </div>
+         
+          </div>
+        </div>
+      </div>
+      <!-- Inner -->
+      </div>
+      <!-- Carousel wrapper -->
+
 
         <!--2.4.2 START THE FEATURETTES -->
-        <hr class="featurette-divider">
 
         <div class="row featurette">
           <div class="col-md-7">
