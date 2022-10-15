@@ -174,11 +174,13 @@ function showByClass(items, className) {
             </div>
           </a>
           <a href="#" 
-            data-img="${v.Img}" 
+            data-id="${v.ID}" 
+            data-img="${v.Img}"  
             data-name="${v.NameCourse}"  
-            data-teacher="${v.Teacher}"  
-            data-price-new="${v.PriceNew}"
-            data-price-old="${v.PriceOld}" 
+            data-teacher="${v.Teacher}" 
+            data-price-new="${v.PriceNew}" 
+            data-price-old="${v.PriceOld}"
+            data-detail="${v.Detail}" 
             class="add-to-cart btn btn-success col-12 mt-auto">
             Add to cart
           </a>
@@ -224,9 +226,13 @@ function TopFour(items, className) {
             </div>
           </a>
           <a href="#" 
+            data-id="${items[i].ID}" 
+            data-img="${items[i].Img}" 
             data-name="${items[i].NameCourse}" 
+            data-teacher="${items[i].Teacher}" 
             data-price-new="${items[i].PriceNew}"
             data-price-old="${items[i].PriceOld}" 
+            data-detail="${items[i].Detail}" 
             class="add-to-cart btn btn-success col-12 mt-auto">
             Add to cart
           </a>
@@ -304,14 +310,11 @@ function displayCourse(items) {
                     </div>
                   </div>
                 </a>
-                <a href="#" 
-                data-id="${v.ID}" 
+                <a href="#"  
+                data-id="${v.ID}"  
                 data-img="${v.Img}"  
                 data-name="${v.NameCourse}"  
-                data-teacher="${v.Teacher}" 
                 data-price-new="${v.PriceNew}" 
-                data-price-old="${v.PriceOld}"
-                data-detail="${v.Detail}"
                 class="add-to-cart btn btn-success col-12 mt-auto"> Add to cart
                 </a>
               </div>

@@ -41,19 +41,17 @@
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
+        line-height: 1.5;
       }
     }
-
     /* GLOBAL STYLES
     --------------------------------------------- */
     /* Padding below the footer and lighter body text */
 
     body {
       padding-top: 3rem;
-      padding-bottom: 3rem;
       color: #5a5a5a;
     }
-
 
     /* CUSTOMIZE THE CAROUSEL
     -------------------------------------------- */
@@ -62,13 +60,6 @@
     .carousel {
       margin-bottom: 4rem;
     }
-
-    /* Since positioning the image, we need to help out the caption */
-    .carousel-caption {
-      bottom: 3rem;
-      z-index: 10;
-    }
-
     /* Declare heights because of positioning of img element */
     .carousel-item {
       height: 32rem;
@@ -170,6 +161,38 @@
         color: white;
         margin-top: 2px;
     }
+
+    /* Layout  */
+    .analytic {
+      background-color: rgb(15, 15, 181);
+      margin: 30px auto;
+      padding: 38px 0;
+      width: 100%;
+    }
+    .analytic ul {
+      text-align: center;
+      margin: 0 auto;
+    }
+    .analytic ul li {
+      color: #fff;
+      display: inline-block;
+      width: 25%;
+      text-align: center;
+    }
+    .analytic ul li p {
+      width: 100%;
+    }
+    .analytic ul li .icon {
+      margin-bottom: 14px;
+    }
+    .analytic ul li .icon i {
+      font-size: 45px;
+    }
+    .analytic ul li .number {
+      font-size: 43px;
+      margin-bottom: 7px;
+    }
+
   </style>
 
 
@@ -185,20 +208,23 @@
         <a class="navbar-brand pl-sm-3" href="index.html">
           <img src="./img/star-classes-4.png" style="width:150px;">
         </a>
-        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <!-- menu left -->
-          <ul class="BoxShow navbar-nav mr-auto mb-2 m-md-0 col-12 col-sm-2">
-            <li class="nav-item dropdown col-12 border border-warning rounded-pill text-center">
-              <a class="nav-link dropdown-toggle" href="GalleryCourse.html" id="DropdownMenu" role="tab" data-toggle="dropdown" aria-expanded="false">
+          <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
+
+            <!-- Navbar dropdown -->
+            <li class="nav-item dropdown col-12 text-center">
+              <a class="nav-link dropdown-toggle text-center" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown"
+                aria-expanded="false">
                 <img src="./img/tutorialCut.png" style="width: 20px;"> Courses
               </a>
               <!-- Menu H2 -->
               <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="DropdownMenu">
+                <li><a href="GalleryCourse.html" class="dropdown-item px-5 text-uppercase border-bottom">Topic</a></li>
                 <li><a href="#" class="dropdown-item px-5">Python</a></li>
                 <li><a href="#" class="dropdown-item px-5">Excel</a></li>
                 <li><a href="#" class="dropdown-item px-5">Web Development</a></li>
@@ -208,49 +234,46 @@
                 <li><a href="#" class="dropdown-item px-5">Drawing</a></li>
               </ul>
               <!-- Menu H2 -->
-            </li>
-
+            </li><!-- Navbar dropdown -->
           </ul>
-          
 
           <!-- menu search -->
-          <form class="d-flex input-group mx-sm-3 mb-2">
-            <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
-            <button class="btn bg-light" type="submit">
-              <!-- <b style="font-size: 20px;">&#x1F50D;</b> -->
+          <form class="d-flex input-group mx-sm-3 mb-2" id="formSearch">
+            <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
+              id="search" ng-model="search">
+            <button class="btn bg-warning" type="submit">
               <i class="fas fa-search"></i>
             </button>
           </form>
           <!-- menu right -->
           <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
             <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link border border-warning rounded-pill text-center" href="aboutus.html">About us</a>
+              <a class="nav-link text-center" href="aboutus.html">About us</a>
             </li>
             <!-- shopping & payment -->
             <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link active text-sm-center p-2" aria-current="page" href="#">
+              <a class="nav-link active text-center p-2" aria-current="page" href="ShoppingCart.html">
                 <span><i class="fa fa-shopping-cart fa-lg"></i></span>
-                <span class="badge rounded-pill badge-notification bg-danger">2</span>
+                <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
               </a>
             </li>
-
-            <!-- Sign in - dang nhap-->
-            <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link" href="SignIn.html">Sign in</a>
-
+            <!-- Sign in-->
+            <li class="nav-item text-center col-12 col-sm-2 mx-1">
+              <a class="nav-link" href="SignIn.html">Sign in
+              </a>
             </li>
-
-            <!-- Sign up - dang ky -->
-            <li class="nav-item col-12 col-sm-2">
+            <!-- Sign up -->
+            <li class="nav-item text-center col-12 col-sm-2">
               <a class="nav-link" href="SignUp.html">Sign up</a>
             </li>
-
             <!-- Visitor -->
-            <li class="nav-item col-sm-4">
-              <div class="navbar-text text-light">
+            <li class="nav-item col-12 col-sm-4">
+              <div class="navbar-text text-light text-center">
                 <img src="./img/star-classes-icon.png" width="35px" alt="icon">
                 Visitor: <i class="fas fa-users"></i>
-                <span class="badge rounded-pill bg-danger">111</span>
+                <span class="badge rounded-pill badge-notification bg-danger">
+                  <div id="visitor"></div>
+                </span>
               </div>
             </li>
             <!-- Visitor -->
@@ -267,9 +290,11 @@
     <p><h1>We share<br>Knowledge<br> with the world</h1></p>
     <img src="./img/about.png" alt="" width="100%" height="450px">
     </div>
+
     <div class="bg-warning text-center Welcome">
         Welcome to Star Classes
     </div>
+
     <div class="text-center"> 
         <p class="">
             <h3>Improving lives through learning</h3>
@@ -277,100 +302,213 @@
         <p>Whether you want to learn or to share what you know, you’ve come to the right place.<br>
             As a global destination for online learning, we connect people through knowledge.</p>    
     </div>
+
     <section class="d-block">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <a href="#"><img src="./img/temp_Drawing.png" alt="Drawing" width="100%" height="600px"></a>
+              <a href="#"><img src="./img/pic1.jpg" alt="pic1" width="100%" height="400px"></a>
             </div>
   
             <div class="carousel-item">
-              <a href="#">
-                <img src="./img/temp_JS.png" alt="JS" width="100%" height="600px"></a>
-            </div>
-  
-            <div class="carousel-item">
-              <a href="#"><img src="./img/temp_PHP.png" alt="PHP" width="100%" height="600px"></a>
+              <a href="#"><img src="./img/pic2.jpg" alt="pic2" width="100%" height="400px"></a>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+
+          <!-- <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
           <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-          </a>
+          </a> -->
         </div>
+
+    </section>
+
+    <section class="container-fluid marketing">
+      <!-- three reason -->
+      <div class="row mx-auto">
+        <h1 class="text-center mb-4">So many reasons to start</h1>
+        <div class="col-lg-4">
+          <img src="./img/reason1.jpg" width="50%" height="50%" alt="reason-01">
+          <h2>Teach your way</h2>
+          <p>Publish the course you want, in the way you want, and always have control of your own content.</p>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+          <img src="./img/reason2.jpg" width="50%" height="50%" alt="reason-02">
+          <h2>Inspire learners</h2>
+          <p>Teach what you know and help learners explore their interests, gain new skills, and advance their careers.</p>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+          <img src="./img/reason3.jpg" width="50%" height="50%" alt="reason-03">
+          <h2>Get rewarded</h2>
+          <p>Expand your professional network, build your expertise, and earn money on each paid enrollment.</p>
+        </div><!-- /.col-lg-4 -->
+
+      </div><!-- /three reason -->
+    </section>
+
+    <!-- achievements -->
+    <section class="container-fluid marketing">
+      <hr>
+      <div class="analytic mx-auto">
+        <ul class="row">
+          <li class="col-12 col-sm-3">
+            <p class="icon"><i class="fas fa-globe"></i></p>
+            <p class="number">3297</p>
+            <p>Foreign Follower</p>
+          </li>
+          <li class="col-12 col-sm-3">
+            <p class="icon"><i class="fas fa-graduation-cap"></i></p>
+            <p class="number">3700</p>
+            <p>Students Enrolled</p>
+          </li>
+          <li class="col-12 col-sm-3">
+            <p class="icon"><i class="far fa-lightbulb"></i></p>
+            <p class="number">5034</p>
+            <p>Classes Complete</p>
+          </li>
+          <li class="col-12 col-sm-3">
+            <p class="icon"><i class="far fa-user"></i></p>
+            <p class="number">1080</p>
+            <p>Certified Teachers</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <div class="container marketing">
-      <!-- START THE FEATURETTES -->
+      
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+      <div class="container mb-md-4" ng-controller="myController" >
+        <h1 class="text-center">How to begin</h1>
+        <!-- Tabs navs -->
+        <ul class="nav nav-tabs nav-justified mb-3 border-bottom" id="ex1" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="ex7-tab-1" data-toggle="tab" href="#ex7-tabs-1" role="tab" aria-controls="ex7-tabs-1" aria-selected="true">
+              <h5>Plan your curriculum</h5>
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="ex7-tab-2" data-toggle="tab" href="#ex7-tabs-2" role="tab" aria-controls="ex7-tabs-2" aria-selected="false">
+              <h5>Record your video</h5>
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="ex7-tab-3" data-toggle="tab" href="#ex7-tabs-3" role="tab" aria-controls="ex7-tabs-3" aria-selected="false">
+              <h5>Launch your course</h5>
+            </a>
+          </li>
+        </ul>
+        <!-- Tabs content -->
+        <div class="tab-content" id="ex2-content">
+          <div  class="tab-pane fade show active" 
+                id="ex7-tabs-1" role="tabpanel" 
+                aria-labelledby="ex7-tab-1" 
+                data-spy="scroll" 
+                data-target="#myScrollspy" 
+                data-offset="10">
+                <!-- 1 -->
 
-      <hr class="featurette-divider">
+            <div class="row featurette">
+              <div class="col-md-7">
+                <p class="lead" style="line-height: 2;">You start with your passion and knowledge. Then choose a promising topic with the help of our Marketplace Insights tool. <br>
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Become an instructor</h2>
-          <p class="lead">Instructors from around the world teach millions of students on Star Classes. We provide the tools and skills to teach what you love.</p>
+                  The way that you teach — what you bring to it — is up to you. <br>
+                  
+                  How we help you <br>
+                  We offer plenty of resources on how to create your first course. And, our instructor dashboard and curriculum pages help keep you organized..</p>
+              </div>
+              <div class="col-md-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                height="500" src="./img/plan-your-curriculum-2x-v3.jpg" alt="picture">
+              </div>
+            </div>
+            <hr class="featurette-divider"><!-- 1 -->
+             
+          </div>
+          <div
+            class="tab-pane fade"
+            id="ex7-tabs-2"
+            role="tabpanel"
+            aria-labelledby="ex7-tab-2"
+            data-spy="scroll" 
+            data-target="#myScrollspy" 
+            data-offset="10">
+            <!-- 2 -->
+            <div class="row featurette">
+              <div class="col-md-7 order-md-2">
+                <p class="lead" style="line-height: 2;">Use basic tools like a smartphone or a DSLR camera. Add a good microphone and you’re ready to start. <br>
+
+                  If you don’t like being on camera, just capture your screen. Either way, we recommend two hours or more of video for a paid course. <br>
+                  
+                  How we help you <br>
+                  Our support team is available to help you throughout the process and provide feedback on test videos.</p>
+              </div>
+              <div class="col-md-5 order-md-1">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                height="500" src="./img/record-your-video-2x-v3.jpg" alt="picture">
+              </div>
+            </div>
+            <hr class="featurette-divider">
+
+          </div>
+          <div
+            class="tab-pane fade"
+            id="ex7-tabs-3"
+            role="tabpanel"
+            aria-labelledby="ex7-tab-3"
+            data-spy="scroll" 
+            data-target="#myScrollspy" 
+            data-offset="10">
+            <!-- 3 -->
+            <div class="row featurette">
+              <div class="col-md-7">
+                <p class="lead" style="line-height: 2;">Gather your first ratings and reviews by promoting your course through social media and your professional networks. <br>
+                  Your course will be discoverable in our marketplace where you earn revenue from each paid enrollment. <br>
+                  How we help you <br>
+                  Our custom coupon tool lets you offer enrollment incentives while our global promotions drive traffic to courses. There’s even more opportunity for courses chosen for Udemy Business.</p>
+              </div>
+              <div class="col-md-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                height="500" src="./img/launch-your-course-2x-v3.jpg" alt="picture">
+              </div>
+            </div>
+            <hr class="featurette-divider">
+
+          </div>
         </div>
-        <div class="col-md-5">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" src="https://i0.wp.com/chame.rmit.edu.vn/wp-content/uploads/2020/09/MG_8964.jpg?resize=560%2C416&ssl=1" alt="picture">
-        </div>
+        <!-- Tabs content -->
       </div>
 
-      <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">Star Classes</h2>
-          <p class="lead">Get unlimited access to 1,700+ of Star Classes’s top courses for your team. Learn and improve skills across business, tech, design, and more.</p>
-        </div>
-        <div class="col-md-5 order-md-1">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" src="https://glints.com/vn/blog/wp-content/uploads/2022/06/it-la-lam-gi.jpg" alt="picture">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Transform your life through education</h2>
-          <p class="lead">Learners around the world are launching new careers, advancing in their fields, and enriching their lives.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-          height="500" src="https://cdn.vungoi.vn/vungoi/1541393463543_truong.jpg" alt="picture">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
 
       <!-- /END THE FEATURETTES -->
 
     </div>
 
     <!-- FOOTER -->
-    <footer class="border bg-dark text-white">
-      <!-- Section: Social media -->
+    <footer class="container-fluid border bg-dark text-white">
+      <!-- Section 1: Social media -->
       <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
         <!-- Left -->
         <div class="me-5 d-none d-lg-block">
           <span>Get connected with us on social networks:</span>
         </div>
-        <!-- Left -->
-
+        <!--/ Left -->
+  
         <!-- Right -->
         <div>
           <a href="" class="me-4 link-secondary">
-            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-facebook"></i>
           </a>
           <a href="" class="me-4 link-secondary">
             <i class="fab fa-twitter"></i>
@@ -385,18 +523,20 @@
             <i class="fab fa-linkedin"></i>
           </a>
         </div>
-        <!-- Right -->
+        <!--/ Right -->
+  
       </section>
-      <!-- Section: Social media -->
-
-      <!-- Section: Links  -->
-      <section class="d-flex justify-content-center justify-content-lg-between p-2 border-bottom">
+      <!--/ Section 1: Social media -->
+  
+  
+      <!-- Section 2: Links  -->
+      <section class="d-flex justify-content-center justify-content-lg-around p-2 border-bottom">
         <div class="container text-center text-md-start mt-3">
           <!-- Grid row -->
           <div class="row mt-3">
-
-            <!-- Grid column -->
-            <div class="col-md-3 mx-auto mb-4">
+  
+            <!-- Grid column 1 -->
+            <div class="col-md-4 mx-auto mb-4">
               <!-- Content -->
               <h6 class="mb-3">
                 <a href="#"><img src="./img/star-classes-4.png" width="200px" alt="logo-name"></a>
@@ -405,10 +545,9 @@
                 Whether you want to learn or to share what you know, you have come to the right place. As a global
                 destination for online learning, we connect people through knowledge.
               </p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
+            </div><!--/ Grid column 1-->
+  
+            <!-- Grid column 2-->
             <div class="col-md-2 mx-auto mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Star Classes</h6>
@@ -416,28 +555,19 @@
                 <a href="#!" class="text-reset">Courses Classes</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Featured topics</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Sitemap</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Support</a>
+                <a href="#!" class="text-reset">Support & Help</a>
               </p>
               <p>
                 <a href="#!" class="text-reset">Policy</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Payment</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Help</a>
+                <a href="ShoppingCart.html" class="text-reset">Shopping Cart</a>
               </p>
             </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-3 mx-auto mb-md-0 mb-4">
+            <!--/ Grid column 2-->
+  
+            <!-- Grid column 3-->
+            <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
               <p>
@@ -450,31 +580,32 @@
               </p>
               <p>
                 <i class="fas fa-phone me-3 text-secondary"></i>
-                 + 84 234 567 890
-                </p>
+                + 84 234 567 890
+              </p>
               <p>
                 <i class="fas fa-print me-3 text-secondary"></i>
-                 + 84 234 567 890
+                + 84 234 567 890
               </p>
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
+            </div><!--/ Grid column 3-->
+  
+            <!-- Grid column 4-->
             <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
               <!-- GeoLocation API (GoogleMaps)-->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s" width="300" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s"
+                width="300" height="300" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <!-- Grid column -->
-          </div>
-          <!-- Grid row -->
-        </div>
+            <!--/ Grid column 4-->
+          </div><!-- /Grid row -->
+        </div> <!-- /container -->
       </section>
-      <!-- Section: Links  -->
-
-      <!-- Copyright and Time -->
+      <!--/Section 2: Links  -->
+  
+      <!--Section 3:  Copyright and Time -->
       <section class="d-flex justify-content-between p-2 border-bottom">
-        <div class="me-5 d-none d-lg-block pl-2">&copy; 2022 Star Classes</div>
-        <div class="ms-5 d-none d-lg-block">
+        <div class="mr-5 d-none d-lg-block pl-2">&copy; 2022 Star Classes</div>
+        <div class="ml-5 d-none d-lg-block">
           <!-- Display current date, time -->
           <div class="time" id="time">
             <script>
@@ -483,10 +614,11 @@
               time = document.write("Current: " + today);
             </script>
           </div>
-          <!-- Display current date, time -->
+          <!--/ Display current date, time -->
         </div>
       </section>
-      <!-- Copyright and Time -->
+      <!--/Section 3:  Copyright and Time -->
+  
     </footer>
   </main>
 

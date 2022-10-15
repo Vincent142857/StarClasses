@@ -189,20 +189,23 @@
         <a class="navbar-brand pl-sm-3" href="index.html">
           <img src="./img/star-classes-4.png" style="width:150px;">
         </a>
-        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <!-- menu left -->
-          <ul class="BoxShow navbar-nav mr-auto mb-2 m-md-0 col-12 col-sm-2">
-            <li class="nav-item dropdown col-12 border border-warning rounded-pill text-center">
-              <a class="nav-link dropdown-toggle" href="GalleryCourse.html" id="DropdownMenu" role="tab" data-toggle="dropdown" aria-expanded="false">
+          <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
+
+            <!-- Navbar dropdown -->
+            <li class="nav-item dropdown col-12 text-center">
+              <a class="nav-link dropdown-toggle text-center" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown"
+                aria-expanded="false">
                 <img src="./img/tutorialCut.png" style="width: 20px;"> Courses
               </a>
               <!-- Menu H2 -->
               <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="DropdownMenu">
+                <li><a href="GalleryCourse.html" class="dropdown-item px-5 text-uppercase border-bottom">Topic</a></li>
                 <li><a href="#" class="dropdown-item px-5">Python</a></li>
                 <li><a href="#" class="dropdown-item px-5">Excel</a></li>
                 <li><a href="#" class="dropdown-item px-5">Web Development</a></li>
@@ -212,49 +215,46 @@
                 <li><a href="#" class="dropdown-item px-5">Drawing</a></li>
               </ul>
               <!-- Menu H2 -->
-            </li>
-
+            </li><!-- Navbar dropdown -->
           </ul>
-          
 
           <!-- menu search -->
-          <form class="d-flex input-group mx-sm-3 mb-2">
-            <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
+          <form class="d-flex input-group mx-sm-3 mb-2" id="formSearch">
+            <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
+              id="search" ng-model="search">
             <button class="btn bg-warning" type="submit">
-              <!-- <b style="font-size: 20px;">&#x1F50D;</b> -->
               <i class="fas fa-search"></i>
             </button>
           </form>
           <!-- menu right -->
           <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
             <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link border border-warning rounded-pill text-center" href="aboutus.html">About us</a>
+              <a class="nav-link text-center" href="aboutus.html">About us</a>
             </li>
             <!-- shopping & payment -->
             <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link active text-sm-center p-2" aria-current="page" href="ShoppingCart.html">
+              <a class="nav-link active text-center p-2" aria-current="page" href="ShoppingCart.html">
                 <span><i class="fa fa-shopping-cart fa-lg"></i></span>
-                <span class="badge rounded-pill badge-notification bg-danger">2</span>
+                <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
               </a>
             </li>
-
-            <!-- Sign in - dang nhap-->
-            <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link" href="SignIn.html">Sign in</a>
-
+            <!-- Sign in-->
+            <li class="nav-item text-center col-12 col-sm-2 mx-1">
+              <a class="nav-link" href="SignIn.html">Sign in
+              </a>
             </li>
-
-            <!-- Sign up - dang ky -->
-            <li class="nav-item col-12 col-sm-2">
+            <!-- Sign up -->
+            <li class="nav-item text-center col-12 col-sm-2">
               <a class="nav-link" href="SignUp.html">Sign up</a>
             </li>
-
             <!-- Visitor -->
-            <li class="nav-item col-sm-4">
-              <div class="navbar-text text-light">
+            <li class="nav-item col-12 col-sm-4">
+              <div class="navbar-text text-light text-center">
                 <img src="./img/star-classes-icon.png" width="35px" alt="icon">
                 Visitor: <i class="fas fa-users"></i>
-                <span class="badge rounded-pill bg-danger">111</span>
+                <span class="badge rounded-pill badge-notification bg-danger">
+                  <div id="visitor"></div>
+                </span>
               </div>
             </li>
             <!-- Visitor -->
@@ -369,139 +369,131 @@
 
   </section>
 
-
-
   <!-- FOOTER -->
-    <footer class="border bg-dark text-white">
-      <!-- Section: Social media -->
-      <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
-        </div>
-        <!-- Left -->
+  <footer class="container-fluid border bg-dark text-white">
+    <!-- Section 1: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!--/ Left -->
 
-        <!-- Right -->
-        <div>
-          <a href="" class="me-4 link-secondary">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="" class="me-4 link-secondary">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="me-4 link-secondary">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="" class="me-4 link-secondary">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="me-4 link-secondary">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </div>
-        <!-- Right -->
-      </section>
-      <!-- Section: Social media -->
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <!--/ Right -->
 
-      <!-- Section: Links  -->
-      <section class="d-flex justify-content-center justify-content-lg-between p-2 border-bottom">
-        <div class="container text-center text-md-start mt-3">
-          <!-- Grid row -->
-          <div class="row mt-3">
+    </section>
+    <!--/ Section 1: Social media -->
 
-            <!-- Grid column -->
-            <div class="col-md-3 mx-auto mb-4">
-              <!-- Content -->
-              <h6 class="mb-3">
-                <a href="#"><img src="./img/star-classes-4.png" width="200px" alt="logo-name"></a>
-              </h6>
-              <p style="text-align:justify">
-                Whether you want to learn or to share what you know, you have come to the right place. As a global
-                destination for online learning, we connect people through knowledge.
-              </p>
-            </div>
-            <!-- Grid column -->
 
-            <!-- Grid column -->
-            <div class="col-md-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Star Classes</h6>
-              <p>
-                <a href="#!" class="text-reset">Courses Classes</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Featured topics</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Sitemap</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Support</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Policy</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Payment</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Help</a>
-              </p>
-            </div>
-            <!-- Grid column -->
+    <!-- Section 2: Links  -->
+    <section class="d-flex justify-content-center justify-content-lg-around p-2 border-bottom">
+      <div class="container text-center text-md-start mt-3">
+        <!-- Grid row -->
+        <div class="row mt-3">
 
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-3 mx-auto mb-md-0 mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
-              <p>
-                <i class="fas fa-home me-3 text-secondary"></i>
-                590, CMT8, HCM City, VN
-              </p>
-              <p>
-                <i class="fas fa-envelope me-3 text-secondary"></i>
-                <a href="mailto:info@estarclasses.edu.com" class="text-rest text-white">info@starclasses.edu.com</a>
-              </p>
-              <p>
-                <i class="fas fa-phone me-3 text-secondary"></i>
-                 + 84 234 567 890
-                </p>
-              <p>
-                <i class="fas fa-print me-3 text-secondary"></i>
-                 + 84 234 567 890
-              </p>
-            </div>
-            <!-- Grid column -->
+          <!-- Grid column 1 -->
+          <div class="col-md-4 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="mb-3">
+              <a href="#"><img src="./img/star-classes-4.png" width="200px" alt="logo-name"></a>
+            </h6>
+            <p style="text-align:justify">
+              Whether you want to learn or to share what you know, you have come to the right place. As a global
+              destination for online learning, we connect people through knowledge.
+            </p>
+          </div><!--/ Grid column 1-->
 
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
-              <!-- GeoLocation API (GoogleMaps)-->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s" width="300" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <!-- Grid column -->
+          <!-- Grid column 2-->
+          <div class="col-md-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Star Classes</h6>
+            <p>
+              <a href="#!" class="text-reset">Courses Classes</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Support & Help</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Policy</a>
+            </p>
+            <p>
+              <a href="ShoppingCart.html" class="text-reset">Shopping Cart</a>
+            </p>
           </div>
-          <!-- Grid row -->
-        </div>
-      </section>
-      <!-- Section: Links  -->
+          <!--/ Grid column 2-->
 
-      <!-- Copyright and Time -->
-      <section class="d-flex justify-content-between p-2 border-bottom">
-        <div class="me-5 d-none d-lg-block pl-2">&copy; 2022 Star Classes</div>
-        <div class="ms-5 d-none d-lg-block">
-          <!-- Display current date, time -->
-          <div class="time" id="time">
-            <script>
-              var time = document.getElementById("time").innerHTML;
-              var today = new Date();
-              time = document.write("Current: " + today);
-            </script>
+          <!-- Grid column 3-->
+          <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
+            <p>
+              <i class="fas fa-home me-3 text-secondary"></i>
+              590, CMT8, HCM City, VN
+            </p>
+            <p>
+              <i class="fas fa-envelope me-3 text-secondary"></i>
+              <a href="mailto:info@estarclasses.edu.com" class="text-rest text-white">info@starclasses.edu.com</a>
+            </p>
+            <p>
+              <i class="fas fa-phone me-3 text-secondary"></i>
+              + 84 234 567 890
+            </p>
+            <p>
+              <i class="fas fa-print me-3 text-secondary"></i>
+              + 84 234 567 890
+            </p>
+          </div><!--/ Grid column 3-->
+
+          <!-- Grid column 4-->
+          <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
+            <!-- GeoLocation API (GoogleMaps)-->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s"
+              width="300" height="300" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <!-- Display current date, time -->
+          <!--/ Grid column 4-->
+        </div><!-- /Grid row -->
+      </div> <!-- /container -->
+    </section>
+    <!--/Section 2: Links  -->
+
+    <!--Section 3:  Copyright and Time -->
+    <section class="d-flex justify-content-between p-2 border-bottom">
+      <div class="mr-5 d-none d-lg-block pl-2">&copy; 2022 Star Classes</div>
+      <div class="ml-5 d-none d-lg-block">
+        <!-- Display current date, time -->
+        <div class="time" id="time">
+          <script>
+            var time = document.getElementById("time").innerHTML;
+            var today = new Date();
+            time = document.write("Current: " + today);
+          </script>
         </div>
-      </section>
-      <!-- Copyright and Time -->
-    </footer>
+        <!--/ Display current date, time -->
+      </div>
+    </section>
+    <!--/Section 3:  Copyright and Time -->
+
+  </footer>
   </main>
 
     <!-- Java Script -->

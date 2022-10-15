@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <link rel="icon" href="../img/star-classes-icon.png" type="image/x-icon">
   <title>Star Classes</title>
   <!-- MDB icon -->
   <!-- <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" /> -->
@@ -12,6 +13,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <!-- Google Fonts Roboto -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+
+  <!-- Angular  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+
+
   <!-- MDB -->
   <link rel="stylesheet" href="../MDB5/css/mdb.min.css" />
   <script src="../Gallery.js"></script>
@@ -94,9 +101,9 @@
     <!-- top courses -->
     <div class="bg-dark p-3 text-light">
       <small class="mb-5">
-        <a class="text-reset" href="../index.html">Home</a> &#62;
-        <a class="text-reset" href="../index.html#ex7-tab-6">Javascript</a> &#62;
-        <a class="text-reset" href="JV01.html">Javascript for Beginners</a>
+        <a class="text-reset" href="">Home</a> &#62;
+        <a class="text-reset" href="">Javascript</a> &#62;
+        <a class="text-reset" href="">Javascript for Beginners</a>
       </small>
 
       <div class="d-flex flex-column mt-5 px-5">
@@ -138,7 +145,6 @@
 
           <h4>This course includes:</h4>
           <div>
-            4.5
             <p><i class="fas fa-video"></i> 2.5 hour video on demand</p>
             <p><i class="far fa-file"></i> 1 article</p>
             <p><i class="fas fa-file-download"></i> 1 downloadable resource</p>
@@ -227,7 +233,7 @@
             </ul>
           </section>
           <!-- comment of student -->
-          <section>
+          <section ng-app="myApp" ng-controller="myCtrl">
             <h4>
               <i class="fa fa-star text-warning" aria-hidden="true"></i>
               4.5 course rating. 1K ratings.
@@ -244,26 +250,26 @@
                 <i onclick="changeColor(this)" class="fa fa-star"></i>
               </span>
 
-              <div class="form-group m-2">
+              <div class="form-group m-2 col-4">
                 <label for="">Your name:</label>
-                <input class="form-control" type="text" placeholder="Enter your name">
+                <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name" ng-model="user">
               </div>
-              <textarea class="form-control col-12 m-2 p-2" name="comment" id="comment" cols="30" rows="5" placeholder="Enter your comment"></textarea>
-              <button class="btn btn-primary m-2" type="submit">Send</button>
+              <textarea class="form-control col-4 m-2 p-2" name="comment" id="comment" cols="4" rows="2" placeholder="Enter your comment" ng-model="comment"></textarea>
+              <button class="btn btn-primary m-2" type="submit" ng-click="showHide()">Send</button>
             </form>
             <hr>
-            <div class="form-group m-3">
-              <div>result of name</div>
-              <div>result of enter comment</div>
+            <div class="form-group m-3 border p-2" ng-hide="show">
+              <strong>Your name: {{user}}</strong>
+              <p>Your comment: {{comment}}</p>
             </div>
           </section>
           <!-- History comment -->
           <section class="container">
-            <section class="d-flex row border-top m-2">
-              <div class="avatar border col-auto">
+            <section class="d-flex row m-2">
+              <div class="avatar col-auto">
                 <img style="border-radius:50%" src="../img/logo.png" width="10%" alt="avatar">
               </div>
-              <div class="d-flex row col-10 border">
+              <div class="d-flex row col-10">
                 <h4>Terrence F.</h4>
                 <!-- rating -->
                 <span class="star-rate">
@@ -300,6 +306,7 @@
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Custom scripts -->
   <script type="text/javascript">
+    //** change color for star *** //
     function changeColor(color) {
       if (color.style.color === 'rgb(68, 68, 68)') {
         // color.style.color = "#E4A11B";
@@ -310,6 +317,15 @@
       }
     };
 
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope){
+      $scope.show = true;
+      $scope.showHide = function(){
+        this.show = !this.show;
+      };
+    });
+      
+    
   </script>
 </body>
 
