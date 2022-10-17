@@ -6,13 +6,13 @@ var shoppingCart = (function () {
   cart = [];
 
   // Constructor
-  function Item(img, name, price, count) {
+  function Item(img, name, teacher, price, priceOld, detail, count) {
     this.img = img;
     this.name = name;
-    //this.teacher = teacher;
+    this.teacher = teacher;
     this.price = price;
-    //this.priceOld = priceOld;
-    //this.detail = detail;
+    this.priceOld = priceOld;
+    this.detail = detail;
     this.count = count;
   }
 
@@ -33,7 +33,7 @@ var shoppingCart = (function () {
   var obj = {};
 
   // Add to cart
-  obj.addItemToCart = function (img, name, price, count) {
+  obj.addItemToCart = function (img, name, teacher, price, priceOld, detail, count) {
     for (var i in cart) {
       if (cart[i].name === name) {
         cart[i].count++;
@@ -41,7 +41,7 @@ var shoppingCart = (function () {
         return;
       }
     }
-    var item = new Item(img, name, price, count);
+    var item = new Item(img, name, teacher, price, priceOld, detail, count);
     cart.push(item);
     saveCart();
   }
@@ -142,20 +142,15 @@ var shoppingCart = (function () {
 // Add item
 $(".add-to-cart").click(function (e) {
   e.preventDefault();
-  //var id = $(this).data("id");
-  //var img = $(this).data("img");
-  //var name = $(this).data("name");
-  //var teacher = $(this).data("teacher");
-  //var price = Number($(this).data("price-new"));
-  //var priceOld = Number($(this).data("price-old"));
-  //var detail = $(this).data("detail");
-  //var id = this.dataset.id;
-  var img = this.dataset.img;
-  var name = this.dataset.name;
-  var price = Number(this.dataset.priceNew);
+  var id = $(this).data("id");
+  var img = $(this).data("img");
+  var name = $(this).data("name");
+  var teacher = $(this).data("teacher");
+  var price = Number($(this).data("price-new"));
+  var priceOld = Number($(this).data("price-old"));
+  var detail = $(this).data("detail");
   
-  
-  shoppingCart.addItemToCart(img, name, price, 1);
+  shoppingCart.addItemToCart(img, name, teacher, price, priceOld, detail, 1);
   displayCart();
 });
 
@@ -167,50 +162,50 @@ $('.clear-cart').click(function () {
 
 
 function displayCart() {
-  var cartArray = shoppingCart.listCart();
+var cartArray = shoppingCart.listCart();
   var output = ``;
 
   $.each(cartArray, function (k, v) {
     output += `<div class="col-12 m-1 p-1 border">
-                <a class="d-md-flex flex-column flex-md-row text-reset p-1" href="./Courses/{v.detail}" target="new">
+                <div class="d-md-flex flex-column flex-md-row p-1">
+
                   <div class="d-flex flex-row flex-grow-1 col-12 col-sm-8 mx-2">
-
-                    <div class="Exit py-4 col-1">
-                      <input class="delete-item" type="checkbox" checked>
+                    <div class="Exit col-1">
+                      <input class="delete-item my-5" data-name="${v.name}" type="checkbox" checked>
                     </div>
-
                     <div class="img-course col-4">
                       <img class="border" src="./img/imgcourses/${v.img}" alt="img-course" width="100%" height="auto" style="border-radius: 10px">
                     </div>
-
                     <div class="col-7 p-2">
-                      <strong class="title-course">${v.name}</strong> <br>
-                      <small class="name-gv">Created by: {v.teacher}</small>
+                      <a class="text-reset" href="./Courses/${v.detail}" target="new">
+                        <strong class="title-course">${v.name}</strong> </a> <br>
+                        <small class="name-gv">Created by: ${v.teacher}</small>
                     </div>
                   </div>
 
-                  <div class="d-flex flex-row c ol-12 col-sm-3 p-2 text-right">
-                    <div class="col-6">
+                  <div class="d-flex flex-row col-12 col-sm-4 p-2">
+                    <div class="col-3">
                       <b class="text-success">$${v.price}</b>
                       <small class="text-danger">
-                        <del>{v.priceOld}</del>
+                        <del>$${v.priceOld}</del>
                       </small>
                     </div>
-                    <div class="col-6">
-                      <span class="text-right">Qty: ${v.count} </span>
+                    <div class="col-7 mx-1">
+                      <div class="input-group">
+                        <label class="my-auto mx-2">Qty:</label>
+                        <input type='number' class='col-1 text-center item-count form-control' min="1" data-name="${v.name}" value="${v.count}">
+                      </div>
                     </div>
                   </div>
-                </a>
+                </div>
               </div>`
   });
   
   $('.show-cart').html(output);
-  $('.total-cart').html("$ " + shoppingCart.totalCart());
+  $('.total-cart').html("$ " + shoppingCart.totalCart().toPrecision(5));
   $('.total-count').html(shoppingCart.totalCount());
-  console.log(output);
-  console.log(shoppingCart.totalCount());
-  console.log(shoppingCart.totalCart());
 }
+
 
 // Delete item button
 $('.show-cart').on("click", ".delete-item", function (event) {

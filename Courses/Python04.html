@@ -16,6 +16,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
   
+  <script type="text/javascript" src="../MDB5/js/mdb.min.js"></script>
   <link rel="stylesheet" href="../MDB5/css/mdb.min.css" />
   <style>
     * {
@@ -57,20 +58,16 @@
       font-size: 14px;
       margin-right: 7px;
     }
-
+    
     .Cart {
       margin: 10px;
       padding: 10px;
       border: 4px solid white;
       border-radius: 30px;
-      z-index: 9999;
       box-shadow: 2px 0px 10px black;
       position: relative;
       top: -80px;
-      /* left: 70%; */
       background-color: white;
-      /* padding: 10px 20px; */
-      /* display: block; */
     }
     @media screen and (max-width: 800px){
       .Cart {
@@ -78,7 +75,7 @@
       }
       
     }
-    .Cart button {
+    .Cart .btn {
       font-size: large;
     }
     .Cart i {
@@ -90,6 +87,89 @@
 </head>
 
 <body>
+  <!-- Menu top -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand pl-sm-3" href="../index.html">
+          <img src="../img/star-classes-4.png" style="width:150px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- menu left -->
+          <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
+
+            <!-- Navbar dropdown -->
+            <li class="nav-item dropdown col-12 text-center">
+              <a class="nav-link dropdown-toggle text-center" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown"
+                aria-expanded="false">
+                <img src="../img/tutorialCut.png" style="width: 20px;"> Courses
+              </a>
+              <!-- Menu H2 -->
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="DropdownMenu">
+                <li><a href="../GalleryCourse.html" class="dropdown-item px-5 text-uppercase border-bottom">Topic</a></li>
+                <li><a href="#" class="dropdown-item px-5">Python</a></li>
+                <li><a href="#" class="dropdown-item px-5">Excel</a></li>
+                <li><a href="#" class="dropdown-item px-5">Web Development</a></li>
+                <li><a href="#" class="dropdown-item px-5">Javascript</a></li>
+                <li><a href="#" class="dropdown-item px-5">Data Science</a></li>
+                <li><a href="#" class="dropdown-item px-5">AWS Certification</a></li>
+                <li><a href="#" class="dropdown-item px-5">Drawing</a></li>
+              </ul>
+              <!-- Menu H2 -->
+            </li><!-- Navbar dropdown -->
+          </ul>
+
+          <!-- menu search -->
+          <form class="d-flex input-group mx-sm-3 mb-2" id="formSearch">
+            <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
+              id="search" ng-model="search">
+            <button class="btn bg-warning" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <!-- menu right -->
+          <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
+            <li class="nav-item col-12 col-sm-2 mx-1">
+              <a class="nav-link text-center" href="../aboutus.html">About us</a>
+            </li>
+            <!-- shopping & payment -->
+            <li class="nav-item col-12 col-sm-2 mx-1">
+              <a class="nav-link active text-center p-2" aria-current="page" href="../ShoppingCart.html">
+                <span><i class="fa fa-shopping-cart fa-lg"></i></span>
+                <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
+              </a>
+            </li>
+            <!-- Sign in-->
+            <li class="nav-item text-center col-12 col-sm-2 mx-1">
+              <a class="nav-link" href="../SignIn.html">Sign in
+              </a>
+            </li>
+            <!-- Sign up -->
+            <li class="nav-item text-center col-12 col-sm-2">
+              <a class="nav-link" href="../SignUp.html">Sign up</a>
+            </li>
+            <!-- Visitor -->
+            <li class="nav-item col-12 col-sm-4">
+              <div class="navbar-text text-light text-center">
+                <img src="../img/star-classes-icon.png" width="35px" alt="icon">
+                Visitor: <i class="fas fa-users"></i>
+                <span class="badge rounded-pill badge-notification bg-danger">
+                  <div id="visitor"></div>
+                </span>
+              </div>
+            </li>
+            <!-- Visitor -->
+          </ul>
+          <!-- menu right -->
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--/ Menu top -->
   <!-- Start your project here-->
   <div class="container-fluid">
     <!-- top courses -->
@@ -130,8 +210,18 @@
             </p>
 
             <div class="mx-4">
-              <button class="m-2 col-9 btn btn-warning text-black">Add to cart</button>
-              <button class="m-2 col-9 btn text-light" style="background-color:lightslategray">Buy now</button>
+              <a href="../ShoppingCart.html"
+              data-id="PT04"
+              data-name="Learn Python Programming Masterclass" 
+              data-img="python04.png" 
+              data-teacher="Jose Portilla" 
+              data-price-new="13.99"
+              data-price-old="84.99" 
+              data-detail="Python04.html"
+              class="add-to-cart m-2 col-9 btn btn-warning text-black"
+              >Add to cart</a>
+
+              <a href="../ShoppingCart.html" class="m-2 col-9 btn text-light" style="background-color:lightslategray">Buy now</a>
             </div>
 
             <p class="text-center"><small>30-day money-back guarantee</small></p>
@@ -139,7 +229,6 @@
 
           <h4>This course includes:</h4>
           <div>
-            4.5
             <p><i class="fas fa-video"></i> 72 hour video on demand</p>
             <p><i class="far fa-file"></i> 13 article</p>
             <p><i class="fas fa-code"></i> 34 coding exercises</p>
@@ -265,10 +354,10 @@
           <!-- History comment -->
           <section class="container">
             <section class="d-flex row border-top m-2">
-              <div class="avatar border col-auto">
+              <div class="avatar col-auto">
                 <img style="border-radius:50%" src="../img/logo.png" width="10%" alt="avatar">
               </div>
-              <div class="d-flex row col-10 border">
+              <div class="d-flex row col-10">
                 <h4>
                   Shepard B.</h4>
                 <!-- rating -->
@@ -296,10 +385,10 @@
           </section>
           <section class="container">
             <section class="d-flex row border-top m-2">
-              <div class="avatar border col-auto">
+              <div class="avatar col-auto">
                 <img style="border-radius:50%" src="../img/logo.png" width="10%" alt="avatar">
               </div>
-              <div class="d-flex row col-10 border">
+              <div class="d-flex row col-10">
                 <h4>
                   Gary B.</h4>
                   
@@ -326,10 +415,10 @@
           </section>
           <section class="container">
             <section class="d-flex row border-top m-2">
-              <div class="avatar border col-auto">
+              <div class="avatar col-auto">
                 <img style="border-radius:50%" src="../img/logo.png" width="10%" alt="avatar">
               </div>
-              <div class="d-flex row col-10 border">
+              <div class="d-flex row col-10">
                 <h4>
                   Reeve P.</h4>                 
                 <!-- rating -->
@@ -353,10 +442,10 @@
           </section>
           <section class="container">
             <section class="d-flex row border-top m-2">
-              <div class="avatar border col-auto">
+              <div class="avatar col-auto">
                 <img style="border-radius:50%" src="../img/logo.png" width="10%" alt="avatar">
               </div>
-              <div class="d-flex row col-10 border">
+              <div class="d-flex row col-10">
                 <h4>Young Il J.
                 </h4>                 
                 <!-- rating -->
@@ -386,13 +475,12 @@
 
   </div>
 
-
-
-
   <!-- End your project here-->
+  <!-- jquery - JavaScript library for DOM operations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-  <!-- MDB -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script src="../Gallery.js"></script>
+  <script src="../cartForCourse.js"></script>
   <!-- Custom scripts -->
   <script type="text/javascript">
     function changeColor(color) {
