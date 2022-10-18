@@ -721,8 +721,8 @@ $("#formSearch").submit(function (e) {
   let search = $("#search").val();
   let re = new RegExp(search, "ig");
   let subData = data.filter(item => item.Intro.search(re) >= 0);
+  // window.open("GalleryCourse.html")
   displayCourse(subData);
-  //window.open("GalleryCourse.html")
 });
 
 // filter data by subject

@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
 
-
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
     integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
@@ -30,7 +29,7 @@
   <!-- Angular  -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
-  
+
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
 
@@ -146,7 +145,7 @@
         margin-top: 7rem;
       }
     }
-    
+
     .nav-link:hover,
     .dropdown-item:hover {
       color: #E4A11B !important;
@@ -185,22 +184,24 @@
       width: 300px;
       height: 165px;
     }
+
     .card-img-top {
-    border-radius: 50%;
-    width: 60%;
-    max-width: 400px;
-    margin:0 auto;
-    padding-top: 5px;
-  }
-  .card {
-    max-height: 430px;
-    min-height: 430px;
-    color: black;
-  }
+      border-radius: 50%;
+      width: 60%;
+      max-width: 400px;
+      margin: 0 auto;
+      padding-top: 5px;
+    }
+
+    .card {
+      max-height: 430px;
+      min-height: 430px;
+      color: black;
+    }
   </style>
 </head>
 
-<body onload="countVisitor()" ng-app="myApp">
+<body onload="countVisitor()">
   <!-- Menu top -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -218,8 +219,8 @@
 
             <!-- Navbar dropdown -->
             <li class="nav-item dropdown col-12 text-center">
-              <a class="nav-link active dropdown-toggle text-center" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown"
-                aria-expanded="false">
+              <a class="nav-link active dropdown-toggle text-center" href="#" id="DropdownMenu" role="tab"
+                data-toggle="dropdown" aria-expanded="false">
                 <img src="./img/tutorialCut.png" style="width: 20px;"> Courses
               </a>
               <!-- Menu H2 -->
@@ -380,7 +381,8 @@
             <div class="tab-pane fade show active p-3" id="ex7-tabs-2" role="tabpanel" aria-labelledby="ex7-tab-2"
               data-spy="scroll" data-target="#myScrollspy" data-offset="10">
               <p>
-              <h3>Expand your career opportunities with Python</h3>Take one of Star Classes’s range of Python courses and
+              <h3>Expand your career opportunities with Python</h3>Take one of Star Classes’s range of Python courses
+              and
               learn how to code using this incredibly useful language. Its simple syntax and readability makes Python
               perfect for Flask, Django, data science, and machine learning. You’ll learn how to build everything from
               games to sites to apps. Choose from a range of courses that will appeal to...</p>
@@ -408,13 +410,15 @@
               data-target="#myScrollspy" data-offset="10">
               <p>
               <h3>Build websites and applications with Web Development</h3>
-              The world of web development is as wide as the internet itself. Much of our social and vocational lives play
+              The world of web development is as wide as the internet itself. Much of our social and vocational lives
+              play
               out on the internet, which prompts new industries aimed at creating, managing, and debugging the websites
               and applications that we increasingly rely on.</p>
               <hr>
               <div class="row SubjectWebDevelopment"></div>
               <a class="btn btn-info offset-md-10 my-3 text-black" href="GalleryCourse.html">View more &#8594;</a>
-            </div><!--/Tab content of Web Development -->
+            </div>
+            <!--/Tab content of Web Development -->
 
             <!--Tab content of Data Science -->
             <div class="tab-pane fade p-3" id="ex7-tabs-5" role="tabpanel" aria-labelledby="ex7-tab-5" data-spy="scroll"
@@ -428,105 +432,105 @@
               <hr>
               <div class="row SubjectDataScience"></div>
               <a class="btn btn-info offset-md-10 my-3 text-black" href="GalleryCourse.html">View more &#8594;</a>
-            </div><!--/ Tab content of Data Science -->
+            </div>
+            <!--/ Tab content of Data Science -->
 
             <!--Tab content of JavaScript -->
-            <div class="tab-pane fade p-3" id="ex7-tabs-6" role="tabpanel" aria-labelledby="ex7-tab-6" data-spy="scroll" data-target="#myScrollspy" data-offset="10">
+            <div class="tab-pane fade p-3" id="ex7-tabs-6" role="tabpanel" aria-labelledby="ex7-tab-6" data-spy="scroll"
+              data-target="#myScrollspy" data-offset="10">
               <p>
               <h3>Grow your software development skills with JavaScript</h3>
               JavaScript is a text-based computer programming language used to make dynamic web pages. A must-learn for
-              aspiring web developers or programmers, JavaScript can be used for features like image carousels, displaying
+              aspiring web developers or programmers, JavaScript can be used for features like image carousels,
+              displaying
               countdowns and timers, and playing media on a webpage. With JavaScript online classes, you can learn to
               build interactive web applications, choose the best framework, and work with other programming languages
               like HTML and CSS...</p>
               <hr>
               <div class="row SubjectJavascript"></div>
               <a class="btn btn-info offset-md-10 my-3 text-black" href="GalleryCourse.html">View more &#8594;</a>
-            </div><!--/ Tab content of JavaScript -->
+            </div>
+            <!--/ Tab content of JavaScript -->
 
             <!--Tab content of AWS Certification -->
-            <div class="tab-pane fade p-3" id="ex7-tabs-7" role="tabpanel" aria-labelledby="ex7-tab-7" data-spy="scroll" data-target="#myScrollspy" data-offset="10">
+            <div class="tab-pane fade p-3" id="ex7-tabs-7" role="tabpanel" aria-labelledby="ex7-tab-7" data-spy="scroll"
+              data-target="#myScrollspy" data-offset="10">
               <p>
               <h3>Become an expert in cloud computing with AWS Certification</h3>
               Prep for your AWS certification with an AWS course on Star Classes. Learn the fundamentals of AWS such as
               working with a serverless platform, the various frameworks, security and more. With these courses, you’ll
-              build the valuable skills you need to implement cloud initiatives — and open up new career opportunities. If
+              build the valuable skills you need to implement cloud initiatives — and open up new career opportunities.
+              If
               you want to...</p>
               <hr>
               <div class="row SubjectAWSCertification"></div>
               <a class="btn btn-info offset-md-10 my-3 text-black" href="GalleryCourse.html">View more &#8594;</a>
-            </div><!--Tab content of AWS Certification -->
+            </div>
+            <!--Tab content of AWS Certification -->
 
             <!--Tab content of Drawing -->
-            <div class="tab-pane fade p-3" id="ex7-tabs-8" role="tabpanel" aria-labelledby="ex7-tab-8" data-spy="scroll" data-target="#myScrollspy" data-offset="10">
+            <div class="tab-pane fade p-3" id="ex7-tabs-8" role="tabpanel" aria-labelledby="ex7-tab-8" data-spy="scroll"
+              data-target="#myScrollspy" data-offset="10">
               <p>
               <h3>Expand your creative skill-set with Drawing</h3>
               Want to start drawing for fun or take your craft to the next level? Explore our online drawing classes and
               learn pencil drawing, figure drawing, cartoon drawing, character drawing for cartoons and anime,
-              illustration, sketching, shading and more. Take an overview course on the fundamentals of drawing or zero in
+              illustration, sketching, shading and more. Take an overview course on the fundamentals of drawing or zero
+              in
               on an area...</p>
               <hr>
               <div class="row SubjectDrawing"></div>
               <a class="btn btn-info offset-md-10 my-3 text-black" href="GalleryCourse.html">View more &#8594;</a>
-            </div><!--/Tab content of Drawing -->
+            </div>
+            <!--/Tab content of Drawing -->
 
           </div>
           <!-- /2.2 Tabs content -->
         </div><!-- Courses Classes -->
-      </div><!--/2.1 Display by Subject -->
+      </div>
+      <!--/2.1 Display by Subject -->
 
       <!--2.2 Display by student top 4 -->
       <div class="my-2 p-2 border">
         <h2>Students are viewing</h2>
-        
+
         <div class="row sort-top-4-by-student"></div>
         <a class="btn btn-info offset-md-10 my-3 text-black" href="GalleryCourse.html">View more &#8594;</a>
-      </div><!--/ 2.2 Display by student top 4 -->
+      </div>
+      <!--/ 2.2 Display by student top 4 -->
 
       <!--2.3 Display by rating top 4 -->
       <div class="my-3 p-2 border">
         <h2>Rating is the best</h2>
-        
+
         <div class="row sort-top-4-by-rating"></div>
         <a class="btn btn-info offset-md-10 my-3 text-black" href="GalleryCourse.html">View more &#8594;</a>
       </div><!-- /2.3 Display by rating top 4 -->
 
-      
+
       <!-- 2.4 -->
       <div class="container marketing ">
         <h2 class="mt-4" id="teacher">Lecturers of Star Class</h2>
         <hr>
         <!-- Carousel wrapper -->
-        <div
-        id="carouselMultiItemExample"
-        class="carousel slide carousel-dark text-center"
-        data-mdb-ride="carousel"
-        >
-        <!-- Controls -->
-        <button
-        class="carousel-control-prev"
-        type="button"
-        data-mdb-target="#carouselMultiItemExample"
-        data-mdb-slide="prev"
-        >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+          <!-- Controls -->
+          <button class="carousel-control-prev" type="button" data-mdb-target="#carouselMultiItemExample"
+            data-mdb-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 
-        </button>
-        <button
-        class="carousel-control-next"
-        type="button"
-        data-mdb-target="#carouselMultiItemExample"
-        data-mdb-slide="next"
-        >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-mdb-target="#carouselMultiItemExample"
+            data-mdb-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
 
-        </button>
-        <!-- Inner -->
-        <div class=" carousel-inner" >
-          <!-- Single item -->
-          <div class="carousel-item active" >
-            <div class="container-fluid row mx-aotu">
-              
+          </button>
+          <!-- Inner -->
+          <div class=" carousel-inner">
+            <!-- Single item -->
+            <div class="carousel-item active">
+              <div class="container-fluid row mx-aoto">
+
                 <div class="col-lg-4">
                   <a href="./Teacher/ArditSulce.html">
                     <div class="card">
@@ -546,22 +550,21 @@
                 </div>
 
                 <div class="col-lg-4 d-none d-lg-block">
-                <a href="./Teacher/DollarDesignSchool.html">
-                  <div class="card">
-                    <img
-                      src="./img/DollarDesignSchool.jpg" class="card-img-top" />
-                    <div class="card-body mt-auto">
-                      <h5 class="card-title">Dollar Design School</h5>
-                      <p class="card-text">
-                        Career Building Digital Skills Training
-                      </p>
-                      <p class="mt-auto">
-                        Rating
-                        4.5 <i class="fa fa-star text-warning"></i>
-                      </p>
+                  <a href="./Teacher/DollarDesignSchool.html">
+                    <div class="card">
+                      <img src="./img/DollarDesignSchool.jpg" class="card-img-top" />
+                      <div class="card-body mt-auto">
+                        <h5 class="card-title">Dollar Design School</h5>
+                        <p class="card-text">
+                          Career Building Digital Skills Training
+                        </p>
+                        <p class="mt-auto">
+                          Rating
+                          4.5 <i class="fa fa-star text-warning"></i>
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </a>
+                  </a>
                 </div>
 
                 <div class="col-lg-4 d-none d-lg-block">
@@ -581,150 +584,150 @@
                     </div>
                   </a>
                 </div>
-              
-            </div>
-          </div>
 
-          <!-- Single item -->
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4 col-md-12">
-                <a href="./Teacher/InfiniteSkills.html">
-                  <div class="card">
-                    <img src="./img/InfiniteSkills.jpg" class="card-img-top" />
-                    <div class="card-body">
-                      <h5 class="card-title">Infinite Skills</h5>
-                      <p class="card-text">
-                        High Quality Training
-                      </p>
-                      <p>
-                        Rating
-                        4.8 <i class="fa fa-star text-warning"></i>
-                      </p>
-                    </div>
+              </div>
+            </div>
+
+            <!-- Single item -->
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-4 col-md-12">
+                    <a href="./Teacher/InfiniteSkills.html">
+                      <div class="card">
+                        <img src="./img/InfiniteSkills.jpg" class="card-img-top" />
+                        <div class="card-body">
+                          <h5 class="card-title">Infinite Skills</h5>
+                          <p class="card-text">
+                            High Quality Training
+                          </p>
+                          <p>
+                            Rating
+                            4.8 <i class="fa fa-star text-warning"></i>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
                   </div>
-                </a>
-                </div>
 
-                <div class="col-lg-4 d-none d-lg-block">
-                  <a href="./Teacher/JaysenBatchelor.html">
-                    <div class="card">
-                      <img src="./img/JaysenBatchelor.jpg" class="card-img-top"/>
-                      <div class="card-body">
-                        <h5 class="card-title">Jaysen Batchelor</h5>
-                        <p class="card-text">
-                          Illustrator & Designer
-                        </p>
-                        <p>
-                          Rating
-                          4.6 <i class="fa fa-star text-warning"></i>
-                        </p>
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <a href="./Teacher/JaysenBatchelor.html">
+                      <div class="card">
+                        <img src="./img/JaysenBatchelor.jpg" class="card-img-top" />
+                        <div class="card-body">
+                          <h5 class="card-title">Jaysen Batchelor</h5>
+                          <p class="card-text">
+                            Illustrator & Designer
+                          </p>
+                          <p>
+                            Rating
+                            4.6 <i class="fa fa-star text-warning"></i>
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </a>
-                </div>
+                    </a>
+                  </div>
 
-                <div class="col-lg-4 d-none d-lg-block">
-                  <a href="./Teacher/JohnBura.html">
-                    <div class="card">
-                      <img src="./img/JohnBura.jpg" class="card-img-top"/>
-                      <div class="card-body">
-                        <h5 class="card-title">John Bura</h5>
-                        <p class="card-text">
-                          Best Selling Instructor Web/App/Game Developer 700k Students
-                        </p>
-                        <p>
-                          Rating
-                          4.5 <i class="fa fa-star text-warning"></i>
-                        </p>
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <a href="./Teacher/JohnBura.html">
+                      <div class="card">
+                        <img src="./img/JohnBura.jpg" class="card-img-top" />
+                        <div class="card-body">
+                          <h5 class="card-title">John Bura</h5>
+                          <p class="card-text">
+                            Best Selling Instructor Web/App/Game Developer 700k Students
+                          </p>
+                          <p>
+                            Rating
+                            4.5 <i class="fa fa-star text-warning"></i>
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </a>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Single item -->
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                  <a href="./Teacher/JosePortilla.html">
-                    <div class="card">
-                      <img src="./img/JosePortilla.jpg" class="card-img-top" />
-                      <div class="card-body">
-                        <h5 class="card-title">Jose Portilla</h5>
-                        <p class="card-text">
-                          Head of Data Science at Pierian Training
-                        </p>
-                        <p>
-                          Rating
-                          4.6 <i class="fa fa-star text-warning"></i>
-                        </p>
+            <!-- Single item -->
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <a href="./Teacher/JosePortilla.html">
+                      <div class="card">
+                        <img src="./img/JosePortilla.jpg" class="card-img-top" />
+                        <div class="card-body">
+                          <h5 class="card-title">Jose Portilla</h5>
+                          <p class="card-text">
+                            Head of Data Science at Pierian Training
+                          </p>
+                          <p>
+                            Rating
+                            4.6 <i class="fa fa-star text-warning"></i>
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </a>
-                </div>
+                    </a>
+                  </div>
 
-                <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
-                  <a href="./Teacher/KirillEremenko.html">
-                    <div class="card">
-                      <img src="./img/KirillEremenko.jpg" class="card-img-top" />
-                      <div class="card-body">
-                        <h5 class="card-title">Kirill Eremenko</h5>
-                        <p class="card-text">
-                          Data Scientist
-                        </p>
-                        <p>
-                          Rating
-                          4.9 <i class="fa fa-star text-warning"></i>
-                        </p>
+                  <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                    <a href="./Teacher/KirillEremenko.html">
+                      <div class="card">
+                        <img src="./img/KirillEremenko.jpg" class="card-img-top" />
+                        <div class="card-body">
+                          <h5 class="card-title">Kirill Eremenko</h5>
+                          <p class="card-text">
+                            Data Scientist
+                          </p>
+                          <p>
+                            Rating
+                            4.9 <i class="fa fa-star text-warning"></i>
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </a>
-                </div>
+                    </a>
+                  </div>
 
-                <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
-                  <a href="./Teacher/KylePew.html">
-                    <div class="card">
-                      <img src="./img/KylePew.jpg" class="card-img-top" />
-                      <div class="card-body">
-                        <h5 class="card-title">Kyle Pew</h5>
-                        <p class="card-text">
-                          Microsoft Certified Trainer - 1 Million+ Students
-                        </p>
-                        <p>
-                          Rating
-                          4.8 <i class="fa fa-star text-warning"></i>
-                        </p>
+                  <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                    <a href="./Teacher/KylePew.html">
+                      <div class="card">
+                        <img src="./img/KylePew.jpg" class="card-img-top" />
+                        <div class="card-body">
+                          <h5 class="card-title">Kyle Pew</h5>
+                          <p class="card-text">
+                            Microsoft Certified Trainer - 1 Million+ Students
+                          </p>
+                          <p>
+                            Rating
+                            4.8 <i class="fa fa-star text-warning"></i>
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </a>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>  
-          <!-- Single item -->
-          <div class="carousel-item">
-            <div class="container">
+            <!-- Single item -->
+            <div class="carousel-item">
+              <div class="container">
                 <div class="row">
                   <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                     <a href="./Teacher/LigencyITeam.html">
-                    <div class="card">
-                      <img src="./img/LigencyITeam.jpg" class="card-img-top" />
-                      <div class="card-body">
-                        <h5 class="card-title">Ligency I Team</h5>
-                        <p class="card-text">
-                          Helping Data Scientists Succeed
-                        </p>
-                        <p>
-                          Rating
-                          4.8 <i class="fa fa-star text-warning"></i>
-                        </p>
+                      <div class="card">
+                        <img src="./img/LigencyITeam.jpg" class="card-img-top" />
+                        <div class="card-body">
+                          <h5 class="card-title">Ligency I Team</h5>
+                          <p class="card-text">
+                            Helping Data Scientists Succeed
+                          </p>
+                          <p>
+                            Rating
+                            4.8 <i class="fa fa-star text-warning"></i>
+                          </p>
+                        </div>
                       </div>
-                    </div>
                     </a>
                   </div>
 
@@ -749,7 +752,7 @@
                   <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
                     <a href="./Teacher/RobPercival.html">
                       <div class="card">
-                        <img  src="./img/RobPercival.jpg" class="card-img-top" />
+                        <img src="./img/RobPercival.jpg" class="card-img-top" />
                         <div class="card-body">
                           <h5 class="card-title">Rob Percival</h5>
                           <p class="card-text">
@@ -765,36 +768,36 @@
                   </div>
                 </div>
 
+              </div>
             </div>
-          </div>
-          <!-- Single item -->
-          <div class="carousel-item">
-            <div class="container">
+            <!-- Single item -->
+            <div class="carousel-item">
+              <div class="container">
 
                 <div class="row">
                   <div class="col-12 col-lg-4 col-md-12 mb-4 mb-lg-0 mx-auto">
                     <a href="./Teacher/StrphaneMaarek.html">
-                    <div class="card">
-                      <img src="./img/StephaneMaarek.jpg" class="card-img-top" />
-                      <div class="card-body">
-                        <h5 class="card-title">Stephane Maarek</h5>
-                        <p class="card-text">
-                          Best Selling Instructor, 9x AWS Certified, Kafka Guru
-                        </p>
-                        <p>
-                          Rating
-                          4.7 <i class="fa fa-star text-warning"></i>
-                        </p>
+                      <div class="card">
+                        <img src="./img/StephaneMaarek.jpg" class="card-img-top" />
+                        <div class="card-body">
+                          <h5 class="card-title">Stephane Maarek</h5>
+                          <p class="card-text">
+                            Best Selling Instructor, 9x AWS Certified, Kafka Guru
+                          </p>
+                          <p>
+                            Rating
+                            4.7 <i class="fa fa-star text-warning"></i>
+                          </p>
+                        </div>
                       </div>
-                    </div>
                     </a>
                   </div>
                 </div>
-          
+
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Inner -->
+          <!-- Inner -->
         </div>
         <!-- Carousel wrapper -->
         <hr>
@@ -896,7 +899,8 @@
                 Whether you want to learn or to share what you know, you have come to the right place. As a global
                 destination for online learning, we connect people through knowledge.
               </p>
-            </div><!--/ Grid column 1-->
+            </div>
+            <!--/ Grid column 1-->
 
             <!-- Grid column 2-->
             <div class="col-md-2 mx-auto mb-4">
@@ -937,7 +941,8 @@
                 <i class="fas fa-print me-3 text-secondary"></i>
                 + 84 234 567 890
               </p>
-            </div><!--/ Grid column 3-->
+            </div>
+            <!--/ Grid column 3-->
 
             <!-- Grid column 4-->
             <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
@@ -976,51 +981,14 @@
   <!-- Java Script -->
   <!-- jquery - JavaScript library for DOM operations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
   <script src="Gallery.js"></script>
-  <script src="cartForCourse.js"></script>
   <script>
-
-    var app = angular.module("myApp", [])
-    app.controller("myController", function ($rootScope, $http, $location) {
-      $http.get("informationSubject.json").then(function (response) {
-        $rootScope.list = response.data.informationSubject;
-      });
-
-    });
-
     //*** Show Courses on index page ***
     showIndex();
-    
-    //** Count Visitor ** 
-    // function countVisitor() {
-    //   if (typeof (Storage) !== "undefined") {
-    //     if (localStorage.countV) {
-    //       localStorage.countV = Number(localStorage.countV) + 1;
-    //     } else {
-    //       localStorage.countV = 1;
-    //     }
-    //     document.getElementById("visitor").innerHTML = localStorage.countV;
-    //   } else {
-    //     document.getElementById("visitor").innerHTML = 0;
-    //   }
-    // }
-
-
-    $(".add-to-cart").click(function (e) {
-    var id = $(this).data("id");
-    var img = $(this).data("img");
-    var name = $(this).data("name");
-    var teacher = $(this).data("teacher");
-    var price = Number($(this).data("price-new"));
-    var priceOld = Number($(this).data("price-old"));
-    var detail = $(this).data("detail");
-
-    alert("id=" + id + " name=" + name + " price=" + price + " detail=" + detail);
-  });
   </script>
   <!--/Java Script -->
-  
+  <script src="cartForCourse.js"></script>
+
 
 </body>
 
