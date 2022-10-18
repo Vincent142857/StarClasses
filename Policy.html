@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- icon website -->
+  <link rel="icon" href="./img/star-classes-icon.png" type="image/x-icon">
+  <title>Star Classes</title>
+
+  <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./MDB5/js/mdb.min.js"></script>
+
+  <!-- jquery - JavaScript library for DOM operations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <!-- Angular  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+  
+  <!-- Custom styles for this template -->
+  <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    /* GLOBAL STYLES
+    --------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-top: 3rem;
+      color: #5a5a5a;
+    }
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 4rem;
+    }
+
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+      bottom: 3rem;
+      z-index: 10;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .carousel-item {
+      height: 32rem;
+    }
+
+    .carousel-item>img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 32rem;
+    }
+
+
+    /* MARKETING CONTENT
+-------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .col-lg-4 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .marketing h2 {
+      font-weight: 400;
+    }
+
+    .marketing .col-lg-4 p {
+      margin-right: .75rem;
+      margin-left: .75rem;
+    }
+
+    /* Featurettes
+------------------------- */
+    .featurette-divider {
+      margin: 5rem 0;
+      /* Space out the Bootstrap <hr> more */
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -.05rem;
+    }
+
+    /* RESPONSIVE CSS
+-------------------------------------------------- */
+
+    @media (min-width: 40em) {
+
+      /* Bump up size of carousel content */
+      .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+      }
+
+      .featurette-heading {
+        font-size: 50px;
+      }
+    }
+
+    @media (min-width: 62em) {
+      .featurette-heading {
+        margin-top: 7rem;
+      }
+    }
+    
+    .nav-link:hover,
+    .dropdown-item:hover {
+      color: #E4A11B !important;
+      font-weight: bold;
+      cursor: pointer !important;
+    }
+
+    .dropdown-hover:hover>.dropdown-menu {
+      display: inline-block;
+    }
+
+    .dropdown-hover>.dropdown-toggle:active {
+      /*Without this, clicking will make it sticky*/
+      pointer-events: none;
+    }
+
+    .badge-notification {
+      position: absolute;
+      font-size: .6rem;
+      margin-top: -.1rem;
+      margin-left: -.5rem;
+      padding: .2em .45em
+    }
+
+    .BoxShow {
+      box-shadow: -2px -1px 7px rgba(86, 81, 81, 0.473);
+      position: static !important;
+      align-items: flex-end !important;
+    }
+
+    .img-course img {
+      border-radius: 20px !important;
+      border: 1px solid rgba(35, 34, 34, 0.5);
+      max-width: 100%;
+      max-height: 100%;
+      width: 300px;
+      height: 165px;
+    }
+    #SignIn{
+    box-shadow: -2px -2px 10px rgb(177, 175, 175);
+  }
+  .error {
+    padding-left: 10px;
+    color: red;
+  }
+  table, th, td {
+  border: 1px solid black;
+  padding: 10px;
+  }
+  table tr td, table tr th{
+    border: 1px solid black;
+  }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
+</head>
+<body ng-app="myApp"  onload="countVisitor()"  ng-controller="myController">
+  <!-- Menu top -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand pl-sm-3" href="index.html">
+          <img src="./img/star-classes-4.png" style="width:150px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- menu left -->
+          <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
+
+            <!-- Navbar dropdown -->
+            <li class="nav-item dropdown col-12 text-center">
+              <a class="nav-link dropdown-toggle text-center" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown"
+                aria-expanded="false">
+                <img src="./img/tutorialCut.png" style="width: 20px;"> Courses
+              </a>
+              <!-- Menu H2 -->
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="DropdownMenu">
+                <li><a href="GalleryCourse.html" class="dropdown-item px-5 text-uppercase border-bottom">Topic</a></li>
+                <li><a href="#" class="dropdown-item px-5">Python</a></li>
+                <li><a href="#" class="dropdown-item px-5">Excel</a></li>
+                <li><a href="#" class="dropdown-item px-5">Web Development</a></li>
+                <li><a href="#" class="dropdown-item px-5">Javascript</a></li>
+                <li><a href="#" class="dropdown-item px-5">Data Science</a></li>
+                <li><a href="#" class="dropdown-item px-5">AWS Certification</a></li>
+                <li><a href="#" class="dropdown-item px-5">Drawing</a></li>
+              </ul>
+              <!-- Menu H2 -->
+            </li><!-- Navbar dropdown -->
+          </ul>
+
+          <!-- menu search -->
+          <form class="d-flex input-group mx-sm-3 mb-2" id="formSearch">
+            <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
+              id="search" ng-model="search">
+            <button class="btn bg-warning" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <!-- menu right -->
+          <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
+            <li class="nav-item col-12 col-sm-2 mx-1">
+              <a class="nav-link text-center" href="aboutus.html">About us</a>
+            </li>
+            <!-- shopping & payment -->
+            <li class="nav-item col-12 col-sm-2 mx-1">
+              <a class="nav-link active text-center p-2" aria-current="page" href="ShoppingCart.html">
+                <span><i class="fa fa-shopping-cart fa-lg"></i></span>
+                <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
+              </a>
+            </li>
+            <!-- Sign in-->
+            <li class="nav-item text-center col-12 col-sm-2 mx-1">
+              <a class="nav-link" href="SignIn.html">Sign in
+              </a>
+            </li>
+            <!-- Sign up -->
+            <li class="nav-item text-center col-12 col-sm-2">
+              <a class="nav-link" href="SignUp.html">Sign up</a>
+            </li>
+            <!-- Visitor -->
+            <li class="nav-item col-12 col-sm-4">
+              <div class="navbar-text text-light text-center">
+                <img src="./img/star-classes-icon.png" width="35px" alt="icon">
+                Visitor: <i class="fas fa-users"></i>
+                <span class="badge rounded-pill badge-notification bg-danger">
+                  <div id="visitor"></div>
+                </span>
+              </div>
+            </li>
+            <!-- Visitor -->
+          </ul>
+          <!-- menu right -->
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--/ Menu top -->
+  <main class="mt-4 " style="background-color: #F1F8E9;">
+   
+    <div class="container pt-4">
+
+      <div class="alert alert-warning text-black ">
+       <h1>Privacy Policy</h1>
+       <i>This Privacy Policy was last updated on July 15, 2022.</i>
+       <p>Thank you for joining Star Classes. We at Star Classes (“Star Classes”, “we”, “us”) respect your privacy and want you to understand how we collect, 
+        use, and share data about you. This Privacy Policy covers our data collection practices and describes your rights regarding your 
+        personal data.</p>
+        <p>
+          Unless we link to a different policy or state otherwise, this Privacy Policy applies when you visit or use the Star Classes and 
+          CorpU websites, mobile applications, APIs, or related services (the “Services”). It also applies to prospective customers of 
+          our business and enterprise products.
+        </p>
+        <p>
+          <b>By using the Services, you agree to the terms of this Privacy Policy.</b> You shouldn’t use the Services if you don’t agree with this 
+          Privacy Policy or any other agreement that governs your use of the Services.
+        </p>
+
+        <h4>1. What Data We Get</h4>
+        <p class="">
+          We collect certain data from you directly, like information you enter yourself, data about your consumption of content, 
+          and data from third-party platforms you connect with Udemy. We also collect some data automatically, like information about 
+          your device and what parts of our Services you interact with or spend time using. All data listed in this section is subject 
+          to the following processing activities: collecting, recording, structuring, storing, altering, retrieving, encrypting, 
+          pseudonymizing, erasing, combining, and transmitting.
+
+          <table style="width:100%" class="Table">
+            <tr >
+              <th style="width:15%">Category of Personal Data</th>
+              <th>Description</th>
+              <th>Legal Basis for Processing</th>
+            </tr>
+            <tr>
+              <th>Account Data</th>
+              <td>
+                In order to use certain features (like accessing content), you need to create a user account, which requires 
+                us to collect and store your email address, password, and account settings. To create an instructor account, we 
+                collect and store your name, email address, password, and account settings. As you use certain features on the site, 
+                you may be prompted to submit additional information including occupation, government ID information, verification photo, 
+                date of birth, race/ethnicity, skill interests, and phone number. Upon account creation, we assign you a unique identifying number.
+              </td>
+              <td>
+                <li>Performance of contract</li>
+                <li>Legitimate interests (service provisioning, identity verification, fraud prevention and security, communication)</li>
+              </td>
+            </tr>
+            <tr>
+              <th>Profile Data</th>
+              <td>You can also choose to provide profile information like a photo, headline, biography, language, website link, social 
+                media profiles, country, or other data. Your Profile Data will be publicly viewable by others.
+              </td>
+              <td>
+                <li>Performance of contract</li>
+                <li>Legitimate interests (service provisioning, identity verification, fraud prevention and security, communication)</li>
+              </td>
+            </tr>
+            <tr>
+              <th>Shared Content</th>
+              <td>
+                Parts of the Services let you interact with other users or share content publicly, including by uploading courses and 
+                other educational content, posting reviews about content, asking or answering questions, sending messages to students or 
+                instructors, or posting photos or other work you upload. Such shared content may be publicly viewable by others depending 
+                on where it is posted.
+              </td>
+              <td>
+                <li>Performance of contract</li>
+                <li>Legitimate interests (service provisioning, identity verification, fraud prevention and security, communication)</li>
+              </td>
+            </tr>
+          </table>
+        </p>
+        
+        <h4>2. How We Get Data About You</h4>
+        <p>We use tools like cookies, web beacons, and similar tracking technologies to gather the data listed above. Some of these tools 
+          offer you the ability to opt out of data collection.
+        </p>
+        <b>2.1 Cookies and Data Collection Tools</b>
+        <p>
+          We use cookies, which are small text files stored by your browser, to collect, store, and share data about your activities 
+          across websites, including on Udemy. They allow us to remember things about your visits to Star Classes, like your preferred language, 
+          and to make the site easier to use. To learn more about cookies, visit https://cookiepedia.co.uk/all-about-cookies. We may also 
+          use clear pixels in emails to track deliverability and open rates.
+        </p>
+        <p>
+          Star Classes and service providers acting on our behalf (like Google Analytics and third-party advertisers) use server log files 
+          and automated data collection tools like cookies, tags, scripts, customized links, device or browser fingerprints, and web 
+          beacons (together, <b>“Data Collection Tools“</b>) when you access and use the Services. These Data Collection Tools automatically 
+          track and collect certain System Data and Usage Data (as detailed in Section 1) when you use the Services. In some cases, we 
+          tie data gathered through those Data Collection Tools to other data that we collect as described in this Privacy Policy.
+        </p>
+        <b>2.2 Why We Use Data Collection Tools</b>
+        <p>Star Classes uses the following types of Data Collection Tools for the purposes described:</p>
+        <ul>
+          <li>
+            <u>Strictly Necessary:</u> These Data Collection Tools enable you to access the site, provide basic functionality 
+            (like logging in or accessing content), secure the site, protect against fraudulent logins, and detect and prevent abuse or 
+            unauthorized use of your account. These are required for the Services to work properly, so if you disable them, parts of the 
+            site will break or be unavailable.
+          </li>
+          <li>
+            <u>Functional:</u> These Data Collection Tools remember data about your browser and your preferences, provide additional site 
+            functionality, customize content to be more relevant to you, and remember settings affecting the appearance and behavior of 
+            the Services (like your preferred language or volume level for video playback).
+          </li>
+          <li>
+            <u>Performance:</u> These Data Collection Tools help measure and improve the Services by providing usage and performance data, 
+            visit counts, traffic sources, or where an application was downloaded from. These tools can help us test different versions 
+            of Star Classes to see which features or content users prefer and determine which email messages are opened.
+          </li>
+          <li>
+            <u>Advertising:</u> These Data Collection Tools are used to deliver relevant ads (on the site and/or other sites) based on things 
+            we know about you like your Usage and System Data (as detailed in Section 1), and things that the ad service providers know 
+            about you based on their tracking data. The ads can be based on your recent activity or activity over time and across other 
+            sites and services. To help deliver tailored advertising, we may provide these service providers with a hashed, anonymized 
+            version of your email address (in a non-human-readable form) and content that you share publicly on the Services.
+          </li>
+          <li>
+            <u>Social Media:</u> These Data Collection Tools enable social media functionality, like sharing content with friends and networks. 
+            These cookies may track a user or device across other sites and build a profile of user interests for targeted advertising purposes.
+          </li>
+        </ul>
+        <p>
+          You can set your web browser to alert you about attempts to place cookies on your computer, limit the types of cookies you allow, 
+          or refuse cookies altogether. If you do, you may not be able to use some or all features of the Services, and your experience may 
+          be different or less functional. To learn more about managing Data Collection Tools, refer to Section 6.1 (Your Choices About the 
+          Use of Your Data) below.
+        </p>
+
+        <h4>3. What We Use Your Data For</h4>
+        <p>
+          We use your data to do things like provide our Services, communicate with you, troubleshoot issues, secure against fraud and 
+          abuse, improve and update our Services, analyze how people use our Services, serve personalized advertising, and as required by 
+          law or necessary for safety and integrity. We retain your data for as long as it is needed to serve the purposes for which it was 
+          collected.
+        </p>
+        <p>We use the data we collect through your use of the Services to:</p>
+        <ul>
+          <li>Provide and administer the Services, including to facilitate participation in educational content, issue completion 
+            certificates, display customized content, and facilitate communication with other users (Account Data; Shared Content; 
+            Learning Data; System Data; Usage Data; Approximate Geographic Data);</li>
+          <li>Process payments to instructors and other third parties (Student Payment Data; Instructor Payment Data);</li>
+          <li>Process your requests and orders for educational content, products, specific services, information, or features (Account 
+            Data; Learning Data; Student Payment Data; System Data; Communications and Support);</li>
+          <li>Communicate with you about your account by (Account Data; Shared Content; Learning Data; Sweepstakes, Promotions, and Surveys; System Data; 
+            Communications and Support):
+            <ul>
+              <li>
+                Responding to your questions and concerns;
+              </li>
+              <li>
+                Sending you administrative messages and information, including messages from instructors, students, and teaching assistants; 
+                notifications about changes to our Service; and updates to our agreements;
+              </li>
+              <li>
+                Sending you information, such as by email or text messages, about your progress in courses and related content, rewards 
+                programs, new services, new features, promotions, newsletters, and other available instructor-created content (which you 
+                can opt out of at any time);
+              </li>
+              <li>
+                Sending push notifications to your wireless device to provide updates and other relevant messages (which you can 
+                manage from the “options” or “settings” page of the mobile app);
+              </li>
+            </ul>
+          </li>
+          <li>
+            Manage your account and account preferences and personalize your experience (Account Data; Learning Data; Student 
+            Payment Data; Instructor Payment Data; System Data, Usage Data, Cookie Data);
+          </li>
+          <li>
+            Facilitate the Services’ technical functioning, including troubleshooting and resolving issues, securing the 
+            Services, and preventing fraud and abuse (Account Data; Student Payment Data; Instructor Payment Data; Communications 
+            and Support; System Data; Approximate Geographic Location);
+          </li>
+          <li>Verify the identity of instructors (Account Data; Instructor Payment Data);</li>
+          <li>Solicit feedback from users (Account Data; Communications and Support);</li>
+          <li>Market products, services, surveys, and promotions (Account Data; Learning Data; Sweepstakes, Promotions, and Surveys; Usage Data; Cookie Data);</li>
+          <li>Market Subscription Plans to prospective customers (Account Data; Learning Data; Cookie Data);</li>
+          <li>
+            Learn more about you by linking your data with additional data through third-party data providers and/or analyzing 
+            the data with the help of analytics service providers (Account Data; Data About Your Accounts on Other Services; Usage Data; 
+            Cookie Data);
+          </li>
+          <li>Identify unique users across devices (Account Data; System Data; Cookie Data);</li>
+          <li>Tailor advertisements across devices (Cookie Data);</li>
+          <li>Improve our Services and develop new products, services, and features (all data categories);</li>
+        </ul>
+
+        <h4>4. Who We Share Your Data With</h4>
+        <p>
+          We share certain data about you with instructors, other students, companies performing services for us, Star Classes affiliates, 
+          our business partners, analytics and data enrichment providers, your social media providers, companies helping us run promotions 
+          and surveys, and advertising companies who help us promote our Services. We may also share your data as needed for security, legal 
+          compliance, or as part of a corporate restructuring. Lastly, we can share data in other ways if it is aggregated or de-identified 
+          or if we get your consent.
+        </p>
+
+        <h4>5. Security</h4>
+        <p>
+          We use appropriate security based on the type and sensitivity of data being stored. As with any internet-enabled system, 
+          there is always a risk of unauthorized access, so it’s important to protect your password and to contact us if you suspect 
+          any unauthorized access to your account.
+        </p>
+        <p>
+          Star Classes takes appropriate security measures to protect against unauthorized access, alteration, disclosure, or destruction 
+          of your personal data that we collect and store. These measures vary based on the type and sensitivity of the data. Unfortunately, 
+          however, no system can be 100% secured, so we cannot guarantee that communications between you and Star Classes, the Services, or any 
+          information provided to us in connection with the data we collect through the Services will be free from unauthorized access 
+          by third parties. Your password is an important part of our security system, and it is your responsibility to protect it. 
+          You should not share your password with any third party, and if you believe your password or account has been compromised, 
+          you should change it immediately and contact our Support Team with any concerns.
+        </p>
+
+        <h4>6. Your Rights</h4>
+        <p>
+          You have certain rights around the use of your data, including the ability to opt out of promotional emails, cookies, and collection 
+          of your data by certain third parties. You can update or terminate your account from within our Services, and can also contact us 
+          for individual rights requests about your personal data. Parents who believe we’ve unintentionally collected personal data about 
+          their underage child should contact us for help deleting that information.
+        </p>
+        <b>6.1 Your Choices About the Use of Your Data</b>
+        <p>You can choose not to provide certain data to us, but you may not be able to use certain features of the Services.</p>
+        <ul>
+          <li>
+            To stop receiving promotional communications from us, you can opt out by using the unsubscribe mechanism in the promotional 
+            communication you receive or by changing the email preferences in your account. Note that regardless of your email preference 
+            settings, we will send you transactional and relationship messages regarding the Services, including administrative confirmations, 
+            order confirmations, important updates about the Services, and notices about our policies.
+          </li>
+          <li>
+            If you’re located in the European Economic Area, you may opt out of certain Data Collection Tools by clicking the “Cookie settings“ 
+            link at the bottom of any page.
+          </li>
+          <li>
+            The browser or device you use may allow you to control cookies and other types of local data storage. To learn more about 
+            managing cookies, visit https://cookiepedia.co.uk/how-to-manage-cookies. Your wireless device may also allow you to control 
+            whether location or other data is collected and shared.
+          </li>
+          <li>
+            To get information and control cookies used for tailored advertising from participating companies, see the consumer opt-out 
+            pages for the Network Advertising Initiative and Digital Advertising Alliance, or if you’re located in the European Economic 
+            Area, visit the Your Online Choices site. If you’re located in Japan, visit the Digital Advertising Consortium. To opt out of 
+            Google’s display advertising or customize Google Display Network ads, visit the Google Ads Settings page. To opt out of Taboola’s 
+            targeted ads, see the Opt-out Link in their Cookie Policy.
+          </li>
+          <li>
+            To opt out of allowing Google Analytics, Mixpanel, ZoomInfo, or Clearbit to use your data for analytics or enrichment, 
+            see the Google Analytics Opt-out Browser Add-on, Mixpanel Opt-Out Cookie, ZoomInfo’s policy, and Clearbit data claiming mechanism.
+          </li>
+          <li>
+            Apple iOS, Android OS, and Microsoft Windows each provide their own instructions on how to control in-app tailored advertising. 
+            For other devices and operating systems, you should review your privacy settings on that platform.
+          </li>
+        </ul>
+
+        <b>6.2 Accessing, Updating, and Deleting Your Personal Data</b>
+        <p>You can access and update your personal data that Udemy collects and maintains as follows:</p>
+        <ul>
+          <li>To update data you provide directly, log into your account and update your account at any time.</li>
+          <li>To terminate your account
+            <ul>
+              <li>If you are a student, visit your profile settings page and follow the steps detailed.</li>
+              <li>If you are an instructor, follow the steps detailed</li>
+              <li>If you have any issues terminating your account, please contact our Support Team.</li>
+              <li>
+                Please note: even after your account is terminated, some or all of your data may still be visible to others, 
+                including without limitation any data that has been (a) copied, stored, or disseminated by other users (including 
+                comments on content); (b) shared or disseminated by you or others (including in your shared content); or (c) posted 
+                to a third-party platform. Even after your account is terminated, we retain your data for as long as we have a legitimate 
+                purpose to do so (and in accordance with applicable law), including to assist with legal obligations, resolve disputes, and 
+                enforce our agreements. We may retain and disclose such data pursuant to this Privacy Policy after your account has been 
+                terminated.
+              </li>
+            </ul>
+          </li>
+          <li>
+            To request to access, correct, or delete your personal data, please use our online form here. You can also submit these requests 
+            by emailing privacy@udemy.com or writing to us at Udemy, Attn: Privacy/Legal Team, 600 Harrison Street, 3rd floor, San Francisco 
+            CA 94107. Please allow up to 30 days for a response. For your protection, we may require that the request be sent through the email 
+            address associated with your account, and we may need to verify your identity before implementing your request. Please note that we 
+            retain certain data where we have a lawful basis to do so, including for mandatory record-keeping and to complete transactions.
+          </li>
+        </ul>
+
+        <b>6.3 Our Policy Concerning Children</b>
+        <p>
+          We recognize the privacy interests of children and encourage parents and guardians to take an active role in their 
+          children’s online activities and interests. Individuals younger than 18 years of age, but of the required age for consent 
+          to use online services where they live (for example, 13 in the US or 16 in Ireland), may not set up an account, but may have 
+          a parent or guardian open an account and help them access appropriate content. Individuals younger than the required age for 
+          consent to use online services may not use the Services. If we learn that we’ve collected personal data from a child under those 
+          ages, we will take reasonable steps to delete it.
+        </p>
+        <div class="text-center">
+          <input type="checkbox" class="mr-1" >I agree with that policy <br>
+          <a href="./index.html" class="btn btn-primary">Comback</a>
+        </div>
+
+
+      </div>
+     
+    </div>
+    
+
+   <!-- FOOTER -->
+   <footer class="container-fluid border bg-dark text-white">
+    <!-- Section 1: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!--/ Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 link-secondary">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <!--/ Right -->
+
+    </section>
+    <!--/ Section 1: Social media -->
+
+
+    <!-- Section 2: Links  -->
+    <section class="d-flex justify-content-center justify-content-lg-around p-2 border-bottom">
+      <div class="container text-center text-md-start mt-3">
+        <!-- Grid row -->
+        <div class="row mt-3">
+
+          <!-- Grid column 1 -->
+          <div class="col-md-4 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="mb-3">
+              <a href="#"><img src="./img/star-classes-4.png" width="200px" alt="logo-name"></a>
+            </h6>
+            <p style="text-align:justify">
+              Whether you want to learn or to share what you know, you have come to the right place. As a global
+              destination for online learning, we connect people through knowledge.
+            </p>
+          </div><!--/ Grid column 1-->
+
+          <!-- Grid column 2-->
+          <div class="col-md-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Star Classes</h6>
+            <p>
+              <a href="#!" class="text-reset">Courses Classes</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Support & Help</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Policy</a>
+            </p>
+            <p>
+              <a href="ShoppingCart.html" class="text-reset">Shopping Cart</a>
+            </p>
+          </div>
+          <!--/ Grid column 2-->
+
+          <!-- Grid column 3-->
+          <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
+            <p>
+              <i class="fas fa-home me-3 text-secondary"></i>
+              590, CMT8, HCM City, VN
+            </p>
+            <p>
+              <i class="fas fa-envelope me-3 text-secondary"></i>
+              <a href="mailto:info@estarclasses.edu.com" class="text-rest text-white">info@starclasses.edu.com</a>
+            </p>
+            <p>
+              <i class="fas fa-phone me-3 text-secondary"></i>
+              + 84 234 567 890
+            </p>
+            <p>
+              <i class="fas fa-print me-3 text-secondary"></i>
+              + 84 234 567 890
+            </p>
+          </div><!--/ Grid column 3-->
+
+          <!-- Grid column 4-->
+          <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
+            <!-- GeoLocation API (GoogleMaps)-->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s"
+              width="300" height="300" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <!--/ Grid column 4-->
+        </div><!-- /Grid row -->
+      </div> <!-- /container -->
+    </section>
+    <!--/Section 2: Links  -->
+
+    <!--Section 3:  Copyright and Time -->
+    <section class="d-flex justify-content-between p-2 border-bottom">
+      <div class="mr-5 d-none d-lg-block pl-2">&copy; 2022 Star Classes</div>
+      <div class="ml-5 d-none d-lg-block">
+        <!-- Display current date, time -->
+        <div class="time" id="time">
+          <script>
+            var time = document.getElementById("time").innerHTML;
+            var today = new Date();
+            time = document.write("Current: " + today);
+          </script>
+        </div>
+        <!--/ Display current date, time -->
+      </div>
+    </section>
+    <!--/Section 3:  Copyright and Time -->
+
+  </footer>
+  <!--/ FOOTER -->
+  </main>
+
+    <!-- Java Script -->
+    <script src="Gallery.js"></script>
+    <script src="cart.js"></script>
+    <script>
+      var app=angular.module("myApp",[])
+        app.controller("myController",function(){         
+        })
+
+      //** Count Visitor ** 
+      function countVisitor() {
+        if (typeof (Storage) !== "undefined") {
+          if (localStorage.countV) {
+            localStorage.countV = Number(localStorage.countV) + 1;
+          } else {
+            localStorage.countV = 1;
+          }
+          document.getElementById("visitor").innerHTML = localStorage.countV;
+        } else {
+          document.getElementById("visitor").innerHTML = 0;
+        }
+      }
+    </script>
+    <!-- Java Script -->
+</body>
+</html>
