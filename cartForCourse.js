@@ -20,11 +20,13 @@ var shoppingCart = (function () {
   // Save cart
   function saveCart() {
     sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+    //localStorage.setItem('shoppingCart', JSON.stringify(cart));
   }
 
   // Load cart
   function loadCart() {
     cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+    //cart = JSON.parse(localStorage.getItem('shoppingCart'));
   }
 
   if (sessionStorage.getItem("shoppingCart") != null) {
@@ -179,7 +181,7 @@ function displayCart() {
               <img class="border" src="./img/imgcourses/${v.img}" alt="img-course" width="100%" height="auto" style="border-radius: 10px">
             </div>
             <div class="col-7 p-2">
-              <a class="text-reset" href="./Courses/${v.detail}" target="new">
+              <a class="text-reset" href="./Courses/${v.detail}">
                 <strong class="title-course">${v.name}</strong> </a> <br>
                 <small class="name-gv">Created by: ${v.teacher}</small>
             </div>
@@ -206,9 +208,9 @@ function displayCart() {
       </div>`;
   });
 
-  $('.show-cart').html(output);
-  $('.total-cart').html("$ " + shoppingCart.totalCart().toPrecision(5));
   $('.total-count').html(shoppingCart.totalCount());
+  $('.total-cart').html("$ " + shoppingCart.totalCart().toPrecision(5));
+  $('.show-cart').html(output);
 }
 
 

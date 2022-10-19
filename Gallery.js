@@ -704,26 +704,8 @@ var data =
   ]
 
 
-// $.getJSON("informationSubject.json", function (items) {
-//   data = items.informationSubject;
-//   displayCourse(data);
-//   displayShopping(data);
-// });
-
-displayCourse(data);
+//displayCourse(data);
 //displayShopping(data);
-
-
-// event search
-$("#formSearch").submit(function (e) {
-  e.preventDefault();
-
-  let search = $("#search").val();
-  let re = new RegExp(search, "ig");
-  let subData = data.filter(item => item.Intro.search(re) >= 0);
-  // window.open("GalleryCourse.html")
-  displayCourse(subData);
-});
 
 // filter data by subject
 function filterSubject(subject) {
@@ -746,16 +728,6 @@ function showIndex() {
   TopFour(sortRating(data), "sort-top-4-by-rating");
 }
 
-function displayBySubject() {
-  showByClass(filterSubject("SubjectPython"), "Python");
-  showByClass(filterSubject("SubjectExcel"), "SubjectExcel");
-  showByClass(filterSubject("SubjectWebDevelopment"), "SubjectWebDevelopment");
-  showByClass(filterSubject("SubjectDataScience"), "SubjectDataScience");
-  showByClass(filterSubject("SubjectJavascript"), "SubjectJavascript");
-  showByClass(filterSubject("SubjectAWSCertification"), "SubjectAWSCertification");
-  showByClass(filterSubject("SubjectDrawing"), "SubjectDrawing");
-
-}
 
 //Sort Qty-Student Ascending
 function sortQtyStudent(array) {
@@ -810,13 +782,59 @@ function sortPriceNewAZ(array) {
   return array;
 }
 
+// Display the courses
+if (sessionStorage.getItem("menuData") == null && sessionStorage.getItem("subData") == null )
+{
+  displayCourse(data);
+}
+
+//Menu-link for the courses;
+var menuData = [];
+$(".menu-sub").click(function (e) {
+  e.preventDefault();
+  sessionStorage.removeItem("searchData");
+  var sub = $(this).data("sub");
+  sessionStorage.setItem("menuData", JSON.stringify(filterSubject(sub)));
+  var linkData = JSON.parse(sessionStorage.getItem("menuData"));
+  displayCourse(linkData);
+  window.open("GalleryCourse.html", "_self");
+  
+});
+
+if (sessionStorage.getItem("menuData") != null){
+  var linkData = JSON.parse(sessionStorage.getItem("menuData"));
+  displayCourse(linkData);
+}
+
+// event search
+var dataSearch = [];
+$("#formSearch").submit(function (e) {
+  e.preventDefault();
+  sessionStorage.removeItem("menuData");
+  
+  let search = $("#search").val();
+  let re = new RegExp(search, "ig");
+  //let subData = data.filter(item => item.Intro.search(re) >= 0);
+  sessionStorage.setItem("searchData", JSON.stringify(data.filter(item => item.Intro.search(re) >= 0)));
+  var dataSearch = JSON.parse(sessionStorage.getItem("searchData"));
+  
+  displayCourse(dataSearch);
+  window.open("GalleryCourse.html", "_self");
+  //displayCourse(subData);  
+});
+
+if (sessionStorage.getItem("searchData") != null){
+  var dataSearch = JSON.parse(sessionStorage.getItem("searchData"));
+  displayCourse(dataSearch); 
+}
+
 // ** Display all courses on Gallery Course List **
 function showByClass(items, className) {
   let sp = ``;
   $.each(items, function (k, v) {
     sp += `
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mx-auto p-3 d-flex flex-column justify-content-around flex-grow-1" style="max-width: 300px">
-        <a class="d-flex flex-column text-reset" href="./Courses/${v.Detail}" target="new">
+        <a class="d-flex flex-column text-reset" href="./Courses/${v.Detail}">
           <div class="col-12 text-center">
             <img src="./img/imgcourses/${v.Img}" width="100%" height="auto" alt="course">
           </div>
@@ -866,7 +884,7 @@ function TopFour(items, className) {
   for (var i = 0; i < 4; i++) {
     sp += `
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mx-auto p-3 d-flex flex-column justify-content-around flex-grow-1" style="max-width: 300px">
-        <a class="d-flex flex-column text-reset" href="./Courses/${items[i].Detail}" target="new">
+        <a class="d-flex flex-column text-reset" href="./Courses/${items[i].Detail}">
           <div class="col-12 text-center">
             <img src="./img/imgcourses/${items[i].Img}" width="100%" height="160px" alt="course">
           </div>
@@ -913,7 +931,9 @@ function TopFour(items, className) {
 
 
 // Filter/Sort Multiple
+
 $("input.chk").click(function () {
+  
   let cats = $(".chk-subject:checked").map(function () { return $(this).val() }).toArray().toString();
   let level = $(".chk-level:checked").map(function () { return $(this).val() }).toArray().toString();
   let stars = $(".chk-star:checked").map(function () { return $(this).val() }).toArray();
@@ -940,7 +960,7 @@ $("input.chk").click(function () {
   }
 
   displayCourse(ratingData);
-
+  
 });
 
 
@@ -949,8 +969,8 @@ function displayCourse(items) {
   let array = ``;
   $.each(items, function (k, v) {
     array += `
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mx-auto p-3 d-flex flex-column justify-content-around flex-grow-1" style="max-width: 300px">
-        <a class="d-flex flex-column text-reset" href="./Courses/${v.Detail}" target="new">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mx-auto mb-3 p-3 px-sm-4 d-flex flex-column justify-content-around flex-grow-1" style="max-width: 300px;">
+        <a class="d-flex flex-column text-reset" href="./Courses/${v.Detail}">
           <div class="col-12 text-center">
             <img src="./img/imgcourses/${v.Img}" width="100%" height="auto" alt="course">
           </div>
@@ -993,5 +1013,6 @@ function displayCourse(items) {
   });
 
   $("#gallery").html(array);
-  //$("#index-c").html(array);
 }
+
+//displayCourse(data);
