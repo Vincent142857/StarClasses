@@ -783,7 +783,7 @@ function sortPriceNewAZ(array) {
 }
 
 // Display the courses
-if (sessionStorage.getItem("menuData") == null && sessionStorage.getItem("subData") == null )
+if (sessionStorage.getItem("menuData") == null && sessionStorage.getItem("subData") == null)
 {
   displayCourse(data);
 }
@@ -931,9 +931,11 @@ function TopFour(items, className) {
 
 
 // Filter/Sort Multiple
-
+var filterData = [];
 $("input.chk").click(function () {
-  
+  sessionStorage.removeItem("menuData");
+  sessionStorage.removeItem("searchData");
+  //sessionStorage.removeItem("filterData");
   let cats = $(".chk-subject:checked").map(function () { return $(this).val() }).toArray().toString();
   let level = $(".chk-level:checked").map(function () { return $(this).val() }).toArray().toString();
   let stars = $(".chk-star:checked").map(function () { return $(this).val() }).toArray();
@@ -958,10 +960,10 @@ $("input.chk").click(function () {
   } else if (sort == "ZtoA") {
     sortPriceNewZA(ratingData);
   }
-
   displayCourse(ratingData);
-  
 });
+
+
 
 
 //** Display on Gallery **
@@ -1015,4 +1017,61 @@ function displayCourse(items) {
   $("#gallery").html(array);
 }
 
-//displayCourse(data);
+// Display the info of teacher 
+
+function filterTeacher(teacher) {
+  var Sub = data.filter(i => i.Teacher == teacher);
+  return Sub;
+}
+
+function displayCourseByTeacher(teacher, className) {
+  var array = filterTeacher(teacher);
+  DisplayInTeacherByClass(array, className);
+}
+
+function DisplayInTeacherByClass(items, className) {
+  let s = ``;
+  $.each(items, function (k, v) {
+    s += `
+        <div class="col-12 p-2">
+        <a class="d-md-flex justify-content-end border-bottom text-reset" href="../Courses/${v.Detail}">
+          <!-- col-1 -->
+          <div class="img-course col-12 col-sm-6 col-md-auto p-2">
+            <img src="../img/imgcourses/${v.Img}" alt="">
+          </div>
+          <!-- col 2 -->
+          <div class="content col-12 col-sm-6 p-2">
+            <h4 class="title-course">${v.NameCourse}</h4>
+            <p class="name-intro">${v.Intro}</p>
+            <p class="name-gv"><b>${v.Teacher}</b></p>
+          </div>
+          <!-- col 3 -->
+          <div class="text-left col-4 col-sm-1 p-2">
+            <span class="d-block">
+              ${v.Rating} <i class="fa fa-star text-warning"></i>
+            </span>
+          </div>
+          <!-- col 4 -->
+          <div class="col-4 col-sm-1 text-primary pt-2">
+            <span class="d-block">
+              <i class="fas fa-user-graduate"></i> ${v.QtyStudent}
+            </span>
+          </div>
+          <!-- col 5 -->
+          <div class="text-right col-4 col-sm-1 p-2">
+            <b class="text-success">${v.PriceNew}</b>
+            <small class="text-danger">
+              <del>${v.PriceOld}</del>
+            </small>
+          </div>
+        </a>
+      </div>
+      `;
+  });
+  $("."+className).html(s);
+}
+
+
+
+
+

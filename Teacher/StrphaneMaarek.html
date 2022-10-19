@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- icon website -->
-  <link rel="icon" href="./img/star-classes-icon.png" type="image/x-icon">
+  <link rel="icon" href="../img/star-classes-icon.png" type="image/x-icon">
   <title>Star Classes</title>
 
   <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
@@ -25,7 +25,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="./MDB5/js/mdb.min.js"></script>
+  <script type="text/javascript" src="../MDB5/js/mdb.min.js"></script>
 
   <!-- jquery - JavaScript library for DOM operations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -34,132 +34,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
   <style>
- * {
+    * {
       padding: 0;
       margin: 0;
     }
-
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-
-    /* GLOBAL STYLES
-    --------------------------------------------- */
-    /* Padding below the footer and lighter body text */
 
     body {
       padding-top: 3rem;
       color: #5a5a5a;
     }
 
-    /* CUSTOMIZE THE CAROUSEL
-    -------------------------------------------- */
-
-    /* Carousel base class */
-    .carousel {
-      margin-bottom: 4rem;
-    }
-
-    /* Since positioning the image, we need to help out the caption */
-    .carousel-caption {
-      bottom: 3rem;
-      z-index: 10;
-    }
-
-    /* Declare heights because of positioning of img element */
-    .carousel-item {
-      height: 32rem;
-    }
-
-    .carousel-item>img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      height: 32rem;
-    }
-
-
-    /* MARKETING CONTENT
--------------------------------------------------- */
-
-    /* Center align the text within the three columns below the carousel */
-    .marketing .col-lg-4 {
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    .marketing h2 {
-      font-weight: 400;
-    }
-
-    .marketing .col-lg-4 p {
-      margin-right: .75rem;
-      margin-left: .75rem;
-    }
-
-    /* Featurettes
-------------------------- */
-    .featurette-divider {
-      margin: 5rem 0;
-      /* Space out the Bootstrap <hr> more */
-    }
-
-    /* Thin out the marketing headings */
-    .featurette-heading {
-      font-weight: 300;
-      line-height: 1;
-      letter-spacing: -.05rem;
-    }
-
-    /* RESPONSIVE CSS
--------------------------------------------------- */
-
-    @media (min-width: 40em) {
-
-      /* Bump up size of carousel content */
-      .carousel-caption p {
-        margin-bottom: 1.25rem;
-        font-size: 1.25rem;
-        line-height: 1.4;
-      }
-
-      .featurette-heading {
-        font-size: 50px;
-      }
-    }
-
-    @media (min-width: 62em) {
-      .featurette-heading {
-        margin-top: 7rem;
-      }
-    }
-
     .nav-link:hover,
-    .dropdown-item:hover {
+    .list-group-item:hover {
       color: #E4A11B !important;
-      font-weight: bold;
       cursor: pointer !important;
-    }
-
-    .dropdown-hover:hover>.dropdown-menu {
-      display: inline-block;
-    }
-
-    .dropdown-hover>.dropdown-toggle:active {
-      /*Without this, clicking will make it sticky*/
-      pointer-events: none;
     }
 
     .badge-notification {
@@ -215,90 +103,149 @@
       text-align: center;
       color:white;
     }
+    form{
+      margin: 0 auto;
+    }
+
   </style>
 
 
   <!-- Custom styles for this template -->
   <link href="../MDB5/css/mdb.min.css" rel="stylesheet">
 </head>
-<style>
-  form{
-    margin: 0 auto;
-  }
-</style>
+
 <body ng-app="myApp" >
   <!-- Menu top -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
+
         <a class="navbar-brand pl-sm-3" href="../index.html">
           <img src="../img/star-classes-4.png" style="width:150px;">
         </a>
-        
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <!-- menu left -->
-          <ul class="navbar-nav mr-auto mb-2 m-md-0 col-12 col-sm-2">
-            <li class="nav-item dropdown col-12 border border-warning rounded-pill text-center">
-              <a class="nav-link dropdown-toggle" href="GalleryCourse.html" id="DropdownMenu" role="tab" data-toggle="dropdown" aria-expanded="false">
-                <img src="../img/tutorialCut.png" style="width: 20px;"> Courses
-              </a>
-              <!-- Menu H2 -->
-              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="DropdownMenu">
-                <li><a href="#" class="dropdown-item px-5">Javascript</a></li>
-                <li><a href="#" class="dropdown-item px-5">CSS</a></li>
-                <li><a href="#" class="dropdown-item px-5">Bootstrap</a></li>
-                <li><a href="#" class="dropdown-item px-5">Excel</a></li>
-                <li><a href="#" class="dropdown-item px-5">Python</a></li>
-                <li><a href="#" class="dropdown-item px-5">C/C++</a></li>
-              </ul>
-              <!-- Menu H2 -->
-            </li>
+          <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
 
+            <!-- Navbar dropdown -->
+            <li class="nav-item dropdown position-static text-center">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                data-mdb-toggle="dropdown" aria-expanded="false">
+                <img src="../img/tutorialCut.png" style="width: 20px;"> Categories
+              </a>
+              <!-- Dropdown menu -->
+              <div class="dropdown-menu col-12 col-sm-4 mt-0" aria-labelledby="navbarDropdown" style="
+                              border-top-left-radius: 0;
+                              border-top-right-radius: 0;
+                            ">
+                <div class="container">
+                  <div class="row my-4">
+
+                    <div class="col-6 mb-3 mb-lg-0">
+                      <div class="list-group list-group-flush">
+                      
+                        <a href="../GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
+                          Topic
+                        </a>
+                        
+                        <a href="../GalleryCourse.html" data-sub="SubjectPython" class="list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Python</a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectExcel" class="list-group-item list-group-item-action">
+                          <i
+                            class="fas fa-caret-right pe-2"></i>Excel
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectWebDevelopment" class="list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Web Development
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectJavascript"
+                        class="list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Javascript
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectDataScience" class="list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Data Science
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectAWSCertification" class="list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>AWS Certification
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectDrawing" class="list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Drawing
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-6 mb-3 mb-lg-0">
+                      <div class="list-group list-group-flush">
+                        <p class="mb-0 list-group-item text-uppercase font-weight-bold">
+                          Quickly Link
+                        </p>
+                        <a href="../index.html#Featured-course" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Featured course
+                        </a>
+                        <a href="../index.html#Students-are-viewing" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Students are viewing
+                        </a>
+                        <a href="../index.html#teacher" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Lecturers of Star Class
+                        </a>
+                      </div>
+                    </div>
+                    
+
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Navbar dropdown -->
           </ul>
-          
 
           <!-- menu search -->
-          <form class="d-flex input-group mx-sm-3 mb-2">
-            <input class="form-control" type="search" placeholder="Search..." aria-label="Search">
-            <button class="btn bg-light" type="submit">
-              <!-- <b style="font-size: 20px;">&#x1F50D;</b> -->
+          <form class="d-flex input-group mx-sm-3 mb-2" id="formSearch">
+            <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
+              id="search" ng-model="search">
+            <button class="btn bg-warning" type="submit">
               <i class="fas fa-search"></i>
             </button>
           </form>
           <!-- menu right -->
           <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
-            <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link border border-warning rounded-pill text-center" href="aboutus.html">About us</a>
+            <li class="nav-item col-12 col-sm-2 ml-auto">
+              <a class="nav-link text-center active" href="../aboutus.html">About us</a>
             </li>
             <!-- shopping & payment -->
             <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link active text-sm-center p-2" aria-current="page" href="ShoppingCart.html">
+              <a class="nav-link active text-center p-2" aria-current="page" href="../ShoppingCart.html">
                 <span><i class="fa fa-shopping-cart fa-lg"></i></span>
-                <span class="badge rounded-pill badge-notification bg-danger">2</span>
+                <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
               </a>
             </li>
-
-            <!-- Sign in - dang nhap-->
-            <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link" href="SignIn.html">Sign in</a>
-
+            <!-- Sign in-->
+            <li class="nav-item text-center col-12 col-sm-2 mx-1">
+              <a class="nav-link text-center active" href="../SignIn.html">
+                <i class="fas fa-sign-in-alt"></i>
+                Sign in
+              </a>
             </li>
-
-            <!-- Sign up - dang ky -->
-            <li class="nav-item col-12 col-sm-2">
-              <a class="nav-link" href="SignUp.html">Sign up</a>
-            </li>
-
+            <!-- Sign up -->
+            <!-- <li class="nav-item text-center col-12 col-sm-2">
+              <a class="nav-link text-center active" href="SignUp.html">Sign up</a>
+            </li> -->
             <!-- Visitor -->
-            <li class="nav-item col-sm-4">
-              <div class="navbar-text text-light">
+            <li class="nav-item col-12 col-sm-4">
+              <div class="navbar-text text-light text-center">
                 <img src="../img/star-classes-icon.png" width="35px" alt="icon">
                 Visitor: <i class="fas fa-users"></i>
-                <span class="badge rounded-pill bg-danger">111</span>
+                <span class="badge rounded-pill badge-notification bg-danger">
+                  <div id="visitor"></div>
+                </span>
               </div>
             </li>
             <!-- Visitor -->
@@ -308,7 +255,7 @@
       </div>
     </nav>
   </header>
-  <!-- Menu top -->
+  <!--/ Menu top -->
   <main class="d-flex flex-column mt-4 ">
     <div class="container row mx-auto">
       <div class="TeacherLeft col-9">
@@ -363,7 +310,7 @@
 <hr>
        <div  ng-controller="myController" class="Hover">
         <h1>My courses  </h1>
-        <div ng-repeat="x in list|filter : 'Stephane Maarek' ">
+        <div class="Stephane-Maarek">
           <div class="col-12 p-2">
             <a class="d-md-flex justify-content-end border-bottom text-reset" href="../Courses/{{x.Detail}}"
               target="new">
@@ -405,149 +352,179 @@
       </div>
       <div class="TeacherRight col-3">
         <img src="../img/StephaneMaarek.jpg" alt=""><br>
-        <a class="text-reset" href="https://courses.datacumulus.com/"><button class="btn btn-secondary"><i class="fas fa-link"></i><b> Website</b></button></a><br>
-        <a class="text-reset" href="https://twitter.com/stephanemaarek"><button class="btn btn-secondary"><i class="fab fa-twitter"></i><b> Twitter</b></button></a><br>
-        <a class="text-reset" href="https://www.instagram.com/stephanemaarek/"><button class="btn btn-secondary"><i class="fab fa-facebook"></i><b> Facebook</b></button></a><br>
-        <a class="text-reset" href="https://www.linkedin.com/in/stephanemaarek"><button class="btn btn-secondary"><i class="fab fa-linkedin"></i></i><b> Linkedin</b></button></a><br>
-        <a class="text-reset" href="https://www.youtube.com/channel/UCGWZY-0pONnKmF98dhZy9CQ"><button class="btn btn-secondary"><i class="fab fa-youtube"></i><b> Youtube</b></a></button>
+        <a class="text-reset" href="https://courses.datacumulus.com/">
+          <button class="btn btn-secondary">
+            <i class="fas fa-link"></i><b> Website</b>
+          </button>
+        </a><br>
+        <a class="text-reset" href="https://twitter.com/stephanemaarek">
+          <button class="btn btn-secondary">
+            <i class="fab fa-twitter"></i><b> Twitter</b>
+          </button>
+        </a><br>
+        <a class="text-reset" href="https://www.instagram.com/stephanemaarek/">
+          <button class="btn btn-secondary">
+            <i class="fab fa-facebook"></i><b> Facebook</b>
+          </button>
+        </a><br>
+        <a class="text-reset" href="https://www.linkedin.com/in/stephanemaarek">
+          <button class="btn btn-secondary">
+            <i class="fab fa-linkedin"></i><b> Linkedin</b>
+          </button>
+        </a><br>
+        <a class="text-reset" href="https://www.youtube.com/channel/UCGWZY-0pONnKmF98dhZy9CQ">
+          <button class="btn btn-secondary">
+            <i class="fab fa-youtube"></i><b> Youtube</b>
+          </button>
+        </a>
       </div>
     </div>  
 
 
     <!-- FOOTER -->
-    <footer class="border bg-dark text-white">
-      <!-- Section: Social media -->
+    <footer class="container-fluid border bg-dark text-white">
+      <!-- Section 1: Social media -->
       <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
         <!-- Left -->
         <div class="me-5 d-none d-lg-block">
           <span>Get connected with us on social networks:</span>
         </div>
-        <!-- Left -->
-
+        <!--/ Left -->
         <!-- Right -->
         <div>
-          <a href="" class="me-4 link-secondary">
-            <i class="fab fa-facebook-f"></i>
+          <a href="" class="me-4 link-primary">
+            <i class="fab fa-facebook"></i>
           </a>
-          <a href="" class="me-4 link-secondary">
+          <a href="" class="me-4 link-primary">
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="" class="me-4 link-secondary">
+          <a href="" class="me-4 link-warning">
             <i class="fab fa-google"></i>
           </a>
-          <a href="" class="me-4 link-secondary">
+          <a href="" class="me-4 link-danger">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="" class="me-4 link-secondary">
+          <a href="" class="me-4 link-primary">
             <i class="fab fa-linkedin"></i>
           </a>
         </div>
-        <!-- Right -->
+        <!--/ Right -->
       </section>
-      <!-- Section: Social media -->
+      <!--/ Section 1: Social media -->
 
-      <!-- Section: Links  -->
-      <section class="d-flex justify-content-center justify-content-lg-between p-2 border-bottom">
+      <!-- Section 2: Links  -->
+      <section class="d-flex justify-content-center justify-content-lg-around p-2 border-bottom">
         <div class="container text-center text-md-start mt-3">
           <!-- Grid row -->
           <div class="row mt-3">
-
-            <!-- Grid column -->
-            <div class="col-md-3 mx-auto mb-4">
+            <!-- Grid column 1 -->
+            <div class="col-md-4 mx-auto mb-4">
               <!-- Content -->
-              <h6 class="mb-3">
-                <a href="#"><img src="../img/star-classes-4.png" width="200px" alt="logo-name"></a>
-              </h6>
-              <p style="text-align:justify">
+              <p class="mx-auto px-3">
+                <a href="../index.html"><img src="../img/star-classes-4.png" width="200px" alt="logo-name"></a>
+              </p>
+              <p style="text-align:justify" class="px-3">
                 Whether you want to learn or to share what you know, you have come to the right place. As a global
                 destination for online learning, we connect people through knowledge.
               </p>
             </div>
-            <!-- Grid column -->
+            <!--/ Grid column 1-->
 
-            <!-- Grid column -->
+            <!-- Grid column 2-->
             <div class="col-md-2 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Star Classes</h6>
+              <h6 class="text-uppercase fw-bold mb-4">
+                <a href="index.html" class="text-reset">Star Classes</a>
+              </h6>
               <p>
-                <a href="#!" class="text-reset">Courses Classes</a>
+                <a href="GalleryCourse.html" class="text-reset">
+                  <i class="fas fa-caret-right me-2"></i>
+                  Courses Classes
+                </a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Featured topics</a>
+                <a href="#!" class="text-reset">
+                  <i class="fas fa-caret-right me-2"></i>
+                  Support & Help
+                </a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Sitemap</a>
+                <a href="Policy.html" class="text-reset">
+                  <i class="fas fa-caret-right me-2"></i>
+                  Policy
+                </a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Support</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Policy</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Payment</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Help</a>
+                <a href="ShoppingCart.html" class="text-reset">
+                  <i class="fas fa-caret-right me-2"></i>
+                  Shopping Cart
+                </a>
               </p>
             </div>
-            <!-- Grid column -->
+            <!--/ Grid column 2-->
 
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-3 mx-auto mb-md-0 mb-4">
+            <!-- Grid column 3-->
+            <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
               <p>
-                <i class="fas fa-home me-3 text-secondary"></i>
-                590, CMT8, HCM City, VN
+                <i class="fas fa-home me-3"></i>
+                <a href="https://www.google.com/maps?ll=10.786377,106.666297&z=16&t=m&hl=vi&gl=US&mapclient=embed&q=590+%C4%90.+C%C3%A1ch+M%E1%BA%A1ng+Th%C3%A1ng+8+Ph%C6%B0%E1%BB%9Dng+11+Qu%E1%BA%ADn+3+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh"
+                  target="new" class="text-reset">590, CMT8 Street, HCM City, VN</a>
               </p>
               <p>
-                <i class="fas fa-envelope me-3 text-secondary"></i>
+                <i class="fas fa-envelope me-3"></i>
                 <a href="mailto:info@estarclasses.edu.com" class="text-rest text-white">info@starclasses.edu.com</a>
               </p>
               <p>
-                <i class="fas fa-phone me-3 text-secondary"></i>
-                 + 84 234 567 890
-                </p>
+                <i class="fas fa-phone me-3"></i>
+                + 84 234 567 890
+              </p>
               <p>
-                <i class="fas fa-print me-3 text-secondary"></i>
-                 + 84 234 567 890
+                <i class="fas fa-print me-3"></i>
+                + 84 234 567 890
               </p>
             </div>
-            <!-- Grid column -->
+            <!--/ Grid column 3-->
 
-            <!-- Grid column -->
+            <!-- Grid column 4-->
             <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
               <!-- GeoLocation API (GoogleMaps)-->
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s" width="300" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s"
+                width="300" height="300" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <!-- Grid column -->
-          </div>
-          <!-- Grid row -->
-        </div>
+            <!--/ Grid column 4-->
+          </div><!-- /Grid row -->
+        </div> <!-- /container -->
       </section>
-      <!-- Section: Links  -->
+      <!--/Section 2: Links  -->
 
-      <!-- Copyright and Time -->
+      <!--Section 3:  Copyright and Time -->
       <section class="d-flex justify-content-between p-2 border-bottom">
-        <div class="me-5 d-none d-lg-block pl-2">&copy; 2022 Star Classes</div>
-        <div class="ms-5 d-none d-lg-block">
+        <div class="mr-5 d-none d-lg-block pl-2">&copy; 2022 Star Classes</div>
+        <div class="ml-5 d-none d-lg-block">
           <!-- Display current date, time -->
           <div class="time" id="time">
             <script>
               var time = document.getElementById("time").innerHTML;
               var today = new Date();
-              time = document.write("Current: " + today);
+              time = document.write("Now: " + today);
             </script>
           </div>
-          <!-- Display current date, time -->
+          <!--/ Display current date, time -->
         </div>
       </section>
-      <!-- Copyright and Time -->
+      <!--/Section 3:  Copyright and Time -->
+
     </footer>
+    <!--/ FOOTER -->
   </main>
 
     <!-- Java Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../Gallery.js"></script>
    <script>
      var app = angular.module("myApp",[])
       app.controller("myController", function ($rootScope, $http, $location) {
@@ -555,6 +532,9 @@
           $rootScope.list = response.data.informationSubject;
       });
     });
+
+    displayCourseByTeacher('Stephane Maarek', 'Stephane-Maarek');
+
    </script>
     <!-- Java Script -->
 </body>
