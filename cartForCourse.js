@@ -197,7 +197,7 @@ function displayCart() {
             <div class="col-7 mx-1">
               <div class="input-group">
                 <label class="my-auto mx-2">Qty:</label>
-                <input type='number' class='col-1 text-center item-count form-control' min="1"
+                <input type="number" class="col-1 text-center item-count form-control" min="1"
                  data-name="${v.name}" 
                  data-id="${v.id}" 
                  value="${v.count}">
@@ -208,9 +208,9 @@ function displayCart() {
       </div>`;
   });
 
-  $('.total-count').html(shoppingCart.totalCount());
-  $('.total-cart').html("$ " + shoppingCart.totalCart().toPrecision(5));
   $('.show-cart').html(output);
+  $('.total-cart').html("$ " + shoppingCart.totalCart().toPrecision(5));
+  $('.total-count').html(shoppingCart.totalCount());
 }
 
 
@@ -220,6 +220,7 @@ $('.show-cart').on("click", ".delete-item", function (event) {
   shoppingCart.removeItemFromCartAll(id);
   displayCart();
 })
+
 
 // Item count input
 $('.show-cart').on("change", ".item-count", function (event) {
