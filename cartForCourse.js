@@ -86,9 +86,8 @@ var shoppingCart = (function () {
 
   // Clear cart
   obj.clearCart = function () {
-    // cart = [];
-    // saveCart();
-    sessionStorage.removeItem("shoppingCart");
+    cart = [];
+    saveCart();
   }
 
   // Count cart 
@@ -174,8 +173,8 @@ function displayCart() {
       <div class="col-12 m-1 p-1 border">
         <div class="d-md-flex flex-column flex-md-row p-1">
           <div class="d-flex flex-row flex-grow-1 col-12 col-sm-8 mx-2">
-            <div class="col-1 py-5">
-              <i class="delete-item far fa-trash-alt" data-id="${v.id}"></i>
+            <div class="Exit col-1">
+              <input class="delete-item my-5" data-id="${v.id}" type="checkbox" checked>
             </div>
             <div class="img-course col-4">
               <img class="border" src="./img/imgcourses/${v.img}" alt="img-course" width="100%" height="auto" style="border-radius: 10px">
@@ -208,11 +207,10 @@ function displayCart() {
       </div>`;
   });
 
-  if (output.length != 0) {
-    $('.show-cart').html(output);
-    $('.total-cart').html("$ " + shoppingCart.totalCart().toLocaleString('en-US'));
-    $('.total-count').html(shoppingCart.totalCount());
-  }
+  $('.show-cart').html(output);
+  $('.total-cart').html("$ " + shoppingCart.totalCart().toLocaleString('en-US'));
+  $('.total-count').html(shoppingCart.totalCount());
+
 }
 
 
