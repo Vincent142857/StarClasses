@@ -705,7 +705,14 @@ var data =
 
 
 //displayCourse(data);
-//displayShopping(data);
+
+// Display the courses
+if (sessionStorage.getItem("menuData") == null &&
+  sessionStorage.getItem("subData") == null &&
+  sessionStorage.getItem("filterData") == null
+) {
+  displayCourse(data);
+}
 
 // filter data by subject
 function filterSubject(subject) {
@@ -713,9 +720,29 @@ function filterSubject(subject) {
   return Sub;
 }
 
+//function Dynamic sorting
+function compare(key, order = 'asc') {
+  return function (a, b) {
+
+    if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) return 0;
+
+    const varA = (typeof a[key] === 'string') ? a[key].toUpperCase() : a[key];
+    const varB = (typeof b[key] === 'string') ? b[key].toUpperCase() : b[key];
+    let comparison = 0;
+    if (varA > varB) {
+      comparison = 1;
+    } else {
+      comparison = -1;
+    }
+    return (
+      (order == 'desc') ? (comparison * -1) : comparison
+    );
+  };
+}
+
 // show 4 course in index page
 function showIndex() {
-    
+
   TopFour(filterSubject("SubjectPython"), "SubjectPython");
   TopFour(filterSubject("SubjectExcel"), "SubjectExcel");
   TopFour(filterSubject("SubjectWebDevelopment"), "SubjectWebDevelopment");
@@ -723,109 +750,102 @@ function showIndex() {
   TopFour(filterSubject("SubjectJavascript"), "SubjectJavascript");
   TopFour(filterSubject("SubjectAWSCertification"), "SubjectAWSCertification");
   TopFour(filterSubject("SubjectDrawing"), "SubjectDrawing");
+
+  let sortByQtyStudent = data;
+  let sortByRating = data;
+
+  TopFour(sortByQtyStudent.sort(compare("QtyStudent", "desc")), "sort-top-4-by-student");
+  TopFour(sortByRating.sort(compare("Rating", "desc")), "sort-top-4-by-rating");
+}
+
+
+// Filter/Sort Multiple
+
+$(".filter").click(function () {
+  sessionStorage.removeItem("menuData");
+  sessionStorage.removeItem("searchData");
+  sessionStorage.removeItem("filterData");
+
+  //** subject **//
+  let cats = $(".chk-subject:checked").map(function () { return $(this).val() }).toArray().toString();
+  var subjectData = (cats.length == 0) ? data : data.filter(item => cats.search(item.Subject) >= 0);
+
+  //** level **//
+  let level = $(".chk-level:checked").map(function () { return $(this).val() }).toArray().toString();
+  var levelData = (level.length == 0) ? subjectData : subjectData.filter(item => level.search(item.Level) >= 0);
+
+  //** rating star **//
+  let stars = $(".chk-star:checked").map(function () { return $(this).val() }).toArray();
+  var ratingData = (stars.length == 0) ? levelData : levelData.filter(item => item.Rating >= stars[0]);
+
   
-  TopFour(sortQtyStudent(data), "sort-top-4-by-student");
-  TopFour(sortRating(data), "sort-top-4-by-rating");
+
+  //** sort ** *//
+  let key = $(".chk-sort:checked").map(function () { return $(this).data("sort") }).toArray().toString();
+  let order = $(".chk-sort:checked").map(function () { return $(this).val() }).toArray().toString();
+  var sortData = (order.length == 0) ? ratingData : ratingData.sort(compare(key, order));
+
+  sessionStorage.setItem("filterData", JSON.stringify(sortData));
+  var filter = JSON.parse(sessionStorage.getItem("filterData"));
+
+  // displayCourse(sortData);
+  // console.log(ratingData);
+  displayCourse(filter);
+  window.open("GalleryCourse.html", "_self");
+});
+
+if (sessionStorage.getItem("filterData") != null) {
+  var filter = JSON.parse(sessionStorage.getItem("filterData"));
+  displayCourse(filter);
 }
 
-
-//Sort Qty-Student Ascending
-function sortQtyStudent(array) {
-  for (var i = 0; i + 1 < array.length; i++) {
-    for (var j = i + 1; j < array.length; j++) {
-      if (array[i].QtyStudent <= array[j].QtyStudent) {
-        let tmp = array[i];
-        array[i] = array[j];
-        array[j] = tmp;
-      }
-    }
-  }
-  return array;
-}
-//Sort raring Ascending
-function sortRating(array) {
-  for (var i = 0; i + 1 < array.length; i++) {
-    for (var j = i + 1; j < array.length; j++) {
-      if (array[i].Rating <= array[j].Rating) {
-        let tmp = array[i];
-        array[i] = array[j];
-        array[j] = tmp;
-      }
-    }
-  }
-  return array;
-}
-//Sort price Ascending
-function sortPriceNewZA(array) {
-  for (var i = 0; i + 1 < array.length; i++) {
-    for (var j = i + 1; j < array.length; j++) {
-      if (array[i].PriceNew <= array[j].PriceNew) {
-        let tmp = array[i];
-        array[i] = array[j];
-        array[j] = tmp;
-      }
-    }
-  }
-  return array;
-}
-//Sort price Decrease
-function sortPriceNewAZ(array) {
-  for (var i = 0; i + 1 < array.length; i++) {
-    for (var j = i + 1; j < array.length; j++) {
-      if (array[i].PriceNew >= array[j].PriceNew) {
-        let tmp = array[i];
-        array[i] = array[j];
-        array[j] = tmp;
-      }
-    }
-  }
-  return array;
-}
-
-// Display the courses
-if (sessionStorage.getItem("menuData") == null && sessionStorage.getItem("subData") == null)
-{
-  displayCourse(data);
-}
 
 //Menu-link for the courses;
-var menuData = [];
 $(".menu-sub").click(function (e) {
   e.preventDefault();
   sessionStorage.removeItem("searchData");
   var sub = $(this).data("sub");
   sessionStorage.setItem("menuData", JSON.stringify(filterSubject(sub)));
   var linkData = JSON.parse(sessionStorage.getItem("menuData"));
+
+  if (window.open("GalleryCourse.html", "_self")) {
+    window.open("/GalleryCourse.html", "_self");
+  } else {
+    window.open("GalleryCourse.html", "_self");
+  }
   displayCourse(linkData);
-  window.open("GalleryCourse.html", "_self");
-  
 });
 
-if (sessionStorage.getItem("menuData") != null){
+if (sessionStorage.getItem("menuData") != null) {
   var linkData = JSON.parse(sessionStorage.getItem("menuData"));
   displayCourse(linkData);
 }
 
+
 // event search
-var dataSearch = [];
 $("#formSearch").submit(function (e) {
   e.preventDefault();
   sessionStorage.removeItem("menuData");
-  
+
   let search = $("#search").val();
   let re = new RegExp(search, "ig");
   //let subData = data.filter(item => item.Intro.search(re) >= 0);
   sessionStorage.setItem("searchData", JSON.stringify(data.filter(item => item.Intro.search(re) >= 0)));
   var dataSearch = JSON.parse(sessionStorage.getItem("searchData"));
-  
-  window.open("GalleryCourse.html", "_self");
+
+  if (window.open("GalleryCourse.html", "_self")) {
+    window.open("/GalleryCourse.html", "_self");
+  } else {
+    window.open("GalleryCourse.html", "_self");
+  }
+
   displayCourse(dataSearch);
   //displayCourse(subData);  
 });
 
-if (sessionStorage.getItem("searchData") != null){
+if (sessionStorage.getItem("searchData") != null) {
   var dataSearch = JSON.parse(sessionStorage.getItem("searchData"));
-  displayCourse(dataSearch); 
+  displayCourse(dataSearch);
 }
 
 
@@ -837,7 +857,7 @@ function TopFour(items, className) {
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mx-auto p-0 d-flex flex-column justify-content-around flex-grow-1" style="max-width: 250px; box-shadow: -2px -2px 10px rgb(177, 175, 175); border-radius: 15px;">
         <a class="d-flex flex-column text-reset" href="./Courses/${items[i].Detail}">
           <div class="col-12 bg-image hover-zoom ripple ripple-surface">
-            <img src="./img/imgcourses/${items[i].Img}" width="100%" height="160px" alt="course" 
+            <img src="./img/imgcourses/${items[i].Img}" width="100%" height="160px" alt="course"
             style="border-top-left-radius: 15px;
             border-top-right-radius: 15px;">
           </div>
@@ -852,7 +872,7 @@ function TopFour(items, className) {
               </div>
               <div class="d-flex">
                 <small class="text-left mr-auto">
-                  <i class="fas fa-user-graduate"></i> ${items[i].QtyStudent}
+                  <i class="fas fa-user-graduate"></i> ${items[i].QtyStudent.toLocaleString('en-US')}
                 </small>
                 <span class="ml-auto">
                   <strong class="text-success">$${items[i].PriceNew}</strong>
@@ -864,7 +884,7 @@ function TopFour(items, className) {
             </div>
           </div>
         </a>
-        <a href="#" 
+        <div href="#" 
           data-id="${items[i].ID}" 
           data-img="${items[i].Img}" 
           data-name="${items[i].NameCourse}" 
@@ -873,10 +893,8 @@ function TopFour(items, className) {
           data-price-old="${items[i].PriceOld}" 
           data-detail="${items[i].Detail}"
           class="add-to-cart btn btn-success col-12 mt-auto"
-          style="border-bottom-left-radius: 15px;
-          border-bottom-right-radius: 15px;">
-          Add to cart
-        </a>
+          style="border-radius: 0 0 15px 15px;">Add to cart
+        </div>
       </div>
       <div class="w-100 d-sm-none"></div>
     `;
@@ -884,49 +902,12 @@ function TopFour(items, className) {
   $("." + className).html(sp);
 }
 
-
-// Filter/Sort Multiple
-var filterData = [];
-$("input.chk").click(function () {
-  sessionStorage.removeItem("menuData");
-  sessionStorage.removeItem("searchData");
-  //sessionStorage.removeItem("filterData");
-  let cats = $(".chk-subject:checked").map(function () { return $(this).val() }).toArray().toString();
-  let level = $(".chk-level:checked").map(function () { return $(this).val() }).toArray().toString();
-  let stars = $(".chk-star:checked").map(function () { return $(this).val() }).toArray();
-  let sort = $(".chk-sort:checked").map(function () { return $(this).val() }).toArray().toString();
-
-  subData = (cats.length == 0) ? data : data.filter(item => cats.search(item.Subject) >= 0);
-  levelData = (level.length == 0) ? subData : subData.filter(item => level.search(item.Level) >= 0);
-  let ratingData = [];
-
-  if (stars.length == 0) {
-    ratingData = levelData;
-  } else {
-    for (let i = 0; i < levelData.length; i++) {
-      if (levelData[i].Rating >= stars[0]) {
-        ratingData.push(levelData[i]);
-      }
-    }
-  }
-  //** sort ** *//
-  if (sort == "AtoZ") {
-    sortPriceNewAZ(ratingData);
-  } else if (sort == "ZtoA") {
-    sortPriceNewZA(ratingData);
-  }
-  
-  displayCourse(ratingData);
-});
-
-
-
 //** Display on Gallery **
 function displayCourse(items) {
   let array = ``;
   $.each(items, function (k, v) {
     array += `
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mx-auto mb-5 p-0 d-flex flex-column justify-content-around flex-grow-1" style="max-width: 250px; box-shadow: -2px -2px 10px rgb(177, 175, 175); border-radius: 15px;">
+      <div class="col-12 col-sm-6 col-md-5 col-lg-3 mx-auto ml-md-4 mb-5 p-0 d-flex flex-column justify-content-around flex-grow-1" style="max-width: 250px; box-shadow: -2px -2px 10px rgb(177, 175, 175); border-radius: 15px;">
         <a class="d-flex flex-column text-reset" href="./Courses/${v.Detail}">
           <div class="col-12 bg-image hover-zoom ripple ripple-surface">
             <img src="./img/imgcourses/${v.Img}" width="100%" height="auto" alt="course">
@@ -942,7 +923,7 @@ function displayCourse(items) {
               </div>
               <div class="d-flex">
                 <small class="text-left mr-auto">
-                  <i class="fas fa-user-graduate"></i>${v.QtyStudent}
+                  <i class="fas fa-user-graduate"></i>${v.QtyStudent.toLocaleString('en-US')}
                 </small>
                 <span class="ml-auto">
                   <strong class="text-success">$${v.PriceNew}</strong>
@@ -962,7 +943,8 @@ function displayCourse(items) {
         data-price-new="${v.PriceNew}" 
         data-price-old="${v.PriceOld}" 
         data-detail="${v.Detail}" 
-        class="add-to-cart btn btn-success col-12 mt-auto">Add to cart
+        class="add-to-cart btn btn-success col-12 mt-auto"
+        style="border-radius: 0 0 15px 15px;">Add to cart
         </a>
       </div>
       <div class="w-100 d-sm-none"></div>
@@ -1023,8 +1005,9 @@ function DisplayInTeacherByClass(items, className) {
       </div>
       `;
   });
-  $("."+className).html(s);
+  $("." + className).html(s);
 }
+
 
 
 

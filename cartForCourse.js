@@ -20,13 +20,13 @@ var shoppingCart = (function () {
   // Save cart
   function saveCart() {
     sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
-    //localStorage.setItem('shoppingCart', JSON.stringify(cart));
+    // localStorage.setItem('shoppingCart', JSON.stringify(cart));
   }
 
   // Load cart
   function loadCart() {
     cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
-    //cart = JSON.parse(localStorage.getItem('shoppingCart'));
+    // cart = JSON.parse(localStorage.getItem('shoppingCart'));
   }
 
   if (sessionStorage.getItem("shoppingCart") != null) {
@@ -86,8 +86,9 @@ var shoppingCart = (function () {
 
   // Clear cart
   obj.clearCart = function () {
-    cart = [];
-    saveCart();
+    // cart = [];
+    // saveCart();
+    sessionStorage.removeItem("shoppingCart");
   }
 
   // Count cart 
@@ -172,10 +173,9 @@ function displayCart() {
     output += `
       <div class="col-12 m-1 p-1 border">
         <div class="d-md-flex flex-column flex-md-row p-1">
-
           <div class="d-flex flex-row flex-grow-1 col-12 col-sm-8 mx-2">
-            <div class="Exit col-1">
-              <input class="delete-item my-5" data-name="${v.name}" type="checkbox" checked>
+            <div class="col-1">
+              <i class="delete-item far fa-trash-alt" data-id="${v.id}"></i>
             </div>
             <div class="img-course col-4">
               <img class="border" src="./img/imgcourses/${v.img}" alt="img-course" width="100%" height="auto" style="border-radius: 10px">
@@ -208,9 +208,11 @@ function displayCart() {
       </div>`;
   });
 
-  $('.show-cart').html(output);
-  $('.total-cart').html("$ " + shoppingCart.totalCart().toPrecision(5));
-  $('.total-count').html(shoppingCart.totalCount());
+  if (output.length != 0) {
+    $('.show-cart').html(output);
+    $('.total-cart').html("$ " + shoppingCart.totalCart().toLocaleString('en-US'));
+    $('.total-count').html(shoppingCart.totalCount());
+  }
 }
 
 

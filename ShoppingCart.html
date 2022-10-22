@@ -31,114 +31,15 @@
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script> -->
   <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
+    * {
+      padding: 0;
+      margin: 0;
     }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-
-    /* GLOBAL STYLES
-    --------------------------------------------- */
-    /* Padding below the footer and lighter body text */
+    
 
     body {
       padding-top: 3rem;
       color: #5a5a5a;
-    }
-
-
-    /* CUSTOMIZE THE CAROUSEL
-    -------------------------------------------- */
-
-    /* Carousel base class */
-    .carousel {
-      margin-bottom: 4rem;
-    }
-
-    /* Since positioning the image, we need to help out the caption */
-    .carousel-caption {
-      bottom: 3rem;
-      z-index: 10;
-    }
-
-    /* Declare heights because of positioning of img element */
-    .carousel-item {
-      height: 32rem;
-    }
-
-    .carousel-item>img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      height: 32rem;
-    }
-
-
-    /* MARKETING CONTENT
--------------------------------------------------- */
-
-    /* Center align the text within the three columns below the carousel */
-    .marketing .col-lg-4 {
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    .marketing h2 {
-      font-weight: 400;
-    }
-
-    .marketing .col-lg-4 p {
-      margin-right: .75rem;
-      margin-left: .75rem;
-    }
-
-
-    /* Featurettes
-------------------------- */
-
-    .featurette-divider {
-      margin: 5rem 0;
-      /* Space out the Bootstrap <hr> more */
-    }
-
-    /* Thin out the marketing headings */
-    .featurette-heading {
-      font-weight: 300;
-      line-height: 1;
-      letter-spacing: -.05rem;
-    }
-
-    /* RESPONSIVE CSS
--------------------------------------------------- */
-
-    @media (min-width: 40em) {
-
-      /* Bump up size of carousel content */
-      .carousel-caption p {
-        margin-bottom: 1.25rem;
-        font-size: 1.25rem;
-        line-height: 1.4;
-      }
-
-      .featurette-heading {
-        font-size: 50px;
-      }
-    }
-
-    @media (min-width: 62em) {
-      .featurette-heading {
-        margin-top: 7rem;
-      }
     }
 
     .nav-link:hover,
@@ -158,11 +59,6 @@
     .BoxShow {
       box-shadow: -2px -1px 7px rgba(86, 81, 81, 0.473);
     }
-
-    .Exit {
-      box-shadow: 0px 0px 0px white;
-    }
-
 
     .Shopping-Right {
       padding: 10px;
@@ -192,6 +88,9 @@
     .Shopping-Right button {
       /* font-size: 15px; */
       cursor: pointer;
+    }
+    .show-cart strong:hover {
+      color:#E4A11B !important;
     }
 
   </style>
@@ -343,7 +242,7 @@
     </nav>
   </header>
   <!--/ Menu top -->
-  <main class="container-fluid" ng-app="myApp">
+  <main>
     <!-- Shopping Cart -->
 
     <section class="mt-3 p-2">
@@ -352,7 +251,7 @@
         <a class="text-reset" href="ShoppingCart.html">Shopping Cart</a>
       </small>
       <h2 class="p-3">Shopping Cart</h2>
-      <h5 class="pl-3">
+      <h5 class="pl-3 note note-warning">
         You have <strong class="text-primary total-count"></strong> course in cart! <a href="GalleryCourse.html"> Do you buy any more?</a>
       </h5>
       <hr>
@@ -372,9 +271,13 @@
         </div><!-- /column right -->
 
         <!-- column content -->
-        <div class="container col-12 col-sm-8 ml-md-5">
-
+        <div class="container-fluid col-12 col-sm-8 ml-md-5" style="min-height: 300px;">
+          <div class="btn btn-danger clear-cart">
+            <i class="far fa-trash-alt me-2"></i>
+            Delete all
+          </div>
           <div class="show-cart">
+            
 
             <div class="col-12 m-1 p-1 border">
               <a class="d-md-flex flex-column flex-md-row text-reset p-1" href="#" target="new">
@@ -403,7 +306,7 @@
             </div>
 
           </div>
-        </div><!-- /column left -->
+        </div><!-- /column content -->
       </div>
       <hr class="featurette-divider">
 

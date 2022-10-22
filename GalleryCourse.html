@@ -24,120 +24,15 @@
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="./MDB5/js/mdb.min.js"></script>
 
-  <!-- Angular  -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script> -->
   <style>
     * {
       padding: 0;
       margin: 0;
     }
 
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-
-    /* GLOBAL STYLES
-    --------------------------------------------- */
-    /* Padding below the footer and lighter body text */
-
     body {
       padding-top: 3rem;
       color: #5a5a5a;
-    }
-
-    /* CUSTOMIZE THE CAROUSEL
-    -------------------------------------------- */
-
-    /* Carousel base class */
-    /* .carousel {
-      margin-bottom: 0rem;
-    } */
-
-    /* Since positioning the image, we need to help out the caption */
-    .carousel-caption {
-      bottom: 3rem;
-      z-index: 10;
-    }
-
-    /* Declare heights because of positioning of img element */
-    .carousel-item {
-      height: 42rem;
-    }
-
-    .carousel-item>img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      height: 42rem;
-    }
-
-
-    /* MARKETING CONTENT
--------------------------------------------------- */
-
-    /* Center align the text within the three columns below the carousel */
-    .marketing .col-lg-4 {
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    .marketing h2 {
-      font-weight: 400;
-    }
-
-    .marketing .col-lg-4 p {
-      margin-right: .75rem;
-      margin-left: .75rem;
-    }
-
-    /* Featurettes
-------------------------- */
-    .featurette-divider {
-      margin: 5rem 0;
-      /* Space out the Bootstrap <hr> more */
-    }
-
-    /* Thin out the marketing headings */
-    .featurette-heading {
-      font-weight: 300;
-      line-height: 1;
-      letter-spacing: -.05rem;
-    }
-
-    /* RESPONSIVE CSS
--------------------------------------------------- */
-
-    @media (min-width: 40em) {
-
-      /* Bump up size of carousel content */
-      .carousel-caption p {
-        margin-bottom: 1.25rem;
-        font-size: 1.25rem;
-        line-height: 1.4;
-      }
-
-      .featurette-heading {
-        font-size: 50px;
-      }
-    }
-
-    @media (min-width: 62em) {
-      .featurette-heading {
-        margin-top: 7rem;
-      }
     }
 
     .nav-link:hover,
@@ -154,13 +49,6 @@
       padding: .2em .45em
     }
 
-    .BoxShow {
-      box-shadow: -2px -1px 7px rgba(86, 81, 81, 0.473);
-      position: static !important;
-      align-items: flex-end !important;
-    }
-
-  
     /* Gallery */
     .Gallery article {
       background-color: antiquewhite;
@@ -176,14 +64,10 @@
       margin: 0;
       position: relative;
     }
-    .Gallery .add-to-cart {
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
-    }
-    .Gallery article b:hover {
-      color:#E4A11B !important;
-    }
 
+    .Gallery article b:hover {
+      color: #E4A11B !important;
+    }
   </style>
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
@@ -224,32 +108,36 @@
 
                     <div class="col-6 mb-3 mb-lg-0">
                       <div class="list-group list-group-flush">
-                      
+
                         <a href="GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
                           Topic
                         </a>
-                        
-                        <a href="GalleryCourse.html" data-sub="SubjectPython" class="menu-sub list-group-item list-group-item-action"><i
+
+                        <a href="GalleryCourse.html" data-sub="SubjectPython"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Python</a>
-                        <a href="GalleryCourse.html" data-sub="SubjectExcel" class="menu-sub list-group-item list-group-item-action">
-                          <i
-                            class="fas fa-caret-right pe-2"></i>Excel
+                        <a href="GalleryCourse.html" data-sub="SubjectExcel"
+                          class="menu-sub list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>Excel
                         </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment" class="menu-sub list-group-item list-group-item-action"><i
+                        <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Web Development
                         </a>
                         <a href="GalleryCourse.html" data-sub="SubjectJavascript"
-                        class="menu-sub list-group-item list-group-item-action"><i
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Javascript
                         </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectDataScience" class="menu-sub list-group-item list-group-item-action"><i
+                        <a href="GalleryCourse.html" data-sub="SubjectDataScience"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Data Science
                         </a>
                         <a href="GalleryCourse.html" data-sub="SubjectAWSCertification"
-                        class="menu-sub list-group-item list-group-item-action"><i
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>AWS Certification
                         </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectDrawing" class="menu-sub list-group-item list-group-item-action"><i
+                        <a href="GalleryCourse.html" data-sub="SubjectDrawing"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Drawing
                         </a>
                       </div>
@@ -274,7 +162,7 @@
                         </a>
                       </div>
                     </div>
-                    
+
 
                   </div>
                 </div>
@@ -335,10 +223,10 @@
 
   <!-- MAIN CONTENT -->
   <main class="d-flex flex-column mt-4">
-  
-    <section class="Gallery row mx-auto" style="background-color: antiquewhite">
+
+    <section class="Gallery row mx-auto col-12" style="background-color: antiquewhite">
       <!-- Filter courses -->
-      <aside class="d-block col-12 col-md-2 pt-2" style="font-size:medium">
+      <aside class="col-12 col-md-4 col-lg-3 col-xl-2 pt-2" style="font-size:medium">
 
         <!--1.1 Filter by Subject-->
         <section class="col-12 mt-1">
@@ -514,7 +402,7 @@
           </div>
         </section>
         <!--/Filter by Subject-->
-        <!--1.4 Sort-->
+        <!--1.4 Sort Price New-->
         <section class="col-12 mt-1">
           <nav class="navbar navbar-light bg-warning">
             <div class="container-fluid">
@@ -523,7 +411,7 @@
                 aria-expanded="false" aria-label="Toggle navigation">
                 <div class="mx-0">
                   <i class="fas fa-sort"></i>
-                  Sort Price
+                  Sort By
                 </div>
               </button>
             </div>
@@ -531,33 +419,64 @@
 
           <div class="collapse" id="navbarToggleExternalContent4">
             <!-- radio rating -->
-            <div class="bg-light shadow-3 mt-2 p-2">
-              <!-- A to Z -->
+            <div class="bg-light shadow-3 mt-2 p-2 border-bottom">
+              <!-- Ascending -->
               <div class="form-check form-check-inline col-12 my-2">
                 <label class="form-check-label">
-                  <input class="form-check-input chk chk-sort" type="radio" name="chk-sort" value="AtoZ">
-                  Ascending <i class="fas fa-sort-numeric-down"></i>
+                  <input class="form-check-input chk chk-sort" type="radio" name="chk-sort" value="asc"
+                    data-sort="PriceNew">
+                  Ascending price <i class="fas fa-sort-amount-up"></i>
                 </label>
-              </div><!-- A to Z -->
-              <!-- Z to A -->
+              </div><!-- Ascending -->
+              <!-- Decrease -->
               <div class="form-check form-check-inline col-12 my-2">
                 <label class="form-check-label">
-                  <input class="form-check-input chk chk-sort" type="radio" name="chk-sort" value="ZtoA">
-                  Decrease <i class="fas fa-sort-numeric-down-alt"></i>
+                  <input class="form-check-input chk chk-sort" type="radio" name="chk-sort" value="desc"
+                    data-sort="PriceNew">
+                  Decrease price <i class="fas fa-sort-amount-down"></i>
                 </label>
-              </div><!-- Z to A -->
-
+              </div><!-- Decrease -->
             </div><!-- /radio  -->
+
+            <div class="bg-light shadow-3 mt-0 p-2">
+              <!-- Ascending -->
+              <div class="form-check form-check-inline col-12 my-2">
+                <label class="form-check-label">
+                  <input class="form-check-input chk chk-sort" type="radio" name="chk-sort" value="asc"
+                    data-sort="QtyStudent">
+                  Ascending student <i class="fas fa-sort-amount-up"></i>
+                </label>
+              </div><!-- Ascending -->
+              <!-- Decrease -->
+              <div class="form-check form-check-inline col-12 my-2">
+                <label class="form-check-label">
+                  <input class="form-check-input chk chk-sort" type="radio" name="chk-sort" value="desc"
+                    data-sort="QtyStudent">
+                  Decrease student <i class="fas fa-sort-amount-down"></i>
+                </label>
+              </div><!-- Decrease -->
+            </div><!-- /radio  -->
+
+
           </div>
         </section>
-        <!--/Sort-->
+        <!--1.4 Sort Price New-->
 
+        <!--Submit Filter-->
+        <div class="btn bg-secondary mt-1 container-fluid">
+          <button class="filter navbar-toggler col-12" type="button">
+            <div class="d-block">
+              <i class="fas fa-filter"></i>
+              Filter submit
+            </div>
+          </button>
+        </div>
 
       </aside>
       <!-- Display Course -->
-      <article class="col-12 col-md-10 ml-auto p-2">
+      <article class="col-12 col-md-8 col-lg-9 col-xl-10 ml-auto p-2">
         <!-- container courses -->
-        <div class="row d-inline-flex" id="gallery">
+        <div class="row d-inline-flex col-12 mx-auto" id="gallery">
           <!-- Gallery Item 1 -->
 
           <div
@@ -747,7 +666,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
   <script src="Gallery.js"></script>
+
   <script src="cartForCourse.js"></script>
+  
 
   <!--/Java Script -->
 
