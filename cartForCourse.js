@@ -174,7 +174,7 @@ function displayCart() {
       <div class="col-12 m-1 p-1 border">
         <div class="d-md-flex flex-column flex-md-row p-1">
           <div class="d-flex flex-row flex-grow-1 col-12 col-sm-8 mx-2">
-            <div class="col-1">
+            <div class="col-1 py-5">
               <i class="delete-item far fa-trash-alt" data-id="${v.id}"></i>
             </div>
             <div class="img-course col-4">

@@ -720,7 +720,7 @@ function filterSubject(subject) {
   return Sub;
 }
 
-//function Dynamic sorting
+//** array is sorted by "key", in ascending order by default
 function compare(key, order = 'asc') {
   return function (a, b) {
 
@@ -751,8 +751,8 @@ function showIndex() {
   TopFour(filterSubject("SubjectAWSCertification"), "SubjectAWSCertification");
   TopFour(filterSubject("SubjectDrawing"), "SubjectDrawing");
 
-  let sortByQtyStudent = data;
-  let sortByRating = data;
+  let sortByQtyStudent = data.slice();
+  let sortByRating = data.slice();
 
   TopFour(sortByQtyStudent.sort(compare("QtyStudent", "desc")), "sort-top-4-by-student");
   TopFour(sortByRating.sort(compare("Rating", "desc")), "sort-top-4-by-rating");
@@ -777,8 +777,6 @@ $(".filter").click(function () {
   //** rating star **//
   let stars = $(".chk-star:checked").map(function () { return $(this).val() }).toArray();
   var ratingData = (stars.length == 0) ? levelData : levelData.filter(item => item.Rating >= stars[0]);
-
-  
 
   //** sort ** *//
   let key = $(".chk-sort:checked").map(function () { return $(this).data("sort") }).toArray().toString();
@@ -814,6 +812,7 @@ $(".menu-sub").click(function (e) {
     window.open("GalleryCourse.html", "_self");
   }
   displayCourse(linkData);
+  $(".note-link").html(sub);
 });
 
 if (sessionStorage.getItem("menuData") != null) {
