@@ -716,7 +716,7 @@ if (sessionStorage.getItem("menuData") == null &&
 
 // filter data by subject
 function filterSubject(subject) {
-  var Sub = data.filter(i => i.Subject == subject);
+  let Sub = data.filter(i => i.Subject == subject);
   return Sub;
 }
 
@@ -740,8 +740,8 @@ function compare(key, order = 'asc') {
   };
 }
 
-// show 4 course in index page
-function showIndex() {
+// Display 4 course in the index page
+(function() {
 
   TopFour(filterSubject("SubjectPython"), "SubjectPython");
   TopFour(filterSubject("SubjectExcel"), "SubjectExcel");
@@ -756,12 +756,13 @@ function showIndex() {
 
   TopFour(sortByQtyStudent.sort(compare("QtyStudent", "desc")), "sort-top-4-by-student");
   TopFour(sortByRating.sort(compare("Rating", "desc")), "sort-top-4-by-rating");
-}
+})();
 
 
 // Filter/Sort Multiple
 
 $(".filter").click(function () {
+  
   sessionStorage.removeItem("menuData");
   sessionStorage.removeItem("searchData");
   sessionStorage.removeItem("filterData");
@@ -787,9 +788,10 @@ $(".filter").click(function () {
   var filter = JSON.parse(sessionStorage.getItem("filterData"));
 
   // displayCourse(sortData);
-  // console.log(ratingData);
+  
   displayCourse(filter);
-  window.open("GalleryCourse.html", "_self");
+  //reloads the current document;
+  location.reload(); 
 });
 
 if (sessionStorage.getItem("filterData") != null) {
@@ -955,13 +957,8 @@ function displayCourse(items) {
 
 // Display the info of teacher 
 
-function filterTeacher(teacher) {
-  var Sub = data.filter(i => i.Teacher == teacher);
-  return Sub;
-}
-
 function displayCourseByTeacher(teacher, className) {
-  var array = filterTeacher(teacher);
+  let array = data.filter(i => i.Teacher == teacher);
   DisplayInTeacherByClass(array, className);
 }
 
@@ -1006,6 +1003,37 @@ function DisplayInTeacherByClass(items, className) {
   });
   $("." + className).html(s);
 }
+
+
+//** Display count filter by subject in Gallery */
+(function(){
+  let subCoursePython = filterSubject("SubjectPython");
+  let subCourseExcel = filterSubject("SubjectExcel");
+  let subCourseWebDevelopment = filterSubject("SubjectWebDevelopment");
+  let subCourseDataScience = filterSubject("SubjectDataScience");
+  let subCourseJavascript = filterSubject("SubjectJavascript");
+  let subCourseAWSCertification = filterSubject("SubjectAWSCertification");
+  let subCourseDrawing = filterSubject("SubjectDrawing");
+
+  $(".count-python").html(subCoursePython.length);
+  $(".count-EX").html(subCourseExcel.length);
+  $(".count-Web").html(subCourseWebDevelopment.length);
+  $(".count-DS").html(subCourseDataScience.length);
+  $(".count-JS").html(subCourseJavascript.length);
+  $(".count-AWS").html(subCourseAWSCertification.length);
+  $(".count-DR").html(subCourseDrawing.length);
+})();
+
+//** Display count filter by level in Gallery */
+(function(){
+  let subCourseAll = data.filter(item => item.Level === "All levels");
+  let subCourseBeginner = data.filter(item => item.Level === "Beginner");
+  let subCourseIntermediate = data.filter(item => item.Level === "Intermediate");
+
+  $(".count-All-levels").html(subCourseAll.length);
+  $(".count-Beginner").html(subCourseBeginner.length);
+  $(".count-Intermediate").html(subCourseIntermediate.length);
+})();
 
 
 
