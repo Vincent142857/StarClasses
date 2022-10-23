@@ -27,99 +27,11 @@
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="../MDB5/js/mdb.min.js"></script>
 
-  <!-- jquery - JavaScript library for DOM operations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-  <!-- Angular  -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-    }
-
-    body {
-      padding-top: 3rem;
-      color: #5a5a5a;
-    }
-
-    .nav-link:hover,
-    .list-group-item:hover {
-      color: #E4A11B !important;
-      cursor: pointer !important;
-    }
-
-    .badge-notification {
-      position: absolute;
-      font-size: .6rem;
-      margin-top: -.1rem;
-      margin-left: -.5rem;
-      padding: .2em .45em
-    }
-
-    .BoxShow {
-      box-shadow: -2px -1px 7px rgba(86, 81, 81, 0.473);
-      position: static !important;
-      align-items: flex-end !important;
-    }
-
-    .img-course img {
-      border-radius: 20px !important;
-      border: 1px solid rgba(35, 34, 34, 0.5);
-      max-width: 100%;
-      max-height: 100%;
-      width: 250px;
-      height: 165px;
-    }
-
-    .img-course img:hover {
-      width: 280px;
-      height: 185px;
-    }
-
-    .Margin {
-      margin-top: 25px;
-      margin-bottom: 25px;
-    }
-
-    .TeacherRight button {
-      width: 200px;
-      height: 40px;
-      margin-top: 10px;
-    }
-
-    .TeacherRight img {
-      margin-bottom: 50px;
-      border-radius: 50%;
-      margin-top: 20px;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .TeacherRight button:hover {
-      color: #E4A11B;
-    }
-
-    .Instructor {
-      width: 240px;
-      text-align: center;
-      color: white;
-    }
-
-    form {
-      margin: 0 auto;
-    }
-  </style>
-
-
   <!-- Custom styles for this template -->
   <link href="../MDB5/css/mdb.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/StyleTeacher.css">
 </head>
-
-<body ng-app="myApp">
+<body>
   <!-- Menu top -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -298,44 +210,9 @@
           ten years and I am lucky to have helped so many people achieve their goals of creating art. </p>
 
         <hr>
-        <div ng-controller="myController" class="Hover">
+        <div class="Hover">
           <h1>My courses </h1>
           <div class="Matthew-Fussell">
-            <div class="col-12 p-2">
-              <a class="d-md-flex justify-content-end border-bottom text-reset" href="../Courses/{{x.Detail}}"
-                target="new">
-                <!-- col-1 -->
-                <div class="img-course col-12 col-sm-6 col-md-auto p-2">
-                  <img src="../img/imgcourses/{{x.Img}}" alt="">
-                </div>
-                <!-- col 2 -->
-                <div class="content col-12 col-sm-6 p-2">
-                  <h4 class="title-course">{{x.NameCourse}}</h4>
-                  <p class="name-intro">{{x.Intro}}</p>
-                  <p class="name-gv"><b>{{x.Teacher}}</b></p>
-                </div>
-                <!-- col 3 -->
-                <div class="text-left col-4 col-sm-1 p-2">
-                  <span class="d-block">
-                    {{x.Rating}} <i class="fa fa-star text-warning"></i>
-                  </span>
-                </div>
-                <!-- col 4 -->
-                <div class="col-4 col-sm-1 text-primary pt-2">
-                  <span class="d-block">
-                    <i class="fas fa-user-graduate"></i> {{x.QtyStudent}}
-                  </span>
-                </div>
-                <!-- col 5 -->
-                <div class="text-right col-4 col-sm-1 p-2">
-                  <b class="text-success">{{x.PriceNew}}</b>
-                  <small class="text-danger">
-                    <del>{{x.PriceOld}}</del>
-                  </small>
-                </div>
-              </a>
-            </div>
-            <div class="w-100 d-sm-none"></div>
           </div>
         </div>
 
@@ -506,15 +383,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="../Gallery.js"></script>
   <script>
-    var app = angular.module("myApp", [])
-    app.controller("myController", function ($rootScope, $http, $location) {
-      $http.get("../informationSubject.json").then(function (response) {
-        $rootScope.list = response.data.informationSubject;
-      });
-    });
-
     displayCourseByTeacher('Matthew Fussell', 'Matthew-Fussell');
-
   </script>
   <!-- Java Script -->
 </body>

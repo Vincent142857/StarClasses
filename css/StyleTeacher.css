@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding-top: 3rem;
+  color: #5a5a5a;
+}
+
+footer a:hover,
+header .nav-link:hover,
+header .list-group-item:hover {
+  color: #E4A11B !important;
+  cursor: pointer !important;
+}
+
+.badge-notification {
+  position: absolute;
+  font-size: .6rem;
+  margin-top: -.1rem;
+  margin-left: -.5rem;
+  padding: .2em .45em
+}
+
+.img-course img {
+  border-radius: 20px !important;
+  border: 1px solid rgba(35, 34, 34, 0.5);
+  max-width: 100%;
+  max-height: 100%;
+  width: 250px;
+  height: 165px;
+}
+
+.img-course img:hover {
+  width: 280px;
+  height: 185px;
+}
+
+.Margin{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  }
+.TeacherRight button{
+  width: 200px;
+  height: 40px;
+  margin-top: 10px;
+}
+.TeacherRight img{
+  margin-bottom: 50px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+a{
+  text-decoration: none;
+}
+.TeacherRight button:hover{
+  color: #E4A11B;
+}
+.Instructor{
+  width:240px;
+  text-align: center;
+  color:white;
+}
+form{
+  margin: 0 auto;
+}

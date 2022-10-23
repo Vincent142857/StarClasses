@@ -751,7 +751,7 @@ function compare(key, order = 'asc') {
   TopFour(filterSubject("SubjectAWSCertification"), "SubjectAWSCertification");
   TopFour(filterSubject("SubjectDrawing"), "SubjectDrawing");
 
-  let sortByQtyStudent = data;
+  let sortByQtyStudent = data.slice();
   let sortByRating = data.slice();
 
   TopFour(sortByQtyStudent.sort(compare("QtyStudent", "desc")), "sort-top-4-by-student");
@@ -814,7 +814,7 @@ $(".menu-sub").click(function (e) {
     window.open("GalleryCourse.html", "_self");
   }
   displayCourse(linkData);
-  $(".note-link").html(sub);
+  // $(".note-link").html(sub);
 });
 
 if (sessionStorage.getItem("menuData") != null) {
@@ -840,8 +840,7 @@ $("#formSearch").submit(function (e) {
     window.open("GalleryCourse.html", "_self");
   }
 
-  displayCourse(dataSearch);
-  //displayCourse(subData);  
+  displayCourse(dataSearch); 
 });
 
 if (sessionStorage.getItem("searchData") != null) {
@@ -855,7 +854,10 @@ function TopFour(items, className) {
   let sp = ``;
   for (var i = 0; i < 4; i++) {
     sp += `
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mx-auto p-0 d-flex flex-column justify-content-around flex-grow-1" style="max-width: 250px; box-shadow: -2px -2px 10px rgb(177, 175, 175); border-radius: 15px;">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mx-auto p-0 d-flex flex-column justify-content-around flex-grow-1" 
+      style="max-width: 250px;
+        box-shadow: -2px -2px 10px rgb(177, 175, 175);
+        border-radius: 15px;">
         <a class="d-flex flex-column text-reset" href="./Courses/${items[i].Detail}">
           <div class="col-12 bg-image hover-zoom ripple ripple-surface">
             <img src="./img/imgcourses/${items[i].Img}" width="100%" height="160px" alt="course"
@@ -908,7 +910,10 @@ function displayCourse(items) {
   let array = ``;
   $.each(items, function (k, v) {
     array += `
-      <div class="col-12 col-sm-6 col-md-5 col-lg-3 mx-auto ml-md-4 mb-5 p-0 d-flex flex-column justify-content-around flex-grow-1" style="max-width: 250px; box-shadow: -2px -2px 10px rgb(177, 175, 175); border-radius: 15px;">
+      <div class="col-12 col-sm-6 col-md-5 col-lg-3 mx-auto ml-md-4 mb-5 p-0 d-flex flex-column justify-content-around flex-grow-1" 
+      style="max-width: 250px;
+        box-shadow: -2px -2px 10px rgb(177, 175, 175);
+        border-radius: 15px;">
         <a class="d-flex flex-column text-reset" href="./Courses/${v.Detail}">
           <div class="col-12 bg-image hover-zoom ripple ripple-surface">
             <img src="./img/imgcourses/${v.Img}" width="100%" height="auto" alt="course">
