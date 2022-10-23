@@ -33,7 +33,7 @@
   <!-- Angular  -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
-  
+
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
 
@@ -42,15 +42,17 @@
       padding: 0;
       margin: 0;
     }
+
     body {
       padding-top: 3rem;
       color: black;
       background-color: #accde1;
+      font-family: Tahoma;
     }
 
-  
-    .nav-link:hover,
-    .list-group-item:hover {
+
+    header .nav-link:hover,
+    header .list-group-item:hover {
       color: #E4A11B !important;
       cursor: pointer !important;
     }
@@ -77,19 +79,22 @@
       width: 300px;
       height: 165px;
     }
-    #SignUp{
+
+    #SignUp {
       box-shadow: -2px -2px 10px rgb(177, 175, 175);
     }
-  .error {
-    padding-left: 10px;
-    color: red;
-  }
+
+    .error {
+      padding-left: 10px;
+      color: red;
+    }
   </style>
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
 </head>
-<body ng-app="myApp"  onload="countVisitor()"  ng-controller="myController">
-   <!-- Menu top -->
+
+<body ng-app="myApp" onload="countVisitor()" ng-controller="myController">
+  <!-- Menu top -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
@@ -123,32 +128,36 @@
 
                     <div class="col-6 mb-3 mb-lg-0">
                       <div class="list-group list-group-flush">
-                      
+
                         <a href="GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
                           Topic
                         </a>
-                        
-                        <a href="GalleryCourse.html" data-sub="SubjectPython" class="menu-sub list-group-item list-group-item-action"><i
+
+                        <a href="GalleryCourse.html" data-sub="SubjectPython"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Python</a>
-                        <a href="GalleryCourse.html" data-sub="SubjectExcel" class="menu-sub list-group-item list-group-item-action">
-                          <i
-                            class="fas fa-caret-right pe-2"></i>Excel
+                        <a href="GalleryCourse.html" data-sub="SubjectExcel"
+                          class="menu-sub list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>Excel
                         </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment" class="menu-sub list-group-item list-group-item-action"><i
+                        <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Web Development
                         </a>
                         <a href="GalleryCourse.html" data-sub="SubjectJavascript"
-                        class="menu-sub list-group-item list-group-item-action"><i
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Javascript
                         </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectDataScience" class="menu-sub list-group-item list-group-item-action"><i
+                        <a href="GalleryCourse.html" data-sub="SubjectDataScience"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Data Science
                         </a>
                         <a href="GalleryCourse.html" data-sub="SubjectAWSCertification"
-                        class="menu-sub list-group-item list-group-item-action"><i
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>AWS Certification
                         </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectDrawing" class="menu-sub list-group-item list-group-item-action"><i
+                        <a href="GalleryCourse.html" data-sub="SubjectDrawing"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Drawing
                         </a>
                       </div>
@@ -173,7 +182,7 @@
                         </a>
                       </div>
                     </div>
-                    
+
 
                   </div>
                 </div>
@@ -234,37 +243,187 @@
   <main class="d-flex flex-column mt-4">
     <!-- top title -->
 
-    <div class="mr-auto mb-2">
+    <div class="mr-auto mb-2 bg-light col-12">
       <small class="ml-3">
         <a class="text-reset" href="index.html">Home</a> &#62;
         <a class="text-reset" href="Support.html">Support</a>
       </small>
     </div>
+    <!-- questions -->
+    <section class="container list-group mx-auto w-100">
+      <h1 style="text-align:center">FAQ</h1>
+      <h4 style="text-align:center">Find the answers for the most frequently asked questions below</h4>
+      <!-- Question 1 -->
+      <a href="#shortExampleAnswer1collapse" data-mdb-toggle="collapse" aria-expanded="false"
+        aria-controls="shortExampleAnswer1collapse" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Question 1</h5>
+        </div>
+        <b class="mb-1">
+          How do I figure out what to learn?
+        </b>
+        <small class="text-muted"><u>Learn more</u></small>
+        <!-- Collapsed content -->
+        <div class="collapse mt-3" id="shortExampleAnswer1collapse">
+          <p style="text-align:justify; line-height: 1.5;">
+            The most important thing is that you want to learn something that interests you, because once you start learning, you’ll be with this topic for a while. Choosing something just because it’s popular or what others are doing isn’t the way to go because if you don’t have a true interest in it, you’ll lose the motivation to learn! Spend some time seriously looking into the different tech career paths before choosing one to go down. </p>
+          <p style="text-align:justify; line-height: 1.5;">  
+            As far as what will be in demand in the future—really, all tech careers will be. But in particular I’d say those relating to data science, AI, and cybersecurity will have a notable labour shortage in years to come, so if you have an interest in any of those, definitely go for it.
+            If you want to find out more about the various career paths available, head over and listen to the Learn to Code With Star Classes right now.
+          </p>
+          <p style="text-align:justify; line-height: 1.5;">
+            If you want to find out more about the various career paths available, head over and listen to the Learn to Code With Star Classes right now.
+          </p>
+        </div>
+      </a>
+      <!-- Question 2 -->
+      <a href="#shortExampleAnswer2collapse" data-mdb-toggle="collapse" aria-expanded="false"
+        aria-controls="shortExampleAnswer1collapse" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Question 2</h5>
+        </div>
+        <b class="mb-1">
+          Which programming language is the best to learn?
+        </b>
+        <small class="text-muted"><u>Learn more</u></small>
+        <!-- Collapsed content -->
+        <div class="collapse mt-3" id="shortExampleAnswer2collapse">
+
+          <p style="text-align:justify; line-height: 1.5;">
+            I usually tell most people to start by learning HTML and CSS, then move into learning JavaScript. The reason is that JavaScript is used everywhere: frontend, backend, and even to build mobile apps. It has many use cases, which is why I think it is smart to learn.
+          </p>
+          <p style="text-align:justify; line-height: 1.5;">
+            When it comes to deciding which language or technologies to learn, it all comes down to your end goals. I suggest you check out the profile of Stephane Maarek to help you decide. 
+          </p>
+          <p style="text-align:justify; line-height: 1.5;">
+            If you want to get into tech professionally, here is another tip: start by looking up dream job listings, see what skills/experience they are looking for, and then use that to reverse-engineer what you should learn. 
+          </p>
+
+        </div>
+      </a>
+      <!-- Question 3 -->
+      <a href="#shortExampleAnswer3collapse" data-mdb-toggle="collapse" aria-expanded="false"
+        aria-controls="shortExampleAnswer1collapse" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Question 3</h5>
+        </div>
+        <b class="mb-1">
+          Is it possible to do both graphic design and coding?
+        </b>
+        <small class="text-muted"><u>Learn more</u></small>
+        <!-- Collapsed content -->
+        <div class="collapse mt-3" id="shortExampleAnswer3collapse">
+          <p style="text-align:justify; line-height: 1.5;">
+            If you have an interest in coding and graphic design, then there’s nothing to say you shouldn’t learn skills in both areas. They often work hand-in-hand, so having knowledge and skills in both areas could be desirable for certain career paths. You could also think about pursuing something in between like UI design, which is a very in-demand career right now!
+          </p>
+          <p style="text-align:justify; line-height: 1.5;">
+            In general, having design skills along with coding skills is helpful. But it’s also okay to do one over the other. My advice would be to just get started! You can always change directions later… as long as you’re changing directions to the final destination you’re looking for!
+          </p>
+        </div>
+      </a>
+      <!-- Question 4 -->
+      <a href="#shortExampleAnswer4collapse" data-mdb-toggle="collapse" aria-expanded="false"
+        aria-controls="shortExampleAnswer1collapse" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Question 4</h5>
+        </div>
+        <b class="mb-1">
+          When does it make sense to learn Python?
+        </b>
+        <small class="text-muted"><u>Learn more</u></small>
+        <!-- Collapsed content -->
+        <div class="collapse mt-3" id="shortExampleAnswer4collapse">
+          <p style="text-align:justify; line-height: 1.5;">
+            Here are some situations where you might need to know Python: 
+            If you want to become a DevOps engineer and work with configuration management tools like Fabric or Ansible, you might have to work with both Python 2 and 3 (because parts of these libraries don’t have full Python 3 support). 
+          </p>
+          <p style="text-align:justify; line-height: 1.5;">
+            If your company has legacy code written in Python 2, you’ll need to learn to work with that. 
+          </p>
+          <p style="text-align:justify; line-height: 1.5;">
+            If you have a project that depends on certain third-party software or libraries that can’t be ported to Python 3, you’ll have no choice but to use Python 2 for it.
+          </p>
+        </div>
+      </a>
+      <!-- Question 5 -->
+      <a href="#shortExampleAnswer5collapse" data-mdb-toggle="collapse" aria-expanded="false"
+        aria-controls="shortExampleAnswer1collapse" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Question 5</h5>
+        </div>
+        <b class="mb-1">
+          Should I use free or paid resources to learn to code?
+        </b>
+        <small class="text-muted"><u>Learn more</u></small>
+        <!-- Collapsed content -->
+        <div class="collapse mt-3" id="shortExampleAnswer5collapse">
+          <p style="text-align:justify; line-height: 1.5;">
+            Free tools are great for dipping your toe into the water to see if you like coding, but generally, I recommend using paid resources. While there are some great free resources out there (see below), oftentimes you get what you pay for. Paid resources are likely to be much easier to use and understand. You’re also likely to have better support if you get stuck, and more features and perks that other (free) resources just can’t offer.
+          </p>
+          <p style="text-align:justify; line-height: 1.5;">
+            Also, I find that when I pay for something, I’m much more motivated to use it than when I get something for free. Think of it like paying for a gym membership – you’re more likely to exercise when you pay to attend, so it’s like an added sense of accountability!
+          </p>
+          <p style="text-align:justify; line-height: 1.5;">
+            At Star Classes: Offers a multitude of online courses taught by actual college professors. You can also get a certificate or a degree for a great price, completely at your own pace, and all online. 
+          </p>
+          <p style="text-align:justify; line-height: 1.5;">
+            There are so many places to learn tech skills, it can be hard to know where to start. To help you cut through the noise, Star Classes is the best recommendation for you. 
+          </p>
+          <p style="text-align:justify; line-height: 1.5;">
+            At Star Classes: Offers a multitude of online courses taught by actual college professors. You can also get a certificate or a degree for a great price, completely at your own pace, and all online. 
+          </p>
+
+        </div>
+      </a>
+      <!-- Question 6 -->
+      <a href="#shortExampleAnswer6collapse" data-mdb-toggle="collapse" aria-expanded="false"
+        aria-controls="shortExampleAnswer1collapse" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Question 6</h5>
+        </div>
+        <b class="mb-1">
+          Am I too old/too young to learn to code or consider a career in tech?
+        </b>
+        <small class="text-muted"><u>Learn more</u></small>
+        <!-- Collapsed content -->
+        <div class="collapse mt-3" id="shortExampleAnswer6collapse">
+          <p style="text-align:justify; line-height: 1.5;">
+            You’re never too old/too young to start picking up new skills, but when it comes to picking something to learn full-time (like which classes to take at school, for instance), what’s important is choosing projects that align with your career goals (if you have them already). If you want to start coding, age is not as important as motivation.
+          </p>
+        </div>
+      </a>
+    </section>
+    <!-- questions -->
 
     <!-- content -->
     <section class="d-flex flex-column flex-md-row mt-3">
       <!-- form -->
       <article class="col-12 col-md-6 my-auto">
         <form id="SignUp" class="col-9 border rounded-9 mx-auto p-4" name="Form" action="./index.html">
-          <h2><img class="d-inline-flex" src="./img/logo.png" width="9%" alt=""> Do you need support?</h2>
+          <h6><img class="d-inline-flex" src="./img/logo.png" width="9%" alt="">Still have any questions? Contact us to
+            get your answer!</h6>
 
           <!-- full name input -->
           <div class="form-group mb-2">
             <label class="form-label col-3" for="FullName">Full name (*):</label>
-            <input type="text" id="FullName" name="FullName" ng-model="FullName" class="form-control col-9" placeholder="Enter your full name" required />
-            <small class="error" ng-show="Form.FullName.$touched && Form.FullName.$error.required">Full name is required</small>
+            <input type="text" id="FullName" name="FullName" ng-model="FullName" class="form-control col-9"
+              placeholder="Enter your full name" required />
+            <small class="error" ng-show="Form.FullName.$touched && Form.FullName.$error.required">Full name is
+              required</small>
           </div>
           <!-- Email input -->
           <div class="form-group mb-2">
             <label class="form-label" for="Email">Email address (*):</label>
-            <input type="email" id="Email" name="Email" ng-model="Email" class="form-control" placeholder="Enter your email address" required pattern="\w+[@]gmail[.]com([.]vn)?"/>
+            <input type="email" id="Email" name="Email" ng-model="Email" class="form-control"
+              placeholder="Enter your email address" required pattern="\w+[@]gmail[.]com([.]vn)?" />
             <small class="error" ng-show="Form.Email.$touched && Form.Email.$error.required">Email is required</small>
-            <small class="error" ng-show="Form.Email.$touched && Form.Email.$error.pattern">wwww@gmail.com.vn</small>           
+            <small class="error" ng-show="Form.Email.$touched && Form.Email.$error.pattern">wwww@gmail.com.vn</small>
           </div>
           <!-- Phone input -->
           <div class="form-group my-3">
             <label class="form-label" for="Email">Phone number (*):</label>
-            <input type="tel" id="Phone" name="Phone" ng-model="Phone" class="form-control" placeholder="Enter your phone number" required />
+            <input type="tel" id="Phone" name="Phone" ng-model="Phone" class="form-control"
+              placeholder="Enter your phone number" required />
             <small class="error" ng-show="Form.Phone.$touched && Form.Phone.$error.required">Phone is required</small>
           </div>
 
@@ -272,10 +431,10 @@
             <label for="Questions">Questions:</label>
             <textarea class="form-control" name="Questions" id="" rows="3" style="overflow-y: scroll;"></textarea>
           </div>
-          
+
           <!-- Submit button -->
           <button type="submit" class="btn btn-primary btn-block mb-2">Submit a request for support</button>
-          
+
         </form>
       </article>
       <!-- picture -->
@@ -288,176 +447,178 @@
       <figure class="note note-warning p-2">
         <blockquote class="blockquote">
           <small style="text-align:justify;">
-            Star Classes support time is from 9:00 to 18:00 from Monday to Friday. However, we will prioritize support for important issues outside of business hours.
+            Star Classes support time is from 9:00 to 18:00 from Monday to Friday. However, we will prioritize support
+            for important issues outside of business hours.
           </small>
         </blockquote>
       </figure>
     </section>
-  
 
-  <!-- FOOTER -->
-  <footer class="container-fluid border bg-dark text-white">
-    <!-- Section 1: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!--/ Left -->
-      <!-- Right -->
-      <div>
-        <a href="" class="me-4 link-primary">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="" class="me-4 link-primary">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 link-warning">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 link-danger">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 link-primary">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
-      <!--/ Right -->
-    </section>
-    <!--/ Section 1: Social media -->
 
-    <!-- Section 2: Links  -->
-    <section class="d-flex justify-content-center justify-content-lg-around p-2 border-bottom">
-      <div class="container text-center text-md-start mt-3">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column 1 -->
-          <div class="col-md-4 mx-auto mb-4">
-            <!-- Content -->
-            <p class="mx-auto px-3">
-              <a href="index.html"><img src="./img/star-classes-4.png" width="200px" alt="logo-name"></a>
-            </p>
-            <p style="text-align:justify" class="px-3">
-              Whether you want to learn or to share what you know, you have come to the right place. As a global
-              destination for online learning, we connect people through knowledge.
-            </p>
-          </div>
-          <!--/ Grid column 1-->
-
-          <!-- Grid column 2-->
-          <div class="col-md-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              <a href="index.html" class="text-reset">Star Classes</a>
-            </h6>
-            <p>
-              <a href="GalleryCourse.html" class="text-reset">
-                <i class="fas fa-caret-right me-2"></i>
-                Courses Classes
-              </a>
-            </p>
-            <p>
-              <a href="Support.html" class="text-reset">
-                <i class="fas fa-caret-right me-2"></i>
-                Support & Help
-              </a>
-            </p>
-            <p>
-              <a href="Policy.html" class="text-reset">
-                <i class="fas fa-caret-right me-2"></i>
-                Policy
-              </a>
-            </p>
-            <p>
-              <a href="ShoppingCart.html" class="text-reset">
-                <i class="fas fa-caret-right me-2"></i>
-                Shopping Cart
-              </a>
-            </p>
-          </div>
-          <!--/ Grid column 2-->
-
-          <!-- Grid column 3-->
-          <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
-            <p>
-              <i class="fas fa-home me-3"></i>
-              <a href="https://www.google.com/maps?ll=10.786377,106.666297&z=16&t=m&hl=vi&gl=US&mapclient=embed&q=590+%C4%90.+C%C3%A1ch+M%E1%BA%A1ng+Th%C3%A1ng+8+Ph%C6%B0%E1%BB%9Dng+11+Qu%E1%BA%ADn+3+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh"
-                target="new" class="text-reset">590, CMT8 Street, HCM City, VN</a>
-            </p>
-            <p>
-              <i class="fas fa-envelope me-3"></i>
-              <a href="mailto:info@estarclasses.edu.com" class="text-rest text-white">info@starclasses.edu.com</a>
-            </p>
-            <p>
-              <i class="fas fa-phone me-3"></i>
-              + 84 234 567 890
-            </p>
-            <p>
-              <i class="fas fa-print me-3"></i>
-              + 84 234 567 890
-            </p>
-          </div>
-          <!--/ Grid column 3-->
-
-          <!-- Grid column 4-->
-          <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
-            <!-- GeoLocation API (GoogleMaps)-->
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s"
-              width="300" height="300" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <!--/ Grid column 4-->
-        </div><!-- /Grid row -->
-      </div> <!-- /container -->
-    </section>
-    <!--/Section 2: Links  -->
-
-    <!--Section 3:  Copyright and Time -->
-    <section class="d-flex justify-content-between p-2 border-bottom">
-      <div class="mr-5 d-none d-lg-block pl-2">&copy; 2022 Star Classes</div>
-      <div class="ml-5 d-none d-lg-block">
-        <!-- Display current date, time -->
-        <div class="time" id="time">
-          <script>
-            var time = document.getElementById("time").innerHTML;
-            var today = new Date();
-            time = document.write("Now: " + today);
-          </script>
+    <!-- FOOTER -->
+    <footer class="container-fluid border bg-dark text-white">
+      <!-- Section 1: Social media -->
+      <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
         </div>
-        <!--/ Display current date, time -->
-      </div>
-    </section>
-    <!--/Section 3:  Copyright and Time -->
+        <!--/ Left -->
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 link-primary">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="" class="me-4 link-primary">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 link-warning">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 link-danger">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 link-primary">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <!--/ Right -->
+      </section>
+      <!--/ Section 1: Social media -->
 
-  </footer>
-  <!--/ FOOTER -->
+      <!-- Section 2: Links  -->
+      <section class="d-flex justify-content-center justify-content-lg-around p-2 border-bottom">
+        <div class="container text-center text-md-start mt-3">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column 1 -->
+            <div class="col-md-4 mx-auto mb-4">
+              <!-- Content -->
+              <p class="mx-auto px-3">
+                <a href="index.html"><img src="./img/star-classes-4.png" width="200px" alt="logo-name"></a>
+              </p>
+              <p style="text-align:justify" class="px-3">
+                Whether you want to learn or to share what you know, you have come to the right place. As a global
+                destination for online learning, we connect people through knowledge.
+              </p>
+            </div>
+            <!--/ Grid column 1-->
+
+            <!-- Grid column 2-->
+            <div class="col-md-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <a href="index.html" class="text-reset">Star Classes</a>
+              </h6>
+              <p>
+                <a href="GalleryCourse.html" class="text-reset">
+                  <i class="fas fa-caret-right me-2"></i>
+                  Courses Classes
+                </a>
+              </p>
+              <p>
+                <a href="Support.html" class="text-reset">
+                  <i class="fas fa-caret-right me-2"></i>
+                  Support & Help
+                </a>
+              </p>
+              <p>
+                <a href="Policy.html" class="text-reset">
+                  <i class="fas fa-caret-right me-2"></i>
+                  Policy
+                </a>
+              </p>
+              <p>
+                <a href="ShoppingCart.html" class="text-reset">
+                  <i class="fas fa-caret-right me-2"></i>
+                  Shopping Cart
+                </a>
+              </p>
+            </div>
+            <!--/ Grid column 2-->
+
+            <!-- Grid column 3-->
+            <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
+              <p>
+                <i class="fas fa-home me-3"></i>
+                <a href="https://www.google.com/maps?ll=10.786377,106.666297&z=16&t=m&hl=vi&gl=US&mapclient=embed&q=590+%C4%90.+C%C3%A1ch+M%E1%BA%A1ng+Th%C3%A1ng+8+Ph%C6%B0%E1%BB%9Dng+11+Qu%E1%BA%ADn+3+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh"
+                  target="new" class="text-reset">590, CMT8 Street, HCM City, VN</a>
+              </p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                <a href="mailto:info@estarclasses.edu.com" class="text-rest text-white">info@starclasses.edu.com</a>
+              </p>
+              <p>
+                <i class="fas fa-phone me-3"></i>
+                + 84 234 567 890
+              </p>
+              <p>
+                <i class="fas fa-print me-3"></i>
+                + 84 234 567 890
+              </p>
+            </div>
+            <!--/ Grid column 3-->
+
+            <!-- Grid column 4-->
+            <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
+              <!-- GeoLocation API (GoogleMaps)-->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s"
+                width="300" height="300" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!--/ Grid column 4-->
+          </div><!-- /Grid row -->
+        </div> <!-- /container -->
+      </section>
+      <!--/Section 2: Links  -->
+
+      <!--Section 3:  Copyright and Time -->
+      <section class="d-flex justify-content-between p-2 border-bottom">
+        <div class="mr-5 d-none d-lg-block pl-2">&copy; 2022 Star Classes</div>
+        <div class="ml-5 d-none d-lg-block">
+          <!-- Display current date, time -->
+          <div class="time" id="time">
+            <script>
+              var time = document.getElementById("time").innerHTML;
+              var today = new Date();
+              time = document.write("Now: " + today);
+            </script>
+          </div>
+          <!--/ Display current date, time -->
+        </div>
+      </section>
+      <!--/Section 3:  Copyright and Time -->
+
+    </footer>
+    <!--/ FOOTER -->
   </main>
 
-    <!-- Java Script -->
-    <script src="Gallery.js"></script>
-    <script src="cart.js"></script>
-    <script>
-      var app=angular.module("myApp",[])
-        app.controller("myController",function(){         
-        })
+  <!-- Java Script -->
+  <script src="Gallery.js"></script>
+  <script src="cart.js"></script>
+  <script>
+    var app = angular.module("myApp", [])
+    app.controller("myController", function () {
+    })
 
-      //** Count Visitor ** 
-      function countVisitor() {
-        if (typeof (Storage) !== "undefined") {
-          if (localStorage.countV) {
-            localStorage.countV = Number(localStorage.countV) + 1;
-          } else {
-            localStorage.countV = 1;
-          }
-          document.getElementById("visitor").innerHTML = localStorage.countV;
+    //** Count Visitor ** 
+    function countVisitor() {
+      if (typeof (Storage) !== "undefined") {
+        if (localStorage.countV) {
+          localStorage.countV = Number(localStorage.countV) + 1;
         } else {
-          document.getElementById("visitor").innerHTML = 0;
+          localStorage.countV = 1;
         }
+        document.getElementById("visitor").innerHTML = localStorage.countV;
+      } else {
+        document.getElementById("visitor").innerHTML = 0;
       }
-    </script>
-    <!-- Java Script -->
+    }
+  </script>
+  <!-- Java Script -->
 </body>
+
 </html>

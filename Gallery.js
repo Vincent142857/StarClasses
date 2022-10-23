@@ -751,7 +751,7 @@ function compare(key, order = 'asc') {
   TopFour(filterSubject("SubjectAWSCertification"), "SubjectAWSCertification");
   TopFour(filterSubject("SubjectDrawing"), "SubjectDrawing");
 
-  let sortByQtyStudent = data.slice();
+  let sortByQtyStudent = data;
   let sortByRating = data.slice();
 
   TopFour(sortByQtyStudent.sort(compare("QtyStudent", "desc")), "sort-top-4-by-student");

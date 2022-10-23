@@ -152,10 +152,11 @@
       color: #E4A11B !important;
       cursor: pointer !important;
     }
-    a:hover {
+
+    /* a:hover {
       color: #E4A11B !important;
       cursor: pointer !important;
-    }
+    } */
 
 
     .badge-notification {
@@ -172,6 +173,19 @@
       align-items: flex-end !important;
     }
 
+    .BoxShow .nav-link:hover {
+      /* margin: .4em; */
+      /* padding: 1em; */
+      cursor: pointer;
+      background: #FFF59D;
+      text-decoration: none;
+      color: black!important;
+      font-size: 11px;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-font-smoothing: antialiased;
+    }
+
+
     .card-img-top {
       border-top-left-radius: 30px;
       border-top-right-radius: 30px;
@@ -179,7 +193,7 @@
       height: 90%;
       max-width: 400px;
       margin: 0 auto;
-      
+
     }
 
     .card {
@@ -201,6 +215,20 @@
       flex-direction: column;
       justify-items: center;
       align-items: center;
+    }
+    [class^="hvr-"]:hover {
+        margin: .4em!important;
+        padding: 1em !important;
+        cursor: pointer;
+        background: #e1e1e1 !important;
+        text-decoration: none !important;
+        color: #666 !important;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-font-smoothing: antialiased;
+    }   
+
+    h3 {
+      font-family: comic;
     }
   </style>
 </head>
@@ -240,32 +268,36 @@
 
                     <div class="col-6 mb-3 mb-lg-0">
                       <div class="list-group list-group-flush">
-                      
+
                         <a href="GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
                           Topic
                         </a>
-                        
-                        <a href="GalleryCourse.html" data-sub="SubjectPython" class="menu-sub list-group-item list-group-item-action"><i
+
+                        <a href="GalleryCourse.html" data-sub="SubjectPython"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Python</a>
-                        <a href="GalleryCourse.html" data-sub="SubjectExcel" class="menu-sub list-group-item list-group-item-action">
-                          <i
-                            class="fas fa-caret-right pe-2"></i>Excel
+                        <a href="GalleryCourse.html" data-sub="SubjectExcel"
+                          class="menu-sub list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>Excel
                         </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment" class="menu-sub list-group-item list-group-item-action"><i
+                        <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Web Development
                         </a>
                         <a href="GalleryCourse.html" data-sub="SubjectJavascript"
-                        class="menu-sub list-group-item list-group-item-action"><i
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Javascript
                         </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectDataScience" class="menu-sub list-group-item list-group-item-action"><i
+                        <a href="GalleryCourse.html" data-sub="SubjectDataScience"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Data Science
                         </a>
                         <a href="GalleryCourse.html" data-sub="SubjectAWSCertification"
-                        class="menu-sub list-group-item list-group-item-action"><i
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>AWS Certification
                         </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectDrawing" class="menu-sub list-group-item list-group-item-action"><i
+                        <a href="GalleryCourse.html" data-sub="SubjectDrawing"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Drawing
                         </a>
                       </div>
@@ -274,7 +306,7 @@
                     <div class="col-6 mb-3 mb-lg-0">
                       <div class="list-group list-group-flush">
                         <p class="mb-0 list-group-item text-uppercase font-weight-bold">
-                          Quickly Link
+                          Highlights
                         </p>
                         <a href="index.html#Featured-course" class="list-group-item list-group-item-action">
                           <i class="fas fa-caret-right pe-2"></i>
@@ -282,7 +314,7 @@
                         </a>
                         <a href="index.html#Students-are-viewing" class="list-group-item list-group-item-action">
                           <i class="fas fa-caret-right pe-2"></i>
-                          Students are viewing
+                          Recommended for you
                         </a>
                         <a href="index.html#teacher" class="list-group-item list-group-item-action">
                           <i class="fas fa-caret-right pe-2"></i>
@@ -290,7 +322,7 @@
                         </a>
                       </div>
                     </div>
-                    
+
 
                   </div>
                 </div>
@@ -389,7 +421,7 @@
     <section class="container-fluid px-md-5 marketing">
       <!--2.1 Display by Subject -->
       <div>
-        <h1>A broad selection of courses</h1>
+        <h1 style="font-family:bookman;">A broad selection of courses</h1>
         <h5>Choose from online video courses with new additions published every month</h5>
         <!-- Courses Classes -->
         <div class="mb-md-4 border">
@@ -444,16 +476,17 @@
             <div class="tab-pane fade show active p-3" id="ex7-tabs-2" role="tabpanel" aria-labelledby="ex7-tab-2"
               data-spy="scroll" data-target="#myScrollspy" data-offset="10">
               <p>
-              <h3>Expand your career opportunities with Python</h3>Take one of Star Classes’s range of Python courses
-              and
-              learn how to code using this incredibly useful language. Its simple syntax and readability makes Python
+              <h3>Expand your career opportunities with Python</h3>Take one of Star Classes’s
+              range of Python courses and learn how to code using this incredibly useful language. Its simple syntax and
+              readability makes Python
               perfect for Flask, Django, data science, and machine learning. You’ll learn how to build everything from
               games to sites to apps. Choose from a range of courses that will appeal to...</p>
               <hr>
-              
+
               <div class="row SubjectPython"></div>
 
-              <a href="GalleryCourse.html" data-sub="SubjectPython" class="menu-sub btn btn-info offset-md-10 my-3 text-black">View more &#8594;</a>
+              <a href="GalleryCourse.html" data-sub="SubjectPython"
+                class="menu-sub btn btn-secondary offset-md-10 my-3 text-black">View more &#8594;</a>
             </div> <!-- Tab content of Python -->
 
             <!-- Tab content of Excel -->
@@ -469,7 +502,8 @@
 
               <div class="row SubjectExcel"></div>
 
-              <a href="GalleryCourse.html" data-sub="SubjectExcel" class="menu-sub btn btn-info offset-md-10 my-3 text-black">View more &#8594;</a>
+              <a href="GalleryCourse.html" data-sub="SubjectExcel"
+                class="menu-sub btn btn-secondary offset-md-10 my-3 text-black">View more &#8594;</a>
             </div><!-- Tab content of Excel -->
 
             <!--Tab content of Web Development -->
@@ -484,7 +518,8 @@
               <hr>
               <div class="row SubjectWebDevelopment"></div>
 
-              <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment" class="menu-sub btn btn-info offset-md-10 my-3 text-black">View more &#8594;</a>
+              <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment"
+                class="menu-sub btn btn-secondary offset-md-10 my-3 text-black">View more &#8594;</a>
             </div>
             <!--/Tab content of Web Development -->
 
@@ -500,7 +535,8 @@
               <hr>
               <div class="row SubjectDataScience"></div>
 
-              <a href="GalleryCourse.html" data-sub="SubjectDataScience" class="menu-sub btn btn-info offset-md-10 my-3 text-black">View more &#8594;</a>
+              <a href="GalleryCourse.html" data-sub="SubjectDataScience"
+                class="menu-sub btn btn-secondary offset-md-10 my-3 text-black">View more &#8594;</a>
             </div>
             <!--/ Tab content of Data Science -->
 
@@ -517,7 +553,8 @@
               like HTML and CSS...</p>
               <hr>
               <div class="row SubjectJavascript"></div>
-              <a href="GalleryCourse.html" data-sub="SubjectJavascript" class="menu-sub btn btn-info offset-md-10 my-3 text-black">View more &#8594;</a>
+              <a href="GalleryCourse.html" data-sub="SubjectJavascript"
+                class="menu-sub btn btn-secondary offset-md-10 my-3 text-black">View more &#8594;</a>
             </div>
             <!--/ Tab content of JavaScript -->
 
@@ -533,7 +570,8 @@
               <hr>
               <div class="row SubjectAWSCertification"></div>
 
-              <a href="GalleryCourse.html" data-sub="SubjectAWSCertification" class="menu-sub btn btn-info offset-md-10 my-3 text-black">View more &#8594;</a>
+              <a href="GalleryCourse.html" data-sub="SubjectAWSCertification"
+                class="menu-sub btn btn-secondary offset-md-10 my-3 text-black">View more &#8594;</a>
             </div>
             <!--Tab content of AWS Certification -->
 
@@ -550,7 +588,8 @@
               <hr>
               <div class="row SubjectDrawing"></div>
 
-              <a href="GalleryCourse.html" data-sub="SubjectDrawing" class="menu-sub btn btn-info offset-md-10 my-3 text-black">View more &#8594;</a>
+              <a href="GalleryCourse.html" data-sub="SubjectDrawing"
+                class="menu-sub btn btn-secondary offset-md-10 my-3 text-black">View more &#8594;</a>
             </div>
             <!--/Tab content of Drawing -->
 
@@ -565,23 +604,23 @@
         <h2 id="Featured-course">Featured course</h2>
 
         <div class="row sort-top-4-by-student mt-5"></div>
-        <a class="btn btn-info offset-md-10 my-3 text-black" href="GalleryCourse.html">View more &#8594;</a>
+        <a class="btn btn-secondary offset-md-10 my-3 text-black" href="GalleryCourse.html">View more &#8594;</a>
       </div>
       <!--/ 2.2 Display by student top 4 -->
       <hr>
       <!--2.3 Display by rating top 4 -->
       <div class="my-3 p-2">
-        <h2 id="Students-are-viewing">Students are viewing</h2>
+        <h2 id="Students-are-viewing">Recommended for you</h2>
 
         <div class="row sort-top-4-by-rating mt-5"></div>
-        <a class="btn btn-info offset-md-10 my-3 text-black" href="GalleryCourse.html">View more &#8594;</a>
+        <a class="btn btn-secondary offset-md-10 my-3 text-black" href="GalleryCourse.html">View more &#8594;</a>
       </div><!-- /2.3 Display by rating top 4 -->
 
       <hr>
       <!-- 2.4 -->
       <div class="container marketing ">
         <h2 class="my-4" id="teacher">Lecturers of Star Class</h2>
-        
+
         <!-- Carousel wrapper -->
         <div id="carouselMultiItem" class="carousel slide carousel-dark text-center col-12 mx-auto"
           data-mdb-ride="carousel">
@@ -852,7 +891,7 @@
                             BIllustrator and Educator
                           </p>
                           <p>
-                            Rating 4.5 
+                            Rating 4.5
                             <i class="fa fa-star text-warning"></i>
                             <i class="fa fa-star text-warning"></i>
                             <i class="fa fa-star text-warning"></i>
@@ -1114,7 +1153,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="Gallery.js"></script>
   <script src="cartForCourse.js"></script>
-  
+
   <!--/Java Script -->
 
   <!-- Java Script -->

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- icon website -->
-  <link rel="icon" href="/img/star-classes-icon.png" type="image/x-icon">
+  <link rel="icon" href="./img/star-classes-icon.png" type="image/x-icon">
   <title>Star Classes</title>
 
   <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
@@ -24,13 +24,12 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
-    <script src="./MDB5/js/mdb.min.js"></script>
+  <script src="./MDB5/js/mdb.min.js"></script>
 
   <!-- Angular  -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-  <script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
   <style>
-    
     * {
       margin: 0;
       padding: 0;
@@ -41,11 +40,13 @@
       padding-top: 3rem;
       color: #5a5a5a;
     }
+
     .nav-link:hover,
     .list-group-item:hover {
       color: #E4A11B !important;
       cursor: pointer !important;
     }
+
     .badge-notification {
       position: absolute;
       font-size: .6rem;
@@ -53,21 +54,22 @@
       margin-left: -.5rem;
       padding: .2em .45em
     }
-    
+
     .method-payment img {
       max-width: 40px;
       max-height: 40px;
     }
+
     .error {
       padding-left: 10px;
       color: red;
     }
-    
   </style>
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
 </head>
-<body  ng-controller="myController">
+
+<body ng-controller="myController">
   <!-- Menu top -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -102,32 +104,36 @@
 
                     <div class="col-6 mb-3 mb-lg-0">
                       <div class="list-group list-group-flush">
-                      
+
                         <a href="GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
                           Topic
                         </a>
-                        
-                        <a href="GalleryCourse.html" data-sub="SubjectPython" class="menu-sub list-group-item list-group-item-action"><i
+
+                        <a href="GalleryCourse.html" data-sub="SubjectPython"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Python</a>
-                        <a href="GalleryCourse.html" data-sub="SubjectExcel" class="menu-sub list-group-item list-group-item-action">
-                          <i
-                            class="fas fa-caret-right pe-2"></i>Excel
+                        <a href="GalleryCourse.html" data-sub="SubjectExcel"
+                          class="menu-sub list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>Excel
                         </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment" class="menu-sub list-group-item list-group-item-action"><i
+                        <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Web Development
                         </a>
                         <a href="GalleryCourse.html" data-sub="SubjectJavascript"
-                        class="menu-sub list-group-item list-group-item-action"><i
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Javascript
                         </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectDataScience" class="menu-sub list-group-item list-group-item-action"><i
+                        <a href="GalleryCourse.html" data-sub="SubjectDataScience"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Data Science
                         </a>
                         <a href="GalleryCourse.html" data-sub="SubjectAWSCertification"
-                        class="menu-sub list-group-item list-group-item-action"><i
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>AWS Certification
                         </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectDrawing" class="menu-sub list-group-item list-group-item-action"><i
+                        <a href="GalleryCourse.html" data-sub="SubjectDrawing"
+                          class="menu-sub list-group-item list-group-item-action"><i
                             class="fas fa-caret-right pe-2"></i>Drawing
                         </a>
                       </div>
@@ -152,7 +158,7 @@
                         </a>
                       </div>
                     </div>
-                    
+
 
                   </div>
                 </div>
@@ -210,10 +216,9 @@
     </nav>
   </header>
   <!--/ Menu top -->
-  <main class="d-flex flex-column mt-4" ng-app="myApp" >
-    <!-- Shopping Cart --> 
-    
-    <section class="container-fluid p-2" style="background-color: #E8F5E9">
+  <main class="d-flex flex-column mt-4" ng-app="myApp">
+    <!-- top billing -->
+    <section class="container-fluid p-2">
       <div class="mr-auto">
         <small class="mb-5">
           <a class="text-reset" href="index.html">Home</a> &#62;
@@ -223,296 +228,363 @@
         <h2 class="mt-3 pl-3">Billing details</h2>
       </div>
       <hr>
-
-      <div class="d-flex flex-column flex-md-row">
-        <!-- column picture -->
-        <div class="col-12 col-md-6">
-          <div class="col-12 mx-3">
-            <img src="./img//imgcourses/aws01.jpeg" alt="picture payment" width="100%" style="border-radius: 20px;" height="50%">
-          </div>
-          <!-- Method Payment -->
-          <div class="col-12 my-2">
-            <div class="d-flex flex-row justify-content-center method-payment">
-              <div class="mx-2 p-0">
-                <a href="https://momo.vn/" target="new"><img src="./img/logo-momo.jpg" alt="momo" width="100%"></a>
-              </div>
-              <div class="mx-2 p-0">
-                <a href="https://www.citi.com/" target="new"><img src="./img/mastercard.png" alt="mastercard" width="100%"></a>
-              </div>
-              <div class="mx-2 p-0">
-                <a href="https://www.citi.com/" target="new"><img src="./img/InternetBanking.jpg" alt="internet banking" width="100%"></a>
-              </div>
-              <div class="mx-2 p-0">
-                <a href="https://www.citi.com/" target="new"><img src="./img/zalopay.png" alt="zalo" width="100%"></a>
-              </div>
+    </section>
+    <!-- Credit card form -->
+    <section style="background-color: none;">
+      <div class="row">
+        <div class="col-md-8 mb-4">
+          <div class="card mb-4 px-3">
+            <div class="card-header py-3">
+              <h5 class="mb-0">Information details</h5>
             </div>
-          </div><!--/ Method Payment -->
-        </div>
-
-        <!-- column form -->
-        <div class="Shopping-Left col-12 col-md-6">
-          <!-- Your Information -->
-          <form class="col-10 mx-auto" ng-app="myApp" name="Form">
-            <!-- full  name -->
-            <div class="form-group mb-3">
-              <label for="FullName">Full name (*):</label>
-              <input type="text" name="FullName" id="FullName" class="form-control" placeholder="Enter your Full name" required ng-model="FullName">
-              <small class="error" ng-show="Form.FullName.$touched && Form.FullName.$error.required">Full name is required</small>
-            </div>
-            <!-- Email address -->
-            <div class="form-group mb-3">
-              <label for="Email">Email (*):</label>
-              <input type="email" name="Email" id="Email" class="form-control" placeholder="Enter your email" ng-model="Email" required pattern="\w+[@]gmail[.]com([.]vn)?">
-              <small class="error" ng-show="Form.Email.$touched && Form.Email.$error.required">Email is required</small>
-              <small class="error" ng-show="Form.Email.$touched && Form.Email.$error.pattern">wwww@gmail.com.vn</small>
-            </div>
-            <div class="d-flex row">
-              <!-- Phone number -->
-              <div class="form-group mb-3 col-6 pr-2">
-                <label for="Phone">Phone number(*):</label>
-                <input type="tel" name="Phone" id="Phone" class="form-control" ng-model="Phone" placeholder="Enter your phone number" required pattern="\d{8,12}">
-                <small class="error" ng-show="Form.Phone.$touched && Form.Phone.$error.required">Phone is required</small>
-                <small class="error" ng-show="Form.Phone.$touched && Form.Phone.$error.pattern">8-12 number</small>
-              </div>
-              <!-- Country -->
-              <div class="form-group mb-3 col-6 pl-2">
-                <label for="">Country (*):</label>
-                <select name="" id="" class="form-control" >
-                  <option value="">American</option>
-                  <option value="">China</option>
-                  <option value="">India</option>
-                  <option value="" selected>Vietnam</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Address -->
-            <div class="form-group mb-3">
-              <label for="Address">Address (*):</label>
-              <input type="text" name="Address" id="Address" class="form-control" placeholder="Enter your address" required ng-model="Address">
-              <small class="error" ng-show="Form.Address.$touched && Form.Address.$error.required">Address is required</small>
-            </div>
-            <div class="form-group mb-3">
-              <label for="">Method Payment (*):</label>
-              <select name="" id="" class="form-select">
-                <option value="">Momo</option>
-                <option value="">ZaloPay</option>
-                <option value="">Internet Banking</option>
-                <option value="" selected>Mastercard</option>
-              </select>
-            </div>
-            
-            <div class="form-group mt-3">
-               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary offset-md-9" data-mdb-toggle="modal"
-                data-mdb-target="#Modal">
-                Payment
-              </button>
-              <!-- Modal -->
-              <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header border-bottom-0">
-                      <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+            <div class="card-body">
+              <form>
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="FullName" class="form-control border-bottom" />
+                      <label class="form-label" for="FullName">Full name</label>
                     </div>
-                    <div class="modal-body text-start text-black p-4">
-                      <h5 class="modal-title text-uppercase mb-5" id="ModalLabel">Star Classes</h5>
-                      <h4 class="mb-5" style="color: #35558a;">Thanks for your order</h4>
-                      <p class="mb-0" style="color: #35558a;">Payment summary</p>
-                      <hr class="mt-2 mb-4"
-                        style="height: 0; background-color: transparent; opacity: .75; border-top: 2px dashed #9e9e9e;">
-      
-                      <div class="d-flex justify-content-between">
-                        <p class="fw-bold mb-0">Purchase Order (Qty: <strong class="text-primary total-count"></strong>)</p>
-                        <p class="text-muted mb-0 total-cart"></p>
-                      </div>
-      
-                      <div class="d-flex justify-content-between">
-                        <p class="small mb-0">Shipping</p>
-                        <p class="small mb-0">$ 0</p>
-                      </div>
-      
-                      <div class="d-flex justify-content-between pb-1">
-                        <p class="small">Tax</p>
-                        <p class="small">$ 0</p>
-                      </div>
-      
-                      <div class="d-flex justify-content-between">
-                        <p class="fw-bold">Total</p>
-                        <p class="fw-bold total-cart" style="color: #35558a;"></p>
-                      </div>
-      
-                    </div>
-                    <div class="modal-footer d-flex justify-content-center border-top-0 py-4">
-                      <button type="button" class="btn btn-primary btn-lg mb-1" style="background-color: #35558a;">
-                        Track your order
-                      </button>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="tel" id="Phone" class="form-control border-bottom" />
+                      <label class="form-label" for="Phone">Phone number</label>
                     </div>
                   </div>
                 </div>
-              </div><!--/ modal -->
-            </div>
+                <!-- 2 column grid layout with text inputs for the address and Zip -->
+                <div class="row mb-4">
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="form6Example4" class="form-control border-bottom" />
+                      <label class="form-label" for="form6Example4">Address</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="ZipCode" class="form-control border-bottom" />
+                      <label class="form-label" for="ZipCode">Zip/Postal</label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="form6Example5" class="form-control border-bottom" />
+                  <label class="form-label" for="form6Example5">Email</label>
+                </div>
 
-          </form>
-        </div>
-      </div>
+                <hr class="my-4" />
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="checkoutForm1" />
+                  <label class="form-check-label" for="checkoutForm1">
+                    Shipping address is the same as my billing address
+                  </label>
+                </div>
+
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" value="" id="checkoutForm2" checked />
+                  <label class="form-check-label" for="checkoutForm2">
+                    Save this information for next time
+                  </label>
+                </div>
+
+                <hr class="my-4" />
+
+                <h5 class="mb-3">Payment method</h5>
+
+                <div class="form-check">
+                  <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="checkoutForm3"
+                    checked />
+                  <label class="form-check-label" for="checkoutForm3">
+                    Credit/Debit card <i class="fas fa-credit-card text-primary fa-2x"></i>
+                  </label>
+                </div>
+
+                <div class="form-check mt-3">
+                  <input class="form-check-input mt-2" type="radio" name="flexRadioDefault" id="checkoutForm5" />
+                  <label class="form-check-label" for="checkoutForm5">
+                    Paypal <i class="fab fa-cc-paypal text-primary fa-2x"></i>
+                  </label>
+                </div>
+
+                <div class="row my-4">
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="formNameOnCard" class="form-control border-bottom" />
+                      <label class="form-label" for="formNameOnCard">Name on card</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="formCardNumber" class="form-control border-bottom" />
+                      <label class="form-label" for="formCardNumber">Credit card number</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row mb-4">
+                  <div class="col-3">
+                    <div class="form-outline">
+                      <input type="text" id="formExpiration" class="form-control border-bottom" />
+                      <label class="form-label" for="formExpiration">Expiration</label>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="form-outline">
+                      <input type="text" id="formCVV" class="form-control border-bottom" />
+                      <label class="form-label" for="formCVV">CVV</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group mt-3">
+                  <!-- Button trigger modal -->
+                  <button type="submit" class="btn btn-primary btn-lg btn-block" data-mdb-toggle="modal"
+                    data-mdb-target="#Modal">
+                    Confirmation Order
+                  </button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-start text-black p-4">
+                          <h5 class="modal-title text-uppercase mb-5" id="ModalLabel">Star Classes</h5>
+                          <h4 class="mb-5" style="color: #35558a;">Thanks for your order</h4>
+                          <p class="mb-0" style="color: #35558a;">Payment summary</p>
+                          <hr class="mt-2 mb-4"
+                            style="height: 0; background-color: transparent; opacity: .75; border-top: 2px dashed #9e9e9e;">
       
+                          <div class="d-flex justify-content-between">
+                            <p class="fw-bold mb-0">Purchase Order (Qty: <strong class="text-primary total-count"></strong>)
+                            </p>
+                            <p class="text-muted mb-0 total-cart"></p>
+                          </div>
+      
+                          <div class="d-flex justify-content-between">
+                            <p class="small mb-0">Shipping</p>
+                            <p class="small mb-0">$ 0</p>
+                          </div>
+      
+                          <div class="d-flex justify-content-between pb-1">
+                            <p class="small">Tax</p>
+                            <p class="small">$ 0</p>
+                          </div>
+      
+                          <div class="d-flex justify-content-between">
+                            <p class="fw-bold">Total</p>
+                            <p class="fw-bold total-cart" style="color: #35558a;"></p>
+                          </div>
+      
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center border-top-0 py-4">
+                          <button type="button" class="btn btn-primary btn-lg mb-1" style="background-color: #35558a;">
+                            Track your order
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/ modal -->
+                </div>
 
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="container-fluid border bg-dark text-white">
-    <!-- Section 1: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!--/ Left -->
-      <!-- Right -->
-      <div>
-        <a href="" class="me-4 link-primary">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="" class="me-4 link-primary">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 link-warning">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 link-danger">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 link-primary">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
-      <!--/ Right -->
-    </section>
-    <!--/ Section 1: Social media -->
-
-    <!-- Section 2: Links  -->
-    <section class="d-flex justify-content-center justify-content-lg-around p-2 border-bottom">
-      <div class="container text-center text-md-start mt-3">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column 1 -->
-          <div class="col-md-4 mx-auto mb-4">
-            <!-- Content -->
-            <p class="mx-auto px-3">
-              <a href="index.html"><img src="./img/star-classes-4.png" width="200px" alt="logo-name"></a>
-            </p>
-            <p style="text-align:justify" class="px-3">
-              Whether you want to learn or to share what you know, you have come to the right place. As a global
-              destination for online learning, we connect people through knowledge.
-            </p>
+              </form>
+            </div>
           </div>
-          <!--/ Grid column 1-->
-
-          <!-- Grid column 2-->
-          <div class="col-md-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              <a href="index.html" class="text-reset">Star Classes</a>
-            </h6>
-            <p>
-              <a href="GalleryCourse.html" class="text-reset">
-                <i class="fas fa-caret-right me-2"></i>
-                Courses Classes
-              </a>
-            </p>
-            <p>
-              <a href="Support.html" class="text-reset">
-                <i class="fas fa-caret-right me-2"></i>
-                Support & Help
-              </a>
-            </p>
-            <p>
-              <a href="Policy.html" class="text-reset">
-                <i class="fas fa-caret-right me-2"></i>
-                Policy
-              </a>
-            </p>
-            <p>
-              <a href="ShoppingCart.html" class="text-reset">
-                <i class="fas fa-caret-right me-2"></i>
-                Shopping Cart
-              </a>
-            </p>
-          </div>
-          <!--/ Grid column 2-->
-
-          <!-- Grid column 3-->
-          <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
-            <p>
-              <i class="fas fa-home me-3"></i>
-              <a href="https://www.google.com/maps?ll=10.786377,106.666297&z=16&t=m&hl=vi&gl=US&mapclient=embed&q=590+%C4%90.+C%C3%A1ch+M%E1%BA%A1ng+Th%C3%A1ng+8+Ph%C6%B0%E1%BB%9Dng+11+Qu%E1%BA%ADn+3+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh"
-                target="new" class="text-reset">590, CMT8 Street, HCM City, VN</a>
-            </p>
-            <p>
-              <i class="fas fa-envelope me-3"></i>
-              <a href="mailto:info@estarclasses.edu.com" class="text-rest text-white">info@starclasses.edu.com</a>
-            </p>
-            <p>
-              <i class="fas fa-phone me-3"></i>
-              + 84 234 567 890
-            </p>
-            <p>
-              <i class="fas fa-print me-3"></i>
-              + 84 234 567 890
-            </p>
-          </div>
-          <!--/ Grid column 3-->
-
-          <!-- Grid column 4-->
-          <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
-            <!-- GeoLocation API (GoogleMaps)-->
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s"
-              width="300" height="300" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <!--/ Grid column 4-->
-        </div><!-- /Grid row -->
-      </div> <!-- /container -->
-    </section>
-    <!--/Section 2: Links  -->
-
-    <!--Section 3:  Copyright and Time -->
-    <section class="d-flex justify-content-between p-2 border-bottom">
-      <div class="mr-5 d-none d-lg-block pl-2">&copy; 2022 Star Classes</div>
-      <div class="ml-5 d-none d-lg-block">
-        <!-- Display current date, time -->
-        <div class="time" id="time">
-          <script>
-            var time = document.getElementById("time").innerHTML;
-            var today = new Date();
-            time = document.write("Now: " + today);
-          </script>
         </div>
-        <!--/ Display current date, time -->
+        <!-- summary -->
+        <div class="col-md-4 mb-4">
+          <div class="card mb-4 col-md-10 mx-auto">
+            <div class="card-header py-3">
+              <h5 class="mb-0">Summary</h5>
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+                  Purchase order
+                  <span class="text-muted mb-0 total-cart"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+                  Shipping
+                  <span>$ 0</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+                  <div>
+                    <strong>Total amount</strong>
+                    <strong>
+                      <p class="mb-0">(including VAT)</p>
+                    </strong>
+                  </div>
+                  <span class="mb-0 total-cart"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><!--/ summary -->
       </div>
     </section>
-    <!--/Section 3:  Copyright and Time -->
+    
+    
 
-  </footer>
-  <!--/ FOOTER -->
+    <!-- FOOTER -->
+    <footer class="container-fluid border bg-dark text-white">
+      <!-- Section 1: Social media -->
+      <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!--/ Left -->
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 link-primary">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="" class="me-4 link-primary">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 link-warning">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 link-danger">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 link-primary">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+        <!--/ Right -->
+      </section>
+      <!--/ Section 1: Social media -->
+
+      <!-- Section 2: Links  -->
+      <section class="d-flex justify-content-center justify-content-lg-around p-2 border-bottom">
+        <div class="container text-center text-md-start mt-3">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column 1 -->
+            <div class="col-md-4 mx-auto mb-4">
+              <!-- Content -->
+              <p class="mx-auto px-3">
+                <a href="index.html"><img src="./img/star-classes-4.png" width="200px" alt="logo-name"></a>
+              </p>
+              <p style="text-align:justify" class="px-3">
+                Whether you want to learn or to share what you know, you have come to the right place. As a global
+                destination for online learning, we connect people through knowledge.
+              </p>
+            </div>
+            <!--/ Grid column 1-->
+
+            <!-- Grid column 2-->
+            <div class="col-md-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <a href="index.html" class="text-reset">Star Classes</a>
+              </h6>
+              <p>
+                <a href="GalleryCourse.html" class="text-reset">
+                  <i class="fas fa-caret-right me-2"></i>
+                  Courses Classes
+                </a>
+              </p>
+              <p>
+                <a href="Support.html" class="text-reset">
+                  <i class="fas fa-caret-right me-2"></i>
+                  Support & Help
+                </a>
+              </p>
+              <p>
+                <a href="Policy.html" class="text-reset">
+                  <i class="fas fa-caret-right me-2"></i>
+                  Policy
+                </a>
+              </p>
+              <p>
+                <a href="ShoppingCart.html" class="text-reset">
+                  <i class="fas fa-caret-right me-2"></i>
+                  Shopping Cart
+                </a>
+              </p>
+            </div>
+            <!--/ Grid column 2-->
+
+            <!-- Grid column 3-->
+            <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
+              <p>
+                <i class="fas fa-home me-3"></i>
+                <a href="https://www.google.com/maps?ll=10.786377,106.666297&z=16&t=m&hl=vi&gl=US&mapclient=embed&q=590+%C4%90.+C%C3%A1ch+M%E1%BA%A1ng+Th%C3%A1ng+8+Ph%C6%B0%E1%BB%9Dng+11+Qu%E1%BA%ADn+3+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh"
+                  target="new" class="text-reset">590, CMT8 Street, HCM City, VN</a>
+              </p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                <a href="mailto:info@estarclasses.edu.com" class="text-rest text-white">info@starclasses.edu.com</a>
+              </p>
+              <p>
+                <i class="fas fa-phone me-3"></i>
+                + 84 234 567 890
+              </p>
+              <p>
+                <i class="fas fa-print me-3"></i>
+                + 84 234 567 890
+              </p>
+            </div>
+            <!--/ Grid column 3-->
+
+            <!-- Grid column 4-->
+            <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
+              <!-- GeoLocation API (GoogleMaps)-->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3253162668493!2d106.66410831487151!3d10.786376992314795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2zNTkwIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyAxMSwgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1662781476023!5m2!1svi!2s"
+                width="300" height="300" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!--/ Grid column 4-->
+          </div><!-- /Grid row -->
+        </div> <!-- /container -->
+      </section>
+      <!--/Section 2: Links  -->
+
+      <!--Section 3:  Copyright and Time -->
+      <section class="d-flex justify-content-between p-2 border-bottom">
+        <div class="mr-5 d-none d-lg-block pl-2">&copy; 2022 Star Classes</div>
+        <div class="ml-5 d-none d-lg-block">
+          <!-- Display current date, time -->
+          <div class="time" id="time">
+            <script>
+              var time = document.getElementById("time").innerHTML;
+              var today = new Date();
+              time = document.write("Now: " + today);
+            </script>
+          </div>
+          <!--/ Display current date, time -->
+        </div>
+      </section>
+      <!--/Section 3:  Copyright and Time -->
+
+    </footer>
+    <!--/ FOOTER -->
   </main>
 
-    <!-- Java Script -->
-    <!-- jquery - JavaScript library for DOM operations -->
+  <!-- Java Script -->
+  <!-- jquery - JavaScript library for DOM operations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="Gallery.js"></script>
   <script src="cartForCourse.js"></script>
 
-    <script>
-      var app=angular.module("myApp",[])
-      app.controller("myController",function(){})
+  <script>
+    var app = angular.module("myApp", [])
+    app.controller("myController", function () { })
 
-    </script>
-    <!-- Java Script -->
+  </script>
+  <!-- Java Script -->
 </body>
+
 </html>
