@@ -33,15 +33,16 @@
   <!-- Angular  -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
-  
+
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
- 
+
   <style>
     * {
       padding: 0;
       margin: 0;
     }
+
     body {
       padding-top: 3rem;
       color: #5a5a5a;
@@ -129,7 +130,7 @@
         margin-top: 7rem;
       }
     }
-    
+
     .nav-link:hover,
     .dropdown-item:hover {
       color: #E4A11B !important;
@@ -154,70 +155,79 @@
       padding: .2em .45em
     }
 
-    .BoxShow{
+    .BoxShow {
       box-shadow: -2px -1px 7px rgba(86, 81, 81, 0.473);
     }
+
     .About1 h1 {
-        position:absolute;
-        top:120px;
-        left:30px;
-        font-size: 60px;
-        font-family: 'Times New Roman', Times, serif;
-        z-index: 1000;
-        color: black;
-        line-height: 1.5em;
+      position: absolute;
+      top: 120px;
+      left: 30px;
+      font-size: 60px;
+      font-family: 'Times New Roman', Times, serif;
+      z-index: 1000;
+      color: black;
+      line-height: 1.5em;
     }
-    .About1 p{
-      position:absolute;
-      top:380px;
-      left:30px;
+
+    .About1 p {
+      position: absolute;
+      top: 380px;
+      left: 30px;
       font-size: 30px;
       font-family: 'Times New Roman', Times, serif;
       z-index: 1000;
       color: black;
       line-height: 1.5em;
     }
-    .Welcome{
-        font-size: 40px;
-        font-family: 'Times New Roman', Times, serif;
-        color: white;
+
+    .Welcome {
+      font-size: 40px;
+      font-family: 'Times New Roman', Times, serif;
+      color: white;
     }
 
     /* Layout  */
     .analytic {
-      
+
       margin: 30px auto;
       padding: 38px 0;
       width: 100%;
     }
+
     .analytic ul {
       text-align: center;
       margin: 0 auto;
     }
+
     .analytic ul li {
       color: #fff;
       display: inline-block;
       width: 25%;
       text-align: center;
     }
+
     .analytic ul li p {
       width: 100%;
     }
+
     .analytic ul li .icon {
       margin-bottom: 14px;
     }
+
     .analytic ul li .icon i {
       font-size: 45px;
     }
+
     .analytic ul li .number {
       font-size: 43px;
       margin-bottom: 7px;
     }
-    .list-group-item:hover {
-    color: #E4A11B !important;
-    cursor: pointer !important;
-    }
 
+    .list-group-item:hover {
+      color: #E4A11B !important;
+      cursor: pointer !important;
+    }
   </style>
 
 
@@ -225,7 +235,7 @@
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
 </head>
 
-<body ng-app="myApp"  onload="countVisitor()" ng-controller="myController">
+<body ng-app="myApp" onload="countVisitor()" ng-controller="myController">
   <!-- Menu top -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -376,11 +386,11 @@
   <main class="d-flex flex-column mt-2" ng-app="myApp">
 
     <div class="About1">
-    <h1>Welcome <br>to Star Classes</h1>
-    <p>We share Knowledge with the world</p>
-    
-    <a href="#"><img src="./img/pic1.jpg" alt="pic1" width="100%" height="400px"></a>
- 
+      <h1>Welcome <br>to Star Classes</h1>
+      <p>We share Knowledge with the world</p>
+
+      <a href="#"><img src="./img/pic1.jpg" alt="pic1" width="100%" height="400px"></a>
+
     </div>
 
     <section class="marketing">
@@ -396,7 +406,8 @@
         <div class="col-lg-4">
           <img src="./img/reason2.jpg" width="50%" height="50%" alt="reason-02">
           <h2>Inspire learners</h2>
-          <p>Teach what you know and help learners explore their interests, gain new skills, and advance their careers.</p>
+          <p>Teach what you know and help learners explore their interests, gain new skills, and advance their careers.
+          </p>
         </div><!-- /.col-lg-4 -->
 
         <div class="col-lg-4">
@@ -410,7 +421,7 @@
 
     <!-- achievements -->
     <section class="marketing">
-  
+
       <div class="analytic mx-auto bg-warning">
         <ul class="row">
           <li class="col-12 col-sm-3">
@@ -438,100 +449,95 @@
     </section>
 
     <div class="container marketing">
-      
+
       <!-- Wrap the rest of the page in another container to center all the content. -->
-      <div class="container mb-md-4" ng-controller="myController" >
+      <div class="container mb-md-4" ng-controller="myController">
         <h1 class="text-center">How to begin</h1>
         <!-- Tabs navs -->
         <ul class="nav nav-tabs nav-justified mb-3 border-bottom" id="ex1" role="tablist">
           <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="ex7-tab-1" data-toggle="tab" href="#ex7-tabs-1" role="tab" aria-controls="ex7-tabs-1" aria-selected="true">
+            <a class="nav-link active" id="ex7-tab-1" data-toggle="tab" href="#ex7-tabs-1" role="tab"
+              aria-controls="ex7-tabs-1" aria-selected="true">
               <h5>Plan your curriculum</h5>
             </a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="ex7-tab-2" data-toggle="tab" href="#ex7-tabs-2" role="tab" aria-controls="ex7-tabs-2" aria-selected="false">
+            <a class="nav-link" id="ex7-tab-2" data-toggle="tab" href="#ex7-tabs-2" role="tab"
+              aria-controls="ex7-tabs-2" aria-selected="false">
               <h5>Record your video</h5>
             </a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="ex7-tab-3" data-toggle="tab" href="#ex7-tabs-3" role="tab" aria-controls="ex7-tabs-3" aria-selected="false">
+            <a class="nav-link" id="ex7-tab-3" data-toggle="tab" href="#ex7-tabs-3" role="tab"
+              aria-controls="ex7-tabs-3" aria-selected="false">
               <h5>Launch your course</h5>
             </a>
           </li>
         </ul>
         <!-- Tabs content -->
         <div class="tab-content" id="ex2-content">
-          <div  class="tab-pane fade show active" 
-                id="ex7-tabs-1" role="tabpanel" 
-                aria-labelledby="ex7-tab-1" 
-                data-spy="scroll" 
-                data-target="#myScrollspy" 
-                data-offset="10">
-                <!-- 1 -->
+          <div class="tab-pane fade show active" id="ex7-tabs-1" role="tabpanel" aria-labelledby="ex7-tab-1"
+            data-spy="scroll" data-target="#myScrollspy" data-offset="10">
+            <!-- 1 -->
 
             <div class="row featurette">
               <div class="col-md-7">
-                <p class="lead" style="line-height: 2;">You start with your passion and knowledge. Then choose a promising topic with the help of our Marketplace Insights tool. <br>
+                <p class="lead" style="line-height: 2;">You start with your passion and knowledge. Then choose a
+                  promising topic with the help of our Marketplace Insights tool. <br>
 
                   The way that you teach — what you bring to it — is up to you. <br>
-                  
+
                   How we help you <br>
-                  We offer plenty of resources on how to create your first course. And, our instructor dashboard and curriculum pages help keep you organized..</p>
+                  We offer plenty of resources on how to create your first course. And, our instructor dashboard and
+                  curriculum pages help keep you organized..</p>
               </div>
               <div class="col-md-5">
                 <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                height="500" src="./img/plan-your-curriculum-2x-v3.jpg" alt="picture">
+                  height="500" src="./img/plan-your-curriculum-2x-v3.jpg" alt="picture">
               </div>
             </div>
             <hr class="featurette-divider"><!-- 1 -->
-             
+
           </div>
-          <div
-            class="tab-pane fade"
-            id="ex7-tabs-2"
-            role="tabpanel"
-            aria-labelledby="ex7-tab-2"
-            data-spy="scroll" 
-            data-target="#myScrollspy" 
-            data-offset="10">
+          <div class="tab-pane fade" id="ex7-tabs-2" role="tabpanel" aria-labelledby="ex7-tab-2" data-spy="scroll"
+            data-target="#myScrollspy" data-offset="10">
             <!-- 2 -->
             <div class="row featurette">
               <div class="col-md-7 order-md-2">
-                <p class="lead" style="line-height: 2;">Use basic tools like a smartphone or a DSLR camera. Add a good microphone and you’re ready to start. <br>
+                <p class="lead" style="line-height: 2;">Use basic tools like a smartphone or a DSLR camera. Add a good
+                  microphone and you’re ready to start. <br>
 
-                  If you don’t like being on camera, just capture your screen. Either way, we recommend two hours or more of video for a paid course. <br>
-                  
+                  If you don’t like being on camera, just capture your screen. Either way, we recommend two hours or
+                  more of video for a paid course. <br>
+
                   How we help you <br>
-                  Our support team is available to help you throughout the process and provide feedback on test videos.</p>
+                  Our support team is available to help you throughout the process and provide feedback on test videos.
+                </p>
               </div>
               <div class="col-md-5 order-md-1">
                 <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                height="500" src="./img/record-your-video-2x-v3.jpg" alt="picture">
+                  height="500" src="./img/record-your-video-2x-v3.jpg" alt="picture">
               </div>
             </div>
             <hr class="featurette-divider">
 
           </div>
-          <div
-            class="tab-pane fade"
-            id="ex7-tabs-3"
-            role="tabpanel"
-            aria-labelledby="ex7-tab-3"
-            data-spy="scroll" 
-            data-target="#myScrollspy" 
-            data-offset="10">
+          <div class="tab-pane fade" id="ex7-tabs-3" role="tabpanel" aria-labelledby="ex7-tab-3" data-spy="scroll"
+            data-target="#myScrollspy" data-offset="10">
             <!-- 3 -->
             <div class="row featurette">
               <div class="col-md-7">
-                <p class="lead" style="line-height: 2;">Gather your first ratings and reviews by promoting your course through social media and your professional networks. <br>
-                  Your course will be discoverable in our marketplace where you earn revenue from each paid enrollment. <br>
+                <p class="lead" style="line-height: 2;">Gather your first ratings and reviews by promoting your course
+                  through social media and your professional networks. <br>
+                  Your course will be discoverable in our marketplace where you earn revenue from each paid enrollment.
+                  <br>
                   How we help you <br>
-                  Our custom coupon tool lets you offer enrollment incentives while our global promotions drive traffic to courses.</p>
+                  Our custom coupon tool lets you offer enrollment incentives while our global promotions drive traffic
+                  to courses.</p>
               </div>
               <div class="col-md-5">
                 <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                height="500" src="./img/launch-your-course-2x-v3.jpg" alt="picture">
+                  height="500" src="./img/launch-your-course-2x-v3.jpg" alt="picture">
               </div>
             </div>
             <hr class="featurette-divider">
@@ -547,7 +553,7 @@
 
     </div>
 
-     <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="container-fluid border bg-dark text-white">
       <!-- Section 1: Social media -->
       <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
@@ -597,7 +603,8 @@
                 Whether you want to learn or to share what you know, you have come to the right place. As a global
                 destination for online learning, we connect people through knowledge.
               </p>
-            </div><!--/ Grid column 1-->
+            </div>
+            <!--/ Grid column 1-->
 
             <!-- Grid column 2-->
             <div class="col-md-2 mx-auto mb-4">
@@ -638,7 +645,8 @@
                 <i class="fas fa-print me-3 text-secondary"></i>
                 + 84 234 567 890
               </p>
-            </div><!--/ Grid column 3-->
+            </div>
+            <!--/ Grid column 3-->
 
             <!-- Grid column 4-->
             <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
@@ -678,8 +686,8 @@
   <!-- Java Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-  <script src="../Gallery.js"></script>
-  <script src="../cartForCourse.js"></script>
+  <script src="Gallery.js"></script>
+  <script src="cartForCourse.js"></script>
   <!-- Custom scripts -->
   <script type="text/javascript">
     //** change color for star *** //
@@ -694,13 +702,14 @@
     };
 
     var app = angular.module('myApp', []);
-    app.controller('myCtrl', function ($scope){
+    app.controller('myCtrl', function ($scope) {
       $scope.show = true;
-      $scope.showHide = function(){
+      $scope.showHide = function () {
         this.show = !this.show;
       };
     });
   </script>
   <!-- Java Script -->
 </body>
+
 </html>

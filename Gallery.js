@@ -854,7 +854,7 @@ function TopFour(items, className) {
   let sp = ``;
   for (var i = 0; i < 4; i++) {
     sp += `
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mx-auto p-0 d-flex flex-column justify-content-around flex-grow-1" 
+      <div class="col-12 col-sm-6 col-md-5 col-lg-3 mx-auto ml-md-4 mb-5 p-0 d-flex flex-column justify-content-around flex-grow-1" 
       style="max-width: 250px;
         box-shadow: -2px -2px 10px rgb(177, 175, 175);
         border-radius: 15px;">
