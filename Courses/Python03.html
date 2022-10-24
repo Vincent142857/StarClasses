@@ -28,7 +28,7 @@
       box-sizing: content-box;
     }
 
-    ul {
+    .Learn ul {
       list-style: none;
     }
 
@@ -67,7 +67,6 @@
       padding: 10px;
       border: 4px solid white;
       border-radius: 30px;
-      z-index: 9999;
       box-shadow: 2px 0px 10px black;
       position: relative;
       top: -80px;
@@ -89,44 +88,104 @@
       margin-right: 10px;
       padding-left: 20px;
     }
-
+    .list-group-item:hover {
+      color: #E4A11B !important;
+      cursor: pointer !important;
+    }
   </style>
 </head>
-<body>
-  <!-- Menu top -->
-  <header>
+<body onload="countVisitor()">
+   <!-- Menu top -->
+    <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
+
         <a class="navbar-brand pl-sm-3" href="../index.html">
           <img src="../img/star-classes-4.png" style="width:150px;">
         </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <!-- menu left -->
           <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
 
             <!-- Navbar dropdown -->
-            <li class="nav-item dropdown col-12 text-center">
-              <a class="nav-link dropdown-toggle text-center" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown"
-                aria-expanded="false">
-                <img src="../img/tutorialCut.png" style="width: 20px;"> Courses
+            <li class="nav-item dropdown position-static text-center">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                data-mdb-toggle="dropdown" aria-expanded="false">
+                <img src="../img/tutorialCut.png" style="width: 20px;"> Categories
               </a>
-              <!-- Menu H2 -->
-              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="DropdownMenu">
-                <li><a href="../GalleryCourse.html" class="dropdown-item px-5 text-uppercase border-bottom">Topic</a></li>
-                <li><a href="#" class="dropdown-item px-5">Python</a></li>
-                <li><a href="#" class="dropdown-item px-5">Excel</a></li>
-                <li><a href="#" class="dropdown-item px-5">Web Development</a></li>
-                <li><a href="#" class="dropdown-item px-5">Javascript</a></li>
-                <li><a href="#" class="dropdown-item px-5">Data Science</a></li>
-                <li><a href="#" class="dropdown-item px-5">AWS Certification</a></li>
-                <li><a href="#" class="dropdown-item px-5">Drawing</a></li>
-              </ul>
-              <!-- Menu H2 -->
-            </li><!-- Navbar dropdown -->
+              <!-- Dropdown menu -->
+              <div class="dropdown-menu col-12 col-sm-4 mt-0" aria-labelledby="navbarDropdown" style="
+                              border-top-left-radius: 0;
+                              border-top-right-radius: 0;
+                            ">
+                <div class="container">
+                  <div class="row my-4">
+
+                    <div class="col-6 mb-3 mb-lg-0">
+                      <div class="list-group list-group-flush">
+                      
+                        <a href="../GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
+                          Topic
+                        </a>
+                        
+                        <a href="../GalleryCourse.html" data-sub="SubjectPython" class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Python</a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectExcel" class="menu-sub list-group-item list-group-item-action">
+                          <i
+                            class="fas fa-caret-right pe-2"></i>Excel
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectWebDevelopment" class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Web Development
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectJavascript"
+                        class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Javascript
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectDataScience" class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Data Science
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectAWSCertification"
+                        class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>AWS Certification
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectDrawing" class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Drawing
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-6 mb-3 mb-lg-0">
+                      <div class="list-group list-group-flush">
+                        <p class="mb-0 list-group-item text-uppercase font-weight-bold">
+                          Quickly Link
+                        </p>
+                        <a href="index.html#Featured-course" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Featured course
+                        </a>
+                        <a href="index.html#Students-are-viewing" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Students are viewing
+                        </a>
+                        <a href="index.html#teacher" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Lecturers of Star Class
+                        </a>
+                      </div>
+                    </div>
+                    
+
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Navbar dropdown -->
           </ul>
 
           <!-- menu search -->
@@ -139,8 +198,8 @@
           </form>
           <!-- menu right -->
           <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
-            <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link text-center" href="../aboutus.html">About us</a>
+            <li class="nav-item col-12 col-sm-2 ml-auto">
+              <a class="nav-link text-center active" href="../aboutus.html">About us</a>
             </li>
             <!-- shopping & payment -->
             <li class="nav-item col-12 col-sm-2 mx-1">
@@ -151,13 +210,15 @@
             </li>
             <!-- Sign in-->
             <li class="nav-item text-center col-12 col-sm-2 mx-1">
-              <a class="nav-link" href="../SignIn.html">Sign in
+              <a class="nav-link text-center active" href="../SignIn.html">
+                <i class="fas fa-sign-in-alt"></i>
+                Sign in
               </a>
             </li>
             <!-- Sign up -->
-            <li class="nav-item text-center col-12 col-sm-2">
-              <a class="nav-link" href="../SignUp.html">Sign up</a>
-            </li>
+            <!-- <li class="nav-item text-center col-12 col-sm-2">
+              <a class="nav-link text-center active" href="SignUp.html">Sign up</a>
+            </li> -->
             <!-- Visitor -->
             <li class="nav-item col-12 col-sm-4">
               <div class="navbar-text text-light text-center">
@@ -174,10 +235,11 @@
         </div>
       </div>
     </nav>
-  </header>
+    </header>
   <!--/ Menu top -->
+  
   <!-- Start your project here-->
-  <div class="container-fluid">
+  <div style="margin-top:4rem ;">
     <!-- top courses -->
     <div class="bg-dark p-3 text-light">
       <small class="mb-5">
@@ -236,13 +298,14 @@
 
           <h4>This course includes:</h4>
           <div>
-            4.5
             <p><i class="fas fa-video"></i> 30.5 hour video on demand</p>
             <p><i class="far fa-file"></i> 59 article</p>
             <p><i class="fas fa-code"></i> 1 coding exercises</p>
             <p><i class="fas fa-infinity"></i> Unlimited access </p>
             <p><i class="fas fa-mobile-alt"></i> Mobile and TV access</p>
             <p><i class="fas fa-trophy"></i> End of training certificate</p>
+            <a href="../Document/Python/Python03.pdf" target="new" style="color: black;"><i class="fas fa-arrow-alt-circle-down"></i> Download file</a>
+
           </div>
           <h3>Do you train 5 or more people?</h3>
           <p>Give your team members access to over 17,000 of the best courses anytime, anywhere.</p>
@@ -256,9 +319,9 @@
       <!-- main course -->
       <div class="p-3">
         <!-- why -->
-        <div class="border p-3">
+        <div class="Learn p-3">
           <h3>What you'll learn</h3>
-          <ul class="learning-list clearfix" style="text-align:justify">
+          <ul class="border pt-3 pl-3 pb-3 mx-3 learning-list clearfix" style="text-align:justify">
             <li><i class="fas fa-check"></i> Become a professional Python Developer and get hired</li>
           <li>
             <i class="fas fa-check"></i> Learn Object Oriented Programming
@@ -316,44 +379,48 @@
           </ul>
         </div>
         <!-- Course content -->
-        <div class="course-content mt-4">
+        <div class="course-content mt-4 p-1">
           <section>
             <h3>Course content</h3>
-            <small>25 sections • 336 lectures • 30h 47m total length</small>
-        <ul>
-          <li>Chapter 1: Introduction</li>
-          <li>Chapter 2: Python Introduction</li>
-          <li>Chapter 3: Python Basics</li>
-          <li>Chapter 4: Python Basics II</li>
-          <li>Chapter 5: Developer Environment</li>
-          <li>Chapter 6: Advanced Python: Object Oriented Programming</li>
-          <li>Chapter 7: Advanced Python: Functional Programming</li>
-          <li>Chapter 8: Advanced Python: Decorators</li>
-          <li>Chapter 9: Advanced Python: Error Handling</li>
-          <li>Chapter 10: Advanced Python: Generators</li>
-          <li>Chapter 11: Modules In Python</li>
-          <li>Chapter 12: Debugging In Python</li>
-          <li>Chapter 13: File I/O</li>
-          <li>Chapter 14: Regular Expressions</li>
-          <li>Chapter 15: Testing In Python</li>
-          <li>Chapter 16: Caree Of A Python Developer</li>
-          <li>Chapter 17: Scripting with Python</li>
-          <li>Chapter 18: Scaping Data with Python</li>
-          <li>Chapter 19: Web Development with Python</li>
-          <li>Chapter 20: Automation/Testing</li>
-          <li>Chapter 21: Machine Learning + Data Science</li>
-          <li>Chapter 22: Where To Go From Here</li>
-          <li>Chapter 23: Extra Bits</li>
-          <li>Appendix: HTML Forms</li>
-          <li>BONUS SECTION</li>
-        </ul>
+            <div class="mx-4">
+              <small>25 sections • 336 lectures • 30h 47m total length</small>
+              <ul class=" border pt-3 pl-3 pb-3">
+                <li>Chapter 1: Introduction</li>
+                <li>Chapter 2: Python Introduction</li>
+                <li>Chapter 3: Python Basics</li>
+                <li>Chapter 4: Python Basics II</li>
+                <li>Chapter 5: Developer Environment</li>
+                <li>Chapter 6: Advanced Python: Object Oriented Programming</li>
+                <li>Chapter 7: Advanced Python: Functional Programming</li>
+                <li>Chapter 8: Advanced Python: Decorators</li>
+                <li>Chapter 9: Advanced Python: Error Handling</li>
+                <li>Chapter 10: Advanced Python: Generators</li>
+                <li>Chapter 11: Modules In Python</li>
+                <li>Chapter 12: Debugging In Python</li>
+                <li>Chapter 13: File I/O</li>
+                <li>Chapter 14: Regular Expressions</li>
+                <li>Chapter 15: Testing In Python</li>
+                <li>Chapter 16: Caree Of A Python Developer</li>
+                <li>Chapter 17: Scripting with Python</li>
+                <li>Chapter 18: Scaping Data with Python</li>
+                <li>Chapter 19: Web Development with Python</li>
+                <li>Chapter 20: Automation/Testing</li>
+                <li>Chapter 21: Machine Learning + Data Science</li>
+                <li>Chapter 22: Where To Go From Here</li>
+                <li>Chapter 23: Extra Bits</li>
+                <li>Appendix: HTML Forms</li>
+                <li>BONUS SECTION</li>
+              </ul>
+            </div>
           </section>
           <section>
             <h4>Requirements</h4>
-            <li>A computer (Windows/Mac/Linux). That's it!</li>
-            <li>No prior knowledge of Python is required.</li>
-            <li>No previous programming experience is needed.</li>
-            <li>Prepare to fall in love with Python and programming!</li>
+            <ul>
+              <li>A computer (Windows/Mac/Linux). That's it!</li>
+              <li>No prior knowledge of Python is required.</li>
+              <li>No previous programming experience is needed.</li>
+              <li>Prepare to fall in love with Python and programming!</li>
+            </ul>
           </section>
           <section>
             <h4>Who this course is for:</h4>

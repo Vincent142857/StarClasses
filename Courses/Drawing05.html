@@ -83,45 +83,105 @@
       margin-right: 10px;
       padding-left: 20px;
     }
-
+    .list-group-item:hover {
+      color: #E4A11B !important;
+      cursor: pointer !important;
+    }
   </style>
 </head>
 
-<body>
-  <!-- Menu top -->
-  <header>
+<body onload="countVisitor()">
+   <!-- Menu top -->
+    <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
+
         <a class="navbar-brand pl-sm-3" href="../index.html">
           <img src="../img/star-classes-4.png" style="width:150px;">
         </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <!-- menu left -->
           <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
 
             <!-- Navbar dropdown -->
-            <li class="nav-item dropdown col-12 text-center">
-              <a class="nav-link dropdown-toggle text-center" href="#" id="DropdownMenu" role="tab" data-toggle="dropdown"
-                aria-expanded="false">
-                <img src="../img/tutorialCut.png" style="width: 20px;"> Courses
+            <li class="nav-item dropdown position-static text-center">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                data-mdb-toggle="dropdown" aria-expanded="false">
+                <img src="../img/tutorialCut.png" style="width: 20px;"> Categories
               </a>
-              <!-- Menu H2 -->
-              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="DropdownMenu">
-                <li><a href="../GalleryCourse.html" class="dropdown-item px-5 text-uppercase border-bottom">Topic</a></li>
-                <li><a href="#" class="dropdown-item px-5">Python</a></li>
-                <li><a href="#" class="dropdown-item px-5">Excel</a></li>
-                <li><a href="#" class="dropdown-item px-5">Web Development</a></li>
-                <li><a href="#" class="dropdown-item px-5">Javascript</a></li>
-                <li><a href="#" class="dropdown-item px-5">Data Science</a></li>
-                <li><a href="#" class="dropdown-item px-5">AWS Certification</a></li>
-                <li><a href="#" class="dropdown-item px-5">Drawing</a></li>
-              </ul>
-              <!-- Menu H2 -->
-            </li><!-- Navbar dropdown -->
+              <!-- Dropdown menu -->
+              <div class="dropdown-menu col-12 col-sm-4 mt-0" aria-labelledby="navbarDropdown" style="
+                              border-top-left-radius: 0;
+                              border-top-right-radius: 0;
+                            ">
+                <div class="container">
+                  <div class="row my-4">
+
+                    <div class="col-6 mb-3 mb-lg-0">
+                      <div class="list-group list-group-flush">
+                      
+                        <a href="../GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
+                          Topic
+                        </a>
+                        
+                        <a href="../GalleryCourse.html" data-sub="SubjectPython" class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Python</a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectExcel" class="menu-sub list-group-item list-group-item-action">
+                          <i
+                            class="fas fa-caret-right pe-2"></i>Excel
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectWebDevelopment" class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Web Development
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectJavascript"
+                        class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Javascript
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectDataScience" class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Data Science
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectAWSCertification"
+                        class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>AWS Certification
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectDrawing" class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Drawing
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-6 mb-3 mb-lg-0">
+                      <div class="list-group list-group-flush">
+                        <p class="mb-0 list-group-item text-uppercase font-weight-bold">
+                          Quickly Link
+                        </p>
+                        <a href="index.html#Featured-course" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Featured course
+                        </a>
+                        <a href="index.html#Students-are-viewing" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Students are viewing
+                        </a>
+                        <a href="index.html#teacher" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Lecturers of Star Class
+                        </a>
+                      </div>
+                    </div>
+                    
+
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Navbar dropdown -->
           </ul>
 
           <!-- menu search -->
@@ -134,8 +194,8 @@
           </form>
           <!-- menu right -->
           <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
-            <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link text-center" href="../aboutus.html">About us</a>
+            <li class="nav-item col-12 col-sm-2 ml-auto">
+              <a class="nav-link text-center active" href="../aboutus.html">About us</a>
             </li>
             <!-- shopping & payment -->
             <li class="nav-item col-12 col-sm-2 mx-1">
@@ -146,13 +206,15 @@
             </li>
             <!-- Sign in-->
             <li class="nav-item text-center col-12 col-sm-2 mx-1">
-              <a class="nav-link" href="../SignIn.html">Sign in
+              <a class="nav-link text-center active" href="../SignIn.html">
+                <i class="fas fa-sign-in-alt"></i>
+                Sign in
               </a>
             </li>
             <!-- Sign up -->
-            <li class="nav-item text-center col-12 col-sm-2">
-              <a class="nav-link" href="../SignUp.html">Sign up</a>
-            </li>
+            <!-- <li class="nav-item text-center col-12 col-sm-2">
+              <a class="nav-link text-center active" href="SignUp.html">Sign up</a>
+            </li> -->
             <!-- Visitor -->
             <li class="nav-item col-12 col-sm-4">
               <div class="navbar-text text-light text-center">
@@ -169,10 +231,11 @@
         </div>
       </div>
     </nav>
-  </header>
+    </header>
   <!--/ Menu top -->
+  
   <!-- Start your project here-->
-  <div class="container-fluid">
+  <div style="margin-top:4rem;">
     <!-- top courses -->
     <div class="bg-dark p-3 text-light">
       <small class="mb-5">
@@ -235,6 +298,7 @@
             <p><i class="fas fa-infinity"></i> Full lifetime access </p>
             <p><i class="fas fa-mobile-alt"></i> Access on mobile and TV</p>
             <p><i class="fas fa-trophy"></i> Certificate of completion</p>
+            <a href="../Document/Drawing/Dr05.pdf" target="new" style="color: black;"><i class="fas fa-arrow-alt-circle-down"></i> Download file</a>
           </div>
           <h3>Do you train 5 or more people?</h3>
           <p>Get your team access to 17,000+ top courses anytime, anywhere.</p>
@@ -248,9 +312,9 @@
       <!-- main course -->
       <div class="p-3">
         <!-- why -->
-        <div class="Learn border p-3">
+        <div class="Learn p-3">
           <h3>What you'll learn</h3>
-          <ul class="learning-list clearfix" style="text-align:justify">
+          <ul class="border pl-3 pt-3 pb-3 mx-3 learning-list clearfix" style="text-align:justify">
             <li><i class="fas fa-check"></i>
               Draw everyday objects, people, animals, and scenes, using effective techniques.
             </li>
@@ -272,27 +336,31 @@
           </ul>
         </div>
         <!-- Course content -->
-        <div class="course-content mt-4">
+        <div class="course-content mt-4 p-1">
           <section>
             <h3>Course content</h3>
-            <small>14 sections • 115 lectures • 26h 35m total length</small>
-            <ul class="border px-5">
-              <li>Chapter 1: Getting Started in the Drawing Course</li>
-              <li>Chapter 2: Drawing Materials, Mark Making, Blending, and Erasing</li>
-              <li>Chapter 3: Gesture Drawing</li>
-              <li>Chapter 4: Line and Contour Drawing</li>
-              <li>Chapter 5: Structural Drawing</li>
-              <li>Chapter 6: Exploring and Applying Tone or Value in Drawing</li>
-              <li>Chapter 7: Fundamentals of Drawing in Perspective</li>
-              <li>Chapter 8: Block-In Method for Detailed, Rendered Drawings</li>
-              <li>Chapter 9: The Art and Science of Drawing Protraits</li>
-              <li>Chapter 10: Drawing Course Conclusion</li>                 
-            </ul>
+            <div class="mx-4"> 
+              <small>14 sections • 115 lectures • 26h 35m total length</small>
+              <ul class="border pl-3 pt-3 pb-3">
+                <li>Chapter 1: Getting Started in the Drawing Course</li>
+                <li>Chapter 2: Drawing Materials, Mark Making, Blending, and Erasing</li>
+                <li>Chapter 3: Gesture Drawing</li>
+                <li>Chapter 4: Line and Contour Drawing</li>
+                <li>Chapter 5: Structural Drawing</li>
+                <li>Chapter 6: Exploring and Applying Tone or Value in Drawing</li>
+                <li>Chapter 7: Fundamentals of Drawing in Perspective</li>
+                <li>Chapter 8: Block-In Method for Detailed, Rendered Drawings</li>
+                <li>Chapter 9: The Art and Science of Drawing Protraits</li>
+                <li>Chapter 10: Drawing Course Conclusion</li>                 
+              </ul>
+            </div>
           </section>
           <section>
             <h4>Requirements</h4>
-            <p>- You can follow along with just a pencil, paper, and eraser, but drawing tools such as vine and compressed charcoal, conté, kneaded eraser, chamois, blending stump, and ruler can be helpful. (Materials are explained near the beginning of course)</p>
-            <p>- A willing attitude to learn and practice drawing!</p>
+            <ul>
+              <li>You can follow along with just a pencil, paper, and eraser, but drawing tools such as vine and compressed charcoal, conté, kneaded eraser, chamois, blending stump, and ruler can be helpful. (Materials are explained near the beginning of course)</li>
+              <li>A willing attitude to learn and practice drawing!</li>
+            </ul>
           </section>
           <section>
             <h4>Who this course is for:</h4>

@@ -1,137 +1,85 @@
 // Shopping Cart API
 // ************************************************
 
-var shoppingCart = (function () {
+var dataUser = (function () {
   
-  cart = [];
+  user = [];
 
   // Constructor
-  function Item(img, name, teacher, price, priceOld, detail, count) {
-    this.img = img;
+  function Item(email, phone, name, pwd) {
+    this.email = email;
+    this.phone = phone;
     this.name = name;
-    this.teacher = teacher;
-    this.price = price;
-    this.priceOld = priceOld;
-    this.detail = detail;
-    this.count = count;
+    this.pwd = pwd;
+    
   }
 
   // Save cart
-  function saveCart() {
-    sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+  function saveUser() {
+    sessionStorage.setItem('dataUser', JSON.stringify(user));
   }
 
   // Load cart
-  function loadCart() {
-    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+  function loadUser() {
+    user = JSON.parse(sessionStorage.getItem('dataUser'));
   }
 
-  if (sessionStorage.getItem("shoppingCart") != null) {
-    loadCart();
+  if (sessionStorage.getItem("dataUser") != null) {
+    loadUser();
   }
 
   var obj = {};
 
   // Add to cart
-  obj.addItemToCart = function (img, name, teacher, price, priceOld, detail, count) {
-    for (var i in cart) {
-      if (cart[i].name === name) {
-        cart[i].count++;
-        saveCart();
+  obj.addItemToUser = function (email, phone, name, pwd) {
+    for (var i in user) {
+      if (user[i].email === email) {
+        alert("Account has had")
         return;
       }
     }
-    var item = new Item(img, name, teacher, price, priceOld, detail, count);
+    var item = new Item(email, phone, name, pwd);
     cart.push(item);
-    saveCart();
-  }
-
-  // Set count from item
-  obj.setCountForItem = function (name, count) {
-    for (var i in cart) {
-      if (cart[i].name === name) {
-        cart[i].count = count;
-        break;
-      }
-    }
+    saveUser();
   }
 
   // Remove item from cart
-  obj.removeItemFromCart = function (name) {
-    for (var i in cart) {
-      if (cart[i].name === name) {
-        cart[i].count--;
-        if (cart[i].count === 0) {
-          cart.splice(i, 1);
-        }
+  obj.removeItemFromUser = function (email) {
+    for (var i in user) {
+      if (user[i].email === email) {
+        user.splice(i, 1);
         break;
       }
     }
-    saveCart();
+    saveUser();
   }
 
   // Remove all items from cart
-  obj.removeItemFromCartAll = function (name) {
-    for (var i in cart) {
-      if (cart[i].name === name) {
-        cart.splice(i, 1);
-        break;
+  obj.checkSignIn = function (email, pwd) {
+    for (var i in user) {
+      if (user[i].email === email && user[i].pwd === pwd) {
+        sessionStorage.setItem("infoUser", user[i]);
+        var userNow = sessionStorage.getItem("infoUser");
+        displayUser(userNow);
+        return true;
       }
     }
-    saveCart();
-  }
-
-  // Clear cart
-  obj.clearCart = function () {
-    cart = [];
-    saveCart();
-  }
-
-  // Count cart 
-  obj.totalCount = function () {
-    var totalCount = 0;
-    for (var i in cart) {
-      totalCount += cart[i].count;
-    }
-    return totalCount;
-  }
-
-  // Total cart
-  obj.totalCart = function () {
-    var totalCart = 0;
-    for (var i in cart) {
-      totalCart += cart[i].price * cart[i].count;
-    }
-    return Number(totalCart);
+    return false;
   }
 
   // List cart
-  obj.listCart = function () {
-    var cartCopy = [];
-    for (i in cart) {
-      var item = cart[i];
+  obj.listUser = function () {
+    var userCopy = [];
+    for (i in user) {
+      var item = user[i];
       var itemCopy = {};
       for (p in item) {
         itemCopy[p] = item[p];
-
       }
-      itemCopy.total = Number(item.price * item.count);
-      cartCopy.push(itemCopy)
     }
-    return cartCopy;
+    return userCopy;
   }
 
-  // cart : Array
-  // Item : Object/Class
-  // addItemToCart : Function
-  // removeItemFromCart : Function
-  // removeItemFromCartAll : Function
-  // clearCart : Function
-  // countCart : Function
-  // totalCart : Function
-  // listCart : Function
-  // saveCart : Function
-  // loadCart : Function
   return obj;
 })();
 
@@ -140,29 +88,31 @@ var shoppingCart = (function () {
 // ***************************************** 
 
 // Add item
-$(".add-to-cart").click(function (e) {
+$(".add-to-user").click(function (e) {
   e.preventDefault();
-  var id = $(this).data("id");
-  var img = $(this).data("img");
+  var email = $(this).data("email");
+  var phone = $(this).data("phone");
   var name = $(this).data("name");
-  var teacher = $(this).data("teacher");
-  var price = Number($(this).data("price-new"));
-  var priceOld = Number($(this).data("price-old"));
-  var detail = $(this).data("detail");
+  var pwd = $(this).data("pwd");
   
-  shoppingCart.addItemToCart(img, name, teacher, price, priceOld, detail, 1);
-  displayCart();
+  dataUser.addItemToUser(email, phone, name, pwd);
+  // displayUser();
 });
 
 // Clear items
-$('.clear-cart').click(function () {
-  shoppingCart.clearCart();
-  displayCart();
+$('.check-user').click(function () {
+  var signIn = dataUser.checkSignIn();
+  if (signIn === true) {
+    alert("Welcome to Star Classes!");
+  }else {
+    alert("Sign in failed!");
+  }
+  
 });
 
 
-function displayCart() {
-var cartArray = shoppingCart.listCart();
+function displayUser() {
+var cartArray = dataUser.listCart();
   var output = ``;
 
   $.each(cartArray, function (k, v) {
@@ -202,38 +152,7 @@ var cartArray = shoppingCart.listCart();
   });
   
   $('.show-cart').html(output);
-  $('.total-cart').html("$ " + shoppingCart.totalCart().toPrecision(5));
-  $('.total-count').html(shoppingCart.totalCount());
+  $('.total-cart').html("$ " + dataUser.totalCart().toPrecision(5));
+  $('.total-count').html(dataUser.totalCount());
 }
 
-
-// Delete item button
-$('.show-cart').on("click", ".delete-item", function (event) {
-  var name = $(this).data('name');
-  shoppingCart.removeItemFromCartAll(name);
-  displayCart();
-})
-
-
-// -1
-$('.show-cart').on("click", ".minus-item", function (event) {
-  var name = $(this).data('name');
-  shoppingCart.removeItemFromCart(name);
-  displayCart();
-})
-// +1
-$('.show-cart').on("click", ".plus-item", function (event) {
-  var name = $(this).data('name');
-  shoppingCart.addItemToCart(name);
-  displayCart();
-})
-
-// Item count input
-$('.show-cart').on("change", ".item-count", function (event) {
-  var name = $(this).data('name');
-  var count = Number($(this).val());
-  shoppingCart.setCountForItem(name, count);
-  displayCart();
-});
-
-displayCart();

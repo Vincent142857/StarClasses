@@ -61,18 +61,18 @@ var shoppingCart = (function () {
   }
 
   // Remove item from cart
-  obj.removeItemFromCart = function (id) {
-    for (var i in cart) {
-      if (cart[i].id === id) {
-        cart[i].count--;
-        if (cart[i].count === 0) {
-          cart.splice(i, 1);
-        }
-        break;
-      }
-    }
-    saveCart();
-  }
+  // obj.removeItemFromCart = function (id) {
+  //   for (var i in cart) {
+  //     if (cart[i].id === id) {
+  //       cart[i].count--;
+  //       if (cart[i].count === 0) {
+  //         cart.splice(i, 1);
+  //       }
+  //       break;
+  //     }
+  //   }
+  //   saveCart();
+  // }
 
   // Remove all items from cart
   obj.removeItemFromCartAll = function (id) {

@@ -5,18 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <link rel="icon" href="../img/star-classes-icon.png" type="image/x-icon">
   <title>Star Classes</title>
-  <link rel="icon" href="../img/star-classes-icon.png" type="image/x-icon" />
+ 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <!-- Google Fonts Roboto -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  
   <!-- Angular  -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+  <!-- MDB -->
   <script type="text/javascript" src="../MDB5/js/mdb.min.js"></script>
   <link rel="stylesheet" href="../MDB5/css/mdb.min.css" />
+  
   <style>
     * {
       margin: 0;
@@ -24,7 +27,7 @@
       box-sizing: content-box;
     }
 
-    ul {
+    .Learn ul {
       list-style: none;
     }
 
@@ -68,61 +71,120 @@
       top: -80px;
       background-color: white;
     }
-
-    @media screen and (max-width: 800px) {
-      .Cart {
-        top: 0;
-      }
-
+    @media screen and (max-width: 800px){
+    .Cart {
+      top: 0;
     }
-
+      
+    }
     .Cart .btn {
       font-size: large;
     }
-
     .Cart i {
       margin-right: 10px;
       padding-left: 20px;
+      
     }
+    .list-group-item:hover {
+      color: #E4A11B !important;
+      cursor: pointer !important;
+    }
+
   </style>
 </head>
 
-<body>
-  <!-- Menu top -->
-  <header>
+<body onload="countVisitor()">
+   <!-- Menu top -->
+    <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
+
         <a class="navbar-brand pl-sm-3" href="../index.html">
           <img src="../img/star-classes-4.png" style="width:150px;">
         </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <!-- menu left -->
           <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
 
             <!-- Navbar dropdown -->
-            <li class="nav-item dropdown col-12 text-center">
-              <a class="nav-link dropdown-toggle text-center" href="#" id="DropdownMenu" role="tab"
-                data-toggle="dropdown" aria-expanded="false">
-                <img src="../img/tutorialCut.png" style="width: 20px;"> Courses
+            <li class="nav-item dropdown position-static text-center">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                data-mdb-toggle="dropdown" aria-expanded="false">
+                <img src="../img/tutorialCut.png" style="width: 20px;"> Categories
               </a>
-              <!-- Menu H2 -->
-              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="DropdownMenu">
-                <li><a href="../GalleryCourse.html" class="dropdown-item px-5 text-uppercase border-bottom">Topic</a>
-                </li>
-                <li><a href="#" class="dropdown-item px-5">Python</a></li>
-                <li><a href="#" class="dropdown-item px-5">Excel</a></li>
-                <li><a href="#" class="dropdown-item px-5">Web Development</a></li>
-                <li><a href="#" class="dropdown-item px-5">Javascript</a></li>
-                <li><a href="#" class="dropdown-item px-5">Data Science</a></li>
-                <li><a href="#" class="dropdown-item px-5">AWS Certification</a></li>
-                <li><a href="#" class="dropdown-item px-5">Drawing</a></li>
-              </ul>
-              <!-- Menu H2 -->
-            </li><!-- Navbar dropdown -->
+              <!-- Dropdown menu -->
+              <div class="dropdown-menu col-12 col-sm-4 mt-0" aria-labelledby="navbarDropdown" style="
+                              border-top-left-radius: 0;
+                              border-top-right-radius: 0;
+                            ">
+                <div class="container">
+                  <div class="row my-4">
+
+                    <div class="col-6 mb-3 mb-lg-0">
+                      <div class="list-group list-group-flush">
+                      
+                        <a href="../GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
+                          Topic
+                        </a>
+                        
+                        <a href="../GalleryCourse.html" data-sub="SubjectPython" class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Python</a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectExcel" class="menu-sub list-group-item list-group-item-action">
+                          <i
+                            class="fas fa-caret-right pe-2"></i>Excel
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectWebDevelopment" class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Web Development
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectJavascript"
+                        class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Javascript
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectDataScience" class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Data Science
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectAWSCertification"
+                        class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>AWS Certification
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectDrawing" class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Drawing
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="col-6 mb-3 mb-lg-0">
+                      <div class="list-group list-group-flush">
+                        <p class="mb-0 list-group-item text-uppercase font-weight-bold">
+                          Quickly Link
+                        </p>
+                        <a href="index.html#Featured-course" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Featured course
+                        </a>
+                        <a href="index.html#Students-are-viewing" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Students are viewing
+                        </a>
+                        <a href="index.html#teacher" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Lecturers of Star Class
+                        </a>
+                      </div>
+                    </div>
+                    
+
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- Navbar dropdown -->
           </ul>
 
           <!-- menu search -->
@@ -135,8 +197,8 @@
           </form>
           <!-- menu right -->
           <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
-            <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link text-center" href="../aboutus.html">About us</a>
+            <li class="nav-item col-12 col-sm-2 ml-auto">
+              <a class="nav-link text-center active" href="../aboutus.html">About us</a>
             </li>
             <!-- shopping & payment -->
             <li class="nav-item col-12 col-sm-2 mx-1">
@@ -147,13 +209,15 @@
             </li>
             <!-- Sign in-->
             <li class="nav-item text-center col-12 col-sm-2 mx-1">
-              <a class="nav-link" href="../SignIn.html">Sign in
+              <a class="nav-link text-center active" href="../SignIn.html">
+                <i class="fas fa-sign-in-alt"></i>
+                Sign in
               </a>
             </li>
             <!-- Sign up -->
-            <li class="nav-item text-center col-12 col-sm-2">
-              <a class="nav-link" href="../SignUp.html">Sign up</a>
-            </li>
+            <!-- <li class="nav-item text-center col-12 col-sm-2">
+              <a class="nav-link text-center active" href="SignUp.html">Sign up</a>
+            </li> -->
             <!-- Visitor -->
             <li class="nav-item col-12 col-sm-4">
               <div class="navbar-text text-light text-center">
@@ -170,10 +234,11 @@
         </div>
       </div>
     </nav>
-  </header>
+    </header>
   <!--/ Menu top -->
-  <!-- Start your project here-->
-  <div style="margin-top: 4rem">
+  
+  <!-- Start your project here--> 
+  <div style="margin-top:4rem;">
     <!-- top courses -->
     <div class="bg-dark p-3 text-light">
       <small class="mb-5">
@@ -184,8 +249,7 @@
 
       <div class="d-flex flex-column mt-5 px-5">
         <h1>100 Days of Code: The Complete Python Pro Bootcamp for 2022</h1>
-        <p>Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and
-          apps!
+        <p>Master Python by building 100 projects in 100 days. Learn data science, automation, build websites, games and apps!
         </p>
         <div class="name-gv"><b>Created by Dollar Design School</b></div>
         <!-- rating -->
@@ -213,20 +277,21 @@
             </p>
 
             <div class="mx-4">
-              <a
+              <a href="../ShoppingCart.html"
               data-id="PT01"
-              data-name="100 Days of Code: The Complete Python Pro Bootcamp for 2022"
-              data-img="python01.png"
-              data-teacher="Dollar Design School"
+              data-name="100 Days of Code: The Complete Python Pro Bootcamp for 2022" 
+              data-img="python01.png" 
+              data-teacher="Dollar Design School" 
               data-price-new="13.99"
-              data-price-old="84.99"
+              data-price-old="84.99" 
               data-detail="Python01.html"
               class="add-to-cart m-2 col-9 btn btn-warning text-black"
-              href="../ShoppingCart.html"
               >Add to cart</a>
-              
-              <a href="../ShoppingCart.html" class="m-2 col-9 btn text-light"
-                style="background-color:lightslategray">Buy now</a>
+
+              <a  href="../ShoppingCart.html" 
+                  class="m-2 col-9 btn text-light" 
+                  style="background-color:lightslategray"
+              >Buy now</a>
             </div>
 
             <p class="text-center"><small>30-day money-back guarantee</small></p>
@@ -240,6 +305,7 @@
             <p><i class="fas fa-infinity"></i> Unlimited access </p>
             <p><i class="fas fa-mobile-alt"></i> Mobile and TV access</p>
             <p><i class="fas fa-trophy"></i> End of training certificate</p>
+            <a href="../Document/Python/Python01.pdf" target="new" style="color: black;"><i class="fas fa-arrow-alt-circle-down"></i> Download file</a>
           </div>
           <h3>Do you train 5 or more people?</h3>
           <p>Give your team members access to over 17,000 of the best courses anytime, anywhere.</p>
@@ -253,9 +319,9 @@
       <!-- main course -->
       <div class="p-3">
         <!-- why -->
-        <div class="border p-3">
+        <div class="Learn p-3">
           <h3>What you'll learn</h3>
-          <ul class="learning-list clearfix" style="text-align:justify">
+          <ul class="border pl-3 pt-3 pb-3 mx-4 learning-list clearfix" style="text-align:justify">
             <li><i class="fas fa-check"></i>
               You will master the Python programming language by building 100 unique projects over 100 days.</li>
             <li><i class="fas fa-check"></i>
@@ -274,13 +340,11 @@
             </li>
             <li>
               <i class="fas fa-check"></i>
-              You will learn automation, game, app and web development, data science and machine learning all using
-              Python.
+              You will learn automation, game, app and web development, data science and machine learning all using Python.
             </li>
             <li>
               <i class="fas fa-check"></i>
-              You will learn Selenium, Beautiful Soup, Request, Flask, Pandas, NumPy, Scikit Learn, Plotly, and
-              Matplotlib.
+              You will learn Selenium, Beautiful Soup, Request, Flask, Pandas, NumPy, Scikit Learn, Plotly, and Matplotlib.
             </li>
             <li>
               <i class="fas fa-check"></i>
@@ -293,51 +357,51 @@
           </ul>
         </div>
         <!-- Course content -->
-        <div class="course-content mt-4">
+        <div class="course-content mt-4 p-1">
           <section>
             <h3>Course content</h3>
-            <small>13 sections - 48 lectures - 3h 2m total length</small>
-            <ul class="border px-5">
-              <li>Chapter 1: Beginner - Working with Variables in Python to Manage Data</li>
-              <li>Chapter 2: Beginner - Understanding Data Types and How to Manipulate Strings</li>
-              <li>Chapter 3: Beginner - Control Flow and Logical Operators</li>
-              <li>Chapter 4: Beginner - Randomisation and Python Lists</li>
-              <li>Chapter 5: Beginner - Python Loops</li>
-              <li>Chapter 6: Beginner - Python Functions & Karel</li>
-              <li>Chapter 7: Beginner - Hangman</li>
-              <li>Chapter 8: Beginner - Function Paramenters & Caesar Cipher</li>
-              <li>Chapter 9: Beginner - Dictionaries, Nesting and the Serect Auction</li>
-              <li>Chapter 10: Beginner - Function with Outputs</li>
-              <li>Chapter 11: Beginner - The Blackjack Capstone Project</li>
-              <li>Chapter 12: Beginner - Scope & Number Guesing Game</li>
-              <li>Chapter 13: Beginner - Debugging: How to Find and Fix Errors in your Code</li>
-              <li>Chapter 14: Beginner - Higher Lower Game Project</li>
-              <li>Chapter 15: Intermediate - Local Development Environment Setup & the Coffee Machine</li>
-              <li>Chapter 16: Intermediate - Object Oriented Programming (OOP)</li>
-              <li>Chapter 17: Intermediate - The Quiz Project & the Benefits of OOP</li>
-              <li>Chapter 18: Intermediate - Turtle & the Graphical User Interface (GUI)</li>
-              <li>Chapter 19: Intermediate - Instances, State and Higher Order Functions</li>
-            </ul>
+            <div class="mx-4">
+              <small>13 sections - 48 lectures - 3h 2m total length</small>
+              <ul class="border pl-3 pt-3 pb-3">
+                <li>Chapter 1: Beginner - Working with Variables in Python to Manage Data</li>
+                <li>Chapter 2: Beginner - Understanding Data Types and How to Manipulate Strings</li>
+                <li>Chapter 3: Beginner - Control Flow and Logical Operators</li>
+                <li>Chapter 4: Beginner - Randomisation and Python Lists</li>
+                <li>Chapter 5: Beginner - Python Loops</li>
+                <li>Chapter 6: Beginner - Python Functions & Karel</li>
+                <li>Chapter 7: Beginner - Hangman</li>
+                <li>Chapter 8: Beginner - Function Paramenters & Caesar Cipher</li>
+                <li>Chapter 9: Beginner - Dictionaries, Nesting and the Serect Auction</li>
+                <li>Chapter 10: Beginner - Function with Outputs</li>
+                <li>Chapter 11: Beginner - The Blackjack Capstone Project</li>
+                <li>Chapter 12: Beginner - Scope & Number Guesing Game</li>
+                <li>Chapter 13: Beginner - Debugging: How to Find and Fix Errors in your Code</li>
+                <li>Chapter 14: Beginner - Higher Lower Game Project</li>
+                <li>Chapter 15: Intermediate - Local Development Environment Setup & the Coffee Machine</li>
+                <li>Chapter 16: Intermediate - Object Oriented Programming (OOP)</li>
+                <li>Chapter 17: Intermediate - The Quiz Project & the Benefits of OOP</li>
+                <li>Chapter 18: Intermediate - Turtle & the Graphical User Interface (GUI)</li>
+                <li>Chapter 19: Intermediate - Instances, State and Higher Order Functions</li>
+              </ul>
+            </div>
           </section>
           <section>
             <h4>Requirements</h4>
-            <li>No programming experience needed - I'll teach you everything you need to know</li>
-            <li>A Mac or PC computer with access to the internet</li>
-            <li>No paid software required - I'll teach you how to use PyCharm, Jupyter Notebooks and Google Colab</li>
-            <li>I'll walk you through, step-by-step how to get all the software installed and set up</li>
+            <ul>
+              <li>No programming experience needed - I'll teach you everything you need to know</li>
+              <li>A Mac or PC computer with access to the internet</li>
+              <li>No paid software required - I'll teach you how to use PyCharm, Jupyter Notebooks and Google Colab</li>
+              <li>I'll walk you through, step-by-step how to get all the software installed and set up</li>
+            </ul>
           </section>
           <section>
             <h4>Who this course is for:</h4>
             <ul>
-              <li>If you want to learn to code from scratch through building fun and useful projects, then take this
-                course.</li>
+              <li>If you want to learn to code from scratch through building fun and useful projects, then take this course.</li>
               <li>If you want to start your own startup by building your own websites and web apps.</li>
-              <li>If you are a complete beginner then this course will be everything you need to become a Python
-                professional</li>
-              <li>If you are a seasoned programmer wanting to switch to Python then this is the quickest way. Learn
-                through coding projects.</li>
-              <li>If you are an intermediate Python programmer then you know 100 days of code challenges will help you
-                level up.</li>
+              <li>If you are a complete beginner then this course will be everything you need to become a Python professional</li>
+              <li>If you are a seasoned programmer wanting to switch to Python then this is the quickest way. Learn through coding projects.</li>
+              <li>If you are an intermediate Python programmer then you know 100 days of code challenges will help you level up.</li>
             </ul>
           </section>
           <!-- comment of student -->
@@ -360,11 +424,9 @@
 
               <div class="form-group m-2 col-4">
                 <label for="">Your name:</label>
-                <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name"
-                  ng-model="user">
+                <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name" ng-model="user">
               </div>
-              <textarea class="form-control col-4 m-2 p-2" name="comment" id="comment" cols="4" rows="2"
-                placeholder="Enter your comment" ng-model="comment"></textarea>
+              <textarea class="form-control col-4 m-2 p-2" name="comment" id="comment" cols="4" rows="2" placeholder="Enter your comment" ng-model="comment"></textarea>
               <button class="btn btn-primary m-2" type="submit" ng-click="showHide()">Send</button>
             </form>
             <hr>
@@ -376,8 +438,7 @@
           <!-- History comment -->
           <section class="container d-flex row my-2">
             <div class="avatar col-auto">
-              <div class="p-3 bg-black text-light text-center" style="vertical-align:middle; border-radius:50%"
-                width="5px" height="5px">DB</div>
+              <div class="p-3 bg-black text-light text-center" style="vertical-align:middle; border-radius:50%" width="5px" height="5px">DB</div>
             </div>
             <div class="d-flex row col-10">
               <h4>Deian B.</h4>
@@ -390,24 +451,21 @@
                 <i class="fa fa-star text-warning" aria-hidden="true"></i>
                 <i class="fa fa-star text-warning" aria-hidden="true"></i>
               </span>
-              <p>The course is very good and detailed. There are some solutions that are not accurate or full and a few
-                items that need better clarification, but overall the course is well taught and can be taken by complete
-                beginners.</p>
-
-
+              <p>The course is very good and detailed. There are some solutions that are not accurate or full and a few items that need better clarification, but overall the course is well taught and can be taken by complete beginners.</p>
+              
+                  
               <small class="d-block">
                 Help ?
                 <i onclick="changeColor(this)" class="fas fa-thumbs-up ml-3"></i>
                 <i onclick="changeColor(this)" class="fas fa-thumbs-down ml-3"></i>
-
+                
               </small>
             </div>
           </section>
-
+        
           <section class="container d-flex row my-2">
             <div class="avatar col-auto">
-              <div class="p-3 bg-black text-light text-center" style="vertical-align:middle; border-radius:50%"
-                width="5px" height="5px">ON</div>
+              <div class="p-3 bg-black text-light text-center" style="vertical-align:middle; border-radius:50%" width="5px" height="5px">ON</div>
             </div>
             <div class="d-flex row col-10">
               <h4>
@@ -421,8 +479,7 @@
                 <i class="fa fa-star text-warning" aria-hidden="true"></i>
                 <i class="fa fa-star text-warning" aria-hidden="true"></i>
               </span>
-              <p>This is the best platform anybody who want to learn should use.... All the best to me all the way from
-                Nigeria.... I love Star Classes, i love Angela Yu for your sweet help, my foodie mate</p>
+              <p>This is the best platform anybody who want to learn should use.... All the best to me all the way from Nigeria.... I love Star Classes, i love Angela Yu for your sweet help, my foodie mate</p>                                 
               <small class="d-block">
                 Help ?
                 <i onclick="changeColor(this)" class="fas fa-thumbs-up ml-3"></i>
@@ -430,14 +487,13 @@
               </small>
             </div>
           </section>
-
+          
           <section class="container d-flex row my-2">
             <div class="avatar col-auto">
-              <div class="p-3 bg-black text-light text-center" style="vertical-align:middle; border-radius:50%"
-                width="5px" height="5px">KS</div>
+              <div class="p-3 bg-black text-light text-center" style="vertical-align:middle; border-radius:50%" width="5px" height="5px">KS</div>
             </div>
             <div class="d-flex row col-10">
-              <h4>Kumar P.</h4>
+              <h4>Kumar P.</h4>                 
               <!-- rating -->
               <span class="star-rate">
                 4.8
@@ -447,10 +503,9 @@
                 <i class="fa fa-star text-warning" aria-hidden="true"></i>
                 <i class="fa fa-star text-warning" aria-hidden="true"></i>
               </span>
-              <p>I'm giving this rating after completing 65% of the course. Angela's done a fabulous job. Her skill and
-                charm will ensure you are glued to the screen and wanting to learn more everyday!!!
+              <p>I'm giving this rating after completing 65% of the course. Angela's done a fabulous job. Her skill and charm will ensure you are glued to the screen and wanting to learn more everyday!!!
 
-                Caution: Do every exercise religiously, at least honest 40 mins to each challenge.</p>
+                Caution: Do every exercise religiously, at least honest 40 mins to each challenge.</p>                                 
               <small class="d-block">
                 Help ?
                 <i onclick="changeColor(this)" class="fas fa-thumbs-up ml-3"></i>
@@ -458,7 +513,7 @@
               </small>
             </div>
           </section>
-
+          
 
 
         </div>
@@ -467,13 +522,16 @@
 
   </div>
 
+
+
+
   <!-- End your project here-->
 
-  <!-- jquery - JavaScript library for DOM operations -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <!-- jquery - JavaScript library for DOM operations -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-  <script src="../Gallery.js"></script>
-  <script src="../cartForCourse.js"></script>
+   <script src="../Gallery.js"></script>
+   <script src="../cartForCourse.js"></script>
 
   <!-- Custom scripts -->
   <script type="text/javascript">
@@ -488,14 +546,14 @@
     };
 
     var app = angular.module('myApp', []);
-    app.controller('myCtrl', function ($scope) {
+    app.controller('myCtrl', function ($scope){
       $scope.show = true;
-      $scope.showHide = function () {
+      $scope.showHide = function(){
         this.show = !this.show;
       };
     });
 
-
+    
   </script>
 </body>
 
