@@ -808,11 +808,12 @@ $(".menu-sub").click(function (e) {
   sessionStorage.setItem("menuData", JSON.stringify(filterSubject(sub)));
   var linkData = JSON.parse(sessionStorage.getItem("menuData"));
 
-  if (window.open("./GalleryCourse.html", "_self")) {
+  if (window.open("/GalleryCourse.html", "_self")) {
     window.open("../GalleryCourse.html", "_self");
   } else {
-    window.open("./GalleryCourse.html", "_self");
+    window.open("/GalleryCourse.html", "_self");
   }
+  // console.log(window.open("./GalleryCourse.html", "_self"));
   displayCourse(linkData);
   // $(".note-link").html(sub);
 });
@@ -834,10 +835,10 @@ $("#formSearch").submit(function (e) {
   sessionStorage.setItem("searchData", JSON.stringify(data.filter(item => item.Intro.search(re) >= 0)));
   var dataSearch = JSON.parse(sessionStorage.getItem("searchData"));
 
-  if (window.open("./GalleryCourse.html", "_self")) {
+  if (window.open("/GalleryCourse.html", "_self")) {
     window.open("../GalleryCourse.html", "_self");
   } else {
-    window.open("./GalleryCourse.html", "_self");
+    window.open("/GalleryCourse.html", "_self");
   }
 
   displayCourse(dataSearch);
