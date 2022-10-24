@@ -813,9 +813,7 @@ $(".menu-sub").click(function (e) {
   } else {
     window.open("/GalleryCourse.html", "_self");
   }
-  // console.log(window.open("./GalleryCourse.html", "_self"));
   displayCourse(linkData);
-  // $(".note-link").html(sub);
 });
 
 if (sessionStorage.getItem("menuData") != null) {
