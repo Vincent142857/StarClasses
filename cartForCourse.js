@@ -173,7 +173,7 @@ function displayCart() {
     output += `
       <div class="col-12 m-1 p-1">
         <div class="d-md-flex flex-column flex-md-row p-1 note note-warning">
-          <div class="d-flex flex-row flex-grow-1 col-12 col-sm-8 mx-2">
+          <div class="d-flex flex-row flex-grow-1 col-12 col-md-8 mx-2">
             <div class="Exit col-1 pt-1">
               <input class="delete-item my-5 form-check-input" data-id="${v.id}" type="checkbox" checked style="background-color: #FFAB00; border-color: #FFAB00">
             </div>
@@ -187,20 +187,20 @@ function displayCart() {
             </div>
           </div>
 
-          <div class="d-flex flex-row col-12 col-sm-4 p-2">
-            <div class="col-3 pt-2">
+          <div class="d-flex flex-row col-12 col-md-4 p-2">
+            <div class="col-4 pt-2">
               <b class="text-success">$${v.price}</b>
               <small class="text-danger">
                 <del>$${v.priceOld}</del>
               </small>
             </div>
-            <div class="col-8">
+            <div class="col-7">
               <div class="form-outline">
                 <input type="number" class="col-auto text-center item-count form-control" min="1"
                 data-name="${v.name}" 
                 data-id="${v.id}" 
                 value="${v.count}" style="background-color: #FFF3E0; border: none; color: #3B71CA;">
-                <label class="form-label my-auto">Quantity:</label>
+                <label class="form-label my-auto">Qty:</label>
               </div>
             </div>
           </div>
