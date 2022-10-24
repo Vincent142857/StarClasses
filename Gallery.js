@@ -706,6 +706,117 @@ var data =
 
 //displayCourse(data);
 
+// ** Display Top 4 courses on Index
+function TopFour(items, className) {
+  let sp = ``;
+  for (var i = 0; i < 4; i++) {
+    sp += `
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mx-auto ml-md-4 mb-5 p-0 d-flex flex-column justify-content-around flex-grow-1" 
+      style="max-width: 250px;
+        box-shadow: -2px -2px 10px rgb(177, 175, 175);
+        border-radius: 15px;">
+        <a class="d-flex flex-column text-reset" href="./Courses/${items[i].Detail}">
+          <div class="col-12 bg-image hover-zoom ripple ripple-surface">
+            <img src="./img/imgcourses/${items[i].Img}" width="100%" height="160px" alt="course"
+            style="border-top-left-radius: 15px;
+            border-top-right-radius: 15px;">
+          </div>
+          <div class="col-12 px-2">
+            <b style="text-align: justify;">${items[i].NameCourse}</b>
+            <div class="d-flex row">
+              <div class="d-flex">
+                <small class="mr-auto"><i>${items[i].Teacher}</i></small>
+                <small class="ml-auto">
+                  ${items[i].Rating} <i class="fa fa-star text-warning"></i>
+                </small>
+              </div>
+              <div class="d-flex">
+                <small class="text-left mr-auto">
+                  <i class="fas fa-user-graduate"></i> ${items[i].QtyStudent.toLocaleString('en-US')}
+                </small>
+                <span class="ml-auto">
+                  <strong class="text-success">$${items[i].PriceNew}</strong>
+                  <small class="text-danger">
+                    <del>$${items[i].PriceOld}</del>
+                  </small>
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div href="#" 
+          data-id="${items[i].ID}" 
+          data-img="${items[i].Img}" 
+          data-name="${items[i].NameCourse}" 
+          data-teacher="${items[i].Teacher}" 
+          data-price-new="${items[i].PriceNew}"
+          data-price-old="${items[i].PriceOld}" 
+          data-detail="${items[i].Detail}"
+          class="add-to-cart btn btn-success col-12 mt-auto"
+          style="border-radius: 0 0 15px 15px;">Add to cart
+        </div>
+      </div>
+      <div class="w-100 d-sm-none"></div>
+    `;
+  }
+  $("." + className).html(sp);
+}
+
+//** Display on Gallery **
+function displayCourse(items) {
+  let array = ``;
+  $.each(items, function (k, v) {
+    array += `
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mx-auto ml-4 mb-5 p-0 d-flex flex-column justify-content-around flex-grow-1" 
+      style="max-width: 250px;
+        box-shadow: -2px -2px 10px rgb(177, 175, 175);
+        border-radius: 15px;">
+        <a class="d-flex flex-column text-reset" href="./Courses/${v.Detail}">
+          <div class="col-12 bg-image hover-zoom ripple ripple-surface">
+            <img src="./img/imgcourses/${v.Img}" width="100%" height="auto" alt="course">
+          </div>
+          <div class="col-12 px-2">
+            <b style="text-align: justify;">${v.NameCourse}</b>
+            <div class="d-flex row">
+              <div class="d-flex">
+                <small class="mr-auto"><i>${v.Teacher}</i></small>
+                <small class="ml-auto">
+                  ${v.Rating}<i class="fa fa-star text-warning"></i>
+                </small>
+              </div>
+              <div class="d-flex">
+                <small class="text-left mr-auto">
+                  <i class="fas fa-user-graduate"></i>${v.QtyStudent.toLocaleString('en-US')}
+                </small>
+                <span class="ml-auto">
+                  <strong class="text-success">$${v.PriceNew}</strong>
+                  <small class="text-danger">
+                    <del>$${v.PriceOld}</del>
+                  </small>
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+        <a href="#"  
+        data-id="${v.ID}"  
+        data-img="${v.Img}"  
+        data-name="${v.NameCourse}"  
+        data-teacher="${v.Teacher}"  
+        data-price-new="${v.PriceNew}" 
+        data-price-old="${v.PriceOld}" 
+        data-detail="${v.Detail}" 
+        class="add-to-cart btn btn-success col-12 mt-auto"
+        style="border-radius: 0 0 15px 15px;">Add to cart
+        </a>
+      </div>
+      <div class="w-100 d-sm-none"></div>
+      `;
+  });
+
+  $("#gallery").html(array);
+}
+
 // Display the courses
 if (sessionStorage.getItem("menuData") == null &&
   sessionStorage.getItem("subData") == null &&
@@ -848,116 +959,7 @@ if (sessionStorage.getItem("searchData") != null) {
 }
 
 
-// ** Display Top 4 courses on Index
-function TopFour(items, className) {
-  let sp = ``;
-  for (var i = 0; i < 4; i++) {
-    sp += `
-      <div class="col-12 col-sm-6 col-md-5 col-lg-3 mx-auto ml-md-4 mb-5 p-0 d-flex flex-column justify-content-around flex-grow-1" 
-      style="max-width: 250px;
-        box-shadow: -2px -2px 10px rgb(177, 175, 175);
-        border-radius: 15px;">
-        <a class="d-flex flex-column text-reset" href="./Courses/${items[i].Detail}">
-          <div class="col-12 bg-image hover-zoom ripple ripple-surface">
-            <img src="./img/imgcourses/${items[i].Img}" width="100%" height="160px" alt="course"
-            style="border-top-left-radius: 15px;
-            border-top-right-radius: 15px;">
-          </div>
-          <div class="col-12 px-2">
-            <b style="text-align: justify;">${items[i].NameCourse}</b>
-            <div class="d-flex row">
-              <div class="d-flex">
-                <small class="mr-auto"><i>${items[i].Teacher}</i></small>
-                <small class="ml-auto">
-                  ${items[i].Rating} <i class="fa fa-star text-warning"></i>
-                </small>
-              </div>
-              <div class="d-flex">
-                <small class="text-left mr-auto">
-                  <i class="fas fa-user-graduate"></i> ${items[i].QtyStudent.toLocaleString('en-US')}
-                </small>
-                <span class="ml-auto">
-                  <strong class="text-success">$${items[i].PriceNew}</strong>
-                  <small class="text-danger">
-                    <del>$${items[i].PriceOld}</del>
-                  </small>
-                </span>
-              </div>
-            </div>
-          </div>
-        </a>
-        <div href="#" 
-          data-id="${items[i].ID}" 
-          data-img="${items[i].Img}" 
-          data-name="${items[i].NameCourse}" 
-          data-teacher="${items[i].Teacher}" 
-          data-price-new="${items[i].PriceNew}"
-          data-price-old="${items[i].PriceOld}" 
-          data-detail="${items[i].Detail}"
-          class="add-to-cart btn btn-success col-12 mt-auto"
-          style="border-radius: 0 0 15px 15px;">Add to cart
-        </div>
-      </div>
-      <div class="w-100 d-sm-none"></div>
-    `;
-  }
-  $("." + className).html(sp);
-}
 
-//** Display on Gallery **
-function displayCourse(items) {
-  let array = ``;
-  $.each(items, function (k, v) {
-    array += `
-      <div class="col-12 col-sm-6 col-md-5 col-lg-3 mx-auto ml-md-4 mb-5 p-0 d-flex flex-column justify-content-around flex-grow-1" 
-      style="max-width: 250px;
-        box-shadow: -2px -2px 10px rgb(177, 175, 175);
-        border-radius: 15px;">
-        <a class="d-flex flex-column text-reset" href="./Courses/${v.Detail}">
-          <div class="col-12 bg-image hover-zoom ripple ripple-surface">
-            <img src="./img/imgcourses/${v.Img}" width="100%" height="auto" alt="course">
-          </div>
-          <div class="col-12 px-2">
-            <b style="text-align: justify;">${v.NameCourse}</b>
-            <div class="d-flex row">
-              <div class="d-flex">
-                <small class="mr-auto"><i>${v.Teacher}</i></small>
-                <small class="ml-auto">
-                  ${v.Rating}<i class="fa fa-star text-warning"></i>
-                </small>
-              </div>
-              <div class="d-flex">
-                <small class="text-left mr-auto">
-                  <i class="fas fa-user-graduate"></i>${v.QtyStudent.toLocaleString('en-US')}
-                </small>
-                <span class="ml-auto">
-                  <strong class="text-success">$${v.PriceNew}</strong>
-                  <small class="text-danger">
-                    <del>$${v.PriceOld}</del>
-                  </small>
-                </span>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="#"  
-        data-id="${v.ID}"  
-        data-img="${v.Img}"  
-        data-name="${v.NameCourse}"  
-        data-teacher="${v.Teacher}"  
-        data-price-new="${v.PriceNew}" 
-        data-price-old="${v.PriceOld}" 
-        data-detail="${v.Detail}" 
-        class="add-to-cart btn btn-success col-12 mt-auto"
-        style="border-radius: 0 0 15px 15px;">Add to cart
-        </a>
-      </div>
-      <div class="w-100 d-sm-none"></div>
-      `;
-  });
-
-  $("#gallery").html(array);
-}
 
 // Display the info of teacher 
 
