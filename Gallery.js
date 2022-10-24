@@ -741,7 +741,7 @@ function compare(key, order = 'asc') {
 }
 
 // Display 4 course in the index page
-(function() {
+(function () {
 
   TopFour(filterSubject("SubjectPython"), "SubjectPython");
   TopFour(filterSubject("SubjectExcel"), "SubjectExcel");
@@ -762,7 +762,7 @@ function compare(key, order = 'asc') {
 // Filter/Sort Multiple
 
 $(".filter").click(function () {
-  
+
   sessionStorage.removeItem("menuData");
   sessionStorage.removeItem("searchData");
   sessionStorage.removeItem("filterData");
@@ -788,10 +788,10 @@ $(".filter").click(function () {
   var filter = JSON.parse(sessionStorage.getItem("filterData"));
 
   // displayCourse(sortData);
-  
+
   displayCourse(filter);
   //reloads the current document;
-  location.reload(); 
+  location.reload();
 });
 
 if (sessionStorage.getItem("filterData") != null) {
@@ -808,10 +808,10 @@ $(".menu-sub").click(function (e) {
   sessionStorage.setItem("menuData", JSON.stringify(filterSubject(sub)));
   var linkData = JSON.parse(sessionStorage.getItem("menuData"));
 
-  if (window.open("GalleryCourse.html", "_self")) {
-    window.open("/GalleryCourse.html", "_self");
+  if (window.open("./GalleryCourse.html", "_self")) {
+    window.open("../GalleryCourse.html", "_self");
   } else {
-    window.open("GalleryCourse.html", "_self");
+    window.open("./GalleryCourse.html", "_self");
   }
   displayCourse(linkData);
   // $(".note-link").html(sub);
@@ -834,13 +834,13 @@ $("#formSearch").submit(function (e) {
   sessionStorage.setItem("searchData", JSON.stringify(data.filter(item => item.Intro.search(re) >= 0)));
   var dataSearch = JSON.parse(sessionStorage.getItem("searchData"));
 
-  if (window.open("GalleryCourse.html", "_self")) {
-    window.open("/GalleryCourse.html", "_self");
+  if (window.open("./GalleryCourse.html", "_self")) {
+    window.open("../GalleryCourse.html", "_self");
   } else {
-    window.open("GalleryCourse.html", "_self");
+    window.open("./GalleryCourse.html", "_self");
   }
 
-  displayCourse(dataSearch); 
+  displayCourse(dataSearch);
 });
 
 if (sessionStorage.getItem("searchData") != null) {
@@ -1011,7 +1011,7 @@ function DisplayInTeacherByClass(items, className) {
 
 
 //** Display count filter by subject in Gallery */
-(function(){
+(function () {
   let subCoursePython = filterSubject("SubjectPython");
   let subCourseExcel = filterSubject("SubjectExcel");
   let subCourseWebDevelopment = filterSubject("SubjectWebDevelopment");
@@ -1030,7 +1030,7 @@ function DisplayInTeacherByClass(items, className) {
 })();
 
 //** Display count filter by level in Gallery */
-(function(){
+(function () {
   let subCourseAll = data.filter(item => item.Level === "All levels");
   let subCourseBeginner = data.filter(item => item.Level === "Beginner");
   let subCourseIntermediate = data.filter(item => item.Level === "Intermediate");
