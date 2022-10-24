@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- icon website -->
   <link rel="icon" href="./img/star-classes-icon.png" type="image/x-icon">
   <title>Star Classes</title>
@@ -24,30 +25,23 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./MDB5/js/mdb.min.js"></script>
+
+  <!-- jquery - JavaScript library for DOM operations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
   <!-- Angular  -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-  <script  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+  
+  <!-- Custom styles for this template -->
+  <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
+ 
   <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
+    * {
+      padding: 0;
+      margin: 0;
     }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-        line-height: 1.5;
-      }
-    }
-    /* GLOBAL STYLES
-    --------------------------------------------- */
-    /* Padding below the footer and lighter body text */
-
     body {
       padding-top: 3rem;
       color: #5a5a5a;
@@ -60,6 +54,13 @@
     .carousel {
       margin-bottom: 4rem;
     }
+
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+      bottom: 3rem;
+      z-index: 10;
+    }
+
     /* Declare heights because of positioning of img element */
     .carousel-item {
       height: 32rem;
@@ -92,10 +93,8 @@
       margin-left: .75rem;
     }
 
-
     /* Featurettes
 ------------------------- */
-
     .featurette-divider {
       margin: 5rem 0;
       /* Space out the Bootstrap <hr> more */
@@ -130,12 +129,21 @@
         margin-top: 7rem;
       }
     }
-
-    footer a:hover,
-    header .nav-link:hover,
-    header .list-group-item:hover {
+    
+    .nav-link:hover,
+    .dropdown-item:hover {
       color: #E4A11B !important;
+      font-weight: bold;
       cursor: pointer !important;
+    }
+
+    .dropdown-hover:hover>.dropdown-menu {
+      display: inline-block;
+    }
+
+    .dropdown-hover>.dropdown-toggle:active {
+      /*Without this, clicking will make it sticky*/
+      pointer-events: none;
     }
 
     .badge-notification {
@@ -145,29 +153,39 @@
       margin-left: -.5rem;
       padding: .2em .45em
     }
+
     .BoxShow{
       box-shadow: -2px -1px 7px rgba(86, 81, 81, 0.473);
     }
-    .About1 h1{
+    .About1 h1 {
         position:absolute;
-        top:150px;
+        top:120px;
         left:30px;
         font-size: 60px;
         font-family: 'Times New Roman', Times, serif;
         z-index: 1000;
-        color: white;
+        color: black;
         line-height: 1.5em;
+    }
+    .About1 p{
+      position:absolute;
+      top:380px;
+      left:30px;
+      font-size: 30px;
+      font-family: 'Times New Roman', Times, serif;
+      z-index: 1000;
+      color: black;
+      line-height: 1.5em;
     }
     .Welcome{
         font-size: 40px;
         font-family: 'Times New Roman', Times, serif;
         color: white;
-        margin-top: 2px;
     }
 
     /* Layout  */
     .analytic {
-      background-color: rgb(15, 15, 181);
+      
       margin: 30px auto;
       padding: 38px 0;
       width: 100%;
@@ -195,6 +213,10 @@
       font-size: 43px;
       margin-bottom: 7px;
     }
+    .list-group-item:hover {
+    color: #E4A11B !important;
+    cursor: pointer !important;
+    }
 
   </style>
 
@@ -203,200 +225,168 @@
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body ng-app="myApp"  onload="countVisitor()" ng-controller="myController">
   <!-- Menu top -->
-  <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="container-fluid">
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
 
-        <a class="navbar-brand pl-sm-3" href="index.html">
-          <img src="./img/star-classes-4.png" style="width:150px;">
-        </a>
+          <a class="navbar-brand pl-sm-3" href="../index.html">
+            <img src="../img/star-classes-4.png" style="width:150px;">
+          </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
-        </button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <!-- menu left -->
-          <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <!-- menu left -->
+            <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
 
-            <!-- Navbar dropdown -->
-            <li class="nav-item dropdown position-static text-center">
-              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
-                data-mdb-toggle="dropdown" aria-expanded="false">
-                <img src="./img/tutorialCut.png" style="width: 20px;"> Categories
-              </a>
-              <!-- Dropdown menu -->
-              <div class="dropdown-menu col-12 col-sm-4 mt-0" aria-labelledby="navbarDropdown" style="
-                              border-top-left-radius: 0;
-                              border-top-right-radius: 0;
-                            ">
-                <div class="container">
-                  <div class="row my-4">
+              <!-- Navbar dropdown -->
+              <li class="nav-item dropdown position-static text-center">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                  data-mdb-toggle="dropdown" aria-expanded="false">
+                  <img src="../img/tutorialCut.png" style="width: 20px;"> Categories
+                </a>
+                <!-- Dropdown menu -->
+                <div class="dropdown-menu col-12 col-sm-4 mt-0" aria-labelledby="navbarDropdown" style="
+                                border-top-left-radius: 0;
+                                border-top-right-radius: 0;
+                              ">
+                  <div class="container">
+                    <div class="row my-4">
 
-                    <div class="col-6 mb-3 mb-lg-0">
-                      <div class="list-group list-group-flush">
-                      
-                        <a href="GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
-                          Topic
-                        </a>
-                        
-                        <a href="GalleryCourse.html" data-sub="SubjectPython" class="menu-sub list-group-item list-group-item-action"><i
-                            class="fas fa-caret-right pe-2"></i>Python</a>
-                        <a href="GalleryCourse.html" data-sub="SubjectExcel" class="menu-sub list-group-item list-group-item-action">
-                          <i
-                            class="fas fa-caret-right pe-2"></i>Excel
-                        </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment" class="menu-sub list-group-item list-group-item-action"><i
-                            class="fas fa-caret-right pe-2"></i>Web Development
-                        </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectJavascript"
-                        class="menu-sub list-group-item list-group-item-action"><i
-                            class="fas fa-caret-right pe-2"></i>Javascript
-                        </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectDataScience" class="menu-sub list-group-item list-group-item-action"><i
-                            class="fas fa-caret-right pe-2"></i>Data Science
-                        </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectAWSCertification"
-                        class="menu-sub list-group-item list-group-item-action"><i
-                            class="fas fa-caret-right pe-2"></i>AWS Certification
-                        </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectDrawing" class="menu-sub list-group-item list-group-item-action"><i
-                            class="fas fa-caret-right pe-2"></i>Drawing
-                        </a>
+                      <div class="col-6 mb-3 mb-lg-0">
+                        <div class="list-group list-group-flush">
+
+                          <a href="../GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
+                            Topic
+                          </a>
+
+                          <a href="../GalleryCourse.html" data-sub="SubjectPython"
+                            class="menu-sub list-group-item list-group-item-action"><i
+                              class="fas fa-caret-right pe-2"></i>Python</a>
+                          <a href="../GalleryCourse.html" data-sub="SubjectExcel"
+                            class="menu-sub list-group-item list-group-item-action">
+                            <i class="fas fa-caret-right pe-2"></i>Excel
+                          </a>
+                          <a href="../GalleryCourse.html" data-sub="SubjectWebDevelopment"
+                            class="menu-sub list-group-item list-group-item-action"><i
+                              class="fas fa-caret-right pe-2"></i>Web Development
+                          </a>
+                          <a href="../GalleryCourse.html" data-sub="SubjectJavascript"
+                            class="menu-sub list-group-item list-group-item-action"><i
+                              class="fas fa-caret-right pe-2"></i>Javascript
+                          </a>
+                          <a href="../GalleryCourse.html" data-sub="SubjectDataScience"
+                            class="menu-sub list-group-item list-group-item-action"><i
+                              class="fas fa-caret-right pe-2"></i>Data Science
+                          </a>
+                          <a href="../GalleryCourse.html" data-sub="SubjectAWSCertification"
+                            class="menu-sub list-group-item list-group-item-action"><i
+                              class="fas fa-caret-right pe-2"></i>AWS Certification
+                          </a>
+                          <a href="../GalleryCourse.html" data-sub="SubjectDrawing"
+                            class="menu-sub list-group-item list-group-item-action"><i
+                              class="fas fa-caret-right pe-2"></i>Drawing
+                          </a>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="col-6 mb-3 mb-lg-0">
-                      <div class="list-group list-group-flush">
-                        <p class="mb-0 list-group-item text-uppercase font-weight-bold">
-                          Quickly Link
-                        </p>
-                        <a href="index.html#Featured-course" class="list-group-item list-group-item-action">
-                          <i class="fas fa-caret-right pe-2"></i>
-                          Featured course
-                        </a>
-                        <a href="index.html#Students-are-viewing" class="list-group-item list-group-item-action">
-                          <i class="fas fa-caret-right pe-2"></i>
-                          Students are viewing
-                        </a>
-                        <a href="index.html#teacher" class="list-group-item list-group-item-action">
-                          <i class="fas fa-caret-right pe-2"></i>
-                          Lecturers of Star Class
-                        </a>
+                      <div class="col-6 mb-3 mb-lg-0">
+                        <div class="list-group list-group-flush">
+                          <p class="mb-0 list-group-item text-uppercase font-weight-bold">
+                            Highlights
+                          </p>
+                          <a href="../index.html#Featured-course" class="list-group-item list-group-item-action">
+                            <i class="fas fa-caret-right pe-2"></i>
+                            Featured course
+                          </a>
+                          <a href="../index.html#Students-are-viewing" class="list-group-item list-group-item-action">
+                            <i class="fas fa-caret-right pe-2"></i>
+                            Recommended for you
+                          </a>
+                          <a href="../index.html#teacher" class="list-group-item list-group-item-action">
+                            <i class="fas fa-caret-right pe-2"></i>
+                            Lecturers of Star Class
+                          </a>
+                        </div>
                       </div>
-                    </div>
-                    
 
+
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
-            <!-- Navbar dropdown -->
-          </ul>
+              </li>
+              <!-- Navbar dropdown -->
+            </ul>
 
-          <!-- menu search -->
-          <form class="d-flex input-group mx-sm-3 mb-2" id="formSearch">
-            <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
-              id="search" ng-model="search">
-            <button class="btn bg-warning" type="submit">
-              <i class="fas fa-search"></i>
-            </button>
-          </form>
-          <!-- menu right -->
-          <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
-            <li class="nav-item col-12 col-sm-2 ml-auto">
-              <a class="nav-link text-center active" href="aboutus.html">About us</a>
-            </li>
-            <!-- shopping & payment -->
-            <li class="nav-item col-12 col-sm-2 mx-1">
-              <a class="nav-link active text-center p-2" aria-current="page" href="ShoppingCart.html">
-                <span><i class="fa fa-shopping-cart fa-lg"></i></span>
-                <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
-              </a>
-            </li>
-            <!-- Sign in-->
-            <li class="nav-item text-center col-12 col-sm-2 mx-1">
-              <a class="nav-link text-center active" href="SignIn.html">
-                <i class="fas fa-sign-in-alt"></i>
-                Sign in
-              </a>
-            </li>
-            <!-- Sign up -->
-            <!-- <li class="nav-item text-center col-12 col-sm-2">
-              <a class="nav-link text-center active" href="SignUp.html">Sign up</a>
-            </li> -->
-            <!-- Visitor -->
-            <li class="nav-item col-12 col-sm-4">
-              <div class="navbar-text text-light text-center">
-                <img src="./img/star-classes-icon.png" width="35px" alt="icon">
-                Visitor: <i class="fas fa-users"></i>
-                <span class="badge rounded-pill badge-notification bg-danger">
-                  <div id="visitor"></div>
-                </span>
-              </div>
-            </li>
-            <!-- Visitor -->
-          </ul>
-          <!-- menu right -->
+            <!-- menu search -->
+            <form class="d-flex input-group mx-sm-3 mb-2" id="formSearch">
+              <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
+                id="search" ng-model="search">
+              <button class="btn bg-warning" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+            <!-- menu right -->
+            <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
+              <li class="nav-item col-12 col-sm-2 ml-auto">
+                <a class="nav-link text-center active" href="../aboutus.html">About us</a>
+              </li>
+              <!-- shopping & payment -->
+              <li class="nav-item col-12 col-sm-2 mx-1">
+                <a class="nav-link active text-center p-2" aria-current="page" href="../ShoppingCart.html">
+                  <span><i class="fa fa-shopping-cart fa-lg"></i></span>
+                  <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
+                </a>
+              </li>
+              <!-- Sign in-->
+              <li class="nav-item text-center col-12 col-sm-2 mx-1">
+                <a class="nav-link text-center active" href="../SignIn.html">
+                  <i class="fas fa-sign-in-alt"></i>
+                  Sign in
+                </a>
+              </li>
+              <!-- Sign up -->
+              <!-- <li class="nav-item text-center col-12 col-sm-2">
+                <a class="nav-link text-center active" href="SignUp.html">Sign up</a>
+              </li> -->
+              <!-- Visitor -->
+              <li class="nav-item col-12 col-sm-4">
+                <div class="navbar-text text-light text-center">
+                  <img src="../img/star-classes-icon.png" width="35px" alt="icon">
+                  Visitor: <i class="fas fa-users"></i>
+                  <span class="badge rounded-pill badge-notification bg-danger">
+                    <div id="visitor"></div>
+                  </span>
+                </div>
+              </li>
+              <!-- Visitor -->
+            </ul>
+            <!-- menu right -->
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
   <!--/ Menu top -->
+
   <main class="d-flex flex-column mt-2" ng-app="myApp">
 
     <div class="About1">
-    <p><h1>We share<br>Knowledge<br> with the world</h1></p>
-    <img src="./img/about.png" alt="" width="100%" height="450px">
+    <h1>Welcome <br>to Star Classes</h1>
+    <p>We share Knowledge with the world</p>
+    
+    <a href="#"><img src="./img/pic1.jpg" alt="pic1" width="100%" height="400px"></a>
+ 
     </div>
 
-    <div class="bg-warning text-center Welcome">
-        Welcome to Star Classes
-    </div>
-
-    <div class="text-center"> 
-        <p class="">
-            <h3>Improving lives through learning</h3>
-        </p>
-        <p>Whether you want to learn or to share what you know, you’ve come to the right place.<br>
-            As a global destination for online learning, we connect people through knowledge.</p>    
-    </div>
-
-    <section class="d-block">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <a href="#"><img src="./img/pic1.jpg" alt="pic1" width="100%" height="400px"></a>
-            </div>
-  
-            <div class="carousel-item">
-              <a href="#"><img src="./img/pic2.jpg" alt="pic2" width="100%" height="400px"></a>
-            </div>
-          </div>
-
-          <!-- <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a> -->
-        </div>
-
-    </section>
-
-    <section class="container-fluid marketing">
+    <section class="marketing">
       <!-- three reason -->
       <div class="row mx-auto">
-        <h1 class="text-center mb-4">So many reasons to start</h1>
+        <h1 class="text-center mb-4 bg-warning text-light p-3">So many reasons to start</h1>
         <div class="col-lg-4">
           <img src="./img/reason1.jpg" width="50%" height="50%" alt="reason-01">
           <h2>Teach your way</h2>
@@ -419,28 +409,28 @@
     </section>
 
     <!-- achievements -->
-    <section class="container-fluid marketing">
-      <hr>
-      <div class="analytic mx-auto">
+    <section class="marketing">
+  
+      <div class="analytic mx-auto bg-warning">
         <ul class="row">
           <li class="col-12 col-sm-3">
             <p class="icon"><i class="fas fa-globe"></i></p>
-            <p class="number">3297</p>
+            <p class="number">1297+</p>
             <p>Foreign Follower</p>
           </li>
           <li class="col-12 col-sm-3">
             <p class="icon"><i class="fas fa-graduation-cap"></i></p>
-            <p class="number">3700</p>
+            <p class="number">1750+</p>
             <p>Students Enrolled</p>
           </li>
           <li class="col-12 col-sm-3">
             <p class="icon"><i class="far fa-lightbulb"></i></p>
-            <p class="number">5034</p>
+            <p class="number">520+</p>
             <p>Classes Complete</p>
           </li>
           <li class="col-12 col-sm-3">
             <p class="icon"><i class="far fa-user"></i></p>
-            <p class="number">1080</p>
+            <p class="number">10+</p>
             <p>Certified Teachers</p>
           </li>
         </ul>
@@ -557,7 +547,7 @@
 
     </div>
 
-    <!-- FOOTER -->
+     <!-- FOOTER -->
     <footer class="container-fluid border bg-dark text-white">
       <!-- Section 1: Social media -->
       <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
@@ -566,75 +556,64 @@
           <span>Get connected with us on social networks:</span>
         </div>
         <!--/ Left -->
+
         <!-- Right -->
         <div>
-          <a href="" class="me-4 link-primary">
+          <a href="" class="me-4 link-secondary">
             <i class="fab fa-facebook"></i>
           </a>
-          <a href="" class="me-4 link-primary">
+          <a href="" class="me-4 link-secondary">
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="" class="me-4 link-warning">
+          <a href="" class="me-4 link-secondary">
             <i class="fab fa-google"></i>
           </a>
-          <a href="" class="me-4 link-danger">
+          <a href="" class="me-4 link-secondary">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="" class="me-4 link-primary">
+          <a href="" class="me-4 link-secondary">
             <i class="fab fa-linkedin"></i>
           </a>
         </div>
         <!--/ Right -->
+
       </section>
       <!--/ Section 1: Social media -->
+
 
       <!-- Section 2: Links  -->
       <section class="d-flex justify-content-center justify-content-lg-around p-2 border-bottom">
         <div class="container text-center text-md-start mt-3">
           <!-- Grid row -->
           <div class="row mt-3">
+
             <!-- Grid column 1 -->
             <div class="col-md-4 mx-auto mb-4">
               <!-- Content -->
-              <p class="mx-auto px-3">
-                <a href="index.html"><img src="./img/star-classes-4.png" width="200px" alt="logo-name"></a>
-              </p>
-              <p style="text-align:justify" class="px-3">
+              <h6 class="mb-3">
+                <a href="#"><img src="./img/star-classes-4.png" width="200px" alt="logo-name"></a>
+              </h6>
+              <p style="text-align:justify">
                 Whether you want to learn or to share what you know, you have come to the right place. As a global
                 destination for online learning, we connect people through knowledge.
               </p>
-            </div>
-            <!--/ Grid column 1-->
+            </div><!--/ Grid column 1-->
 
             <!-- Grid column 2-->
             <div class="col-md-2 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">
-                <a href="index.html" class="text-reset">Star Classes</a>
-              </h6>
+              <h6 class="text-uppercase fw-bold mb-4">Star Classes</h6>
               <p>
-                <a href="GalleryCourse.html" class="text-reset">
-                  <i class="fas fa-caret-right me-2"></i>
-                  Courses Classes
-                </a>
+                <a href="#!" class="text-reset">Courses Classes</a>
               </p>
               <p>
-                <a href="Support.html" class="text-reset">
-                  <i class="fas fa-caret-right me-2"></i>
-                  Support & Help
-                </a>
+                <a href="#!" class="text-reset">Support & Help</a>
               </p>
               <p>
-                <a href="Policy.html" class="text-reset">
-                  <i class="fas fa-caret-right me-2"></i>
-                  Policy
-                </a>
+                <a href="#!" class="text-reset">Policy</a>
               </p>
               <p>
-                <a href="ShoppingCart.html" class="text-reset">
-                  <i class="fas fa-caret-right me-2"></i>
-                  Shopping Cart
-                </a>
+                <a href="ShoppingCart.html" class="text-reset">Shopping Cart</a>
               </p>
             </div>
             <!--/ Grid column 2-->
@@ -644,24 +623,22 @@
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
               <p>
-                <i class="fas fa-home me-3"></i>
-                <a href="https://www.google.com/maps?ll=10.786377,106.666297&z=16&t=m&hl=vi&gl=US&mapclient=embed&q=590+%C4%90.+C%C3%A1ch+M%E1%BA%A1ng+Th%C3%A1ng+8+Ph%C6%B0%E1%BB%9Dng+11+Qu%E1%BA%ADn+3+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh"
-                  target="new" class="text-reset">590, CMT8 Street, HCM City, VN</a>
+                <i class="fas fa-home me-3 text-secondary"></i>
+                590, CMT8, HCM City, VN
               </p>
               <p>
-                <i class="fas fa-envelope me-3"></i>
+                <i class="fas fa-envelope me-3 text-secondary"></i>
                 <a href="mailto:info@estarclasses.edu.com" class="text-rest text-white">info@starclasses.edu.com</a>
               </p>
               <p>
-                <i class="fas fa-phone me-3"></i>
+                <i class="fas fa-phone me-3 text-secondary"></i>
                 + 84 234 567 890
               </p>
               <p>
-                <i class="fas fa-print me-3"></i>
+                <i class="fas fa-print me-3 text-secondary"></i>
                 + 84 234 567 890
               </p>
-            </div>
-            <!--/ Grid column 3-->
+            </div><!--/ Grid column 3-->
 
             <!-- Grid column 4-->
             <div class="col-md-2 col-lg-3 mx-auto mb-md-0 mb-4">
@@ -686,7 +663,7 @@
             <script>
               var time = document.getElementById("time").innerHTML;
               var today = new Date();
-              time = document.write("Now: " + today);
+              time = document.write("Current: " + today);
             </script>
           </div>
           <!--/ Display current date, time -->
@@ -698,16 +675,32 @@
     <!--/ FOOTER -->
   </main>
 
-    <!-- Java Script -->
-    <script>
-      var app=angular.module("myApp",[])
-      app.controller("myController",function($scope, $http, $location){
-          $http.get("informationSubject.json").then(function(response){
-              $scope.list = response.data.informationSubject;
-          });
-      });
-      
-    </script>
-    <!-- Java Script -->
+  <!-- Java Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <script src="../Gallery.js"></script>
+  <script src="../cartForCourse.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript">
+    //** change color for star *** //
+    function changeColor(color) {
+      if (color.style.color === 'rgb(68, 68, 68)') {
+        // color.style.color = "#E4A11B";
+        color.style.color = 'rgb(228,161,27)';
+      }
+      else {
+        color.style.color = 'rgb(68, 68, 68)';
+      }
+    };
+
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope){
+      $scope.show = true;
+      $scope.showHide = function(){
+        this.show = !this.show;
+      };
+    });
+  </script>
+  <!-- Java Script -->
 </body>
 </html>
