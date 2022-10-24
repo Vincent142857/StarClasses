@@ -808,10 +808,10 @@ $(".menu-sub").click(function (e) {
   sessionStorage.setItem("menuData", JSON.stringify(filterSubject(sub)));
   var linkData = JSON.parse(sessionStorage.getItem("menuData"));
 
-  if (window.open("/GalleryCourse.html", "_self")) {
+  if (window.open("./GalleryCourse.html", "_self")) {
     window.open("../GalleryCourse.html", "_self");
   } else {
-    window.open("/GalleryCourse.html", "_self");
+    window.open("./GalleryCourse.html", "_self");
   }
   displayCourse(linkData);
 });
