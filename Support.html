@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
 
+
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
     integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
@@ -26,13 +27,15 @@
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="./MDB5/js/mdb.min.js"></script>
 
+  <!-- jquery - JavaScript library for DOM operations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
   <!-- Angular  -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
 
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
-
 
   <style>
     * {
@@ -91,12 +94,13 @@
       color: red;
     }
   </style>
-
+  <!-- Custom styles for this template -->
+  <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
 </head>
 
 <body ng-app="myApp" onload="countVisitor()" ng-controller="myController">
   <!-- Menu top -->
-    <header>
+  <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
 
@@ -111,7 +115,7 @@
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <!-- menu left -->
-          <ul class="navbar-nav mr-auto ml-auto m-md-0 col-12 col-sm-2">
+          <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
 
             <!-- Navbar dropdown -->
             <li class="nav-item dropdown position-static text-center">
@@ -201,8 +205,8 @@
             </button>
           </form>
           <!-- menu right -->
-          <ul class="navbar-nav mb-2 mb-md-0 col-12 col-sm-6 ml-auto">
-            <li class="nav-item col-12 col-sm-2 ">
+          <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
+            <li class="nav-item col-12 col-sm-2 ml-auto">
               <a class="nav-link text-center active" href="aboutus.html">About us</a>
             </li>
             <!-- shopping & payment -->
@@ -239,9 +243,8 @@
         </div>
       </div>
     </nav>
-    </header>
+  </header>
   <!--/ Menu top -->
-
   <main class="d-flex flex-column mt-4">
     <!-- top title -->
 

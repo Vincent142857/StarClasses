@@ -5,9 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- icon website -->
-  <link rel="icon" href="./img/star-classes-icon.png" type="image/x-icon">
+  <link rel="icon" href="/img/star-classes-icon.png" type="image/x-icon">
   <title>Star Classes</title>
 
   <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
@@ -18,171 +17,237 @@
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
     integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
     integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
+
   <script type="text/javascript" src="./MDB5/js/mdb.min.js"></script>
 
   <!-- Angular  -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script> -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    
+
+    body {
+      padding-top: 3rem;
+      color: #5a5a5a;
+    }
+
+    footer a:hover,
+    header .nav-link:hover,
+    header .list-group-item:hover {
+      color: #E4A11B !important;
+      cursor: pointer !important;
+    }
+
+    .badge-notification {
+      position: absolute;
+      font-size: .6rem;
+      margin-top: -.1rem;
+      margin-left: -.5rem;
+      padding: .2em .45em
+    }
+
+    .BoxShow {
+      box-shadow: -2px -1px 7px rgba(86, 81, 81, 0.473);
+    }
+
+    .Shopping-Right {
+      padding: 10px;
+      max-width: 320px;
+      min-width: 270px;
+      border-radius: 10px;
+      box-shadow: -2px -2px 10px rgb(177, 175, 175);
+      padding: 2.5rem;
+      margin: -2rem auto;
+      position: fixed;
+      top: 200px;
+      right: 5%;
+      z-index: 1000;
+      background-color: antiquewhite;
+      max-width: 20%;
+    }
+
+    @media screen and (max-width: 900px) {
+      .Shopping-Right {
+        position: relative;
+        top: 0px;
+        right: 0px;
+        margin: 0 auto;
+        max-width: 320px;
+      }
+    }
+
+    .Shopping-Right button {
+      /* font-size: 15px; */
+      cursor: pointer;
+    }
+    .show-cart strong:hover {
+      color:#E4A11B !important;
+    }
+
+  </style>
 
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
-
 </head>
 
 <body onload="countVisitor()">
   <!-- Menu top -->
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
 
-          <a class="navbar-brand pl-sm-3" href="index.html">
-            <img src="./img/star-classes-4.png" style="width:150px;">
-          </a>
+        <a class="navbar-brand pl-sm-3" href="index.html">
+          <img src="./img/star-classes-4.png" style="width:150px;">
+        </a>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
-          </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
+        </button>
 
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <!-- menu left -->
-            <ul class="navbar-nav mr-auto ml-auto m-md-0 col-12 col-sm-2">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- menu left -->
+          <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
 
-              <!-- Navbar dropdown -->
-              <li class="nav-item dropdown position-static text-center">
-                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
-                  data-mdb-toggle="dropdown" aria-expanded="false">
-                  <img src="./img/tutorialCut.png" style="width: 20px;"> Categories
-                </a>
-                <!-- Dropdown menu -->
-                <div class="dropdown-menu col-12 col-sm-4 mt-0" aria-labelledby="navbarDropdown" style="
-                                border-top-left-radius: 0;
-                                border-top-right-radius: 0;
-                              ">
-                  <div class="container">
-                    <div class="row my-4">
+            <!-- Navbar dropdown -->
+            <li class="nav-item dropdown position-static text-center">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                data-mdb-toggle="dropdown" aria-expanded="false">
+                <img src="./img/tutorialCut.png" style="width: 20px;"> Categories
+              </a>
+              <!-- Dropdown menu -->
+              <div class="dropdown-menu col-12 col-sm-4 mt-0" aria-labelledby="navbarDropdown" style="
+                              border-top-left-radius: 0;
+                              border-top-right-radius: 0;
+                            ">
+                <div class="container">
+                  <div class="row my-4">
 
-                      <div class="col-6 mb-3 mb-lg-0">
-                        <div class="list-group list-group-flush">
+                    <div class="col-6 mb-3 mb-lg-0">
+                      <div class="list-group list-group-flush">
 
-                          <a href="GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
-                            Topic
-                          </a>
+                        <a href="GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
+                          Topic
+                        </a>
 
-                          <a href="GalleryCourse.html" data-sub="SubjectPython"
-                            class="menu-sub list-group-item list-group-item-action"><i
-                              class="fas fa-caret-right pe-2"></i>Python</a>
-                          <a href="GalleryCourse.html" data-sub="SubjectExcel"
-                            class="menu-sub list-group-item list-group-item-action">
-                            <i class="fas fa-caret-right pe-2"></i>Excel
-                          </a>
-                          <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment"
-                            class="menu-sub list-group-item list-group-item-action"><i
-                              class="fas fa-caret-right pe-2"></i>Web Development
-                          </a>
-                          <a href="GalleryCourse.html" data-sub="SubjectJavascript"
-                            class="menu-sub list-group-item list-group-item-action"><i
-                              class="fas fa-caret-right pe-2"></i>Javascript
-                          </a>
-                          <a href="GalleryCourse.html" data-sub="SubjectDataScience"
-                            class="menu-sub list-group-item list-group-item-action"><i
-                              class="fas fa-caret-right pe-2"></i>Data Science
-                          </a>
-                          <a href="GalleryCourse.html" data-sub="SubjectAWSCertification"
-                            class="menu-sub list-group-item list-group-item-action"><i
-                              class="fas fa-caret-right pe-2"></i>AWS Certification
-                          </a>
-                          <a href="GalleryCourse.html" data-sub="SubjectDrawing"
-                            class="menu-sub list-group-item list-group-item-action"><i
-                              class="fas fa-caret-right pe-2"></i>Drawing
-                          </a>
-                        </div>
+                        <a href="GalleryCourse.html" data-sub="SubjectPython"
+                          class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Python</a>
+                        <a href="GalleryCourse.html" data-sub="SubjectExcel"
+                          class="menu-sub list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>Excel
+                        </a>
+                        <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment"
+                          class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Web Development
+                        </a>
+                        <a href="GalleryCourse.html" data-sub="SubjectJavascript"
+                          class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Javascript
+                        </a>
+                        <a href="GalleryCourse.html" data-sub="SubjectDataScience"
+                          class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Data Science
+                        </a>
+                        <a href="GalleryCourse.html" data-sub="SubjectAWSCertification"
+                          class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>AWS Certification
+                        </a>
+                        <a href="GalleryCourse.html" data-sub="SubjectDrawing"
+                          class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Drawing
+                        </a>
                       </div>
-
-                      <div class="col-6 mb-3 mb-lg-0">
-                        <div class="list-group list-group-flush">
-                          <p class="mb-0 list-group-item text-uppercase font-weight-bold">
-                            Highlights
-                          </p>
-                          <a href="index.html#Featured-course" class="list-group-item list-group-item-action">
-                            <i class="fas fa-caret-right pe-2"></i>
-                            Featured course
-                          </a>
-                          <a href="index.html#Students-are-viewing" class="list-group-item list-group-item-action">
-                            <i class="fas fa-caret-right pe-2"></i>
-                            Recommended for you
-                          </a>
-                          <a href="index.html#teacher" class="list-group-item list-group-item-action">
-                            <i class="fas fa-caret-right pe-2"></i>
-                            Lecturers of Star Class
-                          </a>
-                        </div>
-                      </div>
-
-
                     </div>
+
+                    <div class="col-6 mb-3 mb-lg-0">
+                      <div class="list-group list-group-flush">
+                        <p class="mb-0 list-group-item text-uppercase font-weight-bold">
+                          Highlights
+                        </p>
+                        <a href="index.html#Featured-course" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Featured course
+                        </a>
+                        <a href="index.html#Students-are-viewing" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Recommended for you
+                        </a>
+                        <a href="index.html#teacher" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Lecturers of Star Class
+                        </a>
+                      </div>
+                    </div>
+
+
                   </div>
                 </div>
-              </li>
-              <!-- Navbar dropdown -->
-            </ul>
+              </div>
+            </li>
+            <!-- Navbar dropdown -->
+          </ul>
 
-            <!-- menu search -->
-            <form class="d-flex input-group mx-sm-3 mb-2" id="formSearch">
-              <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
-                id="search" ng-model="search">
-              <button class="btn bg-warning" type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-            </form>
-            <!-- menu right -->
-            <ul class="navbar-nav mb-2 mb-md-0 col-12 col-sm-6 ml-auto">
-              <li class="nav-item col-12 col-sm-2 ">
-                <a class="nav-link text-center active" href="aboutus.html">About us</a>
-              </li>
-              <!-- shopping & payment -->
-              <li class="nav-item col-12 col-sm-2 mx-1">
-                <a class="nav-link active text-center p-2" aria-current="page" href="ShoppingCart.html">
-                  <span><i class="fa fa-shopping-cart fa-lg"></i></span>
-                  <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
-                </a>
-              </li>
-              <!-- Sign in-->
-              <li class="nav-item text-center col-12 col-sm-2 mx-1">
-                <a class="nav-link text-center active" href="SignIn.html">
-                  <i class="fas fa-sign-in-alt"></i>
-                  Sign in
-                </a>
-              </li>
-              <!-- Sign up -->
-              <!-- <li class="nav-item text-center col-12 col-sm-2">
-                <a class="nav-link text-center active" href="SignUp.html">Sign up</a>
-              </li> -->
-              <!-- Visitor -->
-              <li class="nav-item col-12 col-sm-4">
-                <div class="navbar-text text-light text-center">
-                  <img src="./img/star-classes-icon.png" width="35px" alt="icon">
-                  Visitor: <i class="fas fa-users"></i>
-                  <span class="badge rounded-pill badge-notification bg-danger">
-                    <div id="visitor"></div>
-                  </span>
-                </div>
-              </li>
-              <!-- Visitor -->
-            </ul>
-            <!-- menu right -->
-          </div>
+          <!-- menu search -->
+          <form class="d-flex input-group mx-sm-3 mb-2" id="formSearch">
+            <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
+              id="search" ng-model="search">
+            <button class="btn bg-warning" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <!-- menu right -->
+          <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
+            <li class="nav-item col-12 col-sm-2 ml-auto">
+              <a class="nav-link text-center active" href="aboutus.html">About us</a>
+            </li>
+            <!-- shopping & payment -->
+            <li class="nav-item col-12 col-sm-2 mx-1">
+              <a class="nav-link active text-center p-2" aria-current="page" href="ShoppingCart.html">
+                <span><i class="fa fa-shopping-cart fa-lg"></i></span>
+                <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
+              </a>
+            </li>
+            <!-- Sign in-->
+            <li class="nav-item text-center col-12 col-sm-2 mx-1">
+              <a class="nav-link text-center active" href="SignIn.html">
+                <i class="fas fa-sign-in-alt"></i>
+                Sign in
+              </a>
+            </li>
+            <!-- Sign up -->
+            <!-- <li class="nav-item text-center col-12 col-sm-2">
+              <a class="nav-link text-center active" href="SignUp.html">Sign up</a>
+            </li> -->
+            <!-- Visitor -->
+            <li class="nav-item col-12 col-sm-4">
+              <div class="navbar-text text-light text-center">
+                <img src="./img/star-classes-icon.png" width="35px" alt="icon">
+                Visitor: <i class="fas fa-users"></i>
+                <span class="badge rounded-pill badge-notification bg-danger">
+                  <div id="visitor"></div>
+                </span>
+              </div>
+            </li>
+            <!-- Visitor -->
+          </ul>
+          <!-- menu right -->
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
   <!--/ Menu top -->
-
   <main>
     <!-- Shopping Cart -->
 
