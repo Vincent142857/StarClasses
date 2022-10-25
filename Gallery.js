@@ -919,7 +919,11 @@ $(".menu-sub").click(function (e) {
   sessionStorage.setItem("menuData", JSON.stringify(filterSubject(sub)));
   var linkData = JSON.parse(sessionStorage.getItem("menuData"));
 
-  location.href = "../GalleryCourse.html" || "./GalleryCourse.html";
+  if(location.href = "../GalleryCourse.html" != undefined){
+    location.href = "../GalleryCourse.html";
+  }else{
+    location.href = "./GalleryCourse.html";
+  }
 
   displayCourse(linkData);
 });
@@ -944,7 +948,7 @@ $("#formSearch").submit(function (e) {
   if (window.open("../GalleryCourse.html", "_self")) {
     window.open("../GalleryCourse.html", "_self");
   } else {
-    window.open("../StarClasses/GalleryCourse.html", "_self");
+    window.open("./StarClasses/GalleryCourse.html", "_self");
   }
 
 
