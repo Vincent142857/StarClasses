@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Star Classes Team 1">
 
   <!-- icon website -->
   <link rel="icon" href="../img/star-classes-icon.png" type="image/x-icon">
@@ -13,8 +14,6 @@
   <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
-
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
@@ -31,13 +30,13 @@
   <link href="../MDB5/css/mdb.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/StyleTeacher.css">
 </head>
-<body>
+<body onload="countVisitor()">
   <!-- Menu top -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
 
-        <a class="navbar-brand pl-sm-3" href="../index.html">
+        <a class="navbar-brand pl-sm-3 my-auto" href="../index.html">
           <img src="../img/star-classes-4.png" style="width:150px;">
         </a>
 
@@ -48,21 +47,22 @@
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <!-- menu left -->
-          <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2">
+          <ul class="navbar-nav mr-auto m-md-0 col-12 col-md-2">
 
             <!-- Navbar dropdown -->
-            <li class="nav-item dropdown position-static text-center">
+            <li class="nav-item dropdown position-static mx-auto my-auto">
               <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
                 data-mdb-toggle="dropdown" aria-expanded="false">
                 <img src="../img/tutorialCut.png" style="width: 20px;"> Categories
               </a>
               <!-- Dropdown menu -->
-              <div class="dropdown-menu col-12 col-sm-4 mt-0" aria-labelledby="navbarDropdown" style="
+              <div class="dropdown-menu col-12 col-sm-10 col-md-6 col-xl-4 mt-0" aria-labelledby="navbarDropdown" style="
                               border-top-left-radius: 0;
                               border-top-right-radius: 0;
+                              min-width: 500px;
                             ">
                 <div class="container">
-                  <div class="row my-4">
+                  <div class="row d-flex my-4">
 
                     <div class="col-6 mb-3 mb-lg-0">
                       <div class="list-group list-group-flush">
@@ -121,36 +121,37 @@
                       </div>
                     </div>
 
-
                   </div>
                 </div>
-              </div>
+              </div><!-- Dropdown menu -->
             </li>
             <!-- Navbar dropdown -->
           </ul>
 
           <!-- menu search -->
-          <form class="d-flex input-group mx-sm-3 mb-2" id="formSearch">
-            <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
-              id="search" ng-model="search">
-            <button class="btn bg-warning" type="submit">
-              <i class="fas fa-search"></i>
-            </button>
-          </form>
+          <div class="col-12 col-md-4 mx-md-3 my-auto">
+            <form class="d-flex input-group" id="formSearch">
+              <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
+                id="search" ng-model="search">
+              <button class="btn bg-warning" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
           <!-- menu right -->
-          <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
-            <li class="nav-item col-12 col-sm-2 ml-auto">
+          <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-md-6">
+            <li class="nav-item col-12 col-md-2 ml-lg-auto my-auto">
               <a class="nav-link text-center active" href="../aboutus.html">About us</a>
             </li>
             <!-- shopping & payment -->
-            <li class="nav-item col-12 col-sm-2 mx-1">
+            <li class="nav-item col-12 col-md-2 mx-1 my-auto">
               <a class="nav-link active text-center p-2" aria-current="page" href="../ShoppingCart.html">
                 <span><i class="fa fa-shopping-cart fa-lg"></i></span>
                 <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
               </a>
             </li>
             <!-- Sign in-->
-            <li class="nav-item text-center col-12 col-sm-2 mx-1">
+            <li class="nav-item col-12 col-md-2 mx-1 my-auto">
               <a class="nav-link text-center active" href="../SignIn.html">
                 <i class="fas fa-sign-in-alt"></i>
                 Sign in
@@ -161,8 +162,8 @@
               <a class="nav-link text-center active" href="SignUp.html">Sign up</a>
             </li> -->
             <!-- Visitor -->
-            <li class="nav-item col-12 col-sm-4">
-              <div class="navbar-text text-light text-center">
+            <li class="nav-item col-12 col-md-4 mx-1 my-auto">
+              <div class="navbar-text d-block text-light text-center">
                 <img src="../img/star-classes-icon.png" width="35px" alt="icon">
                 Visitor: <i class="fas fa-users"></i>
                 <span class="badge rounded-pill badge-notification bg-danger">
@@ -211,7 +212,7 @@
         <div class="Hover">
           <h1>My courses </h1>
           <div class="Jaysen-Batchelor">
-            
+
           </div>
         </div>
 
@@ -281,28 +282,28 @@
             <div class="col-md-2 mx-auto mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">
-                <a href="index.html" class="text-reset">Star Classes</a>
+                <a href="../index.html" class="text-reset">Star Classes</a>
               </h6>
               <p>
-                <a href="GalleryCourse.html" class="text-reset">
+                <a href="../GalleryCourse.html" class="text-reset">
                   <i class="fas fa-caret-right me-2"></i>
                   Courses Classes
                 </a>
               </p>
               <p>
-                <a href="#!" class="text-reset">
+                <a href="../Support.html" class="text-reset">
                   <i class="fas fa-caret-right me-2"></i>
                   Support & Help
                 </a>
               </p>
               <p>
-                <a href="Policy.html" class="text-reset">
+                <a href="../Policy.html" class="text-reset">
                   <i class="fas fa-caret-right me-2"></i>
                   Policy
                 </a>
               </p>
               <p>
-                <a href="ShoppingCart.html" class="text-reset">
+                <a href="../ShoppingCart.html" class="text-reset">
                   <i class="fas fa-caret-right me-2"></i>
                   Shopping Cart
                 </a>

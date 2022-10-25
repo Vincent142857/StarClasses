@@ -65,3 +65,6 @@ a{
 form{
   margin: 0 auto;
 }
+p {
+  text-align: justify;
+}

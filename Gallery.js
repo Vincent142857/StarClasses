@@ -915,15 +915,17 @@ if (sessionStorage.getItem("filterData") != null) {
 $(".menu-sub").click(function (e) {
   e.preventDefault();
   sessionStorage.removeItem("searchData");
+
   var sub = $(this).data("sub");
+  var menu = Number($(this).data("menu"));
+
   sessionStorage.setItem("menuData", JSON.stringify(filterSubject(sub)));
   var linkData = JSON.parse(sessionStorage.getItem("menuData"));
 
-  if(location.href = "../GalleryCourse.html" != undefined){
-    location.href = "../GalleryCourse.html";
-  }
-  if(location.href = "./GalleryCourse.html" != undefined){
+  if (menu === 1) {
     location.href = "./GalleryCourse.html";
+  } else {
+    location.href = "../GalleryCourse.html";
   }
 
   displayCourse(linkData);
@@ -946,12 +948,13 @@ $("#formSearch").submit(function (e) {
   sessionStorage.setItem("searchData", JSON.stringify(data.filter(item => item.Intro.search(re) >= 0)));
   var dataSearch = JSON.parse(sessionStorage.getItem("searchData"));
 
-  if (window.open("../GalleryCourse.html", "_self")) {
-    window.open("../GalleryCourse.html", "_self");
-  } else {
-    window.open("./StarClasses/GalleryCourse.html", "_self");
-  }
+  var menu = Number($(this).data("menu"));
 
+  if (menu === 1) {
+    location.href = "./GalleryCourse.html";
+  } else {
+    location.href = "../GalleryCourse.html";
+  }
 
   displayCourse(dataSearch);
 });
