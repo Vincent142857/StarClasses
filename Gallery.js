@@ -921,7 +921,8 @@ $(".menu-sub").click(function (e) {
 
   if(location.href = "../GalleryCourse.html" != undefined){
     location.href = "../GalleryCourse.html";
-  }else{
+  }
+  if(location.href = "./GalleryCourse.html" != undefined){
     location.href = "./GalleryCourse.html";
   }
 
