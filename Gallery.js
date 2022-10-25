@@ -919,7 +919,7 @@ $(".menu-sub").click(function (e) {
   sessionStorage.setItem("menuData", JSON.stringify(filterSubject(sub)));
   var linkData = JSON.parse(sessionStorage.getItem("menuData"));
 
-  location.href = "../GalleryCourse.html" || "GalleryCourse.html";
+  location.href = "../GalleryCourse.html" || "./GalleryCourse.html";
 
   displayCourse(linkData);
 });
