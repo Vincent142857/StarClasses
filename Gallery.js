@@ -948,7 +948,7 @@ $("#formSearch").submit(function (e) {
   sessionStorage.setItem("searchData", JSON.stringify(data.filter(item => item.Intro.search(re) >= 0)));
   var dataSearch = JSON.parse(sessionStorage.getItem("searchData"));
 
-  var menu = Number($(this).data("menu"));
+  var menu = Number($("#search").data("menu"));
 
   if (menu === 1) {
     location.href = "./GalleryCourse.html";
