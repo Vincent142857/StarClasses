@@ -922,7 +922,7 @@ $(".menu-sub").click(function (e) {
   if (window.open("../GalleryCourse.html", "_self")) {
     window.open("../GalleryCourse.html", "_self");
   } else {
-    window.open("GalleryCourse.html", "_self");
+    window.open("../StarClasses/GalleryCourse.html", "_self");
   }
 
 
@@ -949,7 +949,7 @@ $("#formSearch").submit(function (e) {
   if (window.open("../GalleryCourse.html", "_self")) {
     window.open("../GalleryCourse.html", "_self");
   } else {
-    window.open("./GalleryCourse.html", "_self");
+    window.open("../StarClasses/GalleryCourse.html", "_self");
   }
 
 
