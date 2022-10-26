@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="author" content="Star Classes Team 1">
   <!-- icon website -->
   <link rel="icon" href="../img/star-classes-icon.png" type="image/x-icon">
   <title>Star Classes</title>
@@ -13,7 +13,6 @@
   <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
@@ -32,172 +31,173 @@
 
   <!-- Custom styles for this template -->
   <link href="../MDB5/css/mdb.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="../css/StyleCourses.css">
 </head>
-
 <body onload="countVisitor()">
   <!-- Menu top -->
-    <header>
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
 
-          <a class="navbar-brand pl-sm-3" href="../index.html">
-            <img src="../img/star-classes-4.png" style="width:150px;">
-          </a>
+        <a class="navbar-brand pl-sm-3 my-auto" href="../index.html">
+          <img src="../img/star-classes-4.png" style="width:150px;">
+        </a>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
-          </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
+        </button>
 
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <!-- menu left -->
-            <ul class="navbar-nav mr-auto m-md-0 col-12 col-sm-2 ml-auto">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- menu left -->
+          <ul class="navbar-nav mr-auto m-md-0 col-12 col-md-2">
 
-              <!-- Navbar dropdown -->
-              <li class="nav-item dropdown position-static text-center">
-                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
-                  data-mdb-toggle="dropdown" aria-expanded="false">
-                  <img src="../img/tutorialCut.png" style="width: 20px;"> Categories
-                </a>
-                <!-- Dropdown menu -->
-                <div class="dropdown-menu col-12 col-sm-4 mt-0" aria-labelledby="navbarDropdown" style="
-                                border-top-left-radius: 0;
-                                border-top-right-radius: 0;
-                              ">
-                  <div class="container">
-                    <div class="row my-4">
+            <!-- Navbar dropdown -->
+            <li class="nav-item dropdown position-static mx-auto my-auto">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                data-mdb-toggle="dropdown" aria-expanded="false">
+                <img src="../img/tutorialCut.png" style="width: 20px;"> Categories
+              </a>
+              <!-- Dropdown menu -->
+              <div class="dropdown-menu col-12 col-sm-10 col-md-6 col-xl-4 mt-0" aria-labelledby="navbarDropdown" style="
+                              border-top-left-radius: 0;
+                              border-top-right-radius: 0;
+                              min-width: 500px;
+                            ">
+                <div class="container">
+                  <div class="row d-flex my-4">
 
-                      <div class="col-6 mb-3 mb-lg-0">
-                        <div class="list-group list-group-flush">
+                    <div class="col-6 mb-3 mb-lg-0">
+                      <div class="list-group list-group-flush">
 
-                          <a href="../GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
-                            Topic
-                          </a>
+                        <a href="../GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
+                          Topic
+                        </a>
 
-                          <a href="../GalleryCourse.html" data-sub="SubjectPython"
-                            class="menu-sub list-group-item list-group-item-action"><i
-                              class="fas fa-caret-right pe-2"></i>Python</a>
-                          <a href="../GalleryCourse.html" data-sub="SubjectExcel"
-                            class="menu-sub list-group-item list-group-item-action">
-                            <i class="fas fa-caret-right pe-2"></i>Excel
-                          </a>
-                          <a href="../GalleryCourse.html" data-sub="SubjectWebDevelopment"
-                            class="menu-sub list-group-item list-group-item-action"><i
-                              class="fas fa-caret-right pe-2"></i>Web Development
-                          </a>
-                          <a href="../GalleryCourse.html" data-sub="SubjectJavascript"
-                            class="menu-sub list-group-item list-group-item-action"><i
-                              class="fas fa-caret-right pe-2"></i>Javascript
-                          </a>
-                          <a href="../GalleryCourse.html" data-sub="SubjectDataScience"
-                            class="menu-sub list-group-item list-group-item-action"><i
-                              class="fas fa-caret-right pe-2"></i>Data Science
-                          </a>
-                          <a href="../GalleryCourse.html" data-sub="SubjectAWSCertification"
-                            class="menu-sub list-group-item list-group-item-action"><i
-                              class="fas fa-caret-right pe-2"></i>AWS Certification
-                          </a>
-                          <a href="../GalleryCourse.html" data-sub="SubjectDrawing"
-                            class="menu-sub list-group-item list-group-item-action"><i
-                              class="fas fa-caret-right pe-2"></i>Drawing
-                          </a>
-                        </div>
+                        <a href="../GalleryCourse.html" data-sub="SubjectPython" data-menu="2"
+                          class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Python</a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectExcel" data-menu="2"
+                          class="menu-sub list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>Excel
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectWebDevelopment" data-menu="2"
+                          class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Web Development
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectJavascript" data-menu="2"
+                          class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Javascript
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectDataScience" data-menu="2"
+                          class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Data Science
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectAWSCertification" data-menu="2"
+                          class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>AWS Certification
+                        </a>
+                        <a href="../GalleryCourse.html" data-sub="SubjectDrawing" data-menu="2"
+                          class="menu-sub list-group-item list-group-item-action"><i
+                            class="fas fa-caret-right pe-2"></i>Drawing
+                        </a>
                       </div>
-
-                      <div class="col-6 mb-3 mb-lg-0">
-                        <div class="list-group list-group-flush">
-                          <p class="mb-0 list-group-item text-uppercase font-weight-bold">
-                            Highlights
-                          </p>
-                          <a href="../index.html#Featured-course" class="list-group-item list-group-item-action">
-                            <i class="fas fa-caret-right pe-2"></i>
-                            Featured course
-                          </a>
-                          <a href="../index.html#Students-are-viewing" class="list-group-item list-group-item-action">
-                            <i class="fas fa-caret-right pe-2"></i>
-                            Recommended for you
-                          </a>
-                          <a href="../index.html#teacher" class="list-group-item list-group-item-action">
-                            <i class="fas fa-caret-right pe-2"></i>
-                            Lecturers of Star Class
-                          </a>
-                        </div>
-                      </div>
-
-
                     </div>
+
+                    <div class="col-6 mb-3 mb-lg-0">
+                      <div class="list-group list-group-flush">
+                        <p class="mb-0 list-group-item text-uppercase font-weight-bold">
+                          Highlights
+                        </p>
+                        <a href="../index.html#Featured-course" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Featured course
+                        </a>
+                        <a href="../index.html#Students-are-viewing" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Recommended for you
+                        </a>
+                        <a href="../index.html#teacher" class="list-group-item list-group-item-action">
+                          <i class="fas fa-caret-right pe-2"></i>
+                          Lecturers of Star Class
+                        </a>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
-              </li>
-              <!-- Navbar dropdown -->
-            </ul>
+              </div><!-- Dropdown menu -->
+            </li>
+            <!-- Navbar dropdown -->
+          </ul>
 
-            <!-- menu search -->
-            <form class="d-flex input-group mx-sm-3 mb-2" id="formSearch">
+          <!-- menu search -->
+          <div class="col-12 col-md-4 mx-md-3 my-auto">
+            <form class="d-flex input-group" id="formSearch">
               <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
-                id="search" ng-model="search">
+                id="search" data-menu="2">
               <button class="btn bg-warning" type="submit">
                 <i class="fas fa-search"></i>
               </button>
             </form>
-            <!-- menu right -->
-            <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-sm-6">
-              <li class="nav-item col-12 col-sm-2">
-                <a class="nav-link text-center active" href="../aboutus.html">About us</a>
-              </li>
-              <!-- shopping & payment -->
-              <li class="nav-item col-12 col-sm-2 mx-1">
-                <a class="nav-link active text-center p-2" aria-current="page" href="../ShoppingCart.html">
-                  <span><i class="fa fa-shopping-cart fa-lg"></i></span>
-                  <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
-                </a>
-              </li>
-              <!-- Sign in-->
-              <li class="nav-item text-center col-12 col-sm-2 mx-1">
-                <a class="nav-link text-center active" href="../SignIn.html">
-                  <i class="fas fa-sign-in-alt"></i>
-                  Sign in
-                </a>
-              </li>
-              <!-- Sign up -->
-              <!-- <li class="nav-item text-center col-12 col-sm-2">
-                <a class="nav-link text-center active" href="SignUp.html">Sign up</a>
-              </li> -->
-              <!-- Visitor -->
-              <li class="nav-item col-12 col-sm-4">
-                <div class="navbar-text text-light text-center">
-                  <img src="../img/star-classes-icon.png" width="35px" alt="icon">
-                  Visitor: <i class="fas fa-users"></i>
-                  <span class="badge rounded-pill badge-notification bg-danger">
-                    <div id="visitor"></div>
-                  </span>
-                </div>
-              </li>
-              <!-- Visitor -->
-            </ul>
-            <!-- menu right -->
           </div>
+          <!-- menu right -->
+          <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-md-6">
+            <li class="nav-item col-12 col-md-2 ml-lg-auto my-auto">
+              <a class="nav-link text-center active" href="../aboutus.html">About us</a>
+            </li>
+            <!-- shopping & payment -->
+            <li class="nav-item col-12 col-md-2 mx-1 my-auto">
+              <a class="nav-link active text-center p-2" aria-current="page" href="../ShoppingCart.html">
+                <span><i class="fa fa-shopping-cart fa-lg"></i></span>
+                <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
+              </a>
+            </li>
+            <!-- Sign in-->
+            <li class="nav-item col-12 col-md-2 mx-1 my-auto">
+              <a class="nav-link text-center active" href="../SignIn.html">
+                <i class="fas fa-sign-in-alt"></i>
+                Sign in
+              </a>
+            </li>
+            <!-- Sign up -->
+            <!-- <li class="nav-item text-center col-12 col-sm-2">
+              <a class="nav-link text-center active" href="SignUp.html">Sign up</a>
+            </li> -->
+            <!-- Visitor -->
+            <li class="nav-item col-12 col-md-4 mx-1 my-auto">
+              <div class="navbar-text d-block text-light text-center">
+                <img src="../img/star-classes-icon.png" width="35px" alt="icon">
+                Visitor: <i class="fas fa-users"></i>
+                <span class="badge rounded-pill badge-notification bg-danger">
+                  <div id="visitor"></div>
+                </span>
+              </div>
+            </li>
+            <!-- Visitor -->
+          </ul>
+          <!-- menu right -->
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
   <!--/ Menu top -->
 
   <!-- Start your project here-->
-  <div style="margin-top:4rem;">
+  <main style="margin-top:4rem;">
     <!-- top courses -->
-    <div class="bg-dark p-3 text-light">
+    <section class="bg-dark p-3 text-light">
       <small class="mb-5">
-        <a class="text-reset" href="">Home</a> &#62;
-        <a class="text-reset" href="">Drawing</a> &#62;
-        <a class="text-reset" href="">Masterclass of Realistic Drawing and Shading Human Features</a>
+        <a class="text-reset" href="../index.html">Home</a> &#62;
+        <a class="text-reset menu-sub" data-sub="SubjectDrawing" data-menu="2" href="../GalleryCourse.html">Drawing</a> &#62;
+        <a class="text-reset" href="./Drawing06.html">Masterclass of Realistic Drawing and Shading Human Features</a>
       </small>
 
       <div class="d-flex flex-column mt-5 px-5">
         <h1>Masterclass of Realistic Drawing and Shading Human Features</h1>
         <p>Realistic Human Feature Drawing, Hachure and Shading with Pencil, Charcoal and Brush Techniques - Beginner to Advanced
         </p>
-        <div class="name-gv"><b>Created by Matthew Fussell</b></div>
+        <i class="name-gv">Created by <a href="../Teacher/MatthewFussell.html">Matthew Fussell</a></i>
         <!-- rating -->
         <span class="star-rate">
           4.9
@@ -231,10 +231,10 @@
               data-price-new="16.99"
               data-price-old="84.99" 
               data-detail="Drawing06.html"
-              class="add-to-cart m-2 col-9 btn btn-warning text-black"
+              class="add-to-cart m-2 col-9 btn btn-warning btn-lg text-black"
               >Add to cart</a>
 
-              <a href="../ShoppingCart.html" class="m-2 col-9 btn text-light" style="background-color:lightslategray">Buy now</a>
+              <a href="../ShoppingCart.html" class="m-2 col-9 btn btn-lg text-light" style="background-color:lightslategray">Buy now</a>
             </div>
 
             <p class="text-center"><small>30-day money-back guarantee</small></p>
@@ -247,51 +247,63 @@
             <p><i class="fas fa-infinity"></i> Full lifetime access </p>
             <p><i class="fas fa-mobile-alt"></i> Access on mobile and TV</p>
             <p><i class="fas fa-trophy"></i> Certificate of completion</p>
-            <a href="../Document/Drawing/Dr06.pdf" target="new" style="color: black;"><i class="fas fa-arrow-alt-circle-down"></i> Download file</a>
+            <h5>
+              <a href="../Document/Drawing/Dr06.pdf" target="new" class="text-warning">
+                <i class="fas fa-arrow-alt-circle-down"></i>
+                Download file</a>
+            </h5>
           </div>
-          <h3>Do you train 5 or more people?</h3>
+          <h4 class="mt-3">Do you train 5 or more people?</h4>
           <p>Get your team access to 17,000+ top courses anytime, anywhere.</p>
         </div>
         <!-- Add to Cart -->
       </div>
 
-    </div>
+    </section>
 
-    <div class="d-flex flex-column col-auto">
-      <!-- main course -->
-      <div class="p-3">
+    <!-- main course -->
+    <section class="container p-3">
+        <div class="d-flex flex-column col-auto px-0 px-lg-5">
         <!-- why -->
-        <div class="Learn p-3">
+        <div class="course-content">
           <h3>What you'll learn</h3>
-          <ul class="border pl-3 pt-3 pb-3 mx-3 learning-list clearfix" style="text-align:justify">
-            <li><i class="fas fa-check"></i>
+          <ul class="row" style="text-align:justify; line-height: 1.5;">
+            <li class="col-12 col-md-10 col-lg-5 ml-3 my-2">
+              <i class="fas fa-check text-info me-2"></i>
               Understand the fundamentals of drawing, hachure (hatching) and shading
             </li>
-            <li><i class="fas fa-check"></i>
+            <li class="col-12 col-md-10 col-lg-5 ml-3 my-2">
+              <i class="fas fa-check text-info me-2"></i>
               Realistic hachure with charcoal and pencil
             </li> 
-            <li><i class="fas fa-check"></i>
+            <li class="col-12 col-md-10 col-lg-5 ml-3 my-2">
+              <i class="fas fa-check text-info me-2"></i>
               Draw human face features and figure
             </li>   
-            <li><i class="fas fa-check"></i>
+            <li class="col-12 col-md-10 col-lg-5 ml-3 my-2">
+              <i class="fas fa-check text-info me-2"></i>
               New techniques and structures to learn portrait drawing with circles and ovals
             </li>
-            <li><i class="fas fa-check"></i>
+            <li class="col-12 col-md-10 col-lg-5 ml-3 my-2">
+              <i class="fas fa-check text-info me-2"></i>
               Draw perspectives
             </li>   
-            <li><i class="fas fa-check"></i>
+            <li class="col-12 col-md-10 col-lg-5 ml-3 my-2">
+              <i class="fas fa-check text-info me-2"></i>
               Draw hyper realistic with pencil and brush (eyes, nose, lips, eyelashes, eyebrows, ears, hair, hands, feet, legs )
             </li>
-            <li><i class="fas fa-check"></i>
+            <li class="col-12 col-md-10 col-lg-5 ml-3 my-2">
+              <i class="fas fa-check text-info me-2"></i>
               Draw realistic with blending stump
             </li>
-            <li><i class="fas fa-check"></i>
+            <li class="col-12 col-md-10 col-lg-5 ml-3 my-2">
+              <i class="fas fa-check text-info me-2"></i>
               How to use brush and charcoal/graphite powder to draw hyper realistic portrait
             </li>                 
           </ul>
         </div>
         <!-- Clip -->
-        <h3 class="px-3">Preview course</h3>
+        <h3 class="py-3">Preview course</h3>
         <div class="mx-4">
           <video width="100%" height="400px" controls>
             <source src="../Clip/ClipDrawing/Dr06.mp4" type="video/mp4">
@@ -299,40 +311,40 @@
           </video>
         </div>
         <!-- Course content -->
-        <div class="course-content mt-4 p-1">
-          <section>
-            <h3>Course content</h3>
-           <div class="mx-4">
-              <small>10 sections • 80 lectures • 30h 40m total length</small>
-              <ul class="border pl-3 pt-3 pb-3">
-                <li>Chapter 1: Introduction</li>
-                <li>Chapter 2: Introduction of basic tools, materials, skills and techniques of drawing</li>
-                <li>Chapter 3: Eyes Drawing, Hachure and Shading</li>
-                <li>Chapter 4: Nose Drawing, Hachure and Shading</li>
-                <li>Chapter 5: Lips Drawing, Hachure and Shading</li>
-                <li>Chapter 6: Realistic Ear Drawing, Hachure and Shading</li>
-                <li>Chapter 7: Hair Drawing and Shading</li>
-                <li>Chapter 8: Face Drawing, Hachure and Shading</li>
-                <li>Chapter 9: Hand Drawing and Shading</li>
-                <li>Chapter 10: Arms Drawing and Shading</li>
-              </ul>
-           </div>
-          </section>
-          <section>
-            <h4>Requirements</h4>
-            <ul>
-              <li>Pencil & paper</li>
-              <li>Conte pencil</li>
-              <li>Charcoal painting brushes</li>
-              <li>Stump</li>
-              <li>Graphite and charcoal powder</li>
-              <li>Eraser</li>
+        <div class="content my-3">
+          <h3>Course content</h3>
+          <div class="mx-4">
+            <small>10 sections • 80 lectures • 30h 40m total length</small>
+            <ul class="border p-3">
+              <li>Chapter 1: Introduction</li>
+              <li>Chapter 2: Introduction of basic tools, materials, skills and techniques of drawing</li>
+              <li>Chapter 3: Eyes Drawing, Hachure and Shading</li>
+              <li>Chapter 4: Nose Drawing, Hachure and Shading</li>
+              <li>Chapter 5: Lips Drawing, Hachure and Shading</li>
+              <li>Chapter 6: Realistic Ear Drawing, Hachure and Shading</li>
+              <li>Chapter 7: Hair Drawing and Shading</li>
+              <li>Chapter 8: Face Drawing, Hachure and Shading</li>
+              <li>Chapter 9: Hand Drawing and Shading</li>
+              <li>Chapter 10: Arms Drawing and Shading</li>
             </ul>
-                                                                                                                      
-          </section>
-          <section>
+          </div>
+        </div>
+        <!-- Requirements -->
+        <div class="my-3">
+          <h4>Requirements</h4>
+          <ul style="list-style-type: disc;">
+            <li>Pencil & paper</li>
+            <li>Conte pencil</li>
+            <li>Charcoal painting brushes</li>
+            <li>Stump</li>
+            <li>Graphite and charcoal powder</li>
+            <li>Eraser</li>
+          </ul>                  
+        </div>
+        <!-- Who this course is for -->
+          <div class="my-3">
             <h4>Who this course is for:</h4>
-            <ul>
+            <ul style="list-style-type: disc;">
               <li>Art Lovers</li>
               <li>Art hobbyist</li>
               <li>Students</li>
@@ -341,71 +353,159 @@
               <li>University Students</li>
               <li>Parents & Children</li>
             </ul>
-          </section>
-          <!-- comment of student -->
-          <section ng-app="myApp" ng-controller="myCtrl">
-            <h4>
-              <i class="fa fa-star text-warning" aria-hidden="true"></i>
-              4.7 course rating. 1K ratings.
-            </h4>
-            <hr>
+          </div>
+    
+      </div>
+      <hr>
+    </section>
+    <!-- comment of student -->
+    <section class="my-3" ng-app="myApp" ng-controller="myCtrl">
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-12 col-lg-10">
+            <!-- your comment -->
+            <div class="cart text-dark">
+              <div class="card-body p-4">
+                <h4 class="">Yours comment:</h4>
 
-            <form>
-              <label class="">Yours comment:</label>
-              <span class="d-inline-flex">
-                <i onclick="changeColor(this)" aria-hidden="true" class="fa fa-star"></i>
-                <i onclick="changeColor(this)" class="fa fa-star"></i>
-                <i onclick="changeColor(this)" class="fa fa-star"></i>
-                <i onclick="changeColor(this)" class="fa fa-star"></i>
-                <i onclick="changeColor(this)" class="fa fa-star"></i>
-              </span>
+                <form class="p-3">
 
-              <div class="form-group m-2 col-4">
-                <label for="">Your name:</label>
-                <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name" ng-model="user">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="form-input my-2 col-6">
+                      <input class="form-control border-0 border-bottom" name="name" id="name" type="text"
+                        placeholder="Enter your name" ng-model="user">
+                      <!-- <label class="form-label" for="">Your name</label> -->
+                    </div>
+                    <div class="col-6 my-auto ml-2 d-inline-block">
+                      <!-- rating -->
+                      <div id="rating">
+                        <input type="radio" id="star5" name="rating" value="5"/>
+                        <label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                        
+                        <input type="radio" id="star4half" name="rating" value="4 and a half"/>
+                        <label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+                        
+                        <input type="radio" id="star4" name="rating" value="4"/>
+                        <label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                        
+                        <input type="radio" id="star3half" name="rating" value="3 and a half"/>
+                        <label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+                        
+                        <input type="radio" id="star3" name="rating" value="3"/>
+                        <label class = "full" for="star3" title="Meh - 3 stars"></label>
+                        
+                        <input type="radio" id="star2half" name="rating" value="2 and a half"/>
+                        <label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+                        
+                        <input type="radio" id="star2" name="rating" value="2"/>
+                        <label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                        
+                        <input type="radio" id="star1half" name="rating" value="1 and a half" />
+                        <label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+                        
+                        <input type="radio" id="star1" name="rating" value="1" />
+                        <label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                        
+                        <input type="radio" id="starhalf" name="rating" value="half" />
+                        <label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-8">
+                    <textarea class="form-control col-4 m-2 p-2" name="comment" id="comment" cols="4" rows="2"
+                      placeholder="Enter your comment" ng-model="comment"></textarea>
+                  </div>
+
+                  <button class="btn btn-primary m-2" type="submit" ng-click="showHide()">Post comment</button>
+                  <button class="btn btn-secondary m-2" type="reset">Cancel</button>
+
+                </form>
+
               </div>
-              <textarea class="form-control col-4 m-2 p-2" name="comment" id="comment" cols="4" rows="2" placeholder="Enter your comment" ng-model="comment"></textarea>
-              <button class="btn btn-primary m-2" type="submit" ng-click="showHide()">Send</button>
-            </form>
-            <hr>
-            <div class="form-group m-3 border p-2" ng-hide="show">
-              <strong>Your name: {{user}}</strong>
-              <p>Your comment: {{comment}}</p>
             </div>
-          </section>
-          <!-- History comment -->
-          <section class="container">
-            <section class="d-flex row m-2">
-              <div class="avatar col-auto">
-                <img style="border-radius:50%" src="../img/logo.png" width="10%" alt="avatar">
-              </div>
-              <div class="d-flex row col-10">
-                <h4>Amandeep S.</h4>
-                <!-- rating -->
-                <span class="star-rate">
-                  4.8
-                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                  <i class="fa fa-star text-warning" aria-hidden="true"></i>
-                </span>
-                <p>It was awesome to spend the precious time to this course. Everything is explained so gently.</p>
-                <small>
-                  Help ?
-                  <i onclick="changeColor(this)" class="fas fa-thumbs-up ml-3"></i>
-                  <i onclick="changeColor(this)" class="fas fa-thumbs-down ml-3"></i>
-                  
-                </small>
-              </div>
-            </section>
-          </section>
 
+            <hr>
+
+            <!-- History comment -->
+            <div class="card text-dark">
+              <div class="card-body p-4">
+                <h4 class="mb-0">Recent comments</h4>
+                <p class="fw-light pb-2">Latest Comments section by users</p>
+                <!-- Display your comment -->
+                <div class="d-flex flex-start" ng-hide="show">
+                  <img class="rounded-circle shadow-1-strong me-3" src="../img/logo.png" alt="avatar" width="60"
+                    height="60" />
+                  <div>
+                    <h6 class="fw-bold mb-1">{{user}}</h6>
+                    <div class="d-flex align-items-center mb-3">
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <p class="mb-0 ml-2"> a second ago</p>
+                    </div>
+                    <p class="mb-0">
+                      {{comment}}
+                    </p>
+                  </div>
+                  <hr>
+                </div>
+              </div>
+              <!-- student 1 -->
+              <div class="card-body p-4">
+                <div class="d-flex flex-start">
+                  <img class="rounded-circle shadow-1-strong me-3" src="../img/logo.png" alt="avatar" width="60"
+                    height="60" />
+                  <div>
+                    <h6 class="fw-bold mb-1">Amandeep S.</h6>
+                    <div class="d-flex align-items-center mb-3">
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <p class="mb-0 ml-2"> a month ago</p>
+                    </div>
+                    <p class="mb-0">
+                      It was awesome to spend the precious time to this course. Everything is explained so gently.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- student 1 -->
+              <!-- <div class="card-body p-4">
+                <div class="d-flex flex-start">
+                  <img class="rounded-circle shadow-1-strong me-3" src="../img/logo.png" alt="avatar" width="60"
+                    height="60" />
+                  <div>
+                    <h6 class="fw-bold mb-1">Lara Stewart</h6>
+                    <div class="d-flex align-items-center mb-3">
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                      <p class="mb-0 ml-2"> a month ago</p>
+                    </div>
+                    <p class="mb-0">
+                      This is truly a practical manual handbook. After the course, you will be ready to work
+                      comfortably with the requirements of a Cloud Practitioner. If you are wise enough to do all
+                      the labs, you can demonstrate know-how in any job interview for an AWS Cloud Practitioner. It
+                      is the most hands-on course on Star Classes for this level.
+                    </p>
+                  </div>
+                </div>
+              </div> -->
+
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-  </div>
+  </main>
   <!-- End your project here-->
   <!-- jquery - JavaScript library for DOM operations -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
