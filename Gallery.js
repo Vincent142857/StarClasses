@@ -935,8 +935,6 @@ if (sessionStorage.getItem("menuData") != null) {
   var linkData = JSON.parse(sessionStorage.getItem("menuData"));
   displayCourse(linkData);
 }
-
-
 // event search
 $("#formSearch").submit(function (e) {
   e.preventDefault();
@@ -945,6 +943,7 @@ $("#formSearch").submit(function (e) {
   let search = $("#search").val();
   let re = new RegExp(search, "ig");
   //let subData = data.filter(item => item.Intro.search(re) >= 0);
+ 
   sessionStorage.setItem("searchData", JSON.stringify(data.filter(item => item.Intro.search(re) >= 0)));
   var dataSearch = JSON.parse(sessionStorage.getItem("searchData"));
 
