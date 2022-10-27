@@ -33,6 +33,8 @@
   <!-- Custom styles for this template -->
   <link href="./MDB5/css/mdb.min.css" rel="stylesheet">
 
+
+
   <style>
     * {
       padding: 0;
@@ -79,168 +81,170 @@
     }
   </style>
   <script>
-    function kiemtra() {
-      var sPassword = document.getElementById("Password").value;
-      var sCfmPassword = document.getElementById("CfmPassword").value;
-      if (sCfmPassword != sPassword) {
-        alert("Confirmed password is same as password ");
-        document.getElementById("CfmPassword").focus();
-        return false;
-      }
-    }
+    // function CheckCfm() {
+    //   var sPassword = document.getElementById("Password").value;
+    //   var sCfmPassword = document.getElementById("CfmPassword").value;
+    //   if (sCfmPassword != sPassword) {
+    //     document.getElementById("ErrCfm").innerHTML="Password and Confirm Password must be match.";
+    //   }
+    // }
+    // var sCfmPassword = document.getElementById("CfmPassword")
+    // CfmPassword.addEventListener("change",CheckCfm)
+   
+
   </script>
 
 </head>
 
 <body ng-app="myApp" onload="countVisitor()" ng-controller="myController">
   <!-- Menu top -->
-  <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="container-fluid">
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
 
-        <a class="navbar-brand pl-sm-3 my-auto" href="index.html">
-          <img src="./img/star-classes-4.png" style="width:150px;">
-        </a>
+          <a class="navbar-brand pl-sm-3 my-auto" href="index.html">
+            <img src="./img/star-classes-4.png" style="width:150px;">
+          </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
-        </button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-warning"><i class="fas fa-bars"></i></span>
+          </button>
 
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <!-- menu left -->
-          <ul class="navbar-nav mr-auto m-md-0 col-12 col-md-2">
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <!-- menu left -->
+            <ul class="navbar-nav mr-auto m-md-0 col-12 col-md-2">
 
-            <!-- Navbar dropdown -->
-            <li class="nav-item dropdown position-static mx-auto my-auto">
-              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
-                data-mdb-toggle="dropdown" aria-expanded="false">
-                <img src="./img/tutorialCut.png" style="width: 20px;"> Categories
-              </a>
-              <!-- Dropdown menu -->
-              <div class="dropdown-menu col-12 col-sm-10 col-md-6 col-xl-4 mt-0" aria-labelledby="navbarDropdown" style="
-                              border-top-left-radius: 0;
-                              border-top-right-radius: 0;
-                              min-width: 500px;
-                            ">
-                <div class="container">
-                  <div class="row d-flex my-4">
+              <!-- Navbar dropdown -->
+              <li class="nav-item dropdown position-static mx-auto my-auto">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                  data-mdb-toggle="dropdown" aria-expanded="false">
+                  <img src="./img/tutorialCut.png" style="width: 20px;"> Categories
+                </a>
+                <!-- Dropdown menu -->
+                <div class="dropdown-menu col-12 col-sm-10 col-md-6 col-xl-4 mt-0" aria-labelledby="navbarDropdown" style="
+                                border-top-left-radius: 0;
+                                border-top-right-radius: 0;
+                                min-width: 500px;
+                              ">
+                  <div class="container">
+                    <div class="row d-flex my-4">
 
-                    <div class="col-6 mb-3 mb-lg-0">
-                      <div class="list-group list-group-flush">
+                      <div class="col-6 mb-3 mb-lg-0">
+                        <div class="list-group list-group-flush">
 
-                        <a href="GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
-                          Topic
-                        </a>
+                          <a href="GalleryCourse.html" class="mb-0 list-group-item text-uppercase font-weight-bold">
+                            Topic
+                          </a>
 
-                        <a href="GalleryCourse.html" data-sub="SubjectPython" data-menu="1"
-                          class="menu-sub list-group-item list-group-item-action"><i
-                            class="fas fa-caret-right pe-2"></i>Python</a>
-                        <a href="GalleryCourse.html" data-sub="SubjectExcel" data-menu="1"
-                          class="menu-sub list-group-item list-group-item-action">
-                          <i class="fas fa-caret-right pe-2"></i>Excel
-                        </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment" data-menu="1"
-                          class="menu-sub list-group-item list-group-item-action"><i
-                            class="fas fa-caret-right pe-2"></i>Web Development
-                        </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectJavascript" data-menu="1"
-                          class="menu-sub list-group-item list-group-item-action"><i
-                            class="fas fa-caret-right pe-2"></i>Javascript
-                        </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectDataScience" data-menu="1"
-                          class="menu-sub list-group-item list-group-item-action"><i
-                            class="fas fa-caret-right pe-2"></i>Data Science
-                        </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectAWSCertification" data-menu="1"
-                          class="menu-sub list-group-item list-group-item-action"><i
-                            class="fas fa-caret-right pe-2"></i>AWS Certification
-                        </a>
-                        <a href="GalleryCourse.html" data-sub="SubjectDrawing" data-menu="1"
-                          class="menu-sub list-group-item list-group-item-action"><i
-                            class="fas fa-caret-right pe-2"></i>Drawing
-                        </a>
+                          <a href="GalleryCourse.html" data-sub="SubjectPython" data-menu="1"
+                            class="menu-sub list-group-item list-group-item-action"><i
+                              class="fas fa-caret-right pe-2"></i>Python</a>
+                          <a href="GalleryCourse.html" data-sub="SubjectExcel" data-menu="1"
+                            class="menu-sub list-group-item list-group-item-action">
+                            <i class="fas fa-caret-right pe-2"></i>Excel
+                          </a>
+                          <a href="GalleryCourse.html" data-sub="SubjectWebDevelopment" data-menu="1"
+                            class="menu-sub list-group-item list-group-item-action"><i
+                              class="fas fa-caret-right pe-2"></i>Web Development
+                          </a>
+                          <a href="GalleryCourse.html" data-sub="SubjectJavascript" data-menu="1"
+                            class="menu-sub list-group-item list-group-item-action"><i
+                              class="fas fa-caret-right pe-2"></i>Javascript
+                          </a>
+                          <a href="GalleryCourse.html" data-sub="SubjectDataScience" data-menu="1"
+                            class="menu-sub list-group-item list-group-item-action"><i
+                              class="fas fa-caret-right pe-2"></i>Data Science
+                          </a>
+                          <a href="GalleryCourse.html" data-sub="SubjectAWSCertification" data-menu="1"
+                            class="menu-sub list-group-item list-group-item-action"><i
+                              class="fas fa-caret-right pe-2"></i>AWS Certification
+                          </a>
+                          <a href="GalleryCourse.html" data-sub="SubjectDrawing" data-menu="1"
+                            class="menu-sub list-group-item list-group-item-action"><i
+                              class="fas fa-caret-right pe-2"></i>Drawing
+                          </a>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="col-6 mb-3 mb-lg-0">
-                      <div class="list-group list-group-flush">
-                        <p class="mb-0 list-group-item text-uppercase font-weight-bold">
-                          Highlights
-                        </p>
-                        <a href="index.html#Featured-course" class="list-group-item list-group-item-action">
-                          <i class="fas fa-caret-right pe-2"></i>
-                          Featured course
-                        </a>
-                        <a href="index.html#Students-are-viewing" class="list-group-item list-group-item-action">
-                          <i class="fas fa-caret-right pe-2"></i>
-                          Recommended for you
-                        </a>
-                        <a href="index.html#teacher" class="list-group-item list-group-item-action">
-                          <i class="fas fa-caret-right pe-2"></i>
-                          Lecturers of Star Class
-                        </a>
+                      <div class="col-6 mb-3 mb-lg-0">
+                        <div class="list-group list-group-flush">
+                          <p class="mb-0 list-group-item text-uppercase font-weight-bold">
+                            Highlights
+                          </p>
+                          <a href="index.html#Featured-course" class="list-group-item list-group-item-action">
+                            <i class="fas fa-caret-right pe-2"></i>
+                            Featured course
+                          </a>
+                          <a href="index.html#Students-are-viewing" class="list-group-item list-group-item-action">
+                            <i class="fas fa-caret-right pe-2"></i>
+                            Recommended for you
+                          </a>
+                          <a href="index.html#teacher" class="list-group-item list-group-item-action">
+                            <i class="fas fa-caret-right pe-2"></i>
+                            Lecturers of Star Class
+                          </a>
+                        </div>
                       </div>
-                    </div>
 
+                    </div>
                   </div>
-                </div>
-              </div><!-- Dropdown menu -->
-            </li>
-            <!-- Navbar dropdown -->
-          </ul>
+                </div><!-- Dropdown menu -->
+              </li>
+              <!-- Navbar dropdown -->
+            </ul>
 
-          <!-- menu search -->
-          <div class="col-12 col-md-4 mx-md-3 my-auto">
-            <form class="d-flex input-group" id="formSearch">
-              <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
-                id="search" data-menu="1">
-              <button class="btn bg-warning" type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-            </form>
+            <!-- menu search -->
+            <div class="col-12 col-md-4 mx-md-3 my-auto">
+              <form class="d-flex input-group" id="formSearch">
+                <input class="form-control" type="search" placeholder="Search..." aria-label="Search" name="search"
+                  id="search" data-menu="1">
+                <button class="btn bg-warning" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+            </div>
+            <!-- menu right -->
+            <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-md-6">
+              <li class="nav-item col-12 col-md-2 ml-lg-auto my-auto">
+                <a class="nav-link text-center active" href="aboutus.html">About us</a>
+              </li>
+              <!-- shopping & payment -->
+              <li class="nav-item col-12 col-md-2 mx-1 my-auto">
+                <a class="nav-link active text-center p-2" aria-current="page" href="ShoppingCart.html">
+                  <span><i class="fa fa-shopping-cart fa-lg"></i></span>
+                  <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
+                </a>
+              </li>
+              <!-- Sign in-->
+              <li class="nav-item col-12 col-md-2 mx-1 my-auto">
+                <a class="nav-link text-center active" href="SignIn.html">
+                  <i class="fas fa-sign-in-alt"></i>
+                  Sign in
+                </a>
+              </li>
+              <!-- Sign up -->
+              <!-- <li class="nav-item text-center col-12 col-sm-2">
+                <a class="nav-link text-center active" href="SignUp.html">Sign up</a>
+              </li> -->
+              <!-- Visitor -->
+              <li class="nav-item col-12 col-md-4 mx-1 my-auto">
+                <div class="navbar-text d-block text-light text-center">
+                  <img src="./img/star-classes-icon.png" width="35px" alt="icon">
+                  Visitor: <i class="fas fa-users"></i>
+                  <span class="badge rounded-pill badge-notification bg-danger">
+                    <div id="visitor"></div>
+                  </span>
+                </div>
+              </li>
+              <!-- Visitor -->
+            </ul>
+            <!-- menu right -->
           </div>
-          <!-- menu right -->
-          <ul class="navbar-nav ml-auto mb-2 mb-md-0 col-12 col-md-6">
-            <li class="nav-item col-12 col-md-2 ml-lg-auto my-auto">
-              <a class="nav-link text-center active" href="aboutus.html">About us</a>
-            </li>
-            <!-- shopping & payment -->
-            <li class="nav-item col-12 col-md-2 mx-1 my-auto">
-              <a class="nav-link active text-center p-2" aria-current="page" href="ShoppingCart.html">
-                <span><i class="fa fa-shopping-cart fa-lg"></i></span>
-                <span class="badge rounded-pill badge-notification bg-danger total-count"></span>
-              </a>
-            </li>
-            <!-- Sign in-->
-            <li class="nav-item col-12 col-md-2 mx-1 my-auto">
-              <a class="nav-link text-center active" href="SignIn.html">
-                <i class="fas fa-sign-in-alt"></i>
-                Sign in
-              </a>
-            </li>
-            <!-- Sign up -->
-            <!-- <li class="nav-item text-center col-12 col-sm-2">
-              <a class="nav-link text-center active" href="SignUp.html">Sign up</a>
-            </li> -->
-            <!-- Visitor -->
-            <li class="nav-item col-12 col-md-4 mx-1 my-auto">
-              <div class="navbar-text d-block text-light text-center">
-                <img src="./img/star-classes-icon.png" width="35px" alt="icon">
-                Visitor: <i class="fas fa-users"></i>
-                <span class="badge rounded-pill badge-notification bg-danger">
-                  <div id="visitor"></div>
-                </span>
-              </div>
-            </li>
-            <!-- Visitor -->
-          </ul>
-          <!-- menu right -->
         </div>
-      </div>
-    </nav>
-  </header>
-<!--/ Menu top -->
+      </nav>
+    </header>
+  <!--/ Menu top -->
 
   <main class="d-flex flex-column mt-4" style="background-color: #F1F8E9;">
     <div class="container-sign-up">
@@ -259,8 +263,7 @@
         </aside> -->
         <!-- form -->
         <article class="col-12 col-md-6 mb-5 ml-auto">
-          <form id="SignUp" class="col-11 col-sm-9 border rounded-9 mx-auto p-4" name="Form" onsubmit="return kiemtra();"
-            action="./index.html">
+          <form id="SignUp" class="col-11 col-sm-9 border rounded-9 mx-auto p-4" name="Form">
             <h2><img class="d-inline-flex" src="./img/logo.png" width="9%" alt=""> Created new account</h2>
             <!-- full name input -->
             <div class="form-group mb-2">
@@ -282,25 +285,24 @@
             <div class="form-group my-3">
               <label class="form-label" for="Email">Phone number (*):</label>
               <input type="tel" id="Phone" name="Phone" ng-model="Phone" class="form-control"
-                placeholder="Enter your phone number" required />
+                placeholder="Enter your phone number" required pattern="\d{10,100}" />
               <small class="error" ng-show="Form.Phone.$touched && Form.Phone.$error.required">Phone is required</small>
+              <small class="error" ng-show="Form.Phone.$touched && Form.Phone.$error.pattern">Phone numbers must be 10 digits</small>
             </div>
-
             <!-- Password input -->
             <div class="form-group mb-2">
               <label class="form-label" for="Password">Password (*):</label>
               <input type="password" id="Password" name="Password" ng-model="Password" class="form-control"
                 placeholder="Enter your password" required />
-              <small class="error" ng-show="Form.Password.$touched && Form.Password.$error.required">Password is
-                required</small>
+              <small class="error" ng-show="Form.Password.$touched && Form.Password.$error.required">Password is required</small>
             </div>
             <!-- Confirm Password input -->
             <div class="form-group mb-2">
               <label class="form-label" for="CfmPassword">Confirmed Password(*):</label>
               <input type="password" id="CfmPassword" name="CfmPassword" ng-model="CfmPassword" class="form-control"
                 placeholder="Enter your confirmed password" required />
-              <small class="error" ng-show="Form.CfmPassword.$touched && Form.CfmPassword.$error.required">Confirmed
-                password is required</small>
+              <small class="error" ng-show="Form.CfmPassword.$touched && Form.CfmPassword.$error.required">Confirmed password is required</small>
+              <small class="error" id="ErrCfm"></small>
             </div>
             <!-- Checkbox -->
             <div class="form-check d-flex justify-content-center mb-2">
@@ -311,11 +313,43 @@
             </div>
             <!-- Submit button -->
             <button type="submit" 
-                    class="btn btn-primary btn-block mb-2 bg-warning" 
+                    class="btn btn-warning btn-lg btn-block mb-2" 
+                    ng-disabled="   Form.FullName.$error.required || 
+                                    Form.Email.$error.required ||
+                                    Form.Email.$error.pattern ||  
+                                    Form.Phone.$error.required ||
+                                    Form.Password.$error.required ||
+                                    Form.Phone.$error.pattern ||
+                                    Form.CfmPassword.$error.required
+                                    " 
                     data-mdb-toggle="modal"  
                     data-mdb-target="#Modal">
                     Sign up
             </button>
+              <!-- Modal -->
+              <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header border-bottom-0">
+                      <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-start text-black p-4">
+                      <p class="modal-title mb-5 bg-dark p-2" id="ModalLabel"><img src="./img/star-classes-4.png"
+                          width="50%" alt="Star Classes"></p>
+                      <h4 class="mb-3 text-warning text-center">You are successfully logged in</h4>
+                      <hr>
+                      <h2 class="mb-1 text-warning text-center">Welcome to Star Classes </h2>
+                      <h5 class="mb-0 text-warning text-center">Let's enjoy our courses now!</h5>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center border-top-0 py-4">
+                      <a href="./index.html" type="button" class="btn btn-warning mb-1 clear-cart">
+                        Comeback
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--/ modal -->
             <!-- Register buttons -->
             <div class="text-center">
               <p>Or Sign Up with:</p>
@@ -501,6 +535,18 @@
         document.getElementById("visitor").innerHTML = 0;
       }
     }
+    $("#CfmPassword").on("keyup", function(){
+      var pwd = $("#Password").val();
+      var cfm = $("#CfmPassword").val();
+      console.log(pwd);
+      console.log(cfm);
+      if (cfm != pwd) {
+        $("#ErrCfm").html("Password and Confirm Password must be match.");
+      }
+      else{
+        $("#ErrCfm").html("");
+      }
+    });
   </script>
   <!-- Java Script -->
 </body>
