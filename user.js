@@ -154,5 +154,6 @@ var cartArray = dataUser.listCart();
   $('.show-cart').html(output);
   $('.total-cart').html("$ " + dataUser.totalCart().toPrecision(5));
   $('.total-count').html(dataUser.totalCount());
+
 }
 

@@ -600,7 +600,7 @@ var data =
       "PriceOld": 84.99,
       "Rating": 4.8,
       "QtyStudent": 74291,
-      "Detail": "AWSCertification01.html",
+      "Detail": "AWSCertification07.html",
       "Level": "Beginner"
     },
     {
@@ -653,7 +653,7 @@ var data =
       "Intro": "JavaScript for Beginners : Work closely with me doing exercises & learn more. I make Javascript easy for you guaranteed.",
       "Teacher": "Edwin Diaz",
       "PriceNew": 19.99,
-      "PriceOld": 19.99,
+      "PriceOld": 99.99,
       "Rating": 4.4,
       "QtyStudent": 30106,
       "Detail": "Javascript04.html",
@@ -667,7 +667,7 @@ var data =
       "Intro": "Become a JavaScript expert in 30 days, even if you are a JS beginner. Become a front-end developer of websites in JS",
       "Teacher": "Edwin Diaz",
       "PriceNew": 19.99,
-      "PriceOld": 19.99,
+      "PriceOld": 99.99,
       "Rating": 4.3,
       "QtyStudent": 9931,
       "Detail": "Javascript05.html",
@@ -699,7 +699,7 @@ var data =
       "Rating": 4.6,
       "QtyStudent": 31146,
       "Detail": "Javascript07.html",
-      "Level": "Beginner"
+      "Level": "Intermediate"
     }
   ]
 
