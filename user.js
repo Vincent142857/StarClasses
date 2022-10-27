@@ -4,6 +4,8 @@
 var dataUser = (function () {
   
   user = [];
+  userCurrent =[];
+
 
   // Constructor
   function Item(email, phone, name, pwd) {
@@ -14,33 +16,48 @@ var dataUser = (function () {
     
   }
 
-  // Save cart
+  // Save user information
   function saveUser() {
-    sessionStorage.setItem('dataUser', JSON.stringify(user));
+    // sessionStorage.setItem('dataUser', JSON.stringify(user));
+    localStorage.setItem('dataUser', JSON.stringify(user));
   }
-
-  // Load cart
+  // Load user information
   function loadUser() {
-    user = JSON.parse(sessionStorage.getItem('dataUser'));
+    // user = JSON.parse(sessionStorage.getItem('dataUser'));
+    user = JSON.parse(localStorage.getItem('dataUser'));
+  }
+  // if (sessionStorage.getItem("dataUser") != null) {
+  if (localStorage.getItem("dataUser") != null) {
+    loadUser();
   }
 
-  if (sessionStorage.getItem("dataUser") != null) {
-    loadUser();
+  //save userCurrent
+  function saveUserCurrent(u) {
+    sessionStorage.setItem("infoUserCurrent", JSON.stringify(u));
+  }
+
+  //load userCurrent
+  function loadUserCurrent(){
+    userCurrent = JSON.parse(sessionStorage.getItem("infoUserCurrent"));
+  }
+  if (sessionStorage.getItem("infoUserCurrent") != null) {
+    loadUserCurrent();
   }
 
   var obj = {};
 
-  // Add to cart
+  // Add to dataUser
   obj.addItemToUser = function (email, phone, name, pwd) {
     for (var i in user) {
       if (user[i].email === email) {
-        alert("Account has had")
+        alert("Your email had account! Please sign in with your account.")
         return;
       }
     }
     var item = new Item(email, phone, name, pwd);
-    cart.push(item);
-    saveUser();
+    user.push(item); //save to array user
+    saveUser(); //save to json dataUser
+
   }
 
   // Remove item from cart
@@ -54,30 +71,22 @@ var dataUser = (function () {
     saveUser();
   }
 
-  // Remove all items from cart
+  // Check information of user-current
   obj.checkSignIn = function (email, pwd) {
     for (var i in user) {
       if (user[i].email === email && user[i].pwd === pwd) {
-        sessionStorage.setItem("infoUser", user[i]);
-        var userNow = sessionStorage.getItem("infoUser");
-        displayUser(userNow);
+        saveUserCurrent(user[i]);
         return true;
       }
     }
     return false;
   }
+  console.log(userCurrent.email);
+  console.log(userCurrent.name);
 
   // List cart
   obj.listUser = function () {
-    var userCopy = [];
-    for (i in user) {
-      var item = user[i];
-      var itemCopy = {};
-      for (p in item) {
-        itemCopy[p] = item[p];
-      }
-    }
-    return userCopy;
+    return userCurrent;
   }
 
   return obj;
@@ -90,70 +99,44 @@ var dataUser = (function () {
 // Add item
 $(".add-to-user").click(function (e) {
   e.preventDefault();
-  var email = $(this).data("email");
-  var phone = $(this).data("phone");
-  var name = $(this).data("name");
-  var pwd = $(this).data("pwd");
+  var email = $("#Email").val();
+  var phone = $("#Phone").val();
+  var name = $("#FullName").val();
+  var pwd = $("#Password").val();
   
   dataUser.addItemToUser(email, phone, name, pwd);
-  // displayUser();
+  displayUser();
 });
 
-// Clear items
+
+// Check your account;
 $('.check-user').click(function () {
-  var signIn = dataUser.checkSignIn();
+  var emailCurrent = $("#EmailCurrent").val();
+  var pwdCurrent = $("#PwdCurrent").val();
+
+  var signIn = dataUser.checkSignIn(emailCurrent, pwdCurrent);
   if (signIn === true) {
     alert("Welcome to Star Classes!");
+    displayUser();
   }else {
-    alert("Sign in failed!");
+    alert("Your email or your password is failed!");
   }
-  
 });
 
 
 function displayUser() {
-var cartArray = dataUser.listCart();
-  var output = ``;
+  var userArray = dataUser.listUser();
+  console.log(userArray);
 
-  $.each(cartArray, function (k, v) {
-    output += `<div class="col-12 m-1 p-1 border">
-                <div class="d-md-flex flex-column flex-md-row p-1">
+  var output = `<a class="nav-link text-center active rounded-circle btn btn-warning" href="#">
+      <span class="user-name"></span>
+    </a>`;
 
-                  <div class="d-flex flex-row flex-grow-1 col-12 col-sm-8 mx-2">
-                    <div class="Exit col-1">
-                      <input class="delete-item my-5" data-name="${v.name}" type="checkbox" checked>
-                    </div>
-                    <div class="img-course col-4">
-                      <img class="border" src="./img/imgcourses/${v.img}" alt="img-course" width="100%" height="auto" style="border-radius: 10px">
-                    </div>
-                    <div class="col-7 p-2">
-                      <a class="text-reset" href="./Courses/${v.detail}" target="new">
-                        <strong class="title-course">${v.name}</strong> </a> <br>
-                        <small class="name-gv">Created by: ${v.teacher}</small>
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row col-12 col-sm-4 p-2">
-                    <div class="col-3">
-                      <b class="text-success">$${v.price}</b>
-                      <small class="text-danger">
-                        <del>$${v.priceOld}</del>
-                      </small>
-                    </div>
-                    <div class="col-7 mx-1">
-                      <div class="input-group">
-                        <label class="my-auto mx-2">Qty:</label>
-                        <input type='number' class='col-1 text-center item-count form-control' min="1" data-name="${v.name}" value="${v.count}">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>`
-  });
+    $(".user-name").html(userCurrent.name);
   
-  $('.show-cart').html(output);
-  $('.total-cart').html("$ " + dataUser.totalCart().toPrecision(5));
-  $('.total-count').html(dataUser.totalCount());
-
+  // $('.show-user').html(output);
+  
 }
+
+displayUser();
 

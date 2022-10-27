@@ -313,7 +313,7 @@
             </div>
             <!-- Submit button -->
             <button type="submit" 
-                    class="btn btn-warning btn-lg btn-block mb-2" 
+                    class="btn btn-warning btn-lg btn-block mb-2 add-to-user" 
                     ng-disabled="   Form.FullName.$error.required || 
                                     Form.Email.$error.required ||
                                     Form.Email.$error.pattern ||  
@@ -517,24 +517,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="Gallery.js"></script>
   <script src="cartForCourse.js"></script>
+  <script src="./user.js"></script>
   <script>
     var app = angular.module("myApp", [])
     app.controller("myController", function () {
     })
 
-    //** Count Visitor ** 
-    function countVisitor() {
-      if (typeof (Storage) !== "undefined") {
-        if (localStorage.countV) {
-          localStorage.countV = Number(localStorage.countV) + 1;
-        } else {
-          localStorage.countV = 1;
-        }
-        document.getElementById("visitor").innerHTML = localStorage.countV;
-      } else {
-        document.getElementById("visitor").innerHTML = 0;
-      }
-    }
     $("#CfmPassword").on("keyup", function(){
       var pwd = $("#Password").val();
       var cfm = $("#CfmPassword").val();
@@ -547,6 +535,17 @@
         $("#ErrCfm").html("");
       }
     });
+
+//     $(".add-to-user").click(function () {
+  
+//   var email = $("#Email").val();
+//   var phone = $("#Phone").val();
+//   var name = $("#FullName").val();
+//   var pwd = $("#Password").val();
+  
+//   alert("email=" + email + " phone=" + phone + " name=" + name + " pwd=" + pwd);
+//   // displayUser();
+// });
   </script>
   <!-- Java Script -->
 </body>

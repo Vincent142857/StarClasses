@@ -210,8 +210,10 @@
               </a>
             </li>
             <!-- Sign up -->
-            <!-- <li class="nav-item text-center col-12 col-sm-2">
-              <a class="nav-link text-center active" href="SignUp.html">Sign up</a>
+            <!-- <li class="nav-item col-12 col-md-1 my-auto">
+              <a class="nav-link text-center active rounded-circle btn btn-warning" href="#">
+                <span class="user-name"></span>
+              </a>
             </li> -->
             <!-- Visitor -->
             <li class="nav-item col-12 col-md-4 mx-1 my-auto">
@@ -253,14 +255,14 @@
               <!-- Email input -->
               <div class="form-group mb-4">
                 <label class="form-label" for="Email">Email address (*):</label>
-                <input type="email" id="Email" class="form-control" placeholder="Enter your email address" required ng-model="Email" name="Email"  pattern="\w+[@]gmail[.]com([.]vn)?"/>
+                <input type="email" id="EmailCurrent" class="form-control" placeholder="Enter your email address" required ng-model="Email" name="Email"  pattern="\w+[@]gmail[.]com([.]vn)?"/>
                 <small class="error" ng-show="Form.Email.$touched && Form.Email.$error.required">Email is required</small>
                 <small class="error" ng-show="Form.Email.$touched && Form.Email.$error.pattern">wwww@gmail.com.vn</small>
               </div>
               <!-- Password input -->
               <div class="form-group mb-4">
                 <label class="form-label" for="Password">Password (*):</label>
-                <input type="password" id="Password" name="Password" ng-model="Password" class="form-control" placeholder="Enter your password" required />
+                <input type="password" id="PwdCurrent" name="Password" ng-model="Password" class="form-control" placeholder="Enter your password" required />
                 <small class="error" ng-show="Form.Password.$touched && Form.Password.$error.required">Password is required</small>
               </div>
       
@@ -275,7 +277,7 @@
       
               <!-- Submit button -->
               <button type="submit" 
-                      class="btn btn-primary btn-lg btn-block mb-4 bg-warning"
+                      class="btn btn-primary btn-lg btn-block mb-4 bg-warning check-user"
                       data-mdb-toggle="modal"  
                       data-mdb-target="#Modal"
                       ng-disabled="   Form.Email.$error.required ||
@@ -479,6 +481,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="Gallery.js"></script>
   <script src="cartForCourse.js"></script>
+  <script src="./user.js"></script>
     <script>
       var app=angular.module("myApp",[])
         app.controller("myController",function(){         
