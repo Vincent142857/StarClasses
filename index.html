@@ -1137,21 +1137,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="Gallery.js"></script>
   <script src="cartForCourse.js"></script>
-  
-
   <!--/Java Script -->
-
-  <!-- Java Script -->
-  <script>
-    var app = angular.module("myApp", [])
-    app.controller("myController", function ($rootScope, $http, $location) {
-      $http.get("../informationSubject.json").then(function (response) {
-        $rootScope.list = response.data.informationSubject;
-      });
-    });
-  </script>
-  <!-- Java Script -->
-
 </body>
 
 </html>

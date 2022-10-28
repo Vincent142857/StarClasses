@@ -478,19 +478,6 @@
         app.controller("myController",function(){         
         })
 
-      //** Count Visitor ** 
-      function countVisitor() {
-        if (typeof (Storage) !== "undefined") {
-          if (localStorage.countV) {
-            localStorage.countV = Number(localStorage.countV) + 1;
-          } else {
-            localStorage.countV = 1;
-          }
-          document.getElementById("visitor").innerHTML = localStorage.countV;
-        } else {
-          document.getElementById("visitor").innerHTML = 0;
-        }
-      }
     </script>
     <!-- Java Script -->
 </body>

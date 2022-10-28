@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Star Classes Team 1">
-
   <!-- icon website -->
   <link rel="icon" href="./img/star-classes-icon.png" type="image/x-icon">
   <title>Star Classes</title>
@@ -14,7 +13,6 @@
   <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
@@ -39,14 +37,12 @@
       padding: 0;
       margin: 0;
     }
-
     body {
       padding-top: 3rem;
       color: #5a5a5a;
     }
     /* MARKETING CONTENT
 -------------------------------------------------- */
-
     .marketing .col-lg-4 {
       margin-bottom: 1.5rem;
       text-align: center;
@@ -98,15 +94,7 @@
       cursor: pointer !important;
     }
 
-    .dropdown-hover:hover>.dropdown-menu {
-      display: inline-block;
-    }
-
-    .dropdown-hover>.dropdown-toggle:active {
-      /*Without this, clicking will make it sticky*/
-      pointer-events: none;
-    }
-
+    
     .badge-notification {
       position: absolute;
       font-size: .6rem;
@@ -192,7 +180,7 @@
 
 </head>
 
-<body ng-app="myApp" onload="countVisitor()" ng-controller="myController">
+<body onload="countVisitor()">
   <!-- Menu top -->
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -342,7 +330,7 @@
   </header>
 <!--/ Menu top -->
 
-  <main class="d-flex flex-column mt-2" ng-app="myApp">
+  <main class="d-flex flex-column mt-2">
 
     <div class="About1">
       <h1>Welcome <br>to Star Classes</h1>
@@ -410,32 +398,32 @@
     <div class="container marketing">
 
       <!-- Wrap the rest of the page in another container to center all the content. -->
-      <div class="container mb-md-4" ng-controller="myController">
+      <div class="container mb-md-4">
         <h1 class="text-center">How to begin</h1>
         <!-- Tabs navs -->
         <ul class="nav nav-tabs nav-justified mb-3 border-bottom" id="ex1" role="tablist">
           <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="ex7-tab-1" data-toggle="tab" href="#ex7-tabs-1" role="tab"
-              aria-controls="ex7-tabs-1" aria-selected="true">
+            <a class="nav-link active" id="ex-tab-1" data-toggle="tab" href="#ex-tabs-1" role="tab"
+              aria-controls="ex-tabs-1" aria-selected="true">
               <h5>Plan your curriculum</h5>
             </a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="ex7-tab-2" data-toggle="tab" href="#ex7-tabs-2" role="tab"
-              aria-controls="ex7-tabs-2" aria-selected="false">
+            <a class="nav-link" id="ex-tab-2" data-toggle="tab" href="#ex-tabs-2" role="tab"
+              aria-controls="ex-tabs-2" aria-selected="false">
               <h5>Record your video</h5>
             </a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="ex7-tab-3" data-toggle="tab" href="#ex7-tabs-3" role="tab"
-              aria-controls="ex7-tabs-3" aria-selected="false">
+            <a class="nav-link" id="ex-tab-3" data-toggle="tab" href="#ex-tabs-3" role="tab"
+              aria-controls="ex-tabs-3" aria-selected="false">
               <h5>Launch your course</h5>
             </a>
           </li>
         </ul>
         <!-- Tabs content -->
         <div class="tab-content" id="ex2-content">
-          <div class="tab-pane fade show active" id="ex7-tabs-1" role="tabpanel" aria-labelledby="ex7-tab-1"
+          <div class="tab-pane fade show active" id="ex-tabs-1" role="tabpanel" aria-labelledby="ex-tab-1"
             data-spy="scroll" data-target="#myScrollspy" data-offset="10">
             <!-- 1 -->
 
@@ -458,7 +446,7 @@
             <hr class="featurette-divider"><!-- 1 -->
 
           </div>
-          <div class="tab-pane fade" id="ex7-tabs-2" role="tabpanel" aria-labelledby="ex7-tab-2" data-spy="scroll"
+          <div class="tab-pane fade" id="ex-tabs-2" role="tabpanel" aria-labelledby="ex-tab-2" data-spy="scroll"
             data-target="#myScrollspy" data-offset="10">
             <!-- 2 -->
             <div class="row featurette">
@@ -481,7 +469,7 @@
             <hr class="featurette-divider">
 
           </div>
-          <div class="tab-pane fade" id="ex7-tabs-3" role="tabpanel" aria-labelledby="ex7-tab-3" data-spy="scroll"
+          <div class="tab-pane fade" id="ex-tabs-3" role="tabpanel" aria-labelledby="ex-tab-3" data-spy="scroll"
             data-target="#myScrollspy" data-offset="10">
             <!-- 3 -->
             <div class="row featurette">
@@ -505,8 +493,6 @@
         </div>
         <!-- Tabs content -->
       </div>
-
-
 
       <!-- /END THE FEATURETTES -->
 
@@ -655,30 +641,9 @@
 
   <!-- Java Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
   <script src="Gallery.js"></script>
   <script src="cartForCourse.js"></script>
-  <!-- Custom scripts -->
-  <script type="text/javascript">
-    //** change color for star *** //
-    function changeColor(color) {
-      if (color.style.color === 'rgb(68, 68, 68)') {
-        // color.style.color = "#E4A11B";
-        color.style.color = 'rgb(228,161,27)';
-      }
-      else {
-        color.style.color = 'rgb(68, 68, 68)';
-      }
-    };
-
-    var app = angular.module('myApp', []);
-    app.controller('myCtrl', function ($scope) {
-      $scope.show = true;
-      $scope.showHide = function () {
-        this.show = !this.show;
-      };
-    });
-  </script>
+ 
   <!-- Java Script -->
 </body>
 
