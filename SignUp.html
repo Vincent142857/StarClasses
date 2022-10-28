@@ -80,19 +80,7 @@
       color: red;
     }
   </style>
-  <script>
-    // function CheckCfm() {
-    //   var sPassword = document.getElementById("Password").value;
-    //   var sCfmPassword = document.getElementById("CfmPassword").value;
-    //   if (sCfmPassword != sPassword) {
-    //     document.getElementById("ErrCfm").innerHTML="Password and Confirm Password must be match.";
-    //   }
-    // }
-    // var sCfmPassword = document.getElementById("CfmPassword")
-    // CfmPassword.addEventListener("change",CheckCfm)
-   
-
-  </script>
+  
 
 </head>
 
@@ -217,7 +205,7 @@
                 </a>
               </li>
               <!-- Sign in-->
-              <li class="nav-item col-12 col-md-2 mx-1 my-auto">
+              <li class="nav-item col-12 col-md-2 mx-1 my-auto user-name">
                 <a class="nav-link text-center active" href="SignIn.html">
                   <i class="fas fa-sign-in-alt"></i>
                   Sign in
@@ -280,6 +268,7 @@
                 placeholder="Enter your email address" required pattern="\w+[@]gmail[.]com([.]vn)?" />
               <small class="error" ng-show="Form.Email.$touched && Form.Email.$error.required">Email is required</small>
               <small class="error" ng-show="Form.Email.$touched && Form.Email.$error.pattern">wwww@gmail.com.vn</small>
+
             </div>
             <!-- Phone input -->
             <div class="form-group my-3">
@@ -333,19 +322,25 @@
                     <div class="modal-header border-bottom-0">
                       <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body text-start text-black p-4">
-                      <p class="modal-title mb-5 bg-dark p-2" id="ModalLabel"><img src="./img/star-classes-4.png"
-                          width="50%" alt="Star Classes"></p>
-                      <h4 class="mb-3 text-warning text-center">You are successfully logged in</h4>
-                      <hr>
-                      <h2 class="mb-1 text-warning text-center">Welcome to Star Classes </h2>
-                      <h5 class="mb-0 text-warning text-center">Let's enjoy our courses now!</h5>
+
+                    <div class="str-sign-up">
+
+                      <!-- <div class="modal-body text-start text-black p-4">
+                        <p class="modal-title mb-5 bg-dark p-2" id="ModalLabel"><img src="./img/star-classes-4.png"
+                            width="50%" alt="Star Classes"></p>
+                        <h4 class="mb-3 text-warning text-center">You are successfully logged in</h4>
+                        <hr>
+                        <h2 class="mb-1 text-warning text-center">Welcome to Star Classes </h2>
+                        <h5 class="mb-0 text-warning text-center">Let's enjoy our courses now!</h5>
+                      </div>
+                      <div class="modal-footer d-flex justify-content-center border-top-0 py-4">
+                        <a href="./index.html" type="button" class="btn btn-warning mb-1 clear-cart">
+                          Comeback
+                        </a>
+                      </div> -->
+
                     </div>
-                    <div class="modal-footer d-flex justify-content-center border-top-0 py-4">
-                      <a href="./index.html" type="button" class="btn btn-warning mb-1 clear-cart">
-                        Comeback
-                      </a>
-                    </div>
+
                   </div>
                 </div>
               </div>
@@ -517,7 +512,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="Gallery.js"></script>
   <script src="cartForCourse.js"></script>
-  <script src="./user.js"></script>
+  
   <script>
     var app = angular.module("myApp", [])
     app.controller("myController", function () {
@@ -526,8 +521,7 @@
     $("#CfmPassword").on("keyup", function(){
       var pwd = $("#Password").val();
       var cfm = $("#CfmPassword").val();
-      console.log(pwd);
-      console.log(cfm);
+      
       if (cfm != pwd) {
         $("#ErrCfm").html("Password and Confirm Password must be match.");
       }
@@ -536,16 +530,6 @@
       }
     });
 
-//     $(".add-to-user").click(function () {
-  
-//   var email = $("#Email").val();
-//   var phone = $("#Phone").val();
-//   var name = $("#FullName").val();
-//   var pwd = $("#Password").val();
-  
-//   alert("email=" + email + " phone=" + phone + " name=" + name + " pwd=" + pwd);
-//   // displayUser();
-// });
   </script>
   <!-- Java Script -->
 </body>
