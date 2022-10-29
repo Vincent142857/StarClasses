@@ -38,6 +38,11 @@
       padding: 0;
       box-sizing: border-box;
     }
+    .error {
+      padding-left: 10px;
+      color: red;
+    }
+    
   </style>
 
 </head>
@@ -213,19 +218,23 @@
               <h5 class="mb-0">Information details</h5>
             </div>
             <div class="card-body col-md-11 mx-auto">
-              <form>
+              <form name="Form">
                 <!-- 2 column grid layout with text inputs for the first and last names -->
                 <div class="row mb-4">
                   <div class="col">
                     <div class="form-outline">
-                      <input type="text" id="FullName" class="form-control border-bottom" required />
+                      <input type="text" id="FullName" name="FullName" ng-model="FullName" class="form-control border-bottom" required />
                       <label class="form-label" for="FullName">Full name</label>
+                      <small class="error" ng-show="Form.FullName.$touched && Form.FullName.$error.required">Full name is
+                        required</small>
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-outline">
-                      <input type="tel" id="Phone" class="form-control border-bottom" required/>
+                      <input type="tel" id="Phone" name="Phone" ng-model="Phone" class="form-control border-bottom" required pattern="\d{10}"/>
                       <label class="form-label" for="Phone">Phone number</label>
+                      <small class="error" ng-show="Form.Phone.$touched && Form.Phone.$error.required">Phone is required</small>
+                      <small class="error" ng-show="Form.Phone.$touched && Form.Phone.$error.pattern">Phone numbers must be 10 digits</small>
                     </div>
                   </div>
                 </div>
@@ -233,25 +242,34 @@
                 <div class="row mb-4">
                   <div class="col">
                     <div class="form-outline">
-                      <input type="text" id="Address" class="form-control border-bottom" required/>
+                      <input type="text" id="Address" name="Address" ng-model="Address" class="form-control border-bottom" required/>
                       <label class="form-label" for="Address">Address</label>
+
+                      <small class="error" ng-show="Form.Address.$touched && Form.Address.$error.required">Address is
+                        required</small>
+
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-outline">
-                      <input type="text" id="ZipCode" class="form-control border-bottom" />
+                      <input type="text" id="ZipCode" name="ZipCode" ng-model="ZipCode" class="form-control border-bottom" required />
                       <label class="form-label" for="ZipCode">Zip/Postal</label>
+                      <small class="error" ng-show="Form.ZipCode.$touched && Form.ZipCode.$error.required">ZipCode is
+                        required</small>
+
                     </div>
                   </div>
                 </div>
 
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                  <input type="email" id="Email" class="form-control border-bottom" required />
+                  <input type="email" id="Email" name="Email" ng-model="Email" class="form-control border-bottom" required pattern="\w+[@]gmail[.]com([.]vn)?" />
                   <label class="form-label" for="Email">Email</label>
+                  <small class="error" ng-show="Form.Email.$touched && Form.Email.$error.required">Email is required</small>
+                  <small class="error" ng-show="Form.Email.$touched && Form.Email.$error.pattern">wwww@gmail.com.vn</small>
                 </div>
                 <hr>
-                <!-- Email input -->
+                <!-- Note input -->
                 <div class="form-outline mb-4">
                   <textarea row="3" id="note-order" class="form-control border-bottom"></textarea>
                   <label class="form-label" for="note-order">Order notes:</label>
@@ -295,14 +313,16 @@
                 <div class="row my-4">
                   <div class="col">
                     <div class="form-outline">
-                      <input type="text" id="formNameOnCard" class="form-control border-bottom" />
+                      <input type="text" id="formNameOnCard" name="formNameOnCard" ng-model="formNameOnCard" class="form-control border-bottom" required />
                       <label class="form-label" for="formNameOnCard">Name on card</label>
+                      <small class="error" ng-show="Form.formNameOnCard.$touched && Form.formNameOnCard.$error.required">Name On Card is required</small>
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-outline">
-                      <input type="text" id="formCardNumber" class="form-control border-bottom" />
+                      <input type="text" id="formCardNumber" name="formCardNumber" ng-model="formCardNumber" class="form-control border-bottom" required />
                       <label class="form-label" for="formCardNumber">Credit card number</label>
+                      <small class="error" ng-show="Form.formCardNumber.$touched && Form.formCardNumber.$error.required">Card Number is required</small>
                     </div>
                   </div>
                 </div>
@@ -310,21 +330,32 @@
                 <div class="row mb-4">
                   <div class="col-3">
                     <div class="form-outline">
-                      <input type="text" id="formExpiration" class="form-control border-bottom" />
+                      <input type="text" id="formExpiration" name="formExpiration" ng-model="formExpiration" class="form-control border-bottom" required/>
                       <label class="form-label" for="formExpiration">Expiration</label>
+                      <small class="error" ng-show="Form.formExpiration.$touched && Form.formExpiration.$error.required">Expiration is required</small>
                     </div>
                   </div>
                   <div class="col-3">
                     <div class="form-outline">
-                      <input type="text" id="formCVV" class="form-control border-bottom" />
+                      <input type="text" id="formCVV" name="formCVV" ng-model="formCVV" class="form-control border-bottom" required />
                       <label class="form-label" for="formCVV">CVV</label>
+                      <small class="error" ng-show="Form.formCVV.$touched && Form.formCVV.$error.required">CVV is required</small>
                     </div>
                   </div>
                 </div>
 
                 <div class="form-group mt-3">
                   <!-- Button trigger modal -->
-                  <button type="submit" class="btn btn-warning btn-lg btn-block text-dark" data-mdb-toggle="modal"
+                  <button type="submit"
+                  ng-disabled="  Form.FullName.$error.required || 
+                                    Form.Email.$error.required ||
+                                    Form.Email.$error.pattern ||  
+                                    Form.Phone.$error.required ||
+                                    Form.Phone.$error.pattern ||
+                                    Form.Address.$error.required ||
+                                    Form.ZipCode.$error.required
+                                    " 
+                  class="btn btn-warning btn-lg btn-block text-dark" data-mdb-toggle="modal"
                     data-mdb-target="#Modal">
                     Confirmation Order
                   </button>
