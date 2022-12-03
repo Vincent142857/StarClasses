@@ -935,16 +935,40 @@ if (sessionStorage.getItem("menuData") != null) {
   var linkData = JSON.parse(sessionStorage.getItem("menuData"));
   displayCourse(linkData);
 }
-// event search
+// ********* Form search**************
+var searchText = (array, query) => {
+  // let query = new RegExp(search, "ig");
+  let arr = [];
+
+  // let dataArray = array.map((item) => {
+  //   (
+  //     item.Subject.toLowerCase().search(query) >= 0 || 
+  //     item.NameCourse.toLowerCase().search(query) >= 0 || 
+  //     item.Intro.toLowerCase().search(query) >= 0 || 
+  //     item.Teacher.toLowerCase().search(query) >= 0
+  //   ) ? arr.push(item) : null;
+  // });
+  
+  for (let k in array) {
+    if(
+        array[k].Subject.toLowerCase().search(query) >= 0 || 
+        array[k].NameCourse.toLowerCase().search(query) >= 0 || 
+        array[k].Intro.toLowerCase().search(query) >= 0 || 
+        array[k].Teacher.toLowerCase().search(query) >= 0
+    ) arr.push(array[k]);
+  };
+  return arr;
+}
+// add event search
 $("#formSearch").submit(function (e) {
   e.preventDefault();
   sessionStorage.removeItem("menuData");
 
-  let search = $("#search").val();
+  let search = $("#search").val().toLowerCase();
   let re = new RegExp(search, "ig");
-  //let subData = data.filter(item => item.Intro.search(re) >= 0);
- 
-  sessionStorage.setItem("searchData", JSON.stringify(data.filter(item => item.Intro.search(re) >= 0)));
+  let array = searchText(data, re);
+  
+  sessionStorage.setItem("searchData", JSON.stringify(array));
   var dataSearch = JSON.parse(sessionStorage.getItem("searchData"));
 
   var menu = Number($("#search").data("menu"));
